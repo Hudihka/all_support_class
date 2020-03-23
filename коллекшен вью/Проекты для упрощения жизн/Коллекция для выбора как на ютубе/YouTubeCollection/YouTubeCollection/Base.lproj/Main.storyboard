@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YouTubeCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Цветочки" translatesAutoresizingMaskIntoConstraints="NO" id="a6C-v5-y9B">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHk-v3-2iT" customClass="ViewCollection" customModule="YouTubeCollection" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="lGD-hl-FbZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LHk-v3-2iT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6PH-fL-2L8"/>
+                            <constraint firstItem="LHk-v3-2iT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="MNc-2Y-d9R"/>
+                            <constraint firstItem="a6C-v5-y9B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WOk-Hx-gjd"/>
+                            <constraint firstItem="a6C-v5-y9B" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="adi-fG-n2U"/>
+                            <constraint firstItem="a6C-v5-y9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p6e-u7-doM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LHk-v3-2iT" secondAttribute="trailing" id="qUN-2j-CTw"/>
+                            <constraint firstItem="a6C-v5-y9B" firstAttribute="top" secondItem="LHk-v3-2iT" secondAttribute="bottom" id="tIC-cq-D0B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="a6C-v5-y9B" id="q6s-II-NeZ"/>
+                        <outlet property="viewCollection" destination="LHk-v3-2iT" id="auY-4J-5r0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Цветочки" width="640" height="400"/>
+    </resources>
+</document>

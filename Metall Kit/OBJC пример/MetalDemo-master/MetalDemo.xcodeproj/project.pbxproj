@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		452958EA20CADBE1001E365E /* Main-Desktop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452958E920CADBE1001E365E /* Main-Desktop.storyboard */; };
+		45A69F8020CAB695003390F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A69F7F20CAB695003390F1 /* AppDelegate.m */; };
+		45A69F8220CAB696003390F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A69F8120CAB696003390F1 /* Assets.xcassets */; };
+		45A69F8820CAB696003390F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A69F8720CAB696003390F1 /* main.m */; };
+		45A69F8E20CABA56003390F1 /* ArcballCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB09581D1A7409E600E722D0 /* ArcballCamera.mm */; };
+		45A69F9020CABA56003390F1 /* Primitives.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBE5E7A01A74CA0800C23AE8 /* Primitives.mm */; };
+		45A69F9220CABA56003390F1 /* Mesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB53A0DE1A7D3E8000E1A557 /* Mesh.mm */; };
+		45A69F9520CABA56003390F1 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E3A1A72BE5200D1880C /* Shaders.metal */; };
+		45A69F9720CABA56003390F1 /* RenderViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E381A72BE5200D1880C /* RenderViewController.mm */; };
+		45A69F9920CABA56003390F1 /* Math.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E8B1A72C5EA00D1880C /* Math.mm */; };
+		45A69F9B20CABA56003390F1 /* Quaternion.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB0958201A7426E000E722D0 /* Quaternion.mm */; };
+		45A69F9D20CABA56003390F1 /* SkyboxRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB6064AD1A862E9500D59110 /* SkyboxRenderer.mm */; };
+		45A69F9F20CABA56003390F1 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBEC67821A7E0E010080388D /* Texture.mm */; };
+		45A69FA020CABA70003390F1 /* nightsky_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB60649F1A8626AD00D59110 /* nightsky_back.jpg */; };
+		45A69FA120CABA70003390F1 /* nightsky_bottom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A01A8626AD00D59110 /* nightsky_bottom.jpg */; };
+		45A69FA220CABA70003390F1 /* nightsky_front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A11A8626AD00D59110 /* nightsky_front.jpg */; };
+		45A69FA320CABA70003390F1 /* nightsky_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A21A8626AD00D59110 /* nightsky_left.jpg */; };
+		45A69FA420CABA70003390F1 /* nightsky_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A31A8626AD00D59110 /* nightsky_right.jpg */; };
+		45A69FA520CABA70003390F1 /* nightsky_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A41A8626AD00D59110 /* nightsky_top.jpg */; };
+		45A69FA620CABA70003390F1 /* default_diff.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF362211A7E8C54000F08D6 /* default_diff.png */; };
+		45A69FA720CABA70003390F1 /* default_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF362221A7E8C54000F08D6 /* default_normal.png */; };
+		45A69FA820CABA70003390F1 /* spaceship_diff.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF3621B1A7E8B02000F08D6 /* spaceship_diff.png */; };
+		45A69FA920CABA70003390F1 /* spaceship_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF3621C1A7E8B02000F08D6 /* spaceship_normal.png */; };
+		45A69FAA20CABA70003390F1 /* spaceship.geom in Resources */ = {isa = PBXBuildFile; fileRef = EB53A0E11A7D744600E1A557 /* spaceship.geom */; };
+		45A69FAE20CAC956003390F1 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A69FAC20CAC956003390F1 /* Metal.framework */; };
+		45A69FAF20CAC956003390F1 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A69FAD20CAC956003390F1 /* MetalKit.framework */; };
+		EB0958171A73CAC700E722D0 /* rokuzlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0958161A73CAC700E722D0 /* rokuzlogo.png */; };
+		EB09581E1A7409E600E722D0 /* ArcballCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB09581D1A7409E600E722D0 /* ArcballCamera.mm */; };
+		EB0958211A7426E000E722D0 /* Quaternion.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB0958201A7426E000E722D0 /* Quaternion.mm */; };
+		EB53A0DF1A7D3E8000E1A557 /* Mesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB53A0DE1A7D3E8000E1A557 /* Mesh.mm */; };
+		EB53A0E21A7D744600E1A557 /* spaceship.geom in Resources */ = {isa = PBXBuildFile; fileRef = EB53A0E11A7D744600E1A557 /* spaceship.geom */; };
+		EB6064A51A8626AD00D59110 /* nightsky_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB60649F1A8626AD00D59110 /* nightsky_back.jpg */; };
+		EB6064A61A8626AD00D59110 /* nightsky_bottom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A01A8626AD00D59110 /* nightsky_bottom.jpg */; };
+		EB6064A71A8626AD00D59110 /* nightsky_front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A11A8626AD00D59110 /* nightsky_front.jpg */; };
+		EB6064A81A8626AD00D59110 /* nightsky_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A21A8626AD00D59110 /* nightsky_left.jpg */; };
+		EB6064A91A8626AD00D59110 /* nightsky_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A31A8626AD00D59110 /* nightsky_right.jpg */; };
+		EB6064AA1A8626AD00D59110 /* nightsky_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6064A41A8626AD00D59110 /* nightsky_top.jpg */; };
+		EB6064AE1A862E9500D59110 /* SkyboxRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB6064AD1A862E9500D59110 /* SkyboxRenderer.mm */; };
+		EBE5E7A11A74CA0800C23AE8 /* Primitives.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBE5E7A01A74CA0800C23AE8 /* Primitives.mm */; };
+		EBE86E331A72BE5200D1880C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E321A72BE5200D1880C /* main.m */; };
+		EBE86E361A72BE5200D1880C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E351A72BE5200D1880C /* AppDelegate.m */; };
+		EBE86E391A72BE5200D1880C /* RenderViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E381A72BE5200D1880C /* RenderViewController.mm */; };
+		EBE86E3B1A72BE5200D1880C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E3A1A72BE5200D1880C /* Shaders.metal */; };
+		EBE86E3E1A72BE5200D1880C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE86E3C1A72BE5200D1880C /* Main.storyboard */; };
+		EBE86E401A72BE5200D1880C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE86E3F1A72BE5200D1880C /* Images.xcassets */; };
+		EBE86E431A72BE5200D1880C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBE86E411A72BE5200D1880C /* LaunchScreen.xib */; };
+		EBE86E8C1A72C5EA00D1880C /* Math.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBE86E8B1A72C5EA00D1880C /* Math.mm */; };
+		EBEC67831A7E0E010080388D /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBEC67821A7E0E010080388D /* Texture.mm */; };
+		EBF3621E1A7E8B02000F08D6 /* spaceship_diff.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF3621B1A7E8B02000F08D6 /* spaceship_diff.png */; };
+		EBF3621F1A7E8B02000F08D6 /* spaceship_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF3621C1A7E8B02000F08D6 /* spaceship_normal.png */; };
+		EBF362231A7E8C54000F08D6 /* default_diff.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF362211A7E8C54000F08D6 /* default_diff.png */; };
+		EBF362241A7E8C54000F08D6 /* default_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EBF362221A7E8C54000F08D6 /* default_normal.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		452958E920CADBE1001E365E /* Main-Desktop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Main-Desktop.storyboard"; sourceTree = "<group>"; };
+		45A69F7C20CAB694003390F1 /* MetalDemo-Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MetalDemo-Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A69F7E20CAB695003390F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		45A69F7F20CAB695003390F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		45A69F8120CAB696003390F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45A69F8620CAB696003390F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A69F8720CAB696003390F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45A69FAC20CAC956003390F1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		45A69FAD20CAC956003390F1 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		EB0958161A73CAC700E722D0 /* rokuzlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rokuzlogo.png; path = Images.xcassets/rokuzlogo.png; sourceTree = "<group>"; };
+		EB09581C1A7409E600E722D0 /* ArcballCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcballCamera.h; path = MetalDemo/camera/ArcballCamera.h; sourceTree = "<group>"; };
+		EB09581D1A7409E600E722D0 /* ArcballCamera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ArcballCamera.mm; path = MetalDemo/camera/ArcballCamera.mm; sourceTree = "<group>"; };
+		EB09581F1A741E6F00E722D0 /* Quaternion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Quaternion.h; path = math/Quaternion.h; sourceTree = "<group>"; };
+		EB0958201A7426E000E722D0 /* Quaternion.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Quaternion.mm; path = math/Quaternion.mm; sourceTree = "<group>"; };
+		EB53A0DD1A7D3E6800E1A557 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = MetalDemo/geometry/Mesh.h; sourceTree = "<group>"; };
+		EB53A0DE1A7D3E8000E1A557 /* Mesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Mesh.mm; path = MetalDemo/geometry/Mesh.mm; sourceTree = "<group>"; };
+		EB53A0E11A7D744600E1A557 /* spaceship.geom */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = spaceship.geom; path = data/spaceship.geom; sourceTree = "<group>"; };
+		EB60649F1A8626AD00D59110 /* nightsky_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nightsky_back.jpg; path = data/nightsky_back.jpg; sourceTree = "<group>"; };
+		EB6064A01A8626AD00D59110 /* nightsky_bottom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nightsky_bottom.jpg; path = data/nightsky_bottom.jpg; sourceTree = "<group>"; };
+		EB6064A11A8626AD00D59110 /* nightsky_front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nightsky_front.jpg; path = data/nightsky_front.jpg; sourceTree = "<group>"; };
+		EB6064A21A8626AD00D59110 /* nightsky_left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nightsky_left.jpg; path = data/nightsky_left.jpg; sourceTree = "<group>"; };
+		EB6064A31A8626AD00D59110 /* nightsky_right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nightsky_right.jpg; path = data/nightsky_right.jpg; sourceTree = "<group>"; };
+		EB6064A41A8626AD00D59110 /* nightsky_top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nightsky_top.jpg; path = data/nightsky_top.jpg; sourceTree = "<group>"; };
+		EB6064AC1A862E9500D59110 /* SkyboxRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkyboxRenderer.h; path = MetalDemo/renderer/SkyboxRenderer.h; sourceTree = "<group>"; };
+		EB6064AD1A862E9500D59110 /* SkyboxRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SkyboxRenderer.mm; path = MetalDemo/renderer/SkyboxRenderer.mm; sourceTree = "<group>"; };
+		EBE5E79F1A74CA0800C23AE8 /* Primitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Primitives.h; path = MetalDemo/geometry/Primitives.h; sourceTree = "<group>"; };
+		EBE5E7A01A74CA0800C23AE8 /* Primitives.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Primitives.mm; path = MetalDemo/geometry/Primitives.mm; sourceTree = "<group>"; };
+		EBE86E2D1A72BE5100D1880C /* MetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE86E311A72BE5100D1880C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE86E321A72BE5200D1880C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBE86E341A72BE5200D1880C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EBE86E351A72BE5200D1880C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EBE86E371A72BE5200D1880C /* RenderViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = RenderViewController.h; sourceTree = "<group>"; };
+		EBE86E381A72BE5200D1880C /* RenderViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = RenderViewController.mm; sourceTree = "<group>"; };
+		EBE86E3A1A72BE5200D1880C /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		EBE86E3D1A72BE5200D1880C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBE86E3F1A72BE5200D1880C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBE86E421A72BE5200D1880C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EBE86E8A1A72C5EA00D1880C /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Math.h; path = math/Math.h; sourceTree = "<group>"; };
+		EBE86E8B1A72C5EA00D1880C /* Math.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Math.mm; path = math/Math.mm; sourceTree = "<group>"; };
+		EBEC67811A7E0E010080388D /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = MetalDemo/texture/Texture.h; sourceTree = "<group>"; };
+		EBEC67821A7E0E010080388D /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Texture.mm; path = MetalDemo/texture/Texture.mm; sourceTree = "<group>"; };
+		EBF3621B1A7E8B02000F08D6 /* spaceship_diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spaceship_diff.png; path = data/spaceship_diff.png; sourceTree = "<group>"; };
+		EBF3621C1A7E8B02000F08D6 /* spaceship_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spaceship_normal.png; path = data/spaceship_normal.png; sourceTree = "<group>"; };
+		EBF362211A7E8C54000F08D6 /* default_diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_diff.png; path = data/default_diff.png; sourceTree = "<group>"; };
+		EBF362221A7E8C54000F08D6 /* default_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_normal.png; path = data/default_normal.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45A69F7920CAB694003390F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE86E2A1A72BE5100D1880C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A69FAE20CAC956003390F1 /* Metal.framework in Frameworks */,
+				45A69FAF20CAC956003390F1 /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45A69F7D20CAB695003390F1 /* MetalDemo-Desktop */ = {
+			isa = PBXGroup;
+			children = (
+				45A69F7E20CAB695003390F1 /* AppDelegate.h */,
+				45A69F7F20CAB695003390F1 /* AppDelegate.m */,
+				45A69F8120CAB696003390F1 /* Assets.xcassets */,
+				45A69F8620CAB696003390F1 /* Info.plist */,
+				45A69F8720CAB696003390F1 /* main.m */,
+				452958E920CADBE1001E365E /* Main-Desktop.storyboard */,
+			);
+			path = "MetalDemo-Desktop";
+			sourceTree = "<group>";
+		};
+		45A69FAB20CAC956003390F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45A69FAC20CAC956003390F1 /* Metal.framework */,
+				45A69FAD20CAC956003390F1 /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB09581B1A7409D600E722D0 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				EB09581C1A7409E600E722D0 /* ArcballCamera.h */,
+				EB09581D1A7409E600E722D0 /* ArcballCamera.mm */,
+			);
+			name = camera;
+			sourceTree = "<group>";
+		};
+		EB53A0E01A7D741B00E1A557 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EB60649F1A8626AD00D59110 /* nightsky_back.jpg */,
+				EB6064A01A8626AD00D59110 /* nightsky_bottom.jpg */,
+				EB6064A11A8626AD00D59110 /* nightsky_front.jpg */,
+				EB6064A21A8626AD00D59110 /* nightsky_left.jpg */,
+				EB6064A31A8626AD00D59110 /* nightsky_right.jpg */,
+				EB6064A41A8626AD00D59110 /* nightsky_top.jpg */,
+				EBF362211A7E8C54000F08D6 /* default_diff.png */,
+				EBF362221A7E8C54000F08D6 /* default_normal.png */,
+				EBF3621B1A7E8B02000F08D6 /* spaceship_diff.png */,
+				EBF3621C1A7E8B02000F08D6 /* spaceship_normal.png */,
+				EB53A0E11A7D744600E1A557 /* spaceship.geom */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		EB6064AB1A862E5400D59110 /* renderer */ = {
+			isa = PBXGroup;
+			children = (
+				EB6064AC1A862E9500D59110 /* SkyboxRenderer.h */,
+				EB6064AD1A862E9500D59110 /* SkyboxRenderer.mm */,
+			);
+			name = renderer;
+			sourceTree = "<group>";
+		};
+		EBE5E79E1A74C9ED00C23AE8 /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				EBE5E79F1A74CA0800C23AE8 /* Primitives.h */,
+				EBE5E7A01A74CA0800C23AE8 /* Primitives.mm */,
+				EB53A0DD1A7D3E6800E1A557 /* Mesh.h */,
+				EB53A0DE1A7D3E8000E1A557 /* Mesh.mm */,
+			);
+			name = geometry;
+			sourceTree = "<group>";
+		};
+		EBE86E241A72BE5100D1880C = {
+			isa = PBXGroup;
+			children = (
+				EB09581B1A7409D600E722D0 /* camera */,
+				EBE5E79E1A74C9ED00C23AE8 /* geometry */,
+				EBE86E2F1A72BE5100D1880C /* MetalDemo */,
+				45A69F7D20CAB695003390F1 /* MetalDemo-Desktop */,
+				EBE86E2E1A72BE5100D1880C /* Products */,
+				EB6064AB1A862E5400D59110 /* renderer */,
+				EBEC67801A7E0DF30080388D /* texture */,
+				45A69FAB20CAC956003390F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EBE86E2E1A72BE5100D1880C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBE86E2D1A72BE5100D1880C /* MetalDemo.app */,
+				45A69F7C20CAB694003390F1 /* MetalDemo-Desktop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBE86E2F1A72BE5100D1880C /* MetalDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EBE86E341A72BE5200D1880C /* AppDelegate.h */,
+				EBE86E351A72BE5200D1880C /* AppDelegate.m */,
+				EBE86E371A72BE5200D1880C /* RenderViewController.h */,
+				EBE86E381A72BE5200D1880C /* RenderViewController.mm */,
+				EBE86E3A1A72BE5200D1880C /* Shaders.metal */,
+				EBE86E891A72C59000D1880C /* math */,
+				EBE86E301A72BE5100D1880C /* Supporting Files */,
+			);
+			path = MetalDemo;
+			sourceTree = "<group>";
+		};
+		EBE86E301A72BE5100D1880C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB53A0E01A7D741B00E1A557 /* data */,
+				EBE86E3C1A72BE5200D1880C /* Main.storyboard */,
+				EBE86E3F1A72BE5200D1880C /* Images.xcassets */,
+				EB0958161A73CAC700E722D0 /* rokuzlogo.png */,
+				EBE86E411A72BE5200D1880C /* LaunchScreen.xib */,
+				EBE86E311A72BE5100D1880C /* Info.plist */,
+				EBE86E321A72BE5200D1880C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBE86E891A72C59000D1880C /* math */ = {
+			isa = PBXGroup;
+			children = (
+				EBE86E8A1A72C5EA00D1880C /* Math.h */,
+				EBE86E8B1A72C5EA00D1880C /* Math.mm */,
+				EB09581F1A741E6F00E722D0 /* Quaternion.h */,
+				EB0958201A7426E000E722D0 /* Quaternion.mm */,
+			);
+			name = math;
+			sourceTree = "<group>";
+		};
+		EBEC67801A7E0DF30080388D /* texture */ = {
+			isa = PBXGroup;
+			children = (
+				EBEC67811A7E0E010080388D /* Texture.h */,
+				EBEC67821A7E0E010080388D /* Texture.mm */,
+			);
+			name = texture;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45A69F7B20CAB694003390F1 /* MetalDemo-Desktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A69F8A20CAB696003390F1 /* Build configuration list for PBXNativeTarget "MetalDemo-Desktop" */;
+			buildPhases = (
+				45A69F7820CAB694003390F1 /* Sources */,
+				45A69F7920CAB694003390F1 /* Frameworks */,
+				45A69F7A20CAB694003390F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MetalDemo-Desktop";
+			productName = "MetalDemo-Desktop";
+			productReference = 45A69F7C20CAB694003390F1 /* MetalDemo-Desktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBE86E2C1A72BE5100D1880C /* MetalDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE86E521A72BE5300D1880C /* Build configuration list for PBXNativeTarget "MetalDemo" */;
+			buildPhases = (
+				EBE86E291A72BE5100D1880C /* Sources */,
+				EBE86E2A1A72BE5100D1880C /* Frameworks */,
+				EBE86E2B1A72BE5100D1880C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalDemo;
+			productName = MetalDemo;
+			productReference = EBE86E2D1A72BE5100D1880C /* MetalDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBE86E251A72BE5100D1880C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = rokuz;
+				TargetAttributes = {
+					45A69F7B20CAB694003390F1 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
+					EBE86E2C1A72BE5100D1880C = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = JKS99UDPG5;
+					};
+				};
+			};
+			buildConfigurationList = EBE86E281A72BE5100D1880C /* Build configuration list for PBXProject "MetalDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBE86E241A72BE5100D1880C;
+			productRefGroup = EBE86E2E1A72BE5100D1880C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBE86E2C1A72BE5100D1880C /* MetalDemo */,
+				45A69F7B20CAB694003390F1 /* MetalDemo-Desktop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45A69F7A20CAB694003390F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A69FA020CABA70003390F1 /* nightsky_back.jpg in Resources */,
+				45A69FA120CABA70003390F1 /* nightsky_bottom.jpg in Resources */,
+				45A69FA220CABA70003390F1 /* nightsky_front.jpg in Resources */,
+				45A69FA320CABA70003390F1 /* nightsky_left.jpg in Resources */,
+				452958EA20CADBE1001E365E /* Main-Desktop.storyboard in Resources */,
+				45A69FA420CABA70003390F1 /* nightsky_right.jpg in Resources */,
+				45A69FA520CABA70003390F1 /* nightsky_top.jpg in Resources */,
+				45A69FA620CABA70003390F1 /* default_diff.png in Resources */,
+				45A69FA720CABA70003390F1 /* default_normal.png in Resources */,
+				45A69FA820CABA70003390F1 /* spaceship_diff.png in Resources */,
+				45A69FA920CABA70003390F1 /* spaceship_normal.png in Resources */,
+				45A69FAA20CABA70003390F1 /* spaceship.geom in Resources */,
+				45A69F8220CAB696003390F1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE86E2B1A72BE5100D1880C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB6064AA1A8626AD00D59110 /* nightsky_top.jpg in Resources */,
+				EB0958171A73CAC700E722D0 /* rokuzlogo.png in Resources */,
+				EB6064A91A8626AD00D59110 /* nightsky_right.jpg in Resources */,
+				EBE86E3E1A72BE5200D1880C /* Main.storyboard in Resources */,
+				EB6064A71A8626AD00D59110 /* nightsky_front.jpg in Resources */,
+				EB6064A81A8626AD00D59110 /* nightsky_left.jpg in Resources */,
+				EB6064A61A8626AD00D59110 /* nightsky_bottom.jpg in Resources */,
+				EBF362241A7E8C54000F08D6 /* default_normal.png in Resources */,
+				EBE86E431A72BE5200D1880C /* LaunchScreen.xib in Resources */,
+				EBF3621E1A7E8B02000F08D6 /* spaceship_diff.png in Resources */,
+				EBF3621F1A7E8B02000F08D6 /* spaceship_normal.png in Resources */,
+				EB53A0E21A7D744600E1A557 /* spaceship.geom in Resources */,
+				EB6064A51A8626AD00D59110 /* nightsky_back.jpg in Resources */,
+				EBE86E401A72BE5200D1880C /* Images.xcassets in Resources */,
+				EBF362231A7E8C54000F08D6 /* default_diff.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45A69F7820CAB694003390F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A69F8E20CABA56003390F1 /* ArcballCamera.mm in Sources */,
+				45A69F9020CABA56003390F1 /* Primitives.mm in Sources */,
+				45A69F9220CABA56003390F1 /* Mesh.mm in Sources */,
+				45A69F9520CABA56003390F1 /* Shaders.metal in Sources */,
+				45A69F9720CABA56003390F1 /* RenderViewController.mm in Sources */,
+				45A69F9920CABA56003390F1 /* Math.mm in Sources */,
+				45A69F9B20CABA56003390F1 /* Quaternion.mm in Sources */,
+				45A69F9D20CABA56003390F1 /* SkyboxRenderer.mm in Sources */,
+				45A69F9F20CABA56003390F1 /* Texture.mm in Sources */,
+				45A69F8820CAB696003390F1 /* main.m in Sources */,
+				45A69F8020CAB695003390F1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE86E291A72BE5100D1880C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB6064AE1A862E9500D59110 /* SkyboxRenderer.mm in Sources */,
+				EB53A0DF1A7D3E8000E1A557 /* Mesh.mm in Sources */,
+				EBE86E3B1A72BE5200D1880C /* Shaders.metal in Sources */,
+				EBE5E7A11A74CA0800C23AE8 /* Primitives.mm in Sources */,
+				EBE86E361A72BE5200D1880C /* AppDelegate.m in Sources */,
+				EB09581E1A7409E600E722D0 /* ArcballCamera.mm in Sources */,
+				EBE86E391A72BE5200D1880C /* RenderViewController.mm in Sources */,
+				EB0958211A7426E000E722D0 /* Quaternion.mm in Sources */,
+				EBE86E331A72BE5200D1880C /* main.m in Sources */,
+				EBE86E8C1A72C5EA00D1880C /* Math.mm in Sources */,
+				EBEC67831A7E0E010080388D /* Texture.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EBE86E3C1A72BE5200D1880C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE86E3D1A72BE5200D1880C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE86E411A72BE5200D1880C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE86E421A72BE5200D1880C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45A69F8B20CAB696003390F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "MetalDemo-Desktop/MetalDemo_Desktop.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "MetalDemo-Desktop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "rokuz.MetalDemo-Desktop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		45A69F8C20CAB696003390F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "MetalDemo-Desktop/MetalDemo_Desktop.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "MetalDemo-Desktop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "rokuz.MetalDemo-Desktop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EBE86E501A72BE5300D1880C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBE86E511A72BE5300D1880C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBE86E531A72BE5300D1880C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JKS99UDPG5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					TARGET_IOS,
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MetalDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rokuz.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBE86E541A72BE5300D1880C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JKS99UDPG5;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_IOS;
+				INFOPLIST_FILE = MetalDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rokuz.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45A69F8A20CAB696003390F1 /* Build configuration list for PBXNativeTarget "MetalDemo-Desktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A69F8B20CAB696003390F1 /* Debug */,
+				45A69F8C20CAB696003390F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE86E281A72BE5100D1880C /* Build configuration list for PBXProject "MetalDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE86E501A72BE5300D1880C /* Debug */,
+				EBE86E511A72BE5300D1880C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE86E521A72BE5300D1880C /* Build configuration list for PBXNativeTarget "MetalDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE86E531A72BE5300D1880C /* Debug */,
+				EBE86E541A72BE5300D1880C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBE86E251A72BE5100D1880C /* Project object */;
+}
