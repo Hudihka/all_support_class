@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2E08DD1242B6EF400F119A1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E08DD0242B6EF400F119A1 /* Map.swift */; };
 		CE271D22241787F400F4D7E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D21241787F400F4D7E9 /* AppDelegate.swift */; };
 		CE271D24241787F400F4D7E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D23241787F400F4D7E9 /* ViewController.swift */; };
 		CE271D27241787F400F4D7E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE271D25241787F400F4D7E9 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2E08DD0242B6EF400F119A1 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		CE271D1E241787F400F4D7E9 /* Extensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE271D21241787F400F4D7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE271D23241787F400F4D7E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				CE271D422417882200F4D7E9 /* Foundation */,
 				CE271D492417882200F4D7E9 /* Utils.swift */,
 				CE271D4A2417882200F4D7E9 /* JSONparser.swift */,
+				B2E08DD0242B6EF400F119A1 /* Map.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				CE271D4D2417882200F4D7E9 /* UIView.swift in Sources */,
 				CE271D512417882200F4D7E9 /* UITextField.swift in Sources */,
 				CE271D6C241788FE00F4D7E9 /* Vibro.swift in Sources */,
+				B2E08DD1242B6EF400F119A1 /* Map.swift in Sources */,
 				CE271D562417882200F4D7E9 /* UISegmentedControl.swift in Sources */,
 				CE271D69241788FE00F4D7E9 /* ApplicationOpportunities.swift in Sources */,
 				CE271D4B2417882200F4D7E9 /* UIScrollView.swift in Sources */,
