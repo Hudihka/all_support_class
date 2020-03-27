@@ -12,16 +12,16 @@ import Foundation
 ////необходима установка   pod 'ObjectMapper', '~> 3.3'
 //
 //extension Map {
-//    
+//
 //    func dateFromMAP(keyJSON: String, format: String = "yyyy-MM-dd'T'HH:mm:ssZ") -> Date?{
-//        
+//
 //        if let date = (self.JSON[keyJSON] as? String)?.getDatwToString(format){
 //            return date
 //        }
-//        
+//
 //        return nil
-//        
+//
 //    }
-//    
-//    
+//
+//
 //}

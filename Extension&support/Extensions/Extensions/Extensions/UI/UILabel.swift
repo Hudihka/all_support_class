@@ -59,6 +59,18 @@ extension UILabel {
         let attributes = font != nil ? [NSAttributedString.Key.font: font] : [:]
         return text.size(withAttributes: attributes as [NSAttributedString.Key: Any]).width
     }
+    
+    //длинна текста в лейбле
+    
+    var lenghtText: CGFloat?{
+        
+        if let text = self.text as NSString?, let font = self.font  {
+            
+            return (text as NSString).size(withAttributes: [NSAttributedString.Key.font : font]).width
+        }
+        return nil
+    }
+    
 }
 
 
