@@ -18,12 +18,25 @@ enum EnumNotification: String{
     case playNewFilters         = "playNewFilters"       //загрузка данных с учетом фиильтров
     case playInternetStatus     = "playInternetStatus"   //запрос на бэк прии смене интернет статуса
 
+	//sustem
+	case appExitaBacground      = "appExitaBacground"
+	case keybordWill            = "keybordWill"
+	case keybordDid  			= "keybordDid"
 
-//    case reloadBlure            = "reloadBlure"          //подгрузка фильтров с бэка закончена, показываем шторку
 
-
-    var nameNotific: NSNotification.Name {
-        return NSNotification.Name(self.rawValue)
+    private var nameNotific: NSNotification.Name {
+		
+		switch self {
+		case .appExitaBacground:
+			return UIApplication.willEnterForegroundNotification
+		case .keybordWill:
+			return UIResponder.keyboardDidShowNotification
+		case .keybordDid:
+			return UIResponder.keyboardWillHideNotification
+		default:
+			return NSNotification.Name(self.rawValue)
+		}
+		
     }
 
     func subscribeNotific(observer: Any, selector: Selector){
@@ -33,58 +46,36 @@ enum EnumNotification: String{
                                                object: nil)
     }
 
-    func notific() {
-        NotificationCenter.default.post(name: self.nameNotific, object: nil)
-    }
-
-
-    func notific(userInfo: [String: Any]) {
+    func notific(userInfo: [String: Any]? = nil) {
         NotificationCenter.default.post(name: self.nameNotific, object: nil, userInfo: userInfo)
     }
 
+}
 
-    //только для обновления блюра
-
-//    func reloadBlure(_ userInfo: EnumBlureVC?) {
+//extension Notification {
 //
-//        var userInfoNotific: [String : Any]? = nil
+//    var rejectTask: Bool? {
 //
-//        if let value = userInfo {
-//            userInfoNotific = ["NewBlureValue" : value]
+//        guard let userInfo = self.userInfo, let tag = userInfo["tag"] as? Int, tag != 0 else {
+//            return nil
 //        }
 //
-//        NotificationCenter.default.post(name: self.nameNotific, object: nil, userInfo: userInfoNotific)
+//        return tag == 1
 //    }
-
-
-
-}
-
-
-extension Notification {
-
-    var rejectTask: Bool? {
-
-        guard let userInfo = self.userInfo, let tag = userInfo["tag"] as? Int, tag != 0 else {
-            return nil
-        }
-
-        return tag == 1
-    }
-    
-    var message: String?{
-        return self.userInfo?["message"] as? String
-    }
-
-    var keyBakend: String?{
-        return self.userInfo?["keyBakend"] as? String
-    }
-
-    var countTask: Int?{
-        return self.userInfo?["countTask"] as? Int
-    }
-
-}
+//
+//    var message: String?{
+//        return self.userInfo?["message"] as? String
+//    }
+//
+//    var keyBakend: String?{
+//        return self.userInfo?["keyBakend"] as? String
+//    }
+//
+//    var countTask: Int?{
+//        return self.userInfo?["countTask"] as? Int
+//    }
+//
+//}
 
 
 /*

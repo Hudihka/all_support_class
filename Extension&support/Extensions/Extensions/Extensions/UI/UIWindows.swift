@@ -9,16 +9,6 @@
 import Foundation
 import UIKit
 
-extension UIApplication {
-    var workVC: UIViewController {
-        return self.keyWindow?.visibleViewController ?? UIViewController()
-    }
-
-    var statusBarView: UIView? {
-        return value(forKey: "statusBar") as? UIView
-    }
-}
-
 public extension UIWindow {
     var visibleViewController: UIViewController? {  //UIApplication.shared.keyWindow?.visibleViewController получить активный ВК
         return UIWindow.getVisibleViewControllerFrom(self.rootViewController)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52A337F4242FD854004D2806 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A337F3242FD854004D2806 /* UIApplication.swift */; };
 		B2E08DD1242B6EF400F119A1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E08DD0242B6EF400F119A1 /* Map.swift */; };
 		CE271D22241787F400F4D7E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D21241787F400F4D7E9 /* AppDelegate.swift */; };
 		CE271D24241787F400F4D7E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D23241787F400F4D7E9 /* ViewController.swift */; };
@@ -34,12 +35,13 @@
 		CE271D5E2417882200F4D7E9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D492417882200F4D7E9 /* Utils.swift */; };
 		CE271D5F2417882200F4D7E9 /* JSONparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D4A2417882200F4D7E9 /* JSONparser.swift */; };
 		CE271D69241788FE00F4D7E9 /* ApplicationOpportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D62241788FE00F4D7E9 /* ApplicationOpportunities.swift */; };
-		CE271D6A241788FE00F4D7E9 /* SupportNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D63241788FE00F4D7E9 /* SupportNotification.swift */; };
+		CE271D6A241788FE00F4D7E9 /* EnumNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D63241788FE00F4D7E9 /* EnumNotification.swift */; };
 		CE271D6B241788FE00F4D7E9 /* Constats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D64241788FE00F4D7E9 /* Constats.swift */; };
 		CE271D6C241788FE00F4D7E9 /* Vibro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE271D65241788FE00F4D7E9 /* Vibro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52A337F3242FD854004D2806 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		B2E08DD0242B6EF400F119A1 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		CE271D1E241787F400F4D7E9 /* Extensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE271D21241787F400F4D7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		CE271D492417882200F4D7E9 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CE271D4A2417882200F4D7E9 /* JSONparser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONparser.swift; sourceTree = "<group>"; };
 		CE271D62241788FE00F4D7E9 /* ApplicationOpportunities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationOpportunities.swift; sourceTree = "<group>"; };
-		CE271D63241788FE00F4D7E9 /* SupportNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportNotification.swift; sourceTree = "<group>"; };
+		CE271D63241788FE00F4D7E9 /* EnumNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumNotification.swift; sourceTree = "<group>"; };
 		CE271D64241788FE00F4D7E9 /* Constats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constats.swift; sourceTree = "<group>"; };
 		CE271D65241788FE00F4D7E9 /* Vibro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vibro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 			children = (
 				CE271D352417882200F4D7E9 /* UIScrollView.swift */,
 				CE271D362417882200F4D7E9 /* UIWindows.swift */,
+				52A337F3242FD854004D2806 /* UIApplication.swift */,
 				CE271D372417882200F4D7E9 /* UIView.swift */,
 				CE271D382417882200F4D7E9 /* UICollectionView.swift */,
 				CE271D392417882200F4D7E9 /* UITableView.swift */,
@@ -164,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				CE271D62241788FE00F4D7E9 /* ApplicationOpportunities.swift */,
-				CE271D63241788FE00F4D7E9 /* SupportNotification.swift */,
+				CE271D63241788FE00F4D7E9 /* EnumNotification.swift */,
 				CE271D64241788FE00F4D7E9 /* Constats.swift */,
 				CE271D65241788FE00F4D7E9 /* Vibro.swift */,
 			);
@@ -249,7 +252,8 @@
 				CE271D5F2417882200F4D7E9 /* JSONparser.swift in Sources */,
 				CE271D6B241788FE00F4D7E9 /* Constats.swift in Sources */,
 				CE271D5C2417882200F4D7E9 /* Timer.swift in Sources */,
-				CE271D6A241788FE00F4D7E9 /* SupportNotification.swift in Sources */,
+				CE271D6A241788FE00F4D7E9 /* EnumNotification.swift in Sources */,
+				52A337F4242FD854004D2806 /* UIApplication.swift in Sources */,
 				CE271D592417882200F4D7E9 /* Array.swift in Sources */,
 				CE271D582417882200F4D7E9 /* Date.swift in Sources */,
 				CE271D5E2417882200F4D7E9 /* Utils.swift in Sources */,
