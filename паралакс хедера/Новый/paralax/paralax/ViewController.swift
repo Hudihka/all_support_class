@@ -12,9 +12,18 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
 	}
 
-
+	@IBAction func present(_ sender: UIButton) {
+		
+		let VC = sender.tag == 0 ? DefaultController.route() : CustomController.route()
+		VC.modalPresentationStyle = .fullScreen
+		
+		self.present(VC, animated: true, completion: nil)
+	}
+	
+	
+	
 }
 

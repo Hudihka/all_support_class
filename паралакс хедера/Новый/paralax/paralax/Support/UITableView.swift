@@ -74,11 +74,6 @@ extension UITableView {
     }
 
 
-    func reloadDataHeader(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.reloadData()
-        }
-    }
 
 }
 
@@ -90,10 +85,5 @@ extension UITableViewCell {
         self.selectedBackgroundView = view
     }
 
-    func desingSeparator(isLast: Bool, offset: CGFloat = 18) {
-        if !isLast{
-            self.addSeparator(offset, isDown: true)
-        }
-    }
 
 }
