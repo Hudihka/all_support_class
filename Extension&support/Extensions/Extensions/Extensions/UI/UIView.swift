@@ -23,9 +23,22 @@ extension UIView {
 
     func addShadow() {
         self.layer.masksToBounds = false
+		self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.layer.shadowOpacity = 0.5
         self.layer.shadowRadius = 4
+    }
+	
+	func addShadowCustom(color: UIColor = UIColor.black,
+						 size: CGSize,
+						 shadowOpacity: Float,
+						 radius: CGFloat) {
+		
+        self.layer.masksToBounds = false
+		self.layer.shadowColor = color.cgColor
+        self.layer.shadowOffset = size
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowRadius = radius
     }
 
     func addDopShadow(){
