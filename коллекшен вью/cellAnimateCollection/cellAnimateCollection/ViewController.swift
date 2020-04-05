@@ -22,13 +22,15 @@ class ViewController: UIViewController {
 			dataArray.append(name)
 		}
 		
-		
+		desingCollection()
 	}
 
 
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+
+	
 	
 	fileprivate func desingCollection(){
 		
@@ -36,18 +38,42 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 									  clicableCell: false,
 									  arrayNameCell: ["TransformCollectionViewCell"])
 		
-		collectionView.
 	}
-	
-	
 	
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return dataArray.count
 	}
 	
+	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		<#code#>
+		
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransformCollectionViewCell", for: indexPath) as! TransformCollectionViewCell
+		
+		cell.name = dataArray[indexPath.row]
+		
+		return cell
+	}
+	
+	
+	func collectionView(_ collectionView: UICollectionView,
+						layout collectionViewLayout: UICollectionViewLayout,
+						sizeForItemAt indexPath: IndexPath) -> CGSize {
+		
+		return CGSize(width: wDdevice, height: wDdevice + 20)
+
+	}
+
+	func collectionView(_ collectionView: UICollectionView,
+						layout collectionViewLayout: UICollectionViewLayout,
+						minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return 0
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout
+		collectionViewLayout: UICollectionViewLayout,
+						minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+		return 0
 	}
 	
 	
