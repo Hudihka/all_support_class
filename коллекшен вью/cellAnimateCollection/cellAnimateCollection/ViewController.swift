@@ -29,18 +29,20 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-
 	
 	
 	fileprivate func desingCollection(){
 		
-		collectionView.baseSettingsCV(obj: self,
-									  clicableCell: false,
-									  arrayNameCell: ["TransformCollectionViewCell"])
+		collectionView.delegate = self
+		collectionView.dataSource = self
+		collectionView.backgroundColor = UIColor.clear
+		
+		let cellNib = UINib(nibName: "CollectionViewCell", bundle: nil)
+		collectionView.register(cellNib, forCellWithReuseIdentifier: "Cell")
 		
 	}
 	
-
+	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return dataArray.count
 	}
@@ -48,7 +50,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransformCollectionViewCell", for: indexPath) as! TransformCollectionViewCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
 		
 		cell.name = dataArray[indexPath.row]
 		
@@ -61,15 +63,15 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 						sizeForItemAt indexPath: IndexPath) -> CGSize {
 		
 		return CGSize(width: wDdevice, height: wDdevice + 20)
-
+		
 	}
-
+	
 	func collectionView(_ collectionView: UICollectionView,
 						layout collectionViewLayout: UICollectionViewLayout,
 						minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		return 0
 	}
-
+	
 	func collectionView(_ collectionView: UICollectionView, layout
 		collectionViewLayout: UICollectionViewLayout,
 						minimumLineSpacingForSectionAt section: Int) -> CGFloat {

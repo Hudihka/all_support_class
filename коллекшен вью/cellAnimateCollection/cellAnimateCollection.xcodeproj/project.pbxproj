@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5246340F243A4B450020C507 /* TransformViewCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5246340E243A4B450020C507 /* TransformViewCollection.xib */; };
+		52463411243A4B5C0020C507 /* TransformViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52463410243A4B5C0020C507 /* TransformViewCollection.swift */; };
+		52463416243A517A0020C507 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52463414243A517A0020C507 /* CollectionViewCell.swift */; };
+		52463417243A517A0020C507 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52463415243A517A0020C507 /* CollectionViewCell.xib */; };
 		525C06AB243A1A26009B2C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C06AA243A1A26009B2C6C /* AppDelegate.swift */; };
 		525C06AF243A1A26009B2C6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C06AE243A1A26009B2C6C /* ViewController.swift */; };
 		525C06B2243A1A26009B2C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525C06B0243A1A26009B2C6C /* Main.storyboard */; };
@@ -17,11 +21,13 @@
 		525C0700243A2CFD009B2C6C /* Vibro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C06FC243A2CFD009B2C6C /* Vibro.swift */; };
 		525C0703243A2D3C009B2C6C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C0701243A2D3B009B2C6C /* UIView.swift */; };
 		525C0704243A2D3C009B2C6C /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C0702243A2D3B009B2C6C /* UICollectionView.swift */; };
-		525C0707243A2DB6009B2C6C /* TransformCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C0705243A2DB6009B2C6C /* TransformCollectionViewCell.swift */; };
-		525C0708243A2DB6009B2C6C /* TransformCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525C0706243A2DB6009B2C6C /* TransformCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5246340E243A4B450020C507 /* TransformViewCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformViewCollection.xib; sourceTree = "<group>"; };
+		52463410243A4B5C0020C507 /* TransformViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformViewCollection.swift; sourceTree = "<group>"; };
+		52463414243A517A0020C507 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		52463415243A517A0020C507 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		525C06A7243A1A26009B2C6C /* cellAnimateCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cellAnimateCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525C06AA243A1A26009B2C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		525C06AE243A1A26009B2C6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,8 +40,6 @@
 		525C06FC243A2CFD009B2C6C /* Vibro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vibro.swift; sourceTree = "<group>"; };
 		525C0701243A2D3B009B2C6C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		525C0702243A2D3B009B2C6C /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
-		525C0705243A2DB6009B2C6C /* TransformCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformCollectionViewCell.swift; sourceTree = "<group>"; };
-		525C0706243A2DB6009B2C6C /* TransformCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,10 @@
 		525C0709243A2DF3009B2C6C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				525C0705243A2DB6009B2C6C /* TransformCollectionViewCell.swift */,
-				525C0706243A2DB6009B2C6C /* TransformCollectionViewCell.xib */,
+				52463414243A517A0020C507 /* CollectionViewCell.swift */,
+				52463415243A517A0020C507 /* CollectionViewCell.xib */,
+				5246340E243A4B450020C507 /* TransformViewCollection.xib */,
+				52463410243A4B5C0020C507 /* TransformViewCollection.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -171,7 +177,8 @@
 				525C06B7243A1A28009B2C6C /* LaunchScreen.storyboard in Resources */,
 				525C06B4243A1A28009B2C6C /* Assets.xcassets in Resources */,
 				525C06B2243A1A26009B2C6C /* Main.storyboard in Resources */,
-				525C0708243A2DB6009B2C6C /* TransformCollectionViewCell.xib in Resources */,
+				5246340F243A4B450020C507 /* TransformViewCollection.xib in Resources */,
+				52463417243A517A0020C507 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,11 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				525C06AF243A1A26009B2C6C /* ViewController.swift in Sources */,
+				52463411243A4B5C0020C507 /* TransformViewCollection.swift in Sources */,
+				52463416243A517A0020C507 /* CollectionViewCell.swift in Sources */,
 				525C0700243A2CFD009B2C6C /* Vibro.swift in Sources */,
 				525C0704243A2D3C009B2C6C /* UICollectionView.swift in Sources */,
 				525C06FF243A2CFD009B2C6C /* Constats.swift in Sources */,
 				525C06AB243A1A26009B2C6C /* AppDelegate.swift in Sources */,
-				525C0707243A2DB6009B2C6C /* TransformCollectionViewCell.swift in Sources */,
 				525C0703243A2D3C009B2C6C /* UIView.swift in Sources */,
 				525C06BF243A1A97009B2C6C /* TwoViewController.swift in Sources */,
 			);
