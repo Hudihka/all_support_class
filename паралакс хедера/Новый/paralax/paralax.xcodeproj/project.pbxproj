@@ -18,6 +18,8 @@
 		52BF02212438FFD60080F8E7 /* CustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF02202438FFD60080F8E7 /* CustomController.swift */; };
 		52BF0227243908B20080F8E7 /* HederView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF0225243908B20080F8E7 /* HederView.swift */; };
 		52BF0228243908B20080F8E7 /* HederView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BF0226243908B20080F8E7 /* HederView.xib */; };
+		52BF02302439C5A80080F8E7 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BF022F2439C5A80080F8E7 /* Header.xib */; };
+		52BF02322439C5BC0080F8E7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF02312439C5BC0080F8E7 /* Header.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		52BF02202438FFD60080F8E7 /* CustomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomController.swift; path = ../CustomController.swift; sourceTree = "<group>"; };
 		52BF0225243908B20080F8E7 /* HederView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HederView.swift; sourceTree = "<group>"; };
 		52BF0226243908B20080F8E7 /* HederView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HederView.xib; sourceTree = "<group>"; };
+		52BF022F2439C5A80080F8E7 /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Header.xib; path = ../../Header.xib; sourceTree = "<group>"; };
+		52BF02312439C5BC0080F8E7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				52BF02202438FFD60080F8E7 /* CustomController.swift */,
+				52BF022F2439C5A80080F8E7 /* Header.xib */,
+				52BF02312439C5BC0080F8E7 /* Header.swift */,
 			);
 			path = CustomVC;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BF020F2438FC0D0080F8E7 /* LaunchScreen.storyboard in Resources */,
+				52BF02302439C5A80080F8E7 /* Header.xib in Resources */,
 				52BF0228243908B20080F8E7 /* HederView.xib in Resources */,
 				52BF020C2438FC0D0080F8E7 /* Assets.xcassets in Resources */,
 				52BF020A2438FC0C0080F8E7 /* Main.storyboard in Resources */,
@@ -186,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BF02322439C5BC0080F8E7 /* Header.swift in Sources */,
 				52BF02072438FC0C0080F8E7 /* ViewController.swift in Sources */,
 				52BF02192438FD2C0080F8E7 /* UITableView.swift in Sources */,
 				52BF021D2438FF340080F8E7 /* DefaultController.swift in Sources */,
