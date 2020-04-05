@@ -10,8 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HederView" customModule="paralax" customModuleProvider="target">
             <connections>
                 <outlet property="conteinerView" destination="iN0-l3-epB" id="dFc-71-mfh"/>
-                <outlet property="downConstrein" destination="EeT-MT-YA7" id="8k8-0O-v2F"/>
-                <outlet property="imageContent" destination="y1g-Wp-1TM" id="nzZ-To-C0J"/>
+                <outlet property="imageContent" destination="y1g-Wp-1TM" id="nO1-4j-QfI"/>
                 <outlet property="upConstreint" destination="qEm-Ra-Pww" id="vYf-sG-JoB"/>
             </connections>
         </placeholder>

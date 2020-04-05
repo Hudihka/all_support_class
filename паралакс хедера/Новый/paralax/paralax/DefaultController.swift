@@ -43,6 +43,8 @@ extension DefaultController: UITableViewDelegate, UITableViewDataSource{
 		self.tableView.dataSource = self
 		
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+		
+		tableView.addHederView(image: UIImage(named: "testIMG"), height: nil)
 	}
 	
 	
@@ -62,4 +64,42 @@ extension DefaultController: UITableViewDelegate, UITableViewDataSource{
 	}
 	
 	
+}
+
+extension UITableView{
+	
+	// один из параметров должен быть обяз не опциональный
+	func addHederView(image: UIImage?, height: CGFloat?){
+		
+		if self.tableHeaderView == nil {
+			
+			let heightHeader = height ?? image?.getHeightUIImage(width: self.frame.width)
+			
+			let rect = CGRect(origin: .zero,
+							  size: CGSize(width: self.frame.width, height: heightHeader!))
+			
+			let hederViewCustom = HederView(frame: rect)
+			
+			
+			hederViewCustom.updateContent(image: image, superView: self)
+			self.tableHeaderView = hederViewCustom
+			
+		}
+	}
+}
+
+
+extension UIImage{
+
+	func getHeightUIImage(width: CGFloat) -> CGFloat{
+		
+		let size = self.size
+
+		return width * size.height / size.width
+
+	}
+
+
+
+
 }
