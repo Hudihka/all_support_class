@@ -76,7 +76,9 @@ extension UIView {
     }
 
     func cirkleView() {
-        let radius = self.frame.height / 2
+		let value = min(self.frame.height, self.frame.width)
+		
+        let radius = value / 2
         self.addRadius(number: radius)
     }
 
