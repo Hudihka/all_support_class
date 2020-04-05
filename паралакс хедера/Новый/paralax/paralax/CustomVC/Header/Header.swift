@@ -19,7 +19,7 @@ class Header: UIView{
 	
 	var SCView: UIScrollView? = nil
 	
-	private var height: CGFloat = 0
+	private let heightShadow: CGFloat = 40
 	@IBOutlet weak var heghtShadow: NSLayoutConstraint!
 	@IBOutlet weak var positionShadow: NSLayoutConstraint!
 	@IBOutlet weak var imageShadow: UIImageView!
@@ -35,6 +35,7 @@ class Header: UIView{
 		
 		self.imageContent.image = image
 		self.SCView = superView
+		self.desingShadow()
 		
 		SCView?.addObserver(self,
 							forKeyPath: #keyPath(UIScrollView.contentOffset),
@@ -67,22 +68,13 @@ class Header: UIView{
 		conteinerView.clipsToBounds = false
     }
     
-    
-    private func paralax(value: CGFloat) {
+	
+	private func desingShadow(){
 		
-		
-//        let delta: CGFloat = scrollView.contentOffset.y
-//
-//        addSettings(deltaNegative: delta < 0)
-//        if delta < 0 {
-//            swipeDownParalax(delta: delta)
-//        } else if delta > 0{
-//            swipeUpParalax(delta: delta / 2)
-//        } else { //== 0
-//
-//        }
-        
-    }
+		imageShadow.image = #imageLiteral(resourceName: "shadow")
+		heghtShadow.constant = heightShadow
+		positionShadow.constant = self.frame.height - heightShadow
+	}
 	
 	//MARK - KVC
 	
@@ -96,8 +88,10 @@ class Header: UIView{
 			
 			if offset < 0 {
 				self.upConstreint.constant = offset
-			} else {
+			} else if offset == 0 {
 				self.upConstreint.constant = 0
+			} else if offset > 0 {
+				self.upConstreint.constant = offset / 2
 			}
 			
         }

@@ -45,6 +45,8 @@ extension CustomController: UITableViewDelegate, UITableViewDataSource{
 		self.tableView.dataSource = self
 		
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+		
+		tableView.addHederShadowView(image: UIImage(named: "testIMG"), koef: 0.65)
 	}
 	
 	
@@ -64,4 +66,44 @@ extension CustomController: UITableViewDelegate, UITableViewDataSource{
 	}
 	
 	
+}
+
+
+extension UITableView{
+	
+	// один из параметров должен быть обяз не опциональный
+	func addHederShadowView(image: UIImage?, height: CGFloat?){
+		
+		if self.tableHeaderView == nil {
+			
+			guard let heightHeader = height ?? image?.getHeightUIImage(width: self.frame.width) else {
+				return
+			}
+			
+			let hederViewCustom = Header(heightHeader: heightHeader,
+										image: image,
+										superView: self)
+			
+			self.tableHeaderView = hederViewCustom
+			
+		}
+	}
+	
+//	если koef == 1 то высота хедера == ширине
+//	если koef == 0.5 то высота хедера == ширине * 0.5
+	
+	func addHederShadowView(image: UIImage?, koef: CGFloat){
+		
+		if self.tableHeaderView == nil {
+			
+			let heightHeader = self.frame.width * koef
+			
+			let hederViewCustom = Header(heightHeader: heightHeader,
+										image: image,
+										superView: self)
+			
+			self.tableHeaderView = hederViewCustom
+			
+		}
+	}
 }
