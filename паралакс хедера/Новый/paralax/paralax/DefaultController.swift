@@ -44,7 +44,7 @@ extension DefaultController: UITableViewDelegate, UITableViewDataSource{
 		
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 		
-		tableView.addHederView(image: UIImage(named: "testIMG"), height: nil)
+		tableView.addHederView(image: UIImage(named: "testIMG"), koef: 0.5)
 	}
 	
 	
@@ -73,15 +73,32 @@ extension UITableView{
 		
 		if self.tableHeaderView == nil {
 			
-			let heightHeader = height ?? image?.getHeightUIImage(width: self.frame.width)
+			guard let heightHeader = height ?? image?.getHeightUIImage(width: self.frame.width) else {
+				return
+			}
 			
-			let rect = CGRect(origin: .zero,
-							  size: CGSize(width: self.frame.width, height: heightHeader!))
+			let hederViewCustom = HederView(heightHeader: heightHeader,
+											image: image,
+											superView: self)
 			
-			let hederViewCustom = HederView(frame: rect)
+			self.tableHeaderView = hederViewCustom
 			
+		}
+	}
+	
+//	если koef == 1 то высота хедера == ширине
+//	если koef == 0.5 то высота хедера == ширине * 0.5
+	
+	func addHederView(image: UIImage?, koef: CGFloat){
+		
+		if self.tableHeaderView == nil {
 			
-			hederViewCustom.updateContent(image: image, superView: self)
+			let heightHeader = self.frame.width * koef
+			
+			let hederViewCustom = HederView(heightHeader: heightHeader,
+											image: image,
+											superView: self)
+			
 			self.tableHeaderView = hederViewCustom
 			
 		}

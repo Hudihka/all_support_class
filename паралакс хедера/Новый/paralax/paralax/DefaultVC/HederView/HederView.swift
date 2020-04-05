@@ -18,9 +18,27 @@ class HederView: UIView{
     @IBOutlet weak var imageContent: UIImageView!
 	
 	var SCView: UIScrollView? = nil
+	
+	convenience init(heightHeader: CGFloat, image: UIImage?, superView: UIScrollView) {
+		
+		let rect = CGRect(origin: .zero,
+						  size: CGSize(width: superView.frame.width,
+									   height: heightHeader))
+		
+		self.init(frameCustom: rect)
+		
+		self.imageContent.image = image
+		self.SCView = superView
+		
+		SCView?.addObserver(self,
+							forKeyPath: #keyPath(UIScrollView.contentOffset),
+							options: [.new, .old],
+							context: nil)
+	}
+	
     
-    override init (frame: CGRect) {
-        super.init(frame: frame)
+    init(frameCustom: CGRect) {
+        super.init(frame: frameCustom)
         xibSetup()
         settingsView()
     }
@@ -42,18 +60,6 @@ class HederView: UIView{
 		imageContent.contentMode = .scaleAspectFill
 		conteinerView.clipsToBounds = false
     }
-	
-	func updateContent(image: UIImage?, superView: UIScrollView){
-		
-		self.imageContent.image = image
-
-		self.SCView = superView
-		
-		SCView?.addObserver(self,
-							forKeyPath: #keyPath(UIScrollView.contentOffset),
-							options: [.new, .old],
-							context: nil)
-	}
     
     
     private func paralax(value: CGFloat) {
