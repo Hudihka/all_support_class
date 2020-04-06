@@ -27,7 +27,8 @@ class TwoViewController: UIViewController {
 	static func route(image: UIImage) -> TwoViewController{
 		
 		let storubord = UIStoryboard(name: "Main", bundle: nil)
-		let VC = storubord.instantiateViewController(identifier: "TwoViewController") as! TwoViewController
+		
+		let VC = storubord.instantiateViewController(withIdentifier: "TwoViewController") as! TwoViewController
 		
 		VC.uiImage = image
 		
