@@ -33,6 +33,43 @@ class CollectionViewCell: UICollectionViewCell {
 		
 		transformView.addShadow()
 		
+		
+		
+    }
+	
+	private func addGesture(){ // если тру то будет добавлен жест со свайпоп
+        
+        let oneTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected(_:)))
+		transformView?.addGestureRecognizer(oneTap)
+		
+
+        let longPres = UILongPressGestureRecognizer(target: self,
+													action: #selector(transformGesters))
+		
+		transformView?.addGestureRecognizer(longPres)
+		longPres.minimumPressDuration = 0.0001
+		longPres.delegate = self
+
+		oneTap.require(toFail: longPres)
+
     }
 
+	@objc private func tapDetected(_ sender: UITapGestureRecognizer) {
+		
+	}
+	
+	@objc private func transformGesters(_ sender: UITapGestureRecognizer) {
+		
+	}
+
+}
+
+
+
+extension CollectionViewCell: UIGestureRecognizerDelegate {
+	
+	
+	
+	
+	
 }
