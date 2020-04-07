@@ -58,6 +58,18 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 	}
 	
 	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		
+		
+		let name = dataArray[indexPath.row]
+		let VC = TwoViewController.route(imageName: name)
+		
+		self.present(VC, animated: true, completion: nil)
+		
+	}
+	
+	//MARK: Слои
+	
 	func collectionView(_ collectionView: UICollectionView,
 						layout collectionViewLayout: UICollectionViewLayout,
 						sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -77,6 +89,43 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 						minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 		return 0
 	}
+	
+	//MARK: - Анимация ячеек
+	
+	func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+		
+		self.animate(index: indexPath) { (view) in
+			view.transform = .init(scaleX: 0.95, y: 0.95)
+		}
+		
+	}
+
+	func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+		
+		self.animate(index: indexPath) { (view) in
+			view.transform = .identity
+		}
+		
+	}
+	
+	
+	private func animate(index: IndexPath, animationsBlock:@escaping(TransformViewCollection) -> Void){
+		
+		UIView.animateKeyframes(withDuration: 0.5,
+								delay: 0,
+								options: [.calculationModePaced],
+								animations: {
+									
+									if let cell = self.collectionView.cellForItem(at: index) as? CollectionViewCell, let view = cell.transformView {
+										animationsBlock(view)
+									}
+									
+		},
+								completion: nil)
+		
+	}
+	
+	
 	
 	
 }
