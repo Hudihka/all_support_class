@@ -9,17 +9,24 @@ import UserNotifications
 import UIKit
 
 class ApplicationOpportunities: NSObject {
-    static var pushNotificStatus = false
-
-    static func getNotificationActive() {
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().getNotificationSettings { (settings) in
-                ApplicationOpportunities.pushNotificStatus = settings.authorizationStatus == .authorized
+    
+	static func activePush(compl:@escaping(Bool) -> Void){
+		if #available(iOS 10.0, *) {
+            
+            DispatchQueue.global(qos: .userInteractive).sync{
+                UNUserNotificationCenter.current().getNotificationSettings {(settings) in
+                    DispatchQueue.main.async {
+						compl(settings.authorizationStatus == .authorized)
+					}
+                }
             }
+            
         } else {
-            ApplicationOpportunities.pushNotificStatus = UIApplication.shared.isRegisteredForRemoteNotifications
+			compl(UIApplication.shared.isRegisteredForRemoteNotifications)
         }
-    }
+	}
+	
+	
 
     static var versionAplication: String {
         guard let appVersion = Bundle.main.infoDictionary else {
