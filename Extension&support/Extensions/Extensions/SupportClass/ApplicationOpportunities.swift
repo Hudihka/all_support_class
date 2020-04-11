@@ -16,7 +16,7 @@ class ApplicationOpportunities: NSObject {
 	
 	//MARK: - MULTI MEDIA
 	
-	enum PhotoStatus {
+	enum StatusAccess {
 		case permitted      //доступ разрещен
 		case ban            //доступ запрещен
 		case pressTrue      //разрешил доступ
@@ -24,7 +24,7 @@ class ApplicationOpportunities: NSObject {
 		case noValue        //не определился
 	}
 	
-	static func dismisCameraVC(completion: @escaping (PhotoStatus) -> Void) {
+	static func dismisCameraVC(completion: @escaping (StatusAccess) -> Void) {
 		 switch AVCaptureDevice.authorizationStatus(for: .video) {
 		 case .denied:
 			 completion(.ban)
@@ -46,7 +46,7 @@ class ApplicationOpportunities: NSObject {
 	 }
 	
 	
-	static func checkPhotoLibraryPermission(completion: @escaping (PhotoStatus) -> Void) {
+	static func checkPhotoLibraryPermission(completion: @escaping (StatusAccess) -> Void) {
 			let status = PHPhotoLibrary.authorizationStatus()
 			switch status {
 			case .authorized:
@@ -124,6 +124,25 @@ class ApplicationOpportunities: NSObject {
         }
 
         return false
+    }
+	
+	
+	//MARK: - получение доступа к микрофону
+    private func checkRecordPermission(completion: @escaping(StatusAccess?) -> Void){
+
+        switch AVAudioSession.sharedInstance().recordPermission {
+        case AVAudioSession.RecordPermission.granted:
+			completion(.permitted)
+        case AVAudioSession.RecordPermission.denied:
+			completion(.ban)
+        case AVAudioSession.RecordPermission.undetermined:
+            AVAudioSession.sharedInstance().requestRecordPermission({ (allowed) in
+                completion(nil)
+            })
+        default:
+            break
+        }
+
     }
 	
 	
