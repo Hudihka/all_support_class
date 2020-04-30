@@ -25,13 +25,11 @@ class ViewController: UIViewController {
     func addData(_ count: Int){
 
         var newData: [String] = []
-
         for _ in 0...count - 1 {
             newData.append("_")
         }
 
         dataArray = dataArray + newData
-
     }
 
 }
