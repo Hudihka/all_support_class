@@ -48,7 +48,7 @@ class CircleView: UIView {
 	
 	private func addCircle() {
 		
-		self.backgroundColor = UIColor.clear
+//		self.backgroundColor = UIColor.clear
 		guard let startValue = startValue,
 			let finishValue = finishValue,
 			let clockwise = clockwise else {

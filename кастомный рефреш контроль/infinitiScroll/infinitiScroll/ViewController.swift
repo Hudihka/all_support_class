@@ -27,18 +27,19 @@ class ViewController: UIViewController {
     }
 	
 	private func createRefreshView(){
-//
-		refresh.tintColor = .clear
-		refresh.backgroundColor = .clear
-				
-		tableView.addSubview(refresh)
-		refreshView = RefreshView(frame: refresh.frame)
+		
+		let rect = CGRect(x: 0,
+						  y: 0,
+						  width: tableView.frame.width,
+						  height: 0)
+		
+		refreshView = RefreshView(frame: rect)
 
 		refreshView?.block = {
 			self.refresh.endRefreshing()
 		}
-
-		refresh.addSubview(refreshView!)
+		
+		self.tableView.tableHeaderView = refreshView
 	}
 
 
@@ -81,7 +82,41 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 	
 	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
-		refreshView?.offset = scrollView.contentOffset.y
+		
+		guard let refreshView = refreshView else {
+			return
+		}
+		
+		let offset = scrollView.contentOffset.y
+		
+		if refreshView.blockUpConstreint, offset >= -100{
+			return
+		} else {
+			print("---------------------------")
+			refreshView.offset = scrollView.contentOffset.y
+		}
+		
+	}
+	
+	
+	func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+		guard let refreshView = refreshView else {
+			return
+		}
+		
+		let offset = scrollView.contentOffset.y
+		
+		if refreshView.blockUpConstreint == false, refreshView.animateCirkles, offset <= -100{
+			print("block")
+			refreshView.blockUpConstreint = true
+			
+			let rect = CGRect(x: 0,
+							  y: 0,
+							  width: tableView.frame.width,
+							  height: 100)
+			
+			refreshView.frame = rect
+		}
 	}
 
 }
