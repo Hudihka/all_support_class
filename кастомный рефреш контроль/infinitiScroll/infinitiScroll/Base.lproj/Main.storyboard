@@ -118,6 +118,13 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qW-po-bmV">
                                 <rect key="frame" x="119" y="519" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhL-z3-kXa">
+                                        <rect key="frame" x="75" y="21" width="90" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -132,12 +139,13 @@
                         <viewLayoutGuide key="safeArea" id="jup-MT-Cnt"/>
                     </view>
                     <connections>
+                        <outlet property="testView2" destination="xhL-z3-kXa" id="gIY-um-C9P"/>
                         <outlet property="testview" destination="2qW-po-bmV" id="XF8-9c-VCz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgI-a6-Wz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="-331"/>
+            <point key="canvasLocation" x="1228" y="-331.48425787106447"/>
         </scene>
     </scenes>
 </document>

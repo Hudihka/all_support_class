@@ -12,7 +12,9 @@ class TestVC2: UIViewController {
 	
 	//	https://www.youtube.com/watch?v=IWujpBGqxfQ
 	
+	@IBOutlet weak var testView2: UIView!
 	@IBOutlet weak var testview: UIView!
+	
 	let shapeLayerBig = CAShapeLayer()
 	let shapeLayerSmall = CAShapeLayer()
 	
@@ -75,6 +77,14 @@ class TestVC2: UIViewController {
 		rotation.isCumulative = true
 		rotation.repeatCount = Float.greatestFiniteMagnitude
 		testview.layer.add(rotation, forKey: "rotationAnimation")
+		
+		
+		let rotation2: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+		rotation2.toValue = -2 * Double.pi
+		rotation2.duration = 2.5 // or however long you want ...
+		rotation2.isCumulative = true
+		rotation2.repeatCount = Float.greatestFiniteMagnitude
+		testView2.layer.add(rotation2, forKey: "rotationAnimation2")
 	}
 
 	
