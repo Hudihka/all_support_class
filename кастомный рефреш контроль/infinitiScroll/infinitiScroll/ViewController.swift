@@ -28,17 +28,17 @@ class ViewController: UIViewController {
 	
 	private func createRefreshView(){
 //
-//		refresh.tintColor = .clear
-//		refresh.backgroundColor = .clear
+		refresh.tintColor = .clear
+		refresh.backgroundColor = .clear
 				
 		tableView.addSubview(refresh)
-//		refreshView = RefreshView(frame: refresh.frame)
-//
-//		refreshView?.block = {
-//			self.refresh.endRefreshing()
-//		}
-//
-//		refresh.addSubview(refreshView!)
+		refreshView = RefreshView(frame: refresh.frame)
+
+		refreshView?.block = {
+			self.refresh.endRefreshing()
+		}
+
+		refresh.addSubview(refreshView!)
 	}
 
 
