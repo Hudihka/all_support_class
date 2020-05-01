@@ -182,6 +182,17 @@ extension UIView {
             return image
         }
     }
+	
+	func infinitiRotate(clockRotate: Bool, duratiuon: CFTimeInterval, key: String){
+		let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+		
+		let toValue: Double = clockRotate ? 2 : -2
+		rotation.toValue = toValue * Double.pi
+		rotation.duration = duratiuon
+		rotation.isCumulative = true
+		rotation.repeatCount = Float.greatestFiniteMagnitude
+		self.layer.add(rotation, forKey: key)
+	}
 }
 
 
