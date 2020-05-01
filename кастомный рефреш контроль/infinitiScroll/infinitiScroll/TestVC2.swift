@@ -18,6 +18,9 @@ class TestVC2: UIViewController {
 	let shapeLayerBig = CAShapeLayer()
 	let shapeLayerSmall = CAShapeLayer()
 	
+	var cirkleView: CircleView?
+	var cirkleView2: CircleView?
+	
 	private let minPi: Double = Double.pi * 0.075
 	
 
@@ -58,37 +61,33 @@ class TestVC2: UIViewController {
 		shapeLayerSmall.strokeEnd = 0
 		
 		
+		cirkleView = CircleView(frame: CGRect(x: 50, y: 100, width: 60, height: 60))
+		cirkleView?.startValue = EnumAngels.zero.finishValue(from: false)
+		cirkleView?.finishValue = EnumAngels.zero.finishValue(from: true)
+		cirkleView?.clockwise = true
+		self.view.addSubview(cirkleView!)
+		
+		
+		cirkleView2 = CircleView(frame: CGRect(x: 65, y: 115, width: 30, height: 30))
+		cirkleView2?.startValue = EnumAngels.sixHours.finishValue(from: true)
+		cirkleView2?.finishValue = EnumAngels.sixHours.finishValue(from: false)
+		cirkleView2?.clockwise = false
+		self.view.addSubview(cirkleView2!)
+		
+		
 
     }
 	@IBAction func actionSlider(_ sender: UISlider) {
-		shapeLayerBig.strokeEnd = CGFloat(sender.value)
-		shapeLayerSmall.strokeEnd = CGFloat(sender.value)
 		
+		self.cirkleView?.value = CGFloat(sender.value)
+		self.cirkleView2?.value = CGFloat(sender.value)
 		
-		if sender.value == 1{
-			addAnimateRotate()
+		if sender.value == 1 {
+			cirkleView?.infinitiRotate(clockRotate: true, duratiuon: 1, key: "key1")
+			cirkleView2?.infinitiRotate(clockRotate: false, duratiuon: 1, key: "key2")
 		}
+		
 	}
 	
-	private func addAnimateRotate(){
-		let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-		rotation.toValue = Double.pi * 2
-		rotation.duration = 5 // or however long you want ...
-		rotation.isCumulative = true
-		rotation.repeatCount = Float.greatestFiniteMagnitude
-		testview.layer.add(rotation, forKey: "rotationAnimation")
-		
-		
-		let rotation2: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-		rotation2.toValue = -2 * Double.pi
-		rotation2.duration = 2.5 // or however long you want ...
-		rotation2.isCumulative = true
-		rotation2.repeatCount = Float.greatestFiniteMagnitude
-		testView2.layer.add(rotation2, forKey: "rotationAnimation2")
-	}
-
-	
-	@IBAction func action(_ sender: UIButton) {
-	}
 	
 }

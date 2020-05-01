@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		521168A6245BF6A800B8BB78 /* TestVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168A5245BF6A800B8BB78 /* TestVC2.swift */; };
+		521168A9245C14FB00B8BB78 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168A8245C14FB00B8BB78 /* CircleView.swift */; };
+		521168AC245C154600B8BB78 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168AB245C154600B8BB78 /* UIView.swift */; };
+		521168B0245C163500B8BB78 /* EnumAngels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168AF245C163500B8BB78 /* EnumAngels.swift */; };
 		52C83EBB245B47C20077BA17 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C83EBA245B47C20077BA17 /* TestVC.swift */; };
 		CEA3A6A223B9E63800E2C71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A6A123B9E63800E2C71C /* AppDelegate.swift */; };
 		CEA3A6A423B9E63800E2C71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A6A323B9E63800E2C71C /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		521168A5245BF6A800B8BB78 /* TestVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestVC2.swift; path = infinitiScroll/TestVC2.swift; sourceTree = SOURCE_ROOT; };
+		521168A8245C14FB00B8BB78 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = ../CircleView.swift; sourceTree = "<group>"; };
+		521168AB245C154600B8BB78 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../UIView.swift; sourceTree = "<group>"; };
+		521168AF245C163500B8BB78 /* EnumAngels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumAngels.swift; sourceTree = "<group>"; };
 		52C83EBA245B47C20077BA17 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestVC.swift; path = infinitiScroll/TestVC.swift; sourceTree = SOURCE_ROOT; };
 		CEA3A69E23B9E63800E2C71C /* infinitiScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infinitiScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA3A6A123B9E63800E2C71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,23 @@
 			path = TestVC;
 			sourceTree = "<group>";
 		};
+		521168AA245C151B00B8BB78 /* RefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				521168A8245C14FB00B8BB78 /* CircleView.swift */,
+				521168AF245C163500B8BB78 /* EnumAngels.swift */,
+			);
+			path = RefreshView;
+			sourceTree = "<group>";
+		};
+		521168AD245C154B00B8BB78 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				521168AB245C154600B8BB78 /* UIView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		CEA3A69523B9E63800E2C71C = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +90,11 @@
 		CEA3A6A023B9E63800E2C71C /* infinitiScroll */ = {
 			isa = PBXGroup;
 			children = (
+				521168AD245C154B00B8BB78 /* Extension */,
 				CEA3A6A123B9E63800E2C71C /* AppDelegate.swift */,
 				CEA3A6A323B9E63800E2C71C /* ViewController.swift */,
 				CEA3A6A523B9E63800E2C71C /* Main.storyboard */,
+				521168AA245C151B00B8BB78 /* RefreshView */,
 				521168A7245BF6BA00B8BB78 /* TestVC */,
 				CEA3A6A823B9E63900E2C71C /* Assets.xcassets */,
 				CEA3A6AA23B9E63900E2C71C /* LaunchScreen.storyboard */,
@@ -149,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521168B0245C163500B8BB78 /* EnumAngels.swift in Sources */,
 				CEA3A6A423B9E63800E2C71C /* ViewController.swift in Sources */,
+				521168A9245C14FB00B8BB78 /* CircleView.swift in Sources */,
 				52C83EBB245B47C20077BA17 /* TestVC.swift in Sources */,
 				CEA3A6A223B9E63800E2C71C /* AppDelegate.swift in Sources */,
+				521168AC245C154600B8BB78 /* UIView.swift in Sources */,
 				521168A6245BF6A800B8BB78 /* TestVC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
