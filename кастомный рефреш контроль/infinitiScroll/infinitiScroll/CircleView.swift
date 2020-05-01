@@ -30,6 +30,7 @@ class CircleView: UIView {
 	}
 	
 	let shapeLayer = CAShapeLayer()
+	
 	var value: CGFloat = 0{
 		didSet{
 			shapeLayer.strokeEnd = value
@@ -64,7 +65,7 @@ class CircleView: UIView {
 								clockwise: clockwise)
 		
 		shapeLayer.path = path.cgPath
-		shapeLayer.lineWidth = 4
+		shapeLayer.lineWidth = 2
 		shapeLayer.strokeColor = UIColor.red.cgColor
 		shapeLayer.fillColor = UIColor.clear.cgColor
 		shapeLayer.lineCap = .round
@@ -72,10 +73,5 @@ class CircleView: UIView {
 		shapeLayer.strokeEnd = 0
 	}
 	
-	func zeroingCGPath(){
-		UIView.animate(withDuration: 0.3) {
-			self.value = 0
-		}
-	}
 	
 }

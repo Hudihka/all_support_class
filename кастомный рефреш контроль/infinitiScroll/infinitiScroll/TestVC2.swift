@@ -74,8 +74,8 @@ class TestVC2: UIViewController {
 		cirkleView?.layer.removeAnimation(forKey: "key1")
 		cirkleView2?.layer.removeAnimation(forKey: "key2")
 		
-		cirkleView?.zeroingCGPath()
-		cirkleView2?.zeroingCGPath()
+//		cirkleView?.zeroingCGPath()
+//		cirkleView2?.zeroingCGPath()
 		
 		animateCirkles = false
 	}

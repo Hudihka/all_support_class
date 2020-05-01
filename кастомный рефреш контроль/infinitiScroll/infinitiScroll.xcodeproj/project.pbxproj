@@ -11,6 +11,8 @@
 		521168A9245C14FB00B8BB78 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168A8245C14FB00B8BB78 /* CircleView.swift */; };
 		521168AC245C154600B8BB78 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168AB245C154600B8BB78 /* UIView.swift */; };
 		521168B0245C163500B8BB78 /* EnumAngels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168AF245C163500B8BB78 /* EnumAngels.swift */; };
+		521168B2245C52A100B8BB78 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521168B1245C52A100B8BB78 /* RefreshView.swift */; };
+		521168B4245C52B400B8BB78 /* RefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521168B3245C52B400B8BB78 /* RefreshView.xib */; };
 		52C83EBB245B47C20077BA17 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C83EBA245B47C20077BA17 /* TestVC.swift */; };
 		CEA3A6A223B9E63800E2C71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A6A123B9E63800E2C71C /* AppDelegate.swift */; };
 		CEA3A6A423B9E63800E2C71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A6A323B9E63800E2C71C /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		521168A8245C14FB00B8BB78 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = ../CircleView.swift; sourceTree = "<group>"; };
 		521168AB245C154600B8BB78 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../UIView.swift; sourceTree = "<group>"; };
 		521168AF245C163500B8BB78 /* EnumAngels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumAngels.swift; sourceTree = "<group>"; };
+		521168B1245C52A100B8BB78 /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		521168B3245C52B400B8BB78 /* RefreshView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshView.xib; sourceTree = "<group>"; };
 		52C83EBA245B47C20077BA17 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestVC.swift; path = infinitiScroll/TestVC.swift; sourceTree = SOURCE_ROOT; };
 		CEA3A69E23B9E63800E2C71C /* infinitiScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infinitiScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA3A6A123B9E63800E2C71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 			children = (
 				521168A8245C14FB00B8BB78 /* CircleView.swift */,
 				521168AF245C163500B8BB78 /* EnumAngels.swift */,
+				521168B1245C52A100B8BB78 /* RefreshView.swift */,
+				521168B3245C52B400B8BB78 /* RefreshView.xib */,
 			);
 			path = RefreshView;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 			files = (
 				CEA3A6AC23B9E63900E2C71C /* LaunchScreen.storyboard in Resources */,
 				CEA3A6A923B9E63900E2C71C /* Assets.xcassets in Resources */,
+				521168B4245C52B400B8BB78 /* RefreshView.xib in Resources */,
 				CEA3A6A723B9E63800E2C71C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +187,7 @@
 				52C83EBB245B47C20077BA17 /* TestVC.swift in Sources */,
 				CEA3A6A223B9E63800E2C71C /* AppDelegate.swift in Sources */,
 				521168AC245C154600B8BB78 /* UIView.swift in Sources */,
+				521168B2245C52A100B8BB78 /* RefreshView.swift in Sources */,
 				521168A6245BF6A800B8BB78 /* TestVC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
