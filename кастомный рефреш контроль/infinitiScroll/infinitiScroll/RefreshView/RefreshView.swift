@@ -74,12 +74,9 @@ class RefreshView: UIView {
 
     private func settingsView(){
 		
-		wBigView.constant = RefreshConstant.hBigView
-		wSmallView.constant = RefreshConstant.hSmallView
-		
-		self.setNeedsLayout()
 		
 		upConstreintBigWiev.constant = -1 * RefreshConstant.startVisibleOffsetBig
+		
 
 		circleViewBig.startValue = EnumAngels.zero.finishValue(from: false)
 		circleViewBig.finishValue = EnumAngels.zero.finishValue(from: true)
@@ -102,7 +99,7 @@ class RefreshView: UIView {
 		if letnght >= 1 {
 			animateCirkles = true
 			circleViewBig.infinitiRotate(clockRotate: true, duratiuon: 1, key: "key1")
-			circleViewSmall.infinitiRotate(clockRotate: false, duratiuon: 1, key: "key2")
+			circleViewSmall.infinitiRotate(clockRotate: false, duratiuon: 0.5, key: "key2")
 		} else {
 			circleViewBig.value = letnght
 			circleViewSmall.value = letnght

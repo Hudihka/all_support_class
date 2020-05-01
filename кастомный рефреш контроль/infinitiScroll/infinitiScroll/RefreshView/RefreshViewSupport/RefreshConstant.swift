@@ -12,10 +12,10 @@ import UIKit
 struct RefreshConstant {
 	
 	/* диаметр большого круга*/
-	static let hBigView: CGFloat = 30
+	static let hBigView: CGFloat = 50
 	
 	/*если оттянуть на эту высоту то начнет появлятся большой круг*/
-	static let startVisibleOffsetBig: CGFloat = 30
+	static let startVisibleOffsetBig: CGFloat = 50
 	
 	/*дробное число говорящие во сколько мелкий круг меньше большого*/
 	static let procentValueMinCircle: CGFloat = 0.5

@@ -28,14 +28,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="433" height="162"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZW-sp-DeI" customClass="CircleView" customModule="infinitiScroll" customModuleProvider="target">
-                            <rect key="frame" x="181" y="100" width="71" height="71"/>
+                            <rect key="frame" x="191.5" y="100" width="50" height="50"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbX-nS-ZUD" customClass="CircleView" customModule="infinitiScroll" customModuleProvider="target">
-                                    <rect key="frame" x="25.5" y="25.5" width="20" height="20"/>
+                                    <rect key="frame" x="12.5" y="12.5" width="25" height="25"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="wbX-nS-ZUD" secondAttribute="height" multiplier="1:1" id="jid-2C-Zj6"/>
-                                        <constraint firstAttribute="width" constant="20" id="m0K-vm-dYa"/>
+                                        <constraint firstAttribute="width" constant="25" id="m0K-vm-dYa"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -44,7 +44,7 @@
                                 <constraint firstAttribute="width" secondItem="7ZW-sp-DeI" secondAttribute="height" multiplier="1:1" id="76J-Od-geZ"/>
                                 <constraint firstItem="wbX-nS-ZUD" firstAttribute="centerY" secondItem="7ZW-sp-DeI" secondAttribute="centerY" id="dcb-Sp-bK8"/>
                                 <constraint firstItem="wbX-nS-ZUD" firstAttribute="centerX" secondItem="7ZW-sp-DeI" secondAttribute="centerX" id="lav-Gc-4lO"/>
-                                <constraint firstAttribute="width" constant="71" id="n4L-Q3-beK"/>
+                                <constraint firstAttribute="width" constant="50" id="n4L-Q3-beK"/>
                             </constraints>
                         </view>
                     </subviews>

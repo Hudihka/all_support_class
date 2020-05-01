@@ -65,7 +65,7 @@ class CircleView: UIView {
 								clockwise: clockwise)
 		
 		shapeLayer.path = path.cgPath
-		shapeLayer.lineWidth = 2
+		shapeLayer.lineWidth = 1
 		shapeLayer.strokeColor = UIColor.red.cgColor
 		shapeLayer.fillColor = UIColor.clear.cgColor
 		shapeLayer.lineCap = .round

@@ -99,25 +99,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 	}
 	
 	
-	func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-		guard let refreshView = refreshView else {
-			return
-		}
-		
-		let offset = scrollView.contentOffset.y
-		
-		if refreshView.blockUpConstreint == false, refreshView.animateCirkles, offset <= -100{
-			print("block")
-			refreshView.blockUpConstreint = true
-			
-			let rect = CGRect(x: 0,
-							  y: 0,
-							  width: tableView.frame.width,
-							  height: 100)
-			
-			refreshView.frame = rect
-		}
-	}
+//	func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//		guard let refreshView = refreshView else {
+//			return
+//		}
+//		
+//		let offset = scrollView.contentOffset.y
+//		
+//		if refreshView.blockUpConstreint == false,
+//			refreshView.animateCirkles,
+//			offset <= -100{
+//			
+//			
+//			print("block")
+//			refreshView.blockUpConstreint = true
+//			
+//			let rect = CGRect(x: 0,
+//							  y: 0,
+//							  width: tableView.frame.width,
+//							  height: 100)
+//			
+//			refreshView.frame = rect
+//		}
+//	}
 
 }
 
