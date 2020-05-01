@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BpK-sc-6Q5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LjM-fJ-fGF">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -57,9 +57,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lG6-EX-9PF">
-                                <rect key="frame" x="14" y="20" width="347" height="31"/>
+                                <rect key="frame" x="38" y="20" width="323" height="31"/>
                                 <connections>
-                                    <action selector="sliderAction:" destination="BpK-sc-6Q5" eventType="valueChanged" id="Kt8-er-GKk"/>
+                                    <action selector="sliderAction:" destination="BpK-sc-6Q5" eventType="valueChanged" id="Duu-zM-wzL"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43v-Nd-Cd7">
@@ -78,19 +78,66 @@
                         <constraints>
                             <constraint firstItem="Vv7-SK-RZg" firstAttribute="trailing" secondItem="lG6-EX-9PF" secondAttribute="trailing" constant="16" id="3bN-oX-2hs"/>
                             <constraint firstItem="lG6-EX-9PF" firstAttribute="top" secondItem="Vv7-SK-RZg" secondAttribute="top" constant="20" id="W4v-Sn-LlQ"/>
-                            <constraint firstItem="lG6-EX-9PF" firstAttribute="leading" secondItem="Vv7-SK-RZg" secondAttribute="leading" constant="16" id="c0i-Zc-oPg"/>
+                            <constraint firstItem="lG6-EX-9PF" firstAttribute="leading" secondItem="Vv7-SK-RZg" secondAttribute="leading" constant="40" id="c0i-Zc-oPg"/>
                             <constraint firstItem="Vv7-SK-RZg" firstAttribute="bottom" secondItem="43v-Nd-Cd7" secondAttribute="bottom" constant="20" id="fzm-rM-oab"/>
                             <constraint firstItem="43v-Nd-Cd7" firstAttribute="leading" secondItem="Vv7-SK-RZg" secondAttribute="leading" constant="16" id="iBt-h8-lCE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vv7-SK-RZg"/>
                     </view>
-                    <connections>
-                        <outlet property="slider" destination="lG6-EX-9PF" id="ZaY-yq-q03"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3V-He-5Gl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234.4000000000001" y="141.67916041979012"/>
+            <point key="canvasLocation" x="1228" y="394"/>
+        </scene>
+        <!--TestVC2-->
+        <scene sceneID="uiK-fI-Aqp">
+            <objects>
+                <viewController id="LjM-fJ-fGF" customClass="TestVC2" customModule="infinitiScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emU-fF-NwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xWq-lN-kc2">
+                                <rect key="frame" x="38" y="20" width="323" height="31"/>
+                                <connections>
+                                    <action selector="actionSlider:" destination="LjM-fJ-fGF" eventType="valueChanged" id="v49-Fw-11l"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvC-LG-Xhj">
+                                <rect key="frame" x="16" y="583" width="114" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="OLJ-yC-Ldj"/>
+                                    <constraint firstAttribute="height" constant="64" id="gHR-dp-br0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="action:" destination="LjM-fJ-fGF" eventType="touchUpInside" id="j98-p1-mig"/>
+                                    <action selector="tapedAction:" destination="LjM-fJ-fGF" eventType="touchUpInside" id="Jv6-ZB-uLL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qW-po-bmV">
+                                <rect key="frame" x="119" y="519" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tvC-LG-Xhj" firstAttribute="leading" secondItem="jup-MT-Cnt" secondAttribute="leading" constant="16" id="3iH-m7-MgL"/>
+                            <constraint firstItem="jup-MT-Cnt" firstAttribute="trailing" secondItem="xWq-lN-kc2" secondAttribute="trailing" constant="16" id="4sc-H4-7zX"/>
+                            <constraint firstItem="jup-MT-Cnt" firstAttribute="bottom" secondItem="tvC-LG-Xhj" secondAttribute="bottom" constant="20" id="DYQ-Zi-Ayp"/>
+                            <constraint firstItem="xWq-lN-kc2" firstAttribute="top" secondItem="jup-MT-Cnt" secondAttribute="top" constant="20" id="aeW-Wn-xEw"/>
+                            <constraint firstItem="xWq-lN-kc2" firstAttribute="leading" secondItem="jup-MT-Cnt" secondAttribute="leading" constant="40" id="j6b-Sn-8AZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jup-MT-Cnt"/>
+                    </view>
+                    <connections>
+                        <outlet property="testview" destination="2qW-po-bmV" id="XF8-9c-VCz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EgI-a6-Wz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="-331"/>
         </scene>
     </scenes>
 </document>

@@ -9,9 +9,9 @@
 import UIKit
 
 class TestVC: UIViewController {
-
-	@IBOutlet weak var slider: UISlider!
 	
+	
+	let shapeLayer = CAShapeLayer()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,6 @@ class TestVC: UIViewController {
 		
 		let minAngel = -0.5 * .pi + minPi
 		let maxAngle = (3 * .pi / 2) - minPi
-		
-		slider.minimumValue = Float(minAngel)
-		slider.minimumValue = Float(maxAngle)
         
 		
 		
@@ -37,7 +34,7 @@ class TestVC: UIViewController {
 		shapeLayer.strokeColor = UIColor.red.cgColor
 		shapeLayer.fillColor = UIColor.clear.cgColor
 		shapeLayer.lineWidth = 10
-//		shapeLayer.strokeEnd = 0
+		shapeLayer.strokeEnd = 0
 		shapeLayer.lineCap = .round
 		
 		view.layer.addSublayer(shapeLayer)
@@ -45,8 +42,7 @@ class TestVC: UIViewController {
 
 	@IBAction func sliderAction(_ sender: UISlider) {
 		
-		
-		
+		shapeLayer.strokeEnd = CGFloat(sender.value)
 	}
 	
 	@IBAction func tapedAction(_ sender: UIButton) {
