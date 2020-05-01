@@ -11,56 +11,17 @@ import UIKit
 class TestVC2: UIViewController {
 	
 	//	https://www.youtube.com/watch?v=IWujpBGqxfQ
-	
-	@IBOutlet weak var testView2: UIView!
-	@IBOutlet weak var testview: UIView!
-	
-	let shapeLayerBig = CAShapeLayer()
-	let shapeLayerSmall = CAShapeLayer()
+	@IBOutlet weak var slider: UISlider!
 	
 	var cirkleView: CircleView?
 	var cirkleView2: CircleView?
 	
-	private let minPi: Double = Double.pi * 0.075
+	private var animateCirkles = false
 	
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		self.view.layer.addSublayer(shapeLayerBig)
-
-		let path = UIBezierPath(arcCenter: self.view.center,
-								radius: 100,
-								startAngle: CGFloat(-0.5 * .pi + minPi),
-								endAngle: CGFloat((3 * .pi / 2) - minPi),
-								clockwise: true)
-		
-		shapeLayerBig.path = path.cgPath
-		shapeLayerBig.lineWidth = 10
-		shapeLayerBig.strokeColor = UIColor.red.cgColor
-		shapeLayerBig.fillColor = UIColor.clear.cgColor
-		shapeLayerBig.lineCap = .round
-		
-		shapeLayerBig.strokeEnd = 0
-		
-		
-		self.view.layer.addSublayer(shapeLayerSmall)
-
-		let path2 = UIBezierPath(arcCenter: self.view.center,
-								radius: 50,
-								startAngle: CGFloat((.pi / 2) - minPi),
-								endAngle: CGFloat((.pi / 2) + minPi),
-								clockwise: false)
-		
-		shapeLayerSmall.path = path2.cgPath
-		shapeLayerSmall.lineWidth = 10
-		shapeLayerSmall.strokeColor = UIColor.red.cgColor
-		shapeLayerSmall.fillColor = UIColor.clear.cgColor
-		shapeLayerSmall.lineCap = .round
-		
-		shapeLayerSmall.strokeEnd = 0
-		
-		
+				
 		cirkleView = CircleView(frame: CGRect(x: 50, y: 100, width: 60, height: 60))
 		cirkleView?.startValue = EnumAngels.zero.finishValue(from: false)
 		cirkleView?.finishValue = EnumAngels.zero.finishValue(from: true)
@@ -74,20 +35,50 @@ class TestVC2: UIViewController {
 		cirkleView2?.clockwise = false
 		self.view.addSubview(cirkleView2!)
 		
-		
-
     }
+	
+	
 	@IBAction func actionSlider(_ sender: UISlider) {
 		
-		self.cirkleView?.value = CGFloat(sender.value)
-		self.cirkleView2?.value = CGFloat(sender.value)
-		
-		if sender.value == 1 {
-			cirkleView?.infinitiRotate(clockRotate: true, duratiuon: 1, key: "key1")
-			cirkleView2?.infinitiRotate(clockRotate: false, duratiuon: 1, key: "key2")
-		}
+		lenghntCirkle(letnght: CGFloat(sender.value))
 		
 	}
 	
 	
+	@IBAction func actionCancel(_ sender: UIButton) {
+		if animateCirkles {
+			stopedAnimateRotate()
+		}
+	}
+	
+	
+	
+	func lenghntCirkle(letnght: CGFloat){
+		if animateCirkles {
+			return
+		}
+		
+		
+		self.cirkleView?.value = letnght
+		self.cirkleView2?.value = letnght
+		
+		if letnght == 1 {
+			animateCirkles = true
+			cirkleView?.infinitiRotate(clockRotate: true, duratiuon: 1, key: "key1")
+			cirkleView2?.infinitiRotate(clockRotate: false, duratiuon: 1, key: "key2")
+			slider.setValue(0, animated: true)
+		}
+	}
+	
+	func stopedAnimateRotate(){
+		cirkleView?.layer.removeAnimation(forKey: "key1")
+		cirkleView2?.layer.removeAnimation(forKey: "key2")
+		
+		cirkleView?.zeroingCGPath()
+		cirkleView2?.zeroingCGPath()
+		
+		animateCirkles = false
+	}
+	
+
 }

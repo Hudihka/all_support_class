@@ -72,4 +72,10 @@ class CircleView: UIView {
 		shapeLayer.strokeEnd = 0
 	}
 	
+	func zeroingCGPath(){
+		UIView.animate(withDuration: 0.3) {
+			self.value = 0
+		}
+	}
+	
 }

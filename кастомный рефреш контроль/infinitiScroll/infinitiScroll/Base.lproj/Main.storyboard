@@ -100,7 +100,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xWq-lN-kc2">
                                 <rect key="frame" x="38" y="20" width="323" height="31"/>
                                 <connections>
-                                    <action selector="actionSlider:" destination="LjM-fJ-fGF" eventType="valueChanged" id="v49-Fw-11l"/>
+                                    <action selector="actionSlider:" destination="LjM-fJ-fGF" eventType="valueChanged" id="gdA-A9-mbe"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvC-LG-Xhj">
@@ -111,22 +111,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="action:" destination="LjM-fJ-fGF" eventType="touchUpInside" id="j98-p1-mig"/>
-                                    <action selector="tapedAction:" destination="LjM-fJ-fGF" eventType="touchUpInside" id="Jv6-ZB-uLL"/>
+                                    <action selector="actionCancel:" destination="LjM-fJ-fGF" eventType="touchUpInside" id="d0O-G7-1ZA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qW-po-bmV">
-                                <rect key="frame" x="119" y="519" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhL-z3-kXa">
-                                        <rect key="frame" x="75" y="21" width="90" height="87"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -139,8 +126,7 @@
                         <viewLayoutGuide key="safeArea" id="jup-MT-Cnt"/>
                     </view>
                     <connections>
-                        <outlet property="testView2" destination="xhL-z3-kXa" id="gIY-um-C9P"/>
-                        <outlet property="testview" destination="2qW-po-bmV" id="XF8-9c-VCz"/>
+                        <outlet property="slider" destination="xWq-lN-kc2" id="UNg-cH-7nP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgI-a6-Wz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
