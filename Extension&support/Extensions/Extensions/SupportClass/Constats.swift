@@ -53,7 +53,7 @@ var indentNavigationBarHeight: CGFloat {
 }
 
 var statusBarHeight: CGFloat{
-    return isIPhoneXorXmax ? 44 : 20
+    return UIApplication.shared.statusBarFrame.height
 }
 
 let navigBarHeight: CGFloat = 44
