@@ -10,6 +10,15 @@ import UIKit
 
 class TestVC: UIViewController {
 	
+	/*
+	
+	ДИСПАТЧИ ЗАДЕРЖКИ НА менее чем на 0.3 сек спользую для того
+	что бы статус бар успел стать прозрачным  наоборот
+	
+	*/
+	
+	private var flagAnimate = false
+	
 	private var isHideStatusBar = false
 	private var isFlip = false
 	
@@ -52,6 +61,9 @@ class TestVC: UIViewController {
 			contentView.addSubview(labelInfo!)
 			
 			statusBarScreen = UIImageView(frame: frameSB)
+			//ставь цвет бэкграунда супервью
+			//в данном случае вью контроллера
+			statusBarScreen?.backgroundColor = .white
 			statusBarScreen?.image = statusBarView.screenshot
 			
 			contentView.addSubview(statusBarScreen!)
@@ -74,6 +86,12 @@ class TestVC: UIViewController {
 	
 	@IBAction func tapedAction(_ sender: UIButton) {
 		
+		if flagAnimate {//нужно для того что бы не началось 2 анимации подрят
+			return
+		}
+		
+		flagAnimate = true
+		
 		initContentView() //создаем вью на статус баре
 		//делаем скриншот статус бара, присваиваем лейбл с информацией
 		//можно сделать любой фрейм
@@ -85,17 +103,20 @@ class TestVC: UIViewController {
 		
 		//первая анимация
 		flipAnimate(comBlock: nil)
-		
-		
+//
+//
 		weak var selF = self
 		flipAnimate {
 			//делаем статус бар не прозрачным
 			selF?.isHideStatusBar = false
 			selF?.setNeedsStatusBarAppearanceUpdate()
 			
-			selF?.labelInfo = nil
-			selF?.statusBarScreen = nil
-			selF?.contentView = nil
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+				selF?.contentView = nil
+				selF?.labelInfo = nil
+				selF?.statusBarScreen = nil
+				selF?.flagAnimate = false
+			}
 		}
 		
 		
@@ -129,7 +150,8 @@ class TestVC: UIViewController {
 		let finishView = isFlip ? labelInfo : statusBarScreen
 		let option: UIView.AnimationOptions = isFlip ? .transitionFlipFromTop : .transitionFlipFromBottom
 		
-		let time: DispatchTime = comBlock == nil ? .now() + 0 : .now() + 2
+		//перв
+		let time: DispatchTime = comBlock == nil ? .now() + 0.2 : .now() + 2
 		
 		DispatchQueue.main.asyncAfter(deadline: time) {
 			UIView.transition(from: startView,
