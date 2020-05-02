@@ -12,42 +12,34 @@ class RefreshView: UIView {
 
 	@IBOutlet var countentView: UIView!
 	
-	@IBOutlet private weak var upConstreint: NSLayoutConstraint!
-	
-	@IBOutlet weak var wBigView: NSLayoutConstraint!
-	@IBOutlet weak var upConstreintBigWiev: NSLayoutConstraint!
-	
-	@IBOutlet weak var wSmallView: NSLayoutConstraint!
-	
 	
 	@IBOutlet weak var circleViewBig: CircleView!
 	@IBOutlet weak var circleViewSmall: CircleView!
 	
 	var animateCirkles = false
-	var blockUpConstreint = false
+	
+	//если тру то вю будет всегда по центру
+	private let circleViewInCentre = true
+	@IBOutlet private weak var constreintUp: NSLayoutConstraint!
+	@IBOutlet private weak var withBigView: NSLayoutConstraint!
 	
 	var block: () -> () = { }
 	
-	private let maxOffset: CGFloat = -100
-	
 	var offset: CGFloat? {
 		didSet{
-			
-			guard let offset = offset, offset < 0 else {
-				return
+			if let offset = offset, offset <= -30{ //начнаем рисовать не сразу
+				
+				let absValue = abs(offset)
+				let lenght = (absValue - 30) / 100
+				lenghntCirkle(letnght: lenght)
+
+				if circleViewInCentre {
+					let position = (absValue - withBigView.constant) / 2
+					constreintUp.constant = position
+				}
+
 			}
 			
-			upConstreint.constant = offset
-			
-			let absValue = abs(offset)
-			
-			/*констреин того что бы вьью была по центру*/
-			let centerPosition = (absValue - RefreshConstant.hBigView)/2
-			upConstreintBigWiev.constant = centerPosition
-			
-			/*рисуем круги*/
-			let offsetPath = absValue - RefreshConstant.startVisibleOffsetBig
-			lenghntCirkle(offset: offsetPath)
 		}
 	}
 	
@@ -73,15 +65,10 @@ class RefreshView: UIView {
 
 
     private func settingsView(){
-		
-		
-		upConstreintBigWiev.constant = -1 * RefreshConstant.startVisibleOffsetBig
-		
-
+	
 		circleViewBig.startValue = EnumAngels.zero.finishValue(from: false)
 		circleViewBig.finishValue = EnumAngels.zero.finishValue(from: true)
 		circleViewBig.clockwise = true
-		
 		
 		circleViewSmall.startValue = EnumAngels.sixHours.finishValue(from: true)
 		circleViewSmall.finishValue = EnumAngels.sixHours.finishValue(from: false)
@@ -89,13 +76,12 @@ class RefreshView: UIView {
 		
     }
 	
-	private func lenghntCirkle(offset: CGFloat){
-		if animateCirkles, offset > 0 {
+	private func lenghntCirkle(letnght: CGFloat){
+		if animateCirkles, letnght > 0 {
 			return
 		}
 		
-		let letnght = offset / 100
-		
+
 		if letnght >= 1 {
 			animateCirkles = true
 			circleViewBig.infinitiRotate(clockRotate: true, duratiuon: 1, key: "key1")
@@ -112,14 +98,6 @@ class RefreshView: UIView {
 			circleViewBig.layer.removeAnimation(forKey: "key1")
 			circleViewSmall.layer.removeAnimation(forKey: "key2")
 			
-//			upConstreint.constant = 0
-			
-			UIView.animate(withDuration: 0.2,
-						   delay: 0.1,
-						   options: [],
-						   animations: {
-							self.upConstreint.constant = 0
-			}, completion: nil)
 			
 			UIView.animate(withDuration: 0.3, animations: {
 				self.circleViewBig.value = 0

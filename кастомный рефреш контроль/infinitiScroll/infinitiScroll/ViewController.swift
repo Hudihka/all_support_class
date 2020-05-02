@@ -27,20 +27,40 @@ class ViewController: UIViewController {
     }
 	
 	private func createRefreshView(){
-		
-		let rect = CGRect(x: 0,
-						  y: 0,
-						  width: tableView.frame.width,
-						  height: 0)
-		
-		refreshView = RefreshView(frame: rect)
 
+        
+        refresh.tintColor = UIColor.clear
+        refresh.backgroundColor = UIColor.clear
+		refresh.clipsToBounds = true
+		
+		
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
+		
+		
+		refreshView = RefreshView(frame: refresh.frame)
+		refresh.addSubview(refreshView!)
+		
 		refreshView?.block = {
 			self.refresh.endRefreshing()
 		}
 		
-		self.tableView.tableHeaderView = refreshView
+
+		refresh.addTarget(self, action: #selector(loadContent), for: .valueChanged)
+
 	}
+	
+
+    @objc func loadContent() {
+		if refreshView?.animateCirkles ?? true {
+			return
+		}
+		
+		//загрузка контента
+    }
 
 
     func addData(_ count: Int){
@@ -77,51 +97,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		//убираем рефреш вью
 		refreshView?.stopedAnimateRotate()
 	}
 	
 	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
-		
-		guard let refreshView = refreshView else {
-			return
-		}
-		
-		let offset = scrollView.contentOffset.y
-		
-		if refreshView.blockUpConstreint, offset >= -100{
-			return
-		} else {
-			print("---------------------------")
-			refreshView.offset = scrollView.contentOffset.y
-		}
-		
+		refreshView?.offset = scrollView.contentOffset.y
 	}
 	
-	
-//	func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//		guard let refreshView = refreshView else {
-//			return
-//		}
-//		
-//		let offset = scrollView.contentOffset.y
-//		
-//		if refreshView.blockUpConstreint == false,
-//			refreshView.animateCirkles,
-//			offset <= -100{
-//			
-//			
-//			print("block")
-//			refreshView.blockUpConstreint = true
-//			
-//			let rect = CGRect(x: 0,
-//							  y: 0,
-//							  width: tableView.frame.width,
-//							  height: 100)
-//			
-//			refreshView.frame = rect
-//		}
-//	}
 
 }
 
