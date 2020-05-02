@@ -52,16 +52,11 @@ class ViewController: UIViewController {
 	
 
     @objc func loadContent() {
-		if refresh.
+		if refreshView?.animateCirkles ?? true {
+			return
+		}
 		
-//        let refreshView = refreshControl.viewWithTag(12052018)
-//
-//        for vw in (refreshView?.subviews)! {
-//                if let titleLable = vw as? UILabel {
-//                    titleLable.text = "Refreshing contents"
-//                }
-//        }
-//        self.perform(#selector(finishedRefreshing), with: nil, afterDelay: 23.0)
+		//загрузка контента
     }
 
 
@@ -99,6 +94,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		//убираем рефреш вью
 		refreshView?.stopedAnimateRotate()
 	}
 	

@@ -15,7 +15,7 @@ class RefreshView: UIView {
 	@IBOutlet weak var circleViewBig: CircleView!
 	@IBOutlet weak var circleViewSmall: CircleView!
 	
-	private var animateCirkles = false
+	var animateCirkles = false
 	
 	//если тру то вю будет всегда по центру
 	private let circleViewInCentre = true
@@ -92,6 +92,7 @@ class RefreshView: UIView {
 		if animateCirkles {
 			circleViewBig.layer.removeAnimation(forKey: "key1")
 			circleViewSmall.layer.removeAnimation(forKey: "key2")
+			
 			
 			UIView.animate(withDuration: 0.3, animations: {
 				self.circleViewBig.value = 0
