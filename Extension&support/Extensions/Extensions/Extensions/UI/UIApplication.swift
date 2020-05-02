@@ -14,9 +14,26 @@ extension UIApplication {
         return self.keyWindow?.visibleViewController ?? UIViewController()
     }
 
-    var statusBarView: UIView? {
-        return value(forKey: "statusBar") as? UIView
-    }
+	var statusBarView: UIView? {
+		
+		if #available(iOS 13.0, *) {
+			let tag = 38482
+			let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+			
+			if let statusBar = keyWindow?.viewWithTag(tag) {
+				return statusBar
+			} else {
+				guard let statusBarFrame = keyWindow?.windowScene?.statusBarManager?.statusBarFrame else { return nil }
+				let statusBarView = UIView(frame: statusBarFrame)
+				statusBarView.tag = tag
+				keyWindow?.addSubview(statusBarView)
+				return statusBarView
+			}
+			
+		} else {
+			return value(forKey: "statusBar") as? UIView
+		}
+	}
 	
 	//видно ли клавиатуру
 	var isKeyboardPresented: Bool {
