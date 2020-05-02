@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LjM-fJ-fGF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BpK-sc-6Q5">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -56,12 +56,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lG6-EX-9PF">
-                                <rect key="frame" x="38" y="20" width="323" height="31"/>
-                                <connections>
-                                    <action selector="sliderAction:" destination="BpK-sc-6Q5" eventType="valueChanged" id="Duu-zM-wzL"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43v-Nd-Cd7">
                                 <rect key="frame" x="16" y="583" width="114" height="64"/>
                                 <constraints>
@@ -76,9 +70,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Vv7-SK-RZg" firstAttribute="trailing" secondItem="lG6-EX-9PF" secondAttribute="trailing" constant="16" id="3bN-oX-2hs"/>
-                            <constraint firstItem="lG6-EX-9PF" firstAttribute="top" secondItem="Vv7-SK-RZg" secondAttribute="top" constant="20" id="W4v-Sn-LlQ"/>
-                            <constraint firstItem="lG6-EX-9PF" firstAttribute="leading" secondItem="Vv7-SK-RZg" secondAttribute="leading" constant="40" id="c0i-Zc-oPg"/>
                             <constraint firstItem="Vv7-SK-RZg" firstAttribute="bottom" secondItem="43v-Nd-Cd7" secondAttribute="bottom" constant="20" id="fzm-rM-oab"/>
                             <constraint firstItem="43v-Nd-Cd7" firstAttribute="leading" secondItem="Vv7-SK-RZg" secondAttribute="leading" constant="16" id="iBt-h8-lCE"/>
                         </constraints>
