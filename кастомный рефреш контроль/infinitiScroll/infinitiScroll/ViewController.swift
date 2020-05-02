@@ -27,19 +27,42 @@ class ViewController: UIViewController {
     }
 	
 	private func createRefreshView(){
-//
-		refresh.tintColor = .clear
-		refresh.backgroundColor = .clear
-				
-		tableView.addSubview(refresh)
+        
+        refresh.tintColor = UIColor.clear
+        refresh.backgroundColor = UIColor.clear
+		refresh.clipsToBounds = true
+		
+		
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
+		
+		
 		refreshView = RefreshView(frame: refresh.frame)
-
+		refresh.addSubview(refreshView!)
+		
 		refreshView?.block = {
 			self.refresh.endRefreshing()
 		}
-
-		refresh.addSubview(refreshView!)
+		
+		refresh.addTarget(self, action: #selector(loadContent), for: .valueChanged)
 	}
+	
+
+    @objc func loadContent() {
+		if refresh.
+		
+//        let refreshView = refreshControl.viewWithTag(12052018)
+//
+//        for vw in (refreshView?.subviews)! {
+//                if let titleLable = vw as? UILabel {
+//                    titleLable.text = "Refreshing contents"
+//                }
+//        }
+//        self.perform(#selector(finishedRefreshing), with: nil, afterDelay: 23.0)
+    }
 
 
     func addData(_ count: Int){
