@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="circleViewBig" destination="7ZW-sp-DeI" id="AuT-Ww-yLi"/>
                 <outlet property="circleViewSmall" destination="wbX-nS-ZUD" id="zxj-46-9P3"/>
+                <outlet property="constreintUp" destination="wUD-fT-Q3N" id="h8d-CF-ZBn"/>
                 <outlet property="countentView" destination="iN0-l3-epB" id="Bqy-6k-v2V"/>
                 <outlet property="withBigView" destination="n4L-Q3-beK" id="0HB-8F-GD4"/>
             </connections>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZW-sp-DeI" customClass="CircleView" customModule="infinitiScroll" customModuleProvider="target">
-                    <rect key="frame" x="191.5" y="40" width="50" height="50"/>
+                    <rect key="frame" x="191.5" y="50" width="50" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbX-nS-ZUD" customClass="CircleView" customModule="infinitiScroll" customModuleProvider="target">
                             <rect key="frame" x="12.5" y="12.5" width="25" height="25"/>
@@ -44,8 +45,8 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="7ZW-sp-DeI" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="G8c-19-mo1"/>
                 <constraint firstItem="7ZW-sp-DeI" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="UGB-84-BiL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7ZW-sp-DeI" secondAttribute="bottom" constant="30" id="wUD-fT-Q3N"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

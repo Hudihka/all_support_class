@@ -11,8 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-	
-	var refreshView: RefreshView?
+    
+    //добавить надо под тейбл вью
+    //и должна быть тем же размером что и ТВ
+    @IBOutlet weak var refreshView: RefreshView!
+    
+    //высота контента ТВ
+    //ПЕРЕСЧИТЫВАЙ ЕСЛИ обновляешь данные таблицы
+    var TVContentHeight: CGFloat = 0
+    
 
     var dataArray = [String]()
 
@@ -23,27 +30,33 @@ class ViewController: UIViewController {
 		
         desingTV()
 		createRefreshView()
+        reloadContentHeightTV()
     }
 	
 	private func createRefreshView(){
-
-		
-		
-		refreshView = RefreshView(frame: refresh.frame)
 		
 		refreshView?.block = {
 			// убираем анимац нижнюю вью
 		}
-
+        
+        
+//        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: -1 * heightView, right: 0)
 	}
 	
 
-    @objc func loadContent() {
+    fileprivate func loadContent() {
 		if refreshView?.animateCirkles ?? true {
 			return
 		}
+        
+        print("//загрузка контента")
 		
 		//загрузка контента
+    }
+    
+    fileprivate func reloadContentHeightTV(){
+        tableView.layoutIfNeeded()
+        TVContentHeight = tableView.contentSize.height
     }
 
 
@@ -64,6 +77,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func desingTV(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.tableView.backgroundColor = .clear
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,18 +103,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 	
 	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
-		refreshView?.offset = scrollView.contentOffset.y
+        
+        let scrollWey = scrollView.contentOffset.y
+        print(scrollWey)
+        if scrollWey > TVContentHeight {
+            print(scrollWey - TVContentHeight)
+        }
 	}
     
-    /*
-     юзер отпустил палец
-     */
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>){
-        print("------------------")
-    }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool){
-        print("1111111111111111")
+           /*
+         юзер отпустил палец
+         */
+        
+        loadContent()
     }
 
 	
