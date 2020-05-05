@@ -18,7 +18,8 @@ class RefreshView: UIView {
 	
 	var animateCirkles = false
 	
-
+	//если тру то вю будет всегда по центру
+	private let circleViewInCentre = true
 	@IBOutlet private weak var constreintUp: NSLayoutConstraint!
 	@IBOutlet private weak var withBigView: NSLayoutConstraint!
 	
@@ -31,6 +32,11 @@ class RefreshView: UIView {
 				let absValue = abs(offset)
 				let lenght = (absValue - 30) / 100
 				lenghntCirkle(letnght: lenght)
+
+				if circleViewInCentre {
+					let position = (absValue - withBigView.constant) / 2
+					constreintUp.constant = position
+				}
 
 			}
 			

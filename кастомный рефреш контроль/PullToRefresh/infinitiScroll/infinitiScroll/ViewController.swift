@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 	
+	var refresh = UIRefreshControl()
 	var refreshView: RefreshView?
 
     var dataArray = [String]()
@@ -27,13 +28,28 @@ class ViewController: UIViewController {
 	
 	private func createRefreshView(){
 
+        
+        refresh.tintColor = UIColor.clear
+        refresh.backgroundColor = UIColor.clear
+		refresh.clipsToBounds = true
+		
+		
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
 		
 		
 		refreshView = RefreshView(frame: refresh.frame)
+		refresh.addSubview(refreshView!)
 		
 		refreshView?.block = {
-			// убираем анимац нижнюю вью
+			self.refresh.endRefreshing()
 		}
+		
+
+		refresh.addTarget(self, action: #selector(loadContent), for: .valueChanged)
 
 	}
 	
@@ -90,18 +106,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		refreshView?.offset = scrollView.contentOffset.y
 	}
-    
-    /*
-     юзер отпустил палец
-     */
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>){
-        print("------------------")
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool){
-        print("1111111111111111")
-    }
-
 	
 
 }
