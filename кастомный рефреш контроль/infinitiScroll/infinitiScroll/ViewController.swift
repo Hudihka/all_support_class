@@ -16,10 +16,6 @@ class ViewController: UIViewController {
     //и должна быть тем же размером что и ТВ
     @IBOutlet weak var refreshView: RefreshView!
     
-    //высота контента ТВ
-    //ПЕРЕСЧИТЫВАЙ ЕСЛИ обновляешь данные таблицы
-    var TVContentHeight: CGFloat = 0
-    
 
     var dataArray = [String]()
 
@@ -30,7 +26,6 @@ class ViewController: UIViewController {
 		
         desingTV()
 		createRefreshView()
-        reloadContentHeightTV()
     }
 	
 	private func createRefreshView(){
@@ -54,10 +49,6 @@ class ViewController: UIViewController {
 		//загрузка контента
     }
     
-    fileprivate func reloadContentHeightTV(){
-        tableView.layoutIfNeeded()
-        TVContentHeight = tableView.contentSize.height
-    }
 
 
     func addData(_ count: Int){
@@ -104,10 +95,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let scrollWey = scrollView.contentOffset.y
-        print(scrollWey)
-        if scrollWey > TVContentHeight {
-            print(scrollWey - TVContentHeight)
+        
+        let scrollWey = scrollView.contentOffset.y + scrollView.frame.height
+        let height = scrollView.contentSize.height
+        
+        if scrollWey > height {
+            print(scrollWey - height)
         }
 	}
     
@@ -119,8 +112,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         loadContent()
     }
-
-	
-
 }
 
