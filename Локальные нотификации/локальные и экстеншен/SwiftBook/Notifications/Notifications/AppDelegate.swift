@@ -15,12 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let notifications = Notifications()
 
-    func application(
-        _ application: UIApplication,
+    func application(_ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         notifications.requestAutorization()
         notifications.notificationCenter.delegate = notifications
+		
+		UserDefaults.standard.set(3, forKey: "test")
+		
+		let value = UserDefaults.standard.integer(forKey: "test")
+		print("значение при запуске приложения \(value)")
+		
+		
         return true
     }
 

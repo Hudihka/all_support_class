@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import UserNotifications
 import UserNotificationsUI
 
@@ -23,7 +24,14 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     override func viewDidLoad() {
         super.viewDidLoad()
         setNotificationCategories()
-		startTimer()
+//		startTimer()
+		
+//		let apl = UIApplication.shared.
+		
+		let value = UserDefaults.standard.integer(forKey: "test")
+		print("значение при запуске ПУША \(value)")
+		
+		labelTime.text = "значение при запуске ПУША \(value)"
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
@@ -51,6 +59,9 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 	
 	        let (h,m,s) = self.time.secondsToHoursMinutesSeconds
 	        self.labelTime.text = "\(h) : \(m) : \(s)"
+			
+			let value = UserDefaults.standard.integer(forKey: "test")
+			print("значение при запуске ПУША \(value)")
 	    }
     
     func openApp() {

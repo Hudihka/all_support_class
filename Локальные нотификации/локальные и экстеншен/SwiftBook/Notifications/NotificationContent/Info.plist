@@ -26,11 +26,11 @@
 		<dict>
 			<key>UNNotificationExtensionCategory</key>
 			<string>User Actions</string>
+			<key>UNNotificationExtensionDefaultContentHidden</key>
+			<true/>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
 			<real>1</real>
 			<key>UNNotificationExtensionUserInteractionEnabled</key>
-			<true/>
-			<key>UNNotificationExtensionDefaultContentHidden</key>
 			<true/>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
