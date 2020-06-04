@@ -1,0 +1,42 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'NotificationContent' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NotificationContent
+
+end
+
+target 'Notifications' do
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'Firebase/Core'
+  pod 'FacebookSDK'
+  
+  pod 'Branch'
+  
+  pod 'Alamofire', '~> 4.5'
+  pod 'SDWebImage', '~> 4.0'
+  
+  pod 'JMMaskTextField'
+  
+  pod 'GoogleMaps'
+
+
+  pod 'Pushwoosh'
+  
+  pod 'AppsFlyerFramework'
+  
+  pod "ExponeaSDK", "~> 2.2.3"
+
+end
+
+target 'NotificationService' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NotificationService
+
+end

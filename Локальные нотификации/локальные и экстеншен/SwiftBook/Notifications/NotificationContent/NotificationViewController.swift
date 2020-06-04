@@ -28,6 +28,8 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 		
 //		let apl = UIApplication.shared.
 		
+		let data = UIApplication.shared.delegate
+		
 		let value = UserDefaults.standard.integer(forKey: "test")
 		print("значение при запуске ПУША \(value)")
 		
