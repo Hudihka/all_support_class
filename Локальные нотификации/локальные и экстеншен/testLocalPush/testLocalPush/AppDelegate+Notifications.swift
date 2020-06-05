@@ -19,12 +19,24 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         application.registerForRemoteNotifications()
         
         self.openPushAplication(launchOptions)
+        
+        
+        //локальные пуши
+        let choiceA = UNNotificationAction(identifier: "ross", title: "Ross", options: [.foreground])
+        let choiceB = UNNotificationAction(identifier: "chandler", title: "Chandler", options: [.foreground])
+        let choiceC = UNNotificationAction(identifier: "joey", title: "Joey", options: [.foreground])
+        
+        let friendsQuizCategory = UNNotificationCategory(identifier: "userActionsCategory", actions: [choiceA, choiceB, choiceC], intentIdentifiers: [], options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([friendsQuizCategory])
+        
     }
     
     private func registerForPushes(_ application: UIApplication) {
         
         UNUserNotificationCenter.current().delegate = self
         let arraySettings: UNAuthorizationOptions = [.alert, .sound, .badge]
+        
         UNUserNotificationCenter.current().requestAuthorization(options: arraySettings) { (granted, _) in
             print("Permission granted: \(granted)")
             
@@ -54,12 +66,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         print("открытие приложухи по пушу2")
-        
-        //        if self.flagPlayOpenAplication {
-        //            self.parserPush.parserPush(userInfo)
-        //        }
-        //
-        //        self.flagPlayOpenAplication = true
     }
     
     
@@ -67,21 +73,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         print("Unable to register for remote notifications: \(error.localizedDescription)")
     }
     
+    ///методы экстеншена
     
-    // MARK: - NewTocken
-    
-    ///пуш на переднем фоне
-    
-    private func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound, .badge])
+    internal func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
     }
-    
-    
-    
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
-        print("нажатие на пуш")
+        print("нажатие на кнопки пуша пуш")
         
         completionHandler()
     }

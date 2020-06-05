@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
@@ -17,26 +18,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func poehali(_ sender: Any) {
-        
-        
-        
-        
-        
+        scheduleNotification()
     }
     
     
     
-    private func scheduleNotification(notifaicationType: String) {
+    private func scheduleNotification() {
         
         let content = UNMutableNotificationContent()
-        let userActions = "User Actions"
         
-        content.title = notifaicationType
+        content.title = "EXTENSION"
         content.body = "Summer Time"
         content.sound = UNNotificationSound.default
-        content.badge = 1
-        content.categoryIdentifier = userActions
-        
+        content.categoryIdentifier = "userActionsCategory" //ид категории
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
@@ -45,7 +39,7 @@ class ViewController: UIViewController {
                                             content: content,
                                             trigger: trigger)
         
-        notificationCenter.add(request) { (error) in
+        UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
                 print("Error \(error.localizedDescription)")
             }
@@ -53,6 +47,35 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
+    ///просто локальные
+    
+    @IBAction func local(_ sender: Any) {
+        
+        let content = UNMutableNotificationContent()
+        
+        content.title = "TEST LOCAL"
+        content.body = "Summer Time LOCAL"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let identifire = "Local Notification LOcal"
+        let request = UNNotificationRequest(identifier: identifire,
+                                            content: content,
+                                            trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+            }
+        }
+        
+        
+    }
+    
+    
     
 
 

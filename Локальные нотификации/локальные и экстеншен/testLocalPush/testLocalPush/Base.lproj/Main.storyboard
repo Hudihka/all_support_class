@@ -28,9 +28,23 @@
                                     <action selector="poehali:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSC-H9-CCf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpz-PW-6Db">
+                                <rect key="frame" x="108" y="526" width="198" height="72"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="AvV-84-wRX"/>
+                                    <constraint firstAttribute="width" constant="198" id="oCo-8a-1Tj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="local:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cj6-yf-Gbb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="bpz-PW-6Db" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3j6-vU-uBo"/>
+                            <constraint firstItem="bpz-PW-6Db" firstAttribute="top" secondItem="55g-dP-YD7" secondAttribute="bottom" constant="30.5" id="HGj-N8-bZV"/>
                             <constraint firstItem="55g-dP-YD7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="L5t-oX-Fsp"/>
                             <constraint firstItem="55g-dP-YD7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P8P-ho-hUC"/>
                         </constraints>
