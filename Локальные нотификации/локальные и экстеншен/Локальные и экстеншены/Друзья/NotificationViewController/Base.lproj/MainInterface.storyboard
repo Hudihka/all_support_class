@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="friends-logo" translatesAutoresizingMaskIntoConstraints="NO" id="hpP-mG-gB2">
+                                <rect key="frame" x="32" y="18" width="256" height="107"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-Yc-SN8">
+                                <rect key="frame" x="160" y="8" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="hpP-mG-gB2" secondAttribute="bottom" id="Bt1-XU-llH"/>
+                            <constraint firstItem="gMi-Yc-SN8" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="QLC-k8-ZRi"/>
+                            <constraint firstItem="hpP-mG-gB2" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="0.8" id="Uno-jY-D7C"/>
+                            <constraint firstItem="hpP-mG-gB2" firstAttribute="top" secondItem="gMi-Yc-SN8" secondAttribute="bottom" constant="10" id="cZz-ax-6rw"/>
+                            <constraint firstItem="hpP-mG-gB2" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="eAh-MC-fn1"/>
+                            <constraint firstItem="gMi-Yc-SN8" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="vJc-60-7Mh"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="125"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="gMi-Yc-SN8" id="FCW-tm-Ri0"/>
+                        <outlet property="friendsImage" destination="hpP-mG-gB2" id="Igk-8r-Nx1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84.799999999999997" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="friends-logo" width="1004" height="185"/>
+    </resources>
+</document>
