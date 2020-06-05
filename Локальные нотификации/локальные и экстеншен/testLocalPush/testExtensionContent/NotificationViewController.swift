@@ -11,16 +11,38 @@ import UserNotifications
 import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
-
-    @IBOutlet var label: UILabel?
+    
+    
+    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var friendsImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any required interface initialization here.
+        let size = view.bounds.size
+        preferredContentSize = CGSize(width: size.width, height: size.height / 4)
+        
     }
     
-    func didReceive(_ notification: UNNotification) {
-        self.label?.text = notification.request.content.body
-    }
+        func didReceive(_ notification: UNNotification) {
+          answerLabel.text = "How Well Do You Know Your Friends?"
+      }
+    
+      //7 - Implement a method that will be called when the user taps on any of the notification actions.
+      func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+      
+            if response.actionIdentifier == "ross" {
+              friendsImage.image = UIImage(named: "test1")
+              answerLabel.text = "That's the correct answer!"
+            } else if response.actionIdentifier == "chandler" {
+              friendsImage.image = UIImage(named: "test2")
+              answerLabel.text = "Could you BE more wrong!?"
+            } else {
+              friendsImage.image = UIImage(named: "test3")
+              answerLabel.text = "Try again... or go eat a sandwich."
+            }
+            //8 - Do not dismiss the notification interface. The content extension handles the selected action.
+            completion(.doNotDismiss)
+          
+      }
 
 }
