@@ -24,11 +24,14 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
         func didReceive(_ notification: UNNotification) {
+            print("------------------------------")
           answerLabel.text = "How Well Do You Know Your Friends?"
       }
     
       //7 - Implement a method that will be called when the user taps on any of the notification actions.
       func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+        
+        print("------------------------------")
       
             if response.actionIdentifier == "ross" {
               friendsImage.image = UIImage(named: "test1")

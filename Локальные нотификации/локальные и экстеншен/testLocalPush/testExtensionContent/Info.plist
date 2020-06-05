@@ -25,9 +25,11 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>UNNotificationExtensionCategory</key>
-			<string>userActionsCategory</string>
-            <key>UNNotificationExtensionInitialContentSizeRatio</key>
-            <real>1</real>
+			<array>
+				<string>UserActionsCategory</string>
+			</array>
+			<key>UNNotificationExtensionInitialContentSizeRatio</key>
+			<real>1</real>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>

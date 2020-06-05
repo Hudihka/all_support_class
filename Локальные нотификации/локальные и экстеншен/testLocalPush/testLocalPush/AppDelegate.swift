@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let choiceB = UNNotificationAction(identifier: "chandler", title: "Chandler", options: [.foreground])
         let choiceC = UNNotificationAction(identifier: "joey", title: "Joey", options: [.foreground])
         
-        let friendsQuizCategory = UNNotificationCategory(identifier: "userActionsCategory", actions: [choiceA, choiceB, choiceC], intentIdentifiers: [], options: [])
+        let friendsQuizCategory = UNNotificationCategory(identifier: "UserActionsCategory", actions: [choiceA, choiceB, choiceC], intentIdentifiers: [], options: [])
         
         UNUserNotificationCenter.current().setNotificationCategories([friendsQuizCategory])
         UNUserNotificationCenter.current().delegate = self

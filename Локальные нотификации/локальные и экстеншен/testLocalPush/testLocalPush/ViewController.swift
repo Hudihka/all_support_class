@@ -28,9 +28,10 @@ class ViewController: UIViewController {
         let content = UNMutableNotificationContent()
         
         content.title = "EXTENSION"
-        content.body = "Summer Time"
+        content.subtitle = "Can you identify the Friend with his quote?"
+        content.body = "'PIVOTTTT!!'"
         content.sound = UNNotificationSound.default
-        content.categoryIdentifier = "userActionsCategory" //ид категории
+        content.categoryIdentifier = "UserActionsCategory" //ид категории
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         

@@ -14,6 +14,9 @@ class ViewController: UIViewController {
   @IBOutlet weak var responseLabel: UILabel!
   
   @IBOutlet weak var friendImage: UIImageView!
+    
+    
+    
   @IBAction func triviaBtnTapped(_ sender: Any) {
 
     let friendsContent = UNMutableNotificationContent()
@@ -53,16 +56,16 @@ extension ViewController: UNUserNotificationCenterDelegate {
   
   func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
     
-    if response.actionIdentifier == "ross" {
-      responseLabel.text = "That's the correct answer!"
-      friendImage.image = #imageLiteral(resourceName: "ross")
-    } else if response.actionIdentifier == "chandler" {
-      responseLabel.text = "Could you BE more wrong!?"
-      friendImage.image = #imageLiteral(resourceName: "chandler")
-    } else {
-      responseLabel.text = "Try again... or go eat a sandwich."
-      friendImage.image = #imageLiteral(resourceName: "joey")
-    }
+//    if response.actionIdentifier == "ross" {
+//      responseLabel.text = "That's the correct answer!"
+//      friendImage.image = #imageLiteral(resourceName: "ross")
+//    } else if response.actionIdentifier == "chandler" {
+//      responseLabel.text = "Could you BE more wrong!?"
+//      friendImage.image = #imageLiteral(resourceName: "chandler")
+//    } else {
+//      responseLabel.text = "Try again... or go eat a sandwich."
+//      friendImage.image = #imageLiteral(resourceName: "joey")
+//    }
     completionHandler()
   }
 

@@ -60,6 +60,7 @@
 		B27C631B248A59A2002D7938 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		B27C631E248A59A2002D7938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B27C6320248A59A2002D7938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27C6329248A71B9002D7938 /* testLocalPush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testLocalPush.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		B25834F4248A4E2E00BD0C59 /* testLocalPush */ = {
 			isa = PBXGroup;
 			children = (
+				B27C6329248A71B9002D7938 /* testLocalPush.entitlements */,
 				B25834F5248A4E2E00BD0C59 /* AppDelegate.swift */,
 				B258350A248A4FA300BD0C59 /* AppDelegate+Notifications.swift */,
 				B25834F9248A4E2E00BD0C59 /* ViewController.swift */,
@@ -408,6 +410,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = testLocalPush/testLocalPush.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z96TS9T74Z;
 				INFOPLIST_FILE = testLocalPush/Info.plist;
@@ -428,6 +431,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = testLocalPush/testLocalPush.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z96TS9T74Z;
 				INFOPLIST_FILE = testLocalPush/Info.plist;
