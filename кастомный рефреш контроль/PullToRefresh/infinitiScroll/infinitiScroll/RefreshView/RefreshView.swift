@@ -17,9 +17,9 @@ class RefreshView: UIView {
 	@IBOutlet weak var circleViewSmall: CircleView!
 	
 	var animateCirkles = false
-    //если тру то вю будет всегда по центру
-    private let circleViewInCentre = true
-
+	
+	//если тру то вю будет всегда по центру
+	private let circleViewInCentre = true
 	@IBOutlet private weak var constreintUp: NSLayoutConstraint!
 	@IBOutlet private weak var withBigView: NSLayoutConstraint!
 	
@@ -32,12 +32,11 @@ class RefreshView: UIView {
 				let absValue = abs(offset)
 				let lenght = (absValue - 30) / 100
 				lenghntCirkle(letnght: lenght)
-                
-                if circleViewInCentre {
-                    let position = (absValue - withBigView.constant) / 2
-                    constreintUp.constant = position
-                }
 
+				if circleViewInCentre {
+					let position = (absValue - withBigView.constant) / 2
+					constreintUp.constant = position
+				}
 
 			}
 			
@@ -67,13 +66,13 @@ class RefreshView: UIView {
 
     private func settingsView(){
 	
-		circleViewSmall.startValue = EnumAngels.zero.finishValue(from: false)
-		circleViewSmall.finishValue = EnumAngels.zero.finishValue(from: true)
-		circleViewSmall.clockwise = true
+		circleViewBig.startValue = EnumAngels.zero.finishValue(from: false)
+		circleViewBig.finishValue = EnumAngels.zero.finishValue(from: true)
+		circleViewBig.clockwise = true
 		
-		circleViewBig.startValue = EnumAngels.sixHours.finishValue(from: true)
-		circleViewBig.finishValue = EnumAngels.sixHours.finishValue(from: false)
-		circleViewBig.clockwise = false
+		circleViewSmall.startValue = EnumAngels.sixHours.finishValue(from: true)
+		circleViewSmall.finishValue = EnumAngels.sixHours.finishValue(from: false)
+		circleViewSmall.clockwise = false
 		
     }
 	

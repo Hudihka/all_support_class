@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationContent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="golf.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UUT-Vh-0Rn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                            </imageView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0b-Cf-3T5">
+                                <rect key="frame" x="0.0" y="250" width="320" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-BG-2ue">
+                                        <rect key="frame" x="270" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Udb-Ns-xPc"/>
+                                            <constraint firstAttribute="width" constant="50" id="slP-pA-y5p"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="♡">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="8Rb-AJ-qZi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                        <rect key="frame" x="18" y="0.0" width="244" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="244" id="Xwn-oE-eIR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="J0b-Cf-3T5" secondAttribute="top" id="9jG-SP-8EQ"/>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="J0b-Cf-3T5" secondAttribute="leading" constant="18" id="Aiu-JL-6kg"/>
+                                    <constraint firstAttribute="bottom" secondItem="UeU-BG-2ue" secondAttribute="bottom" id="Mup-Hd-RlQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="UeU-BG-2ue" secondAttribute="trailing" id="Rcd-Cv-UW1"/>
+                                    <constraint firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" id="TVd-C8-x4f"/>
+                                    <constraint firstItem="UeU-BG-2ue" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="8" id="ner-Iv-Xz2"/>
+                                    <constraint firstAttribute="height" constant="50" id="yDt-Jt-n5O"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12x-cO-00q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                                <connections>
+                                    <action selector="openAppButton:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="qDc-tY-RUA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45882353186607361" green="0.74901962280273438" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UUT-Vh-0Rn" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" id="46t-hd-cgb"/>
+                            <constraint firstItem="J0b-Cf-3T5" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="B2Y-ED-SR6"/>
+                            <constraint firstItem="12x-cO-00q" firstAttribute="trailing" secondItem="2BE-c3-nQJ" secondAttribute="trailing" id="LNg-V8-kFH"/>
+                            <constraint firstItem="12x-cO-00q" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="TNL-4r-hKl"/>
+                            <constraint firstItem="J0b-Cf-3T5" firstAttribute="trailing" secondItem="2BE-c3-nQJ" secondAttribute="trailing" id="VW6-dS-fnW"/>
+                            <constraint firstItem="UUT-Vh-0Rn" firstAttribute="bottom" secondItem="2BE-c3-nQJ" secondAttribute="bottom" id="VZR-Ju-tfH"/>
+                            <constraint firstItem="UUT-Vh-0Rn" firstAttribute="trailing" secondItem="2BE-c3-nQJ" secondAttribute="trailing" id="aof-5K-9oB"/>
+                            <constraint firstItem="UUT-Vh-0Rn" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="iKL-Pq-CbG"/>
+                            <constraint firstItem="J0b-Cf-3T5" firstAttribute="bottom" secondItem="2BE-c3-nQJ" secondAttribute="bottom" id="jkh-k6-E3c"/>
+                            <constraint firstItem="12x-cO-00q" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" id="ln2-7O-Zp5"/>
+                            <constraint firstItem="J0b-Cf-3T5" firstAttribute="top" secondItem="12x-cO-00q" secondAttribute="bottom" id="xoW-im-uvl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="300"/>
+                    <connections>
+                        <outlet property="label" destination="GcN-lo-r42" id="lpW-cU-7IG"/>
+                        <outlet property="likeButton" destination="UeU-BG-2ue" id="rlc-3O-kcG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804.79999999999995" y="77.361319340329842"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="golf.jpg" width="320" height="300"/>
+    </resources>
+</document>

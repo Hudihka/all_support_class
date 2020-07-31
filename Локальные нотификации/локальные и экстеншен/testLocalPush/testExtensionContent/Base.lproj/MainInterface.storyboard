@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4gg-nK-7vc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4096" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="d1u-33-1o9">
+            <objects>
+                <viewController id="4gg-nK-7vc" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="testExtensionContent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hqt-dy-zsU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tnc-UI-wen"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="G6e-Ca-M7P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="WQg-6N-8RQ">
+                                <rect key="frame" x="32" y="62" width="256" height="63"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awk-YF-iaX">
+                                <rect key="frame" x="160" y="52" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="336-gL-dbt">
+                                <rect key="frame" x="16" y="15" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="awk-YF-iaX" firstAttribute="top" secondItem="hqt-dy-zsU" secondAttribute="bottom" constant="8" id="4cb-FM-UCk"/>
+                            <constraint firstItem="WQg-6N-8RQ" firstAttribute="top" secondItem="awk-YF-iaX" secondAttribute="bottom" constant="10" id="78P-tY-qcP"/>
+                            <constraint firstItem="WQg-6N-8RQ" firstAttribute="width" secondItem="G6e-Ca-M7P" secondAttribute="width" multiplier="0.8" id="EeS-Lr-D3F"/>
+                            <constraint firstAttribute="trailing" secondItem="336-gL-dbt" secondAttribute="trailing" constant="16" id="O55-dK-Z80"/>
+                            <constraint firstItem="WQg-6N-8RQ" firstAttribute="centerX" secondItem="G6e-Ca-M7P" secondAttribute="centerX" id="VFV-gg-4rM"/>
+                            <constraint firstItem="awk-YF-iaX" firstAttribute="centerX" secondItem="G6e-Ca-M7P" secondAttribute="centerX" id="fbo-p8-2Pt"/>
+                            <constraint firstItem="336-gL-dbt" firstAttribute="leading" secondItem="G6e-Ca-M7P" secondAttribute="leading" constant="16" id="rqb-Fe-bBy"/>
+                            <constraint firstItem="336-gL-dbt" firstAttribute="top" secondItem="G6e-Ca-M7P" secondAttribute="top" constant="15" id="uRx-DE-q2O"/>
+                            <constraint firstItem="Tnc-UI-wen" firstAttribute="top" secondItem="WQg-6N-8RQ" secondAttribute="bottom" id="vB7-bp-1LN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xbg-Tm-xl6"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="125"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="336-gL-dbt" id="3oF-pj-ZVz"/>
+                        <outlet property="friendsImage" destination="WQg-6N-8RQ" id="Wfq-pB-Geo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeO-mm-o3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007" y="85"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test1" width="1750" height="1268"/>
+    </resources>
+</document>

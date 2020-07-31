@@ -11,11 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    //добавить надо под тейбл вью
-    //и должна быть тем же размером что и ТВ
-    @IBOutlet weak var refreshView: RefreshView!
-    
+	
+	var refresh = UIRefreshControl()
+	var refreshView: RefreshView?
 
     var dataArray = [String]()
 
@@ -29,26 +27,40 @@ class ViewController: UIViewController {
     }
 	
 	private func createRefreshView(){
+
+        
+        refresh.tintColor = UIColor.clear
+        refresh.backgroundColor = UIColor.clear
+		refresh.clipsToBounds = true
+		
+		
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
+		
+		
+		refreshView = RefreshView(frame: refresh.frame)
+		refresh.addSubview(refreshView!)
 		
 		refreshView?.block = {
-			// убираем анимац нижнюю вью
+			self.refresh.endRefreshing()
 		}
-        
-        
-//        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: -1 * heightView, right: 0)
+		
+
+		refresh.addTarget(self, action: #selector(loadContent), for: .valueChanged)
+
 	}
 	
 
-    fileprivate func loadContent() {
+    @objc func loadContent() {
 		if refreshView?.animateCirkles ?? true {
 			return
 		}
-        
-        print("//загрузка контента")
 		
 		//загрузка контента
     }
-    
 
 
     func addData(_ count: Int){
@@ -68,8 +80,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func desingTV(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        self.tableView.backgroundColor = .clear
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,23 +104,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 	
 	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        
-        let scrollWey = scrollView.contentOffset.y + scrollView.frame.height
-        let height = scrollView.contentSize.height
-        
-        if scrollWey > height {
-            print(scrollWey - height)
-        }
+		refreshView?.offset = scrollView.contentOffset.y
 	}
-    
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool){
-           /*
-         юзер отпустил палец
-         */
-        
-        loadContent()
-    }
+	
+
 }
 
