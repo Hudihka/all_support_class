@@ -15,6 +15,9 @@
 		52F16D8723C383C900B9F974 /* Constats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F16D8623C383C900B9F974 /* Constats.swift */; };
 		52F16D8A23C38DE600B9F974 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F16D8823C38DE600B9F974 /* MyCustomCell.swift */; };
 		52F16D8B23C38DE600B9F974 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F16D8923C38DE600B9F974 /* MyCustomCell.xib */; };
+		B26422D224D46D9500CCB74F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26422D124D46D9500CCB74F /* AlertViewController.swift */; };
+		B26422D524D46FD500CCB74F /* ViewHeaderAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */; };
+		B26422D724D4700D00CCB74F /* ViewHeaderAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		52F16D8623C383C900B9F974 /* Constats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constats.swift; sourceTree = "<group>"; };
 		52F16D8823C38DE600B9F974 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		52F16D8923C38DE600B9F974 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		B26422D124D46D9500CCB74F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertViewController.swift; path = "../New Group/AlertViewController.swift"; sourceTree = "<group>"; };
+		B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewHeaderAlert.xib; sourceTree = "<group>"; };
+		B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHeaderAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			children = (
 				52F16D7223C37D6500B9F974 /* AppDelegate.swift */,
 				52F16D7623C37D6500B9F974 /* ViewController.swift */,
+				B26422D324D46EC100CCB74F /* Alert */,
 				52F16D7823C37D6500B9F974 /* Main.storyboard */,
 				52F16D8823C38DE600B9F974 /* MyCustomCell.swift */,
 				52F16D8923C38DE600B9F974 /* MyCustomCell.xib */,
@@ -71,6 +78,16 @@
 				52F16D8023C37D6700B9F974 /* Info.plist */,
 			);
 			path = testCollectionView;
+			sourceTree = "<group>";
+		};
+		B26422D324D46EC100CCB74F /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B26422D124D46D9500CCB74F /* AlertViewController.swift */,
+				B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */,
+				B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +150,7 @@
 			files = (
 				52F16D7F23C37D6700B9F974 /* LaunchScreen.storyboard in Resources */,
 				52F16D7C23C37D6700B9F974 /* Assets.xcassets in Resources */,
+				B26422D524D46FD500CCB74F /* ViewHeaderAlert.xib in Resources */,
 				52F16D8B23C38DE600B9F974 /* MyCustomCell.xib in Resources */,
 				52F16D7A23C37D6500B9F974 /* Main.storyboard in Resources */,
 			);
@@ -147,7 +165,9 @@
 			files = (
 				52F16D7723C37D6500B9F974 /* ViewController.swift in Sources */,
 				52F16D7323C37D6500B9F974 /* AppDelegate.swift in Sources */,
+				B26422D724D4700D00CCB74F /* ViewHeaderAlert.swift in Sources */,
 				52F16D8A23C38DE600B9F974 /* MyCustomCell.swift in Sources */,
+				B26422D224D46D9500CCB74F /* AlertViewController.swift in Sources */,
 				52F16D8723C383C900B9F974 /* Constats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDKVUYFRKW;
+				DEVELOPMENT_TEAM = CM2ETF5YKF;
 				INFOPLIST_FILE = testCollectionView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,7 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDKVUYFRKW;
+				DEVELOPMENT_TEAM = CM2ETF5YKF;
 				INFOPLIST_FILE = testCollectionView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
