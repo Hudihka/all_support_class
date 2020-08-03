@@ -14,13 +14,13 @@ class ZoomViewController: UIViewController {
     @IBOutlet weak var imageHoll: UIImageView!
     private var imageScrollView: ImageScrollView!
     private var imageZoom: UIImage?
+	
     
     var saveBlock: () -> ()  = {   }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .red
         
         imageScrollView = ImageScrollView(frame: view.frame)
         view.addSubview(imageScrollView)
@@ -30,7 +30,7 @@ class ZoomViewController: UIViewController {
             self.imageScrollView.set(image: imageZoom)
         }
         
-//        addImageHoll()
+        addImageHoll()
     }
 
     

@@ -66,6 +66,7 @@ extension AlertViewController: UIImagePickerControllerDelegate, UINavigationCont
         pickerVC.delegate = self
         pickerVC.allowsEditing = false
         pickerVC.sourceType = .camera
+		pickerVC.modalPresentationStyle = .overFullScreen
         
         self.navigationController?.present(pickerVC, animated: true, completion: nil)
 
@@ -77,7 +78,7 @@ extension AlertViewController: UIImagePickerControllerDelegate, UINavigationCont
         if let chosenImage = info[.originalImage] as? UIImage {
             pickerVC.dismiss(animated: true, completion: nil)
             let ZVC = ZoomViewController.route(image: chosenImage)
-            ZVC.modalPresentationStyle = .fullScreen
+            ZVC.modalPresentationStyle = .overFullScreen
             self.present(ZVC, animated: true, completion: nil)
         }
     }
