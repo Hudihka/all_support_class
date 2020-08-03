@@ -93,13 +93,13 @@
 			path = testCollectionView;
 			sourceTree = "<group>";
 		};
-		B2536DBC24D7F8D000FB388A /* New Group1 */ = {
+		B2536DBC24D7F8D000FB388A /* zoomVC */ = {
 			isa = PBXGroup;
 			children = (
 				B2536DBA24D7F4CE00FB388A /* ZoomViewController.swift */,
 				B2536DBD24D7F95400FB388A /* ImageScrollView.swift */,
 			);
-			path = "New Group1";
+			path = zoomVC;
 			sourceTree = "<group>";
 		};
 		B2540EA624D7BEEE00605D4B /* Extension */ = {
@@ -129,7 +129,7 @@
 				B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */,
 				B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */,
 				B2540EA924D7C45D00605D4B /* ManagerPhoto.swift */,
-				B2536DBC24D7F8D000FB388A /* New Group1 */,
+				B2536DBC24D7F8D000FB388A /* zoomVC */,
 				B2540EAB24D7C7B500605D4B /* Cells */,
 			);
 			path = Alert;

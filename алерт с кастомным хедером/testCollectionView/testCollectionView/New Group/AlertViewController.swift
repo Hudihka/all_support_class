@@ -64,7 +64,7 @@ extension AlertViewController: UIImagePickerControllerDelegate, UINavigationCont
     fileprivate func openFotoCamera() {
 
         pickerVC.delegate = self
-        pickerVC.allowsEditing = true
+        pickerVC.allowsEditing = false
         pickerVC.sourceType = .camera
         
         self.navigationController?.present(pickerVC, animated: true, completion: nil)
@@ -75,12 +75,12 @@ extension AlertViewController: UIImagePickerControllerDelegate, UINavigationCont
     //сделал фото
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        if let chosenImage = info[.editedImage] as? UIImage, let NVC = pickerVC.navigationController {
-            
+        if let chosenImage = info[.originalImage] as? UIImage {
+            pickerVC.dismiss(animated: true, completion: nil)
             let ZVC = ZoomViewController.route(image: chosenImage)
-            NVC.pushViewController(ZVC, animated: true)
-            
+            self.navigationController?.pushViewController(ZVC, animated: true)
         }
     }
+    
 }
 
