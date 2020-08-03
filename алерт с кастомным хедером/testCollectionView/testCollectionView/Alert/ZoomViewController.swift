@@ -20,7 +20,9 @@ class ZoomViewController: UIViewController {
         view.addSubview(imageScrollView)
         setupImageScrollView()
         
-        self.imageScrollView.set(image: imageZoom)
+        if let imageZoom = imageZoom {
+            self.imageScrollView.set(image: imageZoom)
+        }
     }
     
 
