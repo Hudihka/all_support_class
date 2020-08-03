@@ -11,6 +11,8 @@ import UIKit
 
 class ViewHeaderAlert: UIView{
     
+    var indexClear = 0
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     var dataArray = [String]()
@@ -87,6 +89,16 @@ extension ViewHeaderAlert: UICollectionViewDelegateFlowLayout, UICollectionViewD
 
 
         cell.name = dataArray[indexPath.row]
+        
+        
+        
+        if indexPath.row > indexClear {
+            cell.contentView.alpha = 0
+            UIView.animate(withDuration: 0.4) {
+                cell.contentView.alpha = 1
+            }
+             indexClear = indexPath.row
+        }
 
         return cell
     }
@@ -98,8 +110,8 @@ extension ViewHeaderAlert: UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = self.frame.size.width / 3.8
-        return CGSize(width: size, height: size)
+        let size = self.frame.size.height
+        return CGSize(width: size + 8, height: size)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -14,6 +14,7 @@ class MyCustomCell: UICollectionViewCell {
     
     var name: String?{
         didSet{
+            imageView.addRadius(number: 6)
             imageView.image = nil
             if let name = name{
                imageView.image = UIImage(named: name)

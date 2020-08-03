@@ -17,10 +17,10 @@ class AlertViewController: UIViewController {
     }
     
     @IBAction func playAlert(_ sender: Any) {
-        let alertController = UIAlertController(title: "\n\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
 
         
-        let rect = CGRect(x: 0, y: 12, width: alertController.view.bounds.size.width, height: 102)
+        let rect = CGRect(x: 0, y: 10, width: alertController.view.bounds.size.width - 17, height: 102)
         let customView = ViewHeaderAlert(frame: rect)
 
         customView.backgroundColor = .clear
