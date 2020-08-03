@@ -43,5 +43,11 @@ class AlertViewController: UIViewController {
         
     }
     
-
+    @IBAction func cameraVC(_ sender: Any) {
+        
+        let VC = MyCameraVC.route()
+        self.navigationController?.pushViewController(VC, animated: true)
+        
+    }
+    
 }

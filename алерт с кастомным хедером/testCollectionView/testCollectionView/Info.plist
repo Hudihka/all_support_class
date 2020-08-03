@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>БЛА-бла-бла</string>
+	<key>NSCameraUsageDescription</key>
+	<string>БЛА-бла-бла</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>LSRequiresIPhoneOS</key>

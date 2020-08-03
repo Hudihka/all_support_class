@@ -46,13 +46,12 @@ class ViewHeaderAlert: UIView{
         self.backgroundColor = UIColor.clear
         
         settingsCV()
-        
-        
     }
     
     
-   
-    
+    deinit {
+        ManagerPhotos.shared.imageCache.removeAllObjects()
+    }
     
 }
 
@@ -67,30 +66,42 @@ extension ViewHeaderAlert: UICollectionViewDelegateFlowLayout, UICollectionViewD
         
         self.collectionView.backgroundColor = .clear
 
-        self.collectionView.register(UINib(nibName: "MyCustomCell", bundle: nil),
-                                     forCellWithReuseIdentifier: "MyCustomCell")
+        self.collectionView.register(UINib(nibName: "PhotoCell", bundle: nil),
+                                     forCellWithReuseIdentifier: "PhotoCell")
+        
+        self.collectionView.register(UINib(nibName: "CameraCell", bundle: nil),
+                                     forCellWithReuseIdentifier: "CameraCell")
 
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return photos.count + 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MyCustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
-
-
-        cell.ind = indexPath
         
-        if indexPath.row > indexClear {
-            cell.contentView.alpha = 0
-            UIView.animate(withDuration: 0.4) {
-                cell.contentView.alpha = 1
+        if indexPath.row == 0 {
+            
+            let cell: CameraCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CameraCell", for: indexPath) as! CameraCell
+            
+            return cell
+            
+        } else {
+            
+            let cell: PhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+            
+            cell.ind = indexPath
+            
+            if indexPath.row > indexClear {
+                cell.contentView.alpha = 0
+                UIView.animate(withDuration: 0.4) {
+                    cell.contentView.alpha = 1
+                }
+                indexClear = indexPath.row
             }
-             indexClear = indexPath.row
+            
+            return cell
         }
-
-        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView,

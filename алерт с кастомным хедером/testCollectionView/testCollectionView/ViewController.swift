@@ -82,8 +82,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         
         self.collectionView.dragInteractionEnabled = true
 
-        self.collectionView.register(UINib(nibName: "MyCustomCell", bundle: nil),
-                                     forCellWithReuseIdentifier: "MyCustomCell")
+        self.collectionView.register(UINib(nibName: "PhotoCell", bundle: nil),
+                                     forCellWithReuseIdentifier: "PhotoCell")
 
     }
 
@@ -92,7 +92,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MyCustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
+        let cell: PhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
 
 
 //        cell.name = dataArray[indexPath.row]
