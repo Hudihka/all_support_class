@@ -136,6 +136,21 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="868.52678571428567"/>
         </scene>
+        <!--Zoom View Controller-->
+        <scene sceneID="bUN-7s-3mc">
+            <objects>
+                <viewController storyboardIdentifier="ZoomViewController" id="emN-Yw-vha" customClass="ZoomViewController" customModule="testCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Nb-31-61N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.15805855390000001" green="0.15809151530000001" blue="0.15805155039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Is1-hK-8r9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7t-tF-pba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143.4782608695652" y="872.54464285714278"/>
+        </scene>
         <!--My CameraVC-->
         <scene sceneID="FhP-zv-qdA">
             <objects>
@@ -150,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hsr-RY-tjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="865"/>
+            <point key="canvasLocation" x="1964" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M2s-4S-t2M">

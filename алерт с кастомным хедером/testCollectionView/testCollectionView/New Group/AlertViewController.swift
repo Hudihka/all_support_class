@@ -9,6 +9,8 @@
 import UIKit
 
 class AlertViewController: UIViewController {
+    
+    fileprivate let pickerVC = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,11 @@ class AlertViewController: UIViewController {
         
         let rect = CGRect(x: 0, y: 10, width: alertController.view.bounds.size.width - 17, height: 102)
         let customView = ViewHeaderAlert(frame: rect)
+        customView.blockOpenCamera = {
+            alertController.dismiss(animated: true) {
+                 self.openFotoCamera()
+            }
+        }
 
         customView.backgroundColor = .clear
         alertController.view.addSubview(customView)
@@ -51,3 +58,29 @@ class AlertViewController: UIViewController {
     }
     
 }
+
+extension AlertViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    fileprivate func openFotoCamera() {
+
+        pickerVC.delegate = self
+        pickerVC.allowsEditing = true
+        pickerVC.sourceType = .camera
+        
+        self.navigationController?.present(pickerVC, animated: true, completion: nil)
+
+    }
+
+
+    //сделал фото
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let chosenImage = info[.editedImage] as? UIImage, let NVC = pickerVC.navigationController {
+            
+            let ZVC = ZoomViewController.route(image: chosenImage)
+            NVC.pushViewController(ZVC, animated: true)
+            
+        }
+    }
+}
+

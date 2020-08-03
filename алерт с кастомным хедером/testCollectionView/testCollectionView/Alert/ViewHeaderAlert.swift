@@ -11,6 +11,8 @@ import UIKit
 
 class ViewHeaderAlert: UIView{
     
+    var blockOpenCamera: () -> () = {  }
+    
     fileprivate var indexClear = 0
     fileprivate let photos = ManagerPhotos.shared.fetchResult
     
@@ -106,8 +108,13 @@ extension ViewHeaderAlert: UICollectionViewDelegateFlowLayout, UICollectionViewD
 
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-
         
+        if indexPath.row == 0 {
+            blockOpenCamera()
+        } else {
+            ////
+        }
+
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

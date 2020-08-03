@@ -15,6 +15,7 @@
 		52F16D8723C383C900B9F974 /* Constats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F16D8623C383C900B9F974 /* Constats.swift */; };
 		52F16D8A23C38DE600B9F974 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F16D8823C38DE600B9F974 /* PhotoCell.swift */; };
 		52F16D8B23C38DE600B9F974 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F16D8923C38DE600B9F974 /* PhotoCell.xib */; };
+		B2536DBB24D7F4CE00FB388A /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2536DBA24D7F4CE00FB388A /* ZoomViewController.swift */; };
 		B2540EA824D7BF0300605D4B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2540EA724D7BF0300605D4B /* UIView.swift */; };
 		B2540EAA24D7C45D00605D4B /* ManagerPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2540EA924D7C45D00605D4B /* ManagerPhoto.swift */; };
 		B2540EB024D7CB6600605D4B /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2540EAE24D7CB6600605D4B /* CameraCell.swift */; };
@@ -36,6 +37,7 @@
 		52F16D8623C383C900B9F974 /* Constats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constats.swift; sourceTree = "<group>"; };
 		52F16D8823C38DE600B9F974 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		52F16D8923C38DE600B9F974 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PhotoCell.xib; path = "../New Group/PhotoCell.xib"; sourceTree = "<group>"; };
+		B2536DBA24D7F4CE00FB388A /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
 		B2540EA724D7BF0300605D4B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = testCollectionView/Alert/UIView.swift; sourceTree = SOURCE_ROOT; };
 		B2540EA924D7C45D00605D4B /* ManagerPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPhoto.swift; sourceTree = "<group>"; };
 		B2540EAE24D7CB6600605D4B /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */,
 				B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */,
 				B2540EA924D7C45D00605D4B /* ManagerPhoto.swift */,
+				B2536DBA24D7F4CE00FB388A /* ZoomViewController.swift */,
 				B2540EAB24D7C7B500605D4B /* Cells */,
 			);
 			path = Alert;
@@ -200,6 +203,7 @@
 				B2540EAA24D7C45D00605D4B /* ManagerPhoto.swift in Sources */,
 				B26422D724D4700D00CCB74F /* ViewHeaderAlert.swift in Sources */,
 				B2540EA824D7BF0300605D4B /* UIView.swift in Sources */,
+				B2536DBB24D7F4CE00FB388A /* ZoomViewController.swift in Sources */,
 				B2540EB324D7CDCF00605D4B /* MyCameraVC.swift in Sources */,
 				52F16D8A23C38DE600B9F974 /* PhotoCell.swift in Sources */,
 				B2540EB024D7CB6600605D4B /* CameraCell.swift in Sources */,
