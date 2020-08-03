@@ -71,14 +71,14 @@ extension AlertViewController: UIImagePickerControllerDelegate, UINavigationCont
 
     }
 
-
     //сделал фото
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let chosenImage = info[.originalImage] as? UIImage {
             pickerVC.dismiss(animated: true, completion: nil)
             let ZVC = ZoomViewController.route(image: chosenImage)
-            self.navigationController?.pushViewController(ZVC, animated: true)
+            ZVC.modalPresentationStyle = .fullScreen
+            self.present(ZVC, animated: true, completion: nil)
         }
     }
     

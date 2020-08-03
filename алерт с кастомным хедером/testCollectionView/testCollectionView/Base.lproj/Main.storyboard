@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JNp-Lx-yHI">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -143,9 +143,37 @@
                     <view key="view" contentMode="scaleToFill" id="2Nb-31-61N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subtract" translatesAutoresizingMaskIntoConstraints="NO" id="j4F-i8-Ihq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-9O-BvP">
+                                <rect key="frame" x="16" y="814" width="382" height="48"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.72549019609999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eLp-aY-wrg"/>
+                                </constraints>
+                                <state key="normal" title="СОХРАНИТЬ"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="emN-Yw-vha" eventType="touchUpInside" id="KFJ-8c-Otp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.15805855390000001" green="0.15809151530000001" blue="0.15805155039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j4F-i8-Ihq" firstAttribute="leading" secondItem="Is1-hK-8r9" secondAttribute="leading" id="4Ps-RL-VBC"/>
+                            <constraint firstItem="VMU-9O-BvP" firstAttribute="leading" secondItem="Is1-hK-8r9" secondAttribute="leading" constant="16" id="8F2-3N-YLd"/>
+                            <constraint firstAttribute="bottom" secondItem="VMU-9O-BvP" secondAttribute="bottom" constant="34" id="JBK-XI-G0a"/>
+                            <constraint firstAttribute="bottom" secondItem="j4F-i8-Ihq" secondAttribute="bottom" id="QIZ-V0-frx"/>
+                            <constraint firstItem="j4F-i8-Ihq" firstAttribute="top" secondItem="2Nb-31-61N" secondAttribute="top" id="S0f-hg-lJk"/>
+                            <constraint firstItem="Is1-hK-8r9" firstAttribute="trailing" secondItem="VMU-9O-BvP" secondAttribute="trailing" constant="16" id="jxh-AS-jFD"/>
+                            <constraint firstItem="j4F-i8-Ihq" firstAttribute="trailing" secondItem="Is1-hK-8r9" secondAttribute="trailing" id="xu4-KH-xDM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Is1-hK-8r9"/>
                     </view>
+                    <connections>
+                        <outlet property="imageHoll" destination="j4F-i8-Ihq" id="Fj3-9n-nhQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7t-tF-pba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,4 +212,7 @@
             <point key="canvasLocation" x="-646" y="869"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Subtract" width="375" height="812"/>
+    </resources>
 </document>
