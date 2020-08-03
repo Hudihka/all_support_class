@@ -16,6 +16,7 @@
 		52F16D8A23C38DE600B9F974 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F16D8823C38DE600B9F974 /* MyCustomCell.swift */; };
 		52F16D8B23C38DE600B9F974 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F16D8923C38DE600B9F974 /* MyCustomCell.xib */; };
 		B2540EA824D7BF0300605D4B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2540EA724D7BF0300605D4B /* UIView.swift */; };
+		B2540EAA24D7C45D00605D4B /* ManagerPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2540EA924D7C45D00605D4B /* ManagerPhoto.swift */; };
 		B26422D224D46D9500CCB74F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26422D124D46D9500CCB74F /* AlertViewController.swift */; };
 		B26422D524D46FD500CCB74F /* ViewHeaderAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */; };
 		B26422D724D4700D00CCB74F /* ViewHeaderAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */; };
@@ -33,6 +34,7 @@
 		52F16D8823C38DE600B9F974 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		52F16D8923C38DE600B9F974 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
 		B2540EA724D7BF0300605D4B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = testCollectionView/Alert/UIView.swift; sourceTree = SOURCE_ROOT; };
+		B2540EA924D7C45D00605D4B /* ManagerPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPhoto.swift; sourceTree = "<group>"; };
 		B26422D124D46D9500CCB74F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertViewController.swift; path = "../New Group/AlertViewController.swift"; sourceTree = "<group>"; };
 		B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewHeaderAlert.xib; sourceTree = "<group>"; };
 		B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHeaderAlert.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				B26422D124D46D9500CCB74F /* AlertViewController.swift */,
 				B26422D424D46FD500CCB74F /* ViewHeaderAlert.xib */,
 				B26422D624D4700D00CCB74F /* ViewHeaderAlert.swift */,
+				B2540EA924D7C45D00605D4B /* ManagerPhoto.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				52F16D7723C37D6500B9F974 /* ViewController.swift in Sources */,
 				52F16D7323C37D6500B9F974 /* AppDelegate.swift in Sources */,
+				B2540EAA24D7C45D00605D4B /* ManagerPhoto.swift in Sources */,
 				B26422D724D4700D00CCB74F /* ViewHeaderAlert.swift in Sources */,
 				B2540EA824D7BF0300605D4B /* UIView.swift in Sources */,
 				52F16D8A23C38DE600B9F974 /* MyCustomCell.swift in Sources */,

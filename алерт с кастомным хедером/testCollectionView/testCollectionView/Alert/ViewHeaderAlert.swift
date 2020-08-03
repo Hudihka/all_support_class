@@ -11,11 +11,11 @@ import UIKit
 
 class ViewHeaderAlert: UIView{
     
-    var indexClear = 0
+    fileprivate var indexClear = 0
+    fileprivate let photos = ManagerPhotos.shared.fetchResult
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    var dataArray = [String]()
     
     // MARK: - Init
     
@@ -45,19 +45,11 @@ class ViewHeaderAlert: UIView{
         
         self.backgroundColor = UIColor.clear
         
-        getData()
         settingsCV()
         
         
     }
     
-    
-    private func getData(){
-        for i in 0...49{
-            let name = "img_\(i)"
-            dataArray.append(name)
-        }
-    }
     
    
     
@@ -81,16 +73,14 @@ extension ViewHeaderAlert: UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataArray.count
+        return photos.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MyCustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
 
 
-        cell.name = dataArray[indexPath.row]
-        
-        
+        cell.ind = indexPath
         
         if indexPath.row > indexClear {
             cell.contentView.alpha = 0

@@ -12,20 +12,26 @@ class MyCustomCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var name: String?{
+    var ind: IndexPath?{
         didSet{
-            imageView.addRadius(number: 6)
-            imageView.image = nil
-            if let name = name{
-               imageView.image = UIImage(named: name)
+            self.imageView.image = nil
+            if let ind = ind {
+                update(index: ind)
             }
+        }
+    }
+
+
+    private func update(index: IndexPath){
+        ManagerPhotos.shared.getImageOne(indexPath: index) {[weak self] (img) in
+            self?.imageView.image = img
         }
     }
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        imageView.addRadius(number: 6)
     }
 
 }

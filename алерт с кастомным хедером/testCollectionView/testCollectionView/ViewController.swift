@@ -95,7 +95,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let cell: MyCustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
 
 
-        cell.name = dataArray[indexPath.row]
+//        cell.name = dataArray[indexPath.row]
 
         return cell
     }
