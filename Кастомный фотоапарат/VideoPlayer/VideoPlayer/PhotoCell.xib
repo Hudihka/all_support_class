@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="147" height="121"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RR5-hz-etj">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RR5-hz-etj">
                         <rect key="frame" x="0.0" y="0.0" width="147" height="121"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzz-ov-J3X">
@@ -30,11 +30,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Efy-g0-wvC">
+                        <rect key="frame" x="63.5" y="50.5" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Gzz-ov-J3X" secondAttribute="bottom" constant="12" id="1yf-Lc-RdR"/>
                 <constraint firstAttribute="trailing" secondItem="Gzz-ov-J3X" secondAttribute="trailing" constant="12" id="LJK-Sj-emD"/>
+                <constraint firstItem="Efy-g0-wvC" firstAttribute="centerX" secondItem="RR5-hz-etj" secondAttribute="centerX" id="N64-f6-H6k"/>
+                <constraint firstItem="Efy-g0-wvC" firstAttribute="centerY" secondItem="RR5-hz-etj" secondAttribute="centerY" id="PCr-5M-tlb"/>
                 <constraint firstItem="RR5-hz-etj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZBM-SG-ZEc"/>
                 <constraint firstAttribute="bottom" secondItem="RR5-hz-etj" secondAttribute="bottom" id="a0e-rS-8tk"/>
                 <constraint firstItem="RR5-hz-etj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="i4E-Vc-hga"/>
@@ -42,6 +47,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="147" height="121"/>
+            <connections>
+                <outlet property="imageView" destination="RR5-hz-etj" id="5e8-YK-HGM"/>
+                <outlet property="labelDuration" destination="Gzz-ov-J3X" id="wKE-am-cKa"/>
+                <outlet property="spiner" destination="Efy-g0-wvC" id="arV-qw-EnG"/>
+            </connections>
             <point key="canvasLocation" x="15.217391304347828" y="45.870535714285715"/>
         </collectionViewCell>
     </objects>
