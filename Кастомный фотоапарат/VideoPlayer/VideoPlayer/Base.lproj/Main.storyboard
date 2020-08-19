@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="1689.8550724637682" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--GaleryVC-->
         <scene sceneID="ukB-YR-hJW">
             <objects>
-                <viewController id="qmB-Us-wKS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GaleryVC" id="qmB-Us-wKS" customClass="GaleryVC" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="phY-wz-4rR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,10 +81,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mWo-kv-qAa"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="CmB-3X-46i" id="fti-PH-XtG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAv-gG-MCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2753.6231884057975" y="750.66964285714278"/>
+            <point key="canvasLocation" x="2529" y="750"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bya-9a-sMy">
