@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +23,16 @@
                         <rect key="frame" x="47.5" y="39.5" width="20" height="20"/>
                         <color key="color" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </activityIndicatorView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiL-cK-3on">
+                        <rect key="frame" x="66" y="71" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="MXk-Ax-rEe"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="N4M-VC-Fce"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
@@ -31,13 +40,16 @@
                 <constraint firstAttribute="bottom" secondItem="Fyc-ep-c59" secondAttribute="bottom" id="AUj-yR-xdY"/>
                 <constraint firstItem="z6O-i7-CTB" firstAttribute="centerY" secondItem="Fyc-ep-c59" secondAttribute="centerY" id="Afc-Wh-sYp"/>
                 <constraint firstItem="Fyc-ep-c59" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Npo-UT-zqJ"/>
+                <constraint firstAttribute="bottom" secondItem="NiL-cK-3on" secondAttribute="bottom" constant="7" id="dkA-Oh-rBq"/>
                 <constraint firstItem="z6O-i7-CTB" firstAttribute="centerX" secondItem="Fyc-ep-c59" secondAttribute="centerX" id="jHV-Bp-MCG"/>
                 <constraint firstItem="Fyc-ep-c59" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="n89-LX-3OV"/>
+                <constraint firstAttribute="trailing" secondItem="NiL-cK-3on" secondAttribute="trailing" constant="7" id="tdk-ua-MwJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="115" height="99"/>
             <connections>
                 <outlet property="imageView" destination="Fyc-ep-c59" id="j5y-J6-50G"/>
+                <outlet property="labelDuration" destination="NiL-cK-3on" id="12Q-L0-BdD"/>
                 <outlet property="spiner" destination="z6O-i7-CTB" id="uB0-xk-Xr6"/>
             </connections>
             <point key="canvasLocation" x="227" y="132"/>

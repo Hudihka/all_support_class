@@ -13,6 +13,7 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var spiner: UIActivityIndicatorView!
     
+    @IBOutlet var labelDuration: UILabel!
     
     private let manager = ManagerPhotos.shared
     
@@ -20,6 +21,7 @@ class PhotoCell: UICollectionViewCell {
         didSet{
             self.imageView.image = nil
             self.spiner.stopAnimating()
+            self.labelDuration.text = nil
             if let ind = ind {
                 update(index: ind)
             }
@@ -29,6 +31,9 @@ class PhotoCell: UICollectionViewCell {
     private func update(index: IndexPath){
         manager.getImageOne(indexPath: index) {[weak self] (img, duration)  in
             self?.imageView.image = img
+            if let text = duration {
+                self?.labelDuration.text = text
+            }
         }
         
         if let indexBig = manager.indexBigPhoto, index == indexBig{
