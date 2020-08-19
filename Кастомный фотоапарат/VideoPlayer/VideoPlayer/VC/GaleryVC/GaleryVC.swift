@@ -51,7 +51,7 @@ class GaleryVC: UIViewController {
     }
     
     deinit {
-        ManagerPhotos.shared.imageCache.removeAllObjects()
+        ManagerPhotos.shared.clearCashe()
     }
     
 }
