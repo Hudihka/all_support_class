@@ -22,10 +22,10 @@
 		B2109BE424ED055300775740 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BE324ED055300775740 /* UIWindow.swift */; };
 		B2109BE624ED057400775740 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BE524ED057400775740 /* UIApplication.swift */; };
 		B2109BE824ED05E900775740 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BE724ED05E900775740 /* UIView.swift */; };
-		B2109BF024ED0D2100775740 /* ManagerPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BEF24ED0D2100775740 /* ManagerPhotos.swift */; };
 		B2109BF224ED0D4600775740 /* MultimediaOpportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF124ED0D4600775740 /* MultimediaOpportunities.swift */; };
 		B2109BF824ED141600775740 /* GaleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF724ED141600775740 /* GaleryVC.swift */; };
 		B2109BFA24ED154F00775740 /* EnumStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF924ED154F00775740 /* EnumStoryboard.swift */; };
+		B2EAC44224ED37090014A34A /* ManagerPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44124ED37090014A34A /* ManagerPhotos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,10 +46,10 @@
 		B2109BE324ED055300775740 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		B2109BE524ED057400775740 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		B2109BE724ED05E900775740 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		B2109BEF24ED0D2100775740 /* ManagerPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPhotos.swift; sourceTree = "<group>"; };
 		B2109BF124ED0D4600775740 /* MultimediaOpportunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaOpportunities.swift; sourceTree = "<group>"; };
 		B2109BF724ED141600775740 /* GaleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryVC.swift; sourceTree = "<group>"; };
 		B2109BF924ED154F00775740 /* EnumStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumStoryboard.swift; sourceTree = "<group>"; };
+		B2EAC44124ED37090014A34A /* ManagerPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +148,8 @@
 		B2109BEC24ED0CB200775740 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B2109BEF24ED0D2100775740 /* ManagerPhotos.swift */,
 				B2109BF124ED0D4600775740 /* MultimediaOpportunities.swift */,
+				B2EAC44124ED37090014A34A /* ManagerPhotos.swift */,
 			);
 			name = Managers;
 			path = ../../../../Photo/Managers;
@@ -247,8 +247,8 @@
 			files = (
 				B2109BF824ED141600775740 /* GaleryVC.swift in Sources */,
 				B2109BE824ED05E900775740 /* UIView.swift in Sources */,
+				B2EAC44224ED37090014A34A /* ManagerPhotos.swift in Sources */,
 				B2109BAB24ED033100775740 /* ViewController.swift in Sources */,
-				B2109BF024ED0D2100775740 /* ManagerPhotos.swift in Sources */,
 				B2109BE624ED057400775740 /* UIApplication.swift in Sources */,
 				B2109BFA24ED154F00775740 /* EnumStoryboard.swift in Sources */,
 				B2109BD624ED03B100775740 /* PhotoCell.swift in Sources */,
