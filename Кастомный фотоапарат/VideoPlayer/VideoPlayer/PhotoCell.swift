@@ -26,7 +26,6 @@ class PhotoCell: UICollectionViewCell {
         }
     }
 
-
     private func update(index: IndexPath){
         manager.getImageOne(indexPath: index) {[weak self] (img, duration)  in
             self?.imageView.image = img

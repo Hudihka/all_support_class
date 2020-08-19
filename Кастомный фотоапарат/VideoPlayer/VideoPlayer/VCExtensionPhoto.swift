@@ -12,7 +12,6 @@ import UIKit
 
 extension UIViewController {
     
-    
     func tapedGaleruPhoto(completion: @escaping(() -> ())){
         
         MultimediaOpportunities.checkCamera { (_) in

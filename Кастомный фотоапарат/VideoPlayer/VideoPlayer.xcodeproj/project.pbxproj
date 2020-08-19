@@ -19,13 +19,7 @@
 		B2109BF824ED141600775740 /* GaleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF724ED141600775740 /* GaleryVC.swift */; };
 		B2109BFA24ED154F00775740 /* EnumStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF924ED154F00775740 /* EnumStoryboard.swift */; };
 		B2EAC44224ED37090014A34A /* ManagerPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44124ED37090014A34A /* ManagerPhotos.swift */; };
-		B2EAC44424ED38240014A34A /* VCExtensionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44324ED38240014A34A /* VCExtensionPhoto.swift */; };
 		B2EAC44624ED38670014A34A /* MultimediaOpportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44524ED38670014A34A /* MultimediaOpportunities.swift */; };
-		B2EAC44824ED38CC0014A34A /* ZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44724ED38CC0014A34A /* ZoomVC.swift */; };
-		B2EAC44E24ED397D0014A34A /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44A24ED397D0014A34A /* PhotoCell.swift */; };
-		B2EAC44F24ED397D0014A34A /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44B24ED397D0014A34A /* CameraCell.swift */; };
-		B2EAC45024ED397D0014A34A /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2EAC44C24ED397D0014A34A /* PhotoCell.xib */; };
-		B2EAC45124ED397D0014A34A /* CameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2EAC44D24ED397D0014A34A /* CameraCell.xib */; };
 		B2EAC45524ED3A6C0014A34A /* ZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC45224ED3A650014A34A /* ZoomVC.swift */; };
 		B2EAC45624ED3A6C0014A34A /* VCExtensionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */; };
 		B2EAC45B24ED3A9F0014A34A /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC45824ED3A970014A34A /* CameraCell.swift */; };
@@ -47,19 +41,13 @@
 		B2109BF724ED141600775740 /* GaleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryVC.swift; sourceTree = "<group>"; };
 		B2109BF924ED154F00775740 /* EnumStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumStoryboard.swift; sourceTree = "<group>"; };
 		B2EAC44124ED37090014A34A /* ManagerPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPhotos.swift; sourceTree = "<group>"; };
-		B2EAC44324ED38240014A34A /* VCExtensionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtensionPhoto.swift; sourceTree = "<group>"; };
 		B2EAC44524ED38670014A34A /* MultimediaOpportunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaOpportunities.swift; sourceTree = "<group>"; };
-		B2EAC44724ED38CC0014A34A /* ZoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomVC.swift; sourceTree = "<group>"; };
-		B2EAC44A24ED397D0014A34A /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCell.swift; path = "../../Фотокамера/ячейки/PhotoCell.swift"; sourceTree = "<group>"; };
-		B2EAC44B24ED397D0014A34A /* CameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraCell.swift; path = "../../Фотокамера/ячейки/CameraCell.swift"; sourceTree = "<group>"; };
-		B2EAC44C24ED397D0014A34A /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoCell.xib; path = "../../Фотокамера/ячейки/PhotoCell.xib"; sourceTree = "<group>"; };
-		B2EAC44D24ED397D0014A34A /* CameraCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CameraCell.xib; path = "../../Фотокамера/ячейки/CameraCell.xib"; sourceTree = "<group>"; };
-		B2EAC45224ED3A650014A34A /* ZoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomVC.swift; sourceTree = "<group>"; };
-		B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtensionPhoto.swift; sourceTree = "<group>"; };
-		B2EAC45724ED3A930014A34A /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
-		B2EAC45824ED3A970014A34A /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
-		B2EAC45924ED3A9B0014A34A /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
-		B2EAC45A24ED3A9F0014A34A /* CameraCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraCell.xib; sourceTree = "<group>"; };
+		B2EAC45224ED3A650014A34A /* ZoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZoomVC.swift; path = ../ZoomVC.swift; sourceTree = "<group>"; };
+		B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VCExtensionPhoto.swift; path = ../VCExtensionPhoto.swift; sourceTree = "<group>"; };
+		B2EAC45724ED3A930014A34A /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoCell.swift; path = VideoPlayer/PhotoCell.swift; sourceTree = SOURCE_ROOT; };
+		B2EAC45824ED3A970014A34A /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraCell.swift; path = ../CameraCell.swift; sourceTree = "<group>"; };
+		B2EAC45924ED3A9B0014A34A /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PhotoCell.xib; path = VideoPlayer/PhotoCell.xib; sourceTree = SOURCE_ROOT; };
+		B2EAC45A24ED3A9F0014A34A /* CameraCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraCell.xib; path = ../CameraCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +87,7 @@
 				B2109BB124ED033200775740 /* LaunchScreen.storyboard */,
 				B2109BEC24ED0CB200775740 /* Managers */,
 				B2109BB424ED033200775740 /* Info.plist */,
-				B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */,
-				B2EAC45224ED3A650014A34A /* ZoomVC.swift */,
-				B2EAC45824ED3A970014A34A /* CameraCell.swift */,
-				B2EAC45A24ED3A9F0014A34A /* CameraCell.xib */,
-				B2EAC45724ED3A930014A34A /* PhotoCell.swift */,
-				B2EAC45924ED3A9B0014A34A /* PhotoCell.xib */,
-				B2EAC45324ED3A660014A34A /* Cells */,
-				B2109BBB24ED03B100775740 /* Photo */,
+				B2EAC45D24ED3AE50014A34A /* Photo */,
 				B2109BBA24ED039100775740 /* Support */,
 			);
 			path = VideoPlayer;
@@ -120,17 +101,6 @@
 				B2109BE224ED053B00775740 /* Extension */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		B2109BBB24ED03B100775740 /* Photo */ = {
-			isa = PBXGroup;
-			children = (
-				B2EAC44324ED38240014A34A /* VCExtensionPhoto.swift */,
-				B2EAC44724ED38CC0014A34A /* ZoomVC.swift */,
-				B2EAC44924ED39690014A34A /* Cells */,
-			);
-			name = Photo;
-			path = ../../../../Photo;
 			sourceTree = "<group>";
 		};
 		B2109BE224ED053B00775740 /* Extension */ = {
@@ -170,22 +140,17 @@
 			path = GaleryVC;
 			sourceTree = "<group>";
 		};
-		B2EAC44924ED39690014A34A /* Cells */ = {
+		B2EAC45D24ED3AE50014A34A /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				B2EAC44B24ED397D0014A34A /* CameraCell.swift */,
-				B2EAC44D24ED397D0014A34A /* CameraCell.xib */,
-				B2EAC44A24ED397D0014A34A /* PhotoCell.swift */,
-				B2EAC44C24ED397D0014A34A /* PhotoCell.xib */,
+				B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */,
+				B2EAC45224ED3A650014A34A /* ZoomVC.swift */,
+				B2EAC45824ED3A970014A34A /* CameraCell.swift */,
+				B2EAC45A24ED3A9F0014A34A /* CameraCell.xib */,
+				B2EAC45724ED3A930014A34A /* PhotoCell.swift */,
+				B2EAC45924ED3A9B0014A34A /* PhotoCell.xib */,
 			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		B2EAC45324ED3A660014A34A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2EAC45024ED397D0014A34A /* PhotoCell.xib in Resources */,
-				B2EAC45124ED397D0014A34A /* CameraCell.xib in Resources */,
 				B2109BB324ED033200775740 /* LaunchScreen.storyboard in Resources */,
 				B2109BB024ED033200775740 /* Assets.xcassets in Resources */,
 				B2109BAE24ED033100775740 /* Main.storyboard in Resources */,
@@ -266,18 +229,14 @@
 				B2109BE824ED05E900775740 /* UIView.swift in Sources */,
 				B2EAC44624ED38670014A34A /* MultimediaOpportunities.swift in Sources */,
 				B2EAC45B24ED3A9F0014A34A /* CameraCell.swift in Sources */,
-				B2EAC44824ED38CC0014A34A /* ZoomVC.swift in Sources */,
 				B2EAC44224ED37090014A34A /* ManagerPhotos.swift in Sources */,
 				B2109BAB24ED033100775740 /* ViewController.swift in Sources */,
-				B2EAC44E24ED397D0014A34A /* PhotoCell.swift in Sources */,
 				B2109BE624ED057400775740 /* UIApplication.swift in Sources */,
 				B2EAC45C24ED3A9F0014A34A /* PhotoCell.swift in Sources */,
 				B2EAC45524ED3A6C0014A34A /* ZoomVC.swift in Sources */,
-				B2EAC44F24ED397D0014A34A /* CameraCell.swift in Sources */,
 				B2109BFA24ED154F00775740 /* EnumStoryboard.swift in Sources */,
 				B2109BE424ED055300775740 /* UIWindow.swift in Sources */,
 				B2109BE124ED040A00775740 /* Constant.swift in Sources */,
-				B2EAC44424ED38240014A34A /* VCExtensionPhoto.swift in Sources */,
 				B2109BA724ED033100775740 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
