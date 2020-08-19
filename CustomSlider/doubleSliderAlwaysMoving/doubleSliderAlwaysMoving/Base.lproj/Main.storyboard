@@ -53,6 +53,7 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableStep" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysMove" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
