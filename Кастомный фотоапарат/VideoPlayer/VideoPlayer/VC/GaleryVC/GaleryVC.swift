@@ -47,7 +47,7 @@ class GaleryVC: UIViewController {
     }
     
     @objc func openAlboms(){
-        self.openAlbom(pickerVC: <#T##UIImagePickerController#>)
+        self.openAlbom(pickerVC: pickerVC)
     }
     
     deinit {
