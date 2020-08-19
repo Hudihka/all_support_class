@@ -12,7 +12,6 @@
 		B2109B8724ECF3C000775740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2109B8524ECF3C000775740 /* Main.storyboard */; };
 		B2109B8924ECF3C000775740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2109B8824ECF3C000775740 /* Assets.xcassets */; };
 		B2109B8C24ECF3C000775740 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2109B8A24ECF3C000775740 /* LaunchScreen.storyboard */; };
-		B2109B9724ECF6CC00775740 /* RangeSeekSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109B9424ECF6CB00775740 /* RangeSeekSliderDelegate.swift */; };
 		B2109B9824ECF6CC00775740 /* RangeSeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109B9524ECF6CB00775740 /* RangeSeekSlider.swift */; };
 		B2109B9924ECF6CC00775740 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109B9624ECF6CB00775740 /* TapticEngine.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +24,6 @@
 		B2109B8824ECF3C000775740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2109B8B24ECF3C000775740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2109B8D24ECF3C000775740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2109B9424ECF6CB00775740 /* RangeSeekSliderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSeekSliderDelegate.swift; sourceTree = "<group>"; };
 		B2109B9524ECF6CB00775740 /* RangeSeekSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSeekSlider.swift; sourceTree = "<group>"; };
 		B2109B9624ECF6CB00775740 /* TapticEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +72,6 @@
 		B2109B9324ECF6CB00775740 /* DoubleSliderLib */ = {
 			isa = PBXGroup;
 			children = (
-				B2109B9424ECF6CB00775740 /* RangeSeekSliderDelegate.swift */,
 				B2109B9524ECF6CB00775740 /* RangeSeekSlider.swift */,
 				B2109B9624ECF6CB00775740 /* TapticEngine.swift */,
 			);
@@ -154,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2109B9824ECF6CC00775740 /* RangeSeekSlider.swift in Sources */,
-				B2109B9724ECF6CC00775740 /* RangeSeekSliderDelegate.swift in Sources */,
 				B2109B9924ECF6CC00775740 /* TapticEngine.swift in Sources */,
 				B2109B8424ECF3C000775740 /* ViewController.swift in Sources */,
 				B2109B8024ECF3C000775740 /* AppDelegate.swift in Sources */,
