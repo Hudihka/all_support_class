@@ -1,9 +1,9 @@
 //
 //  CameraCell.swift
-//  testCollectionView
+//  VideoPlayer
 //
-//  Created by Админ on 03.08.2020.
-//  Copyright © 2020 Hudihka. All rights reserved.
+//  Created by Админ on 19.08.2020.
+//  Copyright © 2020 Админ. All rights reserved.
 //
 
 import UIKit
