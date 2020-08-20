@@ -18,7 +18,6 @@
 		B2109BE824ED05E900775740 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BE724ED05E900775740 /* UIView.swift */; };
 		B2109BF824ED141600775740 /* GaleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF724ED141600775740 /* GaleryVC.swift */; };
 		B2109BFA24ED154F00775740 /* EnumStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF924ED154F00775740 /* EnumStoryboard.swift */; };
-		B2EAC44224ED37090014A34A /* ManagerPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44124ED37090014A34A /* ManagerPhotos.swift */; };
 		B2EAC44624ED38670014A34A /* MultimediaOpportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC44524ED38670014A34A /* MultimediaOpportunities.swift */; };
 		B2EAC45524ED3A6C0014A34A /* ZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC45224ED3A650014A34A /* ZoomVC.swift */; };
 		B2EAC45624ED3A6C0014A34A /* VCExtensionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */; };
@@ -26,6 +25,7 @@
 		B2EFBB2124ED40A500122509 /* CameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2EFBB1F24ED40A500122509 /* CameraCell.xib */; };
 		B2EFBB2424ED418F00122509 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EFBB2224ED418F00122509 /* PhotoCell.swift */; };
 		B2EFBB2524ED418F00122509 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2EFBB2324ED418F00122509 /* PhotoCell.xib */; };
+		B2EFBB2724EE241500122509 /* ManagerPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EFBB2624EE241500122509 /* ManagerPhotos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,6 @@
 		B2109BE724ED05E900775740 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B2109BF724ED141600775740 /* GaleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryVC.swift; sourceTree = "<group>"; };
 		B2109BF924ED154F00775740 /* EnumStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumStoryboard.swift; sourceTree = "<group>"; };
-		B2EAC44124ED37090014A34A /* ManagerPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPhotos.swift; sourceTree = "<group>"; };
 		B2EAC44524ED38670014A34A /* MultimediaOpportunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaOpportunities.swift; sourceTree = "<group>"; };
 		B2EAC45224ED3A650014A34A /* ZoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZoomVC.swift; path = ../ZoomVC.swift; sourceTree = "<group>"; };
 		B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VCExtensionPhoto.swift; path = ../VCExtensionPhoto.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		B2EFBB1F24ED40A500122509 /* CameraCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraCell.xib; sourceTree = "<group>"; };
 		B2EFBB2224ED418F00122509 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		B2EFBB2324ED418F00122509 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		B2EFBB2624EE241500122509 /* ManagerPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B2EAC44524ED38670014A34A /* MultimediaOpportunities.swift */,
-				B2EAC44124ED37090014A34A /* ManagerPhotos.swift */,
+				B2EFBB2624EE241500122509 /* ManagerPhotos.swift */,
 			);
 			name = Managers;
 			path = ../../../../Photo/Managers;
@@ -230,10 +230,10 @@
 			files = (
 				B2EFBB2424ED418F00122509 /* PhotoCell.swift in Sources */,
 				B2109BF824ED141600775740 /* GaleryVC.swift in Sources */,
+				B2EFBB2724EE241500122509 /* ManagerPhotos.swift in Sources */,
 				B2EAC45624ED3A6C0014A34A /* VCExtensionPhoto.swift in Sources */,
 				B2109BE824ED05E900775740 /* UIView.swift in Sources */,
 				B2EAC44624ED38670014A34A /* MultimediaOpportunities.swift in Sources */,
-				B2EAC44224ED37090014A34A /* ManagerPhotos.swift in Sources */,
 				B2109BAB24ED033100775740 /* ViewController.swift in Sources */,
 				B2109BE624ED057400775740 /* UIApplication.swift in Sources */,
 				B2EFBB2024ED40A500122509 /* CameraCell.swift in Sources */,
