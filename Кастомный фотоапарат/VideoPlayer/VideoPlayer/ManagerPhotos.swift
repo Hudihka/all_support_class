@@ -12,7 +12,6 @@ import UIKit
 
 class ManagerPhotos: NSObject{
     
-    
     static let shared = ManagerPhotos()
     let imageCache = NSCache<NSString, UIImage>()
     let durationCache = NSCache<NSString, NSString>()
@@ -43,9 +42,11 @@ class ManagerPhotos: NSObject{
 
         return requestOption
     }
+    
 
 
-    func getFileBig(indexPath: IndexPath, completion: @escaping (UIImage) -> Void){
+
+    func getImageBig(indexPath: IndexPath, completion: @escaping (UIImage) -> Void){
         
         if let loadIndex = indexBigPhoto{ //защита от повторного тапа
             
@@ -65,21 +66,29 @@ class ManagerPhotos: NSObject{
             self.indexBigPhoto = indexPath
             let obj = self.fetchResult.object(at: indexPath.row)
             
-            
-            
-            self.bigRequest = self.imgManager.requestImage(for: obj,
-                                                           targetSize: self.size,
-                                                           contentMode: .aspectFill,
-                                                           options: self.requestOption) { (image, _) in
-                                                            DispatchQueue.main.async {
-                                                                self.indexBigPhoto = nil
-                                                                if let img = image {
-                                                                    completion(img)
+            if obj.mediaType == .video {
+                //получение видео
+                
+                
+                
+            } else {
+                //получение изображения
+                
+                self.bigRequest = self.imgManager.requestImage(for: obj,
+                                                               targetSize: self.size,
+                                                               contentMode: .aspectFill,
+                                                               options: self.requestOption) { (image, _) in
+                                                                DispatchQueue.main.async {
+                                                                    self.indexBigPhoto = nil
+                                                                    if let img = image {
+                                                                        completion(img)
+                                                                    }
                                                                 }
-                                                            }
+                }
             }
+            
+            
         }
-        
     }
 
     func getImageOne(indexPath: IndexPath, completion: @escaping (UIImage, String?) -> Void){

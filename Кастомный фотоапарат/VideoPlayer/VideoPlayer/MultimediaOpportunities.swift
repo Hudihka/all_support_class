@@ -99,6 +99,15 @@ class  MultimediaOpportunities: NSObject {
         return false
     }
     
+    static var userSeeAlerts: Bool{ //Юзер уже видел алерты о допуске
+        if PHPhotoLibrary.authorizationStatus() != .notDetermined, AVCaptureDevice.authorizationStatus(for: .video) != .notDetermined{
+            return true
+        }
+        
+        return false
+    }
+    
+    
 }
 
 

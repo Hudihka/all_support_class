@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapedGalerey(_ sender: Any) {
+        
         tapedGaleruPhoto {
             let VC = GaleryVC.route()
             self.navigationController?.pushViewController(VC, animated: true)

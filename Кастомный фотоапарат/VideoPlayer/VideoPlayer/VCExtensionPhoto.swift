@@ -14,6 +14,11 @@ extension UIViewController {
     
     func tapedGaleruPhoto(completion: @escaping(() -> ())){
         
+        if MultimediaOpportunities.userSeeAlerts { //уже дал доступ
+            completion()
+            return
+        }
+        
         MultimediaOpportunities.checkCamera { (_) in
             MultimediaOpportunities.checkPhotoLibraryPermission {(_) in
                 DispatchQueue.main.async {
