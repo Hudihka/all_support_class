@@ -24,7 +24,7 @@ class ManagerPhotos: NSObject{
 
     private var option: PHFetchOptions {
         let fetchOption = PHFetchOptions()
-        fetchOption.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        fetchOption.sortDescriptors = [NSSortDescriptor(key: "modificationDate", ascending: false)]
         fetchOption.predicate = NSPredicate(format: "mediaType == %d || mediaType == %d", PHAssetMediaType.image.rawValue,
                                                                                           PHAssetMediaType.video.rawValue)
         
@@ -42,38 +42,36 @@ class ManagerPhotos: NSObject{
 
         return requestOption
     }
-    
-
 
 
     func getImageBig(indexPath: IndexPath, completion: @escaping (UIImage) -> Void){
-        
+
         if let loadIndex = indexBigPhoto{ //защита от повторного тапа
-            
+
             if loadIndex == indexPath {
                 return
             }
-            
+
             if let bigRequest = bigRequest {
                 self.imgManager.cancelImageRequest(bigRequest)
                 indexBigPhoto = nil
             }
-            
+
         }
-        
-        
+
+
         DispatchQueue.global(qos: .userInteractive).async {
             self.indexBigPhoto = indexPath
             let obj = self.fetchResult.object(at: indexPath.row)
-            
+
             if obj.mediaType == .video {
                 //получение видео
-                
-                
-                
+
+
+
             } else {
                 //получение изображения
-                
+
                 self.bigRequest = self.imgManager.requestImage(for: obj,
                                                                targetSize: self.size,
                                                                contentMode: .aspectFill,
@@ -86,8 +84,8 @@ class ManagerPhotos: NSObject{
                                                                 }
                 }
             }
-            
-            
+
+
         }
     }
 
@@ -119,16 +117,17 @@ class ManagerPhotos: NSObject{
                                     contentMode: .aspectFill,
                                     options: self.requestOption) { (image, _) in
                                         if let img = image {
-                                            
-                                            
+
+
                                             self.imageCache.setObject(img, forKey: key)
                                             var duration: String?
-                                            
+
                                             if obj.mediaType == .video {
                                                 duration = obj.duration.durationString as String
                                                 self.durationCache.setObject(duration! as NSString, forKey: keyDuration)
+                                                
                                             }
-                                            
+
                                             DispatchQueue.main.async {
                                                 completion(img, duration)
                                             }

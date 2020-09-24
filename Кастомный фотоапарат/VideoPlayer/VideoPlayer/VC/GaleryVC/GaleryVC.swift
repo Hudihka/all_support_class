@@ -157,12 +157,14 @@ extension GaleryVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
             return
         }
         
+        print(indexPath)
+        
         if let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell {
             cell.spiner.startAnimating()
             let newIndex = reloadIndex(index: indexPath)
-            ManagerPhotos.shared.getImageBig(indexPath: newIndex) {[weak self] (imageBig) in
-                ///открываем фото
-            }
+//            ManagerPhotos.shared.getImageBig(indexPath: newIndex) {[weak self] (imageBig) in
+//                ///открываем фото
+//            }
         }
 
     }
