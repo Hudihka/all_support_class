@@ -11,10 +11,11 @@ import UIKit
 class GaleryVC: UIViewController {
     
     fileprivate var indexClear = 0
-    fileprivate let photos = ManagerPhotos.shared.fetchResult
     
     @IBOutlet weak var collectionView: UICollectionView!
     fileprivate let pickerVC = UIImagePickerController()
+    
+    fileprivate var managerPhoto = ManagerPhotos.shared
     
     fileprivate var photoAccess: Bool{
         return MultimediaOpportunities.accessAllowedPhotos
@@ -51,7 +52,7 @@ class GaleryVC: UIViewController {
     }
     
     deinit {
-        ManagerPhotos.shared.clearCashe()
+        managerPhoto.clearCashe()
     }
     
 }
@@ -117,7 +118,7 @@ extension GaleryVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        let photoCount = photoAccess ? photos.count : 0
+        let photoCount = photoAccess ? managerPhoto.fetchResult.count : 0
         
         return 1 + photoCount
     }
@@ -157,14 +158,28 @@ extension GaleryVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
             return
         }
         
-        print(indexPath)
-        
         if let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell {
+            
+            if managerPhoto.indexBigContent != nil { //что бы избежать ситуации когда на 2х и более ячейках спинер
+                collectionView.reloadData()
+            }
             cell.spiner.startAnimating()
+            
+            
             let newIndex = reloadIndex(index: indexPath)
-//            ManagerPhotos.shared.getImageBig(indexPath: newIndex) {[weak self] (imageBig) in
-//                ///открываем фото
-//            }
+            managerPhoto.getBigContent(indexPath: newIndex) {[weak self] (imageBig, video)  in
+                
+                if let imageBig = imageBig {
+                    //open photo
+                } else if let video = video {
+                    let vc = PlayerViewController.route(video)
+                    self?.present(vc, animated: true, completion: nil)
+                }
+                
+                
+                
+                cell.spiner.stopAnimating()
+            }
         }
 
     }

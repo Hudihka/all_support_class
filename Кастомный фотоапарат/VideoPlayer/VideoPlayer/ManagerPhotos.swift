@@ -16,7 +16,7 @@ class ManagerPhotos: NSObject{
     let imageCache = NSCache<NSString, UIImage>()
     let durationCache = NSCache<NSString, NSString>()
     
-    var indexBigPhoto: IndexPath? = nil
+    var indexBigContent: IndexPath? = nil
     private var bigRequest: PHImageRequestID? = nil
     private let size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
 
@@ -35,18 +35,26 @@ class ManagerPhotos: NSObject{
         return PHAsset.fetchAssets(with: option)
     }
 
-    var requestOption: PHImageRequestOptions{
+    private var requestImageOption: PHImageRequestOptions{
         let requestOption = PHImageRequestOptions()
         requestOption.isSynchronous = true
         requestOption.deliveryMode = .highQualityFormat
 
         return requestOption
     }
+    
+    private var requestVideoOption: PHVideoRequestOptions{
+        let requestOption = PHVideoRequestOptions()
+        requestOption.isNetworkAccessAllowed = true
+        requestOption.deliveryMode = .highQualityFormat
+
+        return requestOption
+    }
 
 
-    func getImageBig(indexPath: IndexPath, completion: @escaping (UIImage) -> Void){
+    func getBigContent(indexPath: IndexPath, completion: @escaping (UIImage?, AVPlayerItem?) -> Void){
 
-        if let loadIndex = indexBigPhoto{ //защита от повторного тапа
+        if let loadIndex = indexBigContent{ //защита от повторного тапа
 
             if loadIndex == indexPath {
                 return
@@ -54,18 +62,28 @@ class ManagerPhotos: NSObject{
 
             if let bigRequest = bigRequest {
                 self.imgManager.cancelImageRequest(bigRequest)
-                indexBigPhoto = nil
+                indexBigContent = nil
             }
 
         }
 
 
         DispatchQueue.global(qos: .userInteractive).async {
-            self.indexBigPhoto = indexPath
+            self.indexBigContent = indexPath
             let obj = self.fetchResult.object(at: indexPath.row)
 
             if obj.mediaType == .video {
                 //получение видео
+                
+                self.bigRequest = self.imgManager.requestPlayerItem(forVideo: obj,
+                                                                    options: self.requestVideoOption,
+                                                                    resultHandler: { (item, _) in
+                                                                        DispatchQueue.main.async {
+                                                                            if let item = item {
+                                                                                completion(nil, item)
+                                                                            }
+                                                                        }
+                                                                    })
 
 
 
@@ -75,11 +93,11 @@ class ManagerPhotos: NSObject{
                 self.bigRequest = self.imgManager.requestImage(for: obj,
                                                                targetSize: self.size,
                                                                contentMode: .aspectFill,
-                                                               options: self.requestOption) { (image, _) in
+                                                               options: self.requestImageOption) { (image, _) in
                                                                 DispatchQueue.main.async {
-                                                                    self.indexBigPhoto = nil
+                                                                    self.indexBigContent = nil
                                                                     if let img = image {
-                                                                        completion(img)
+                                                                        completion(img, nil)
                                                                     }
                                                                 }
                 }
@@ -115,7 +133,7 @@ class ManagerPhotos: NSObject{
             self.imgManager.requestImage(for: obj,
                                     targetSize: size,
                                     contentMode: .aspectFill,
-                                    options: self.requestOption) { (image, _) in
+                                    options: self.requestImageOption) { (image, _) in
                                         if let img = image {
 
 

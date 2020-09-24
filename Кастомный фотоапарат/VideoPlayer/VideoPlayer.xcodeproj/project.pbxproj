@@ -18,6 +18,7 @@
 		B2109BE824ED05E900775740 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BE724ED05E900775740 /* UIView.swift */; };
 		B2109BF824ED141600775740 /* GaleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF724ED141600775740 /* GaleryVC.swift */; };
 		B2109BFA24ED154F00775740 /* EnumStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2109BF924ED154F00775740 /* EnumStoryboard.swift */; };
+		B2D90C99251CB64100BA7924 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D90C98251CB64100BA7924 /* PlayerViewController.swift */; };
 		B2EAC45524ED3A6C0014A34A /* ZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC45224ED3A650014A34A /* ZoomVC.swift */; };
 		B2EAC45624ED3A6C0014A34A /* VCExtensionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */; };
 		B2EFBB2024ED40A500122509 /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EFBB1E24ED40A500122509 /* CameraCell.swift */; };
@@ -42,6 +43,7 @@
 		B2109BE724ED05E900775740 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B2109BF724ED141600775740 /* GaleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryVC.swift; sourceTree = "<group>"; };
 		B2109BF924ED154F00775740 /* EnumStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumStoryboard.swift; sourceTree = "<group>"; };
+		B2D90C98251CB64100BA7924 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		B2EAC45224ED3A650014A34A /* ZoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZoomVC.swift; path = ../ZoomVC.swift; sourceTree = "<group>"; };
 		B2EAC45424ED3A6C0014A34A /* VCExtensionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VCExtensionPhoto.swift; path = ../VCExtensionPhoto.swift; sourceTree = "<group>"; };
 		B2EFBB1E24ED40A500122509 /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
@@ -88,10 +90,6 @@
 				B2109BAF24ED033200775740 /* Assets.xcassets */,
 				B2109BB124ED033200775740 /* LaunchScreen.storyboard */,
 				B2109BB424ED033200775740 /* Info.plist */,
-				B2EFBB1E24ED40A500122509 /* CameraCell.swift */,
-				B2EFBB1F24ED40A500122509 /* CameraCell.xib */,
-				B2EFBB2224ED418F00122509 /* PhotoCell.swift */,
-				B2EFBB2324ED418F00122509 /* PhotoCell.xib */,
 				B2EAC45D24ED3AE50014A34A /* Photo */,
 				B2109BBA24ED039100775740 /* Support */,
 			);
@@ -122,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B2109BAA24ED033100775740 /* ViewController.swift */,
+				B2D90C98251CB64100BA7924 /* PlayerViewController.swift */,
 				B2109BF424ED13BA00775740 /* GaleryVC */,
 			);
 			path = VC;
@@ -131,8 +130,20 @@
 			isa = PBXGroup;
 			children = (
 				B2109BF724ED141600775740 /* GaleryVC.swift */,
+				B2D90C97251CB61F00BA7924 /* Cells */,
 			);
 			path = GaleryVC;
+			sourceTree = "<group>";
+		};
+		B2D90C97251CB61F00BA7924 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B2EFBB1E24ED40A500122509 /* CameraCell.swift */,
+				B2EFBB1F24ED40A500122509 /* CameraCell.xib */,
+				B2EFBB2224ED418F00122509 /* PhotoCell.swift */,
+				B2EFBB2324ED418F00122509 /* PhotoCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B2EAC45D24ED3AE50014A34A /* Photo */ = {
@@ -241,6 +252,7 @@
 				B2109BE124ED040A00775740 /* Constant.swift in Sources */,
 				B2109BA724ED033100775740 /* AppDelegate.swift in Sources */,
 				B2EFBB2924EE245C00122509 /* ManagerPhotos.swift in Sources */,
+				B2D90C99251CB64100BA7924 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

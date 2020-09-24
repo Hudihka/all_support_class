@@ -36,7 +36,7 @@ class PhotoCell: UICollectionViewCell {
             }
         }
         
-        if let indexBig = manager.indexBigPhoto, index == indexBig{
+        if let indexBig = manager.indexBigContent, index == indexBig{
             self.spiner.startAnimating()
         }
     }

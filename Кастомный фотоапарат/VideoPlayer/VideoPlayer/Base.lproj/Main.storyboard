@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sGN-bG-8iO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sGN-bG-8iO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSJ-rn-kCP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSJ-rn-kCP">
                                 <rect key="frame" x="152.5" y="439" width="109" height="72"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -30,12 +31,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jSJ-rn-kCP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3wL-MI-hRc"/>
                             <constraint firstItem="jSJ-rn-kCP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aCE-rm-BHl"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="zAp-Yb-Y9D"/>
                 </viewController>
@@ -53,7 +54,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CmB-3X-46i">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="zZT-nM-9uD">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -72,14 +73,14 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mWo-kv-qAa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CmB-3X-46i" firstAttribute="leading" secondItem="mWo-kv-qAa" secondAttribute="leading" id="Dw6-Jk-aps"/>
                             <constraint firstItem="CmB-3X-46i" firstAttribute="trailing" secondItem="mWo-kv-qAa" secondAttribute="trailing" id="I2p-8J-TBR"/>
                             <constraint firstItem="CmB-3X-46i" firstAttribute="top" secondItem="phY-wz-4rR" secondAttribute="top" id="OpQ-qO-Ofz"/>
                             <constraint firstAttribute="bottom" secondItem="CmB-3X-46i" secondAttribute="bottom" id="nqy-2V-Ufx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="mWo-kv-qAa"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="CmB-3X-46i" id="fti-PH-XtG"/>
@@ -138,7 +139,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subtract" translatesAutoresizingMaskIntoConstraints="NO" id="r9L-fW-3WI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBN-7T-rGN" customClass="GreenButton" customModule="VideoPlayer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBN-7T-rGN" customClass="GreenButton" customModule="VideoPlayer" customModuleProvider="target">
                                 <rect key="frame" x="16" y="794" width="382" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="6Y7-Hb-4GW"/>
@@ -153,6 +154,7 @@
                                 <color key="color" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="vgW-9N-sp6"/>
                         <color key="backgroundColor" red="0.15805855390000001" green="0.15809151530000001" blue="0.15805155039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r9L-fW-3WI" firstAttribute="trailing" secondItem="vgW-9N-sp6" secondAttribute="trailing" id="3ai-3y-roc"/>
@@ -172,7 +174,6 @@
                             <constraint firstItem="iLm-tp-R8B" firstAttribute="trailing" secondItem="vgW-9N-sp6" secondAttribute="trailing" id="o4x-v2-nuM"/>
                             <constraint firstItem="vgW-9N-sp6" firstAttribute="bottom" secondItem="wBN-7T-rGN" secondAttribute="bottom" constant="20" id="w9t-P0-OXV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vgW-9N-sp6"/>
                     </view>
                     <connections>
                         <outlet property="cupView" destination="JCD-LR-aMV" id="cbS-wt-Zjb"/>
@@ -187,8 +188,19 @@
             </objects>
             <point key="canvasLocation" x="2836" y="-573"/>
         </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="2vU-D8-Nei">
+            <objects>
+                <avPlayerViewController storyboardIdentifier="PlayerViewController" videoGravity="AVLayerVideoGravityResizeAspect" id="dyM-Kq-uEq" customClass="PlayerViewController" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfd-ep-zbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3759" y="-573"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Subtract" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
