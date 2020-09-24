@@ -52,6 +52,8 @@ class  MultimediaOpportunities: NSObject {
         case .authorized:
             completion(.permitted)
         //доступ разрещен
+        case .limited: //ios 14 ограниченный доступ
+            completion(.permitted)
         case .denied, .restricted :
             completion(.ban)
         case .notDetermined://не определился
@@ -59,12 +61,12 @@ class  MultimediaOpportunities: NSObject {
                 switch status {
                 case .authorized:
                     completion(.permitted)
-                    
                 case .denied, .restricted:
                     completion(.noValue)
-                    
                 case .notDetermined:
                     completion(.noValue)
+                case .limited: //ios 14 ограниченный доступ
+                    completion(.permitted)
                 }
             }
         }
