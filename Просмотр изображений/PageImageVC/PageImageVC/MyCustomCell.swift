@@ -12,11 +12,11 @@ class MyCustomCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var name: String?{
+    var image: UIImage?{
         didSet{
             imageView.image = nil
-            if let name = name{
-               imageView.image = UIImage(named: name)
+            if let image = image{
+               imageView.image = image
             }
         }
     }

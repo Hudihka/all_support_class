@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var dataArray = [String]()
+    var dataArray = [UIImage]()
     
 
     override func viewDidLoad() {
@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     
     private func getData(){
         for i in 0...49{
-            dataArray.append(objImg(number: i))
+			let name = objImg(number: i)
+			let image = UIImage(named: name) ?? UIImage()
+            dataArray.append(image)
         }
     }
     
@@ -38,7 +40,8 @@ class ViewController: UIViewController {
         
         if add{
             let number = arc4random_uniform(50)
-            let obj = objImg(number: Int(number))
+            let name = objImg(number: Int(number))
+			let obj = UIImage(named: name) ?? UIImage()
             dataArray.append(obj)
         } else if !dataArray.isEmpty {
             dataArray.remove(at: 0)
