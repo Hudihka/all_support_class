@@ -83,14 +83,15 @@ class PageViewController: UIPageViewController {
 }
 
 extension PageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-    func baseSettings() {
-        self.delegate = self
-        self.dataSource = self
-
-        if let firstVC = VCArr.first {
-            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
-        }
-    }
+	func baseSettings() {
+		self.delegate = self
+		self.dataSource = self
+		
+		if let firstVC = VCArr[startIndex] as? ViewControllerPageInfo {
+			firstVC.image = imageFrom(startIndex)
+			setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+		}
+	}
 
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 		guard let viewControllerIndex = VCArr.firstIndex(of: viewController) else {
