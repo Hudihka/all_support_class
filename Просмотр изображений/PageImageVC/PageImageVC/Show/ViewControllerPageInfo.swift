@@ -26,17 +26,10 @@ class ViewControllerPageInfo: UIViewController {
         super.viewDidLoad()
 		
 		spiner.startAnimating()
-		view.backgroundColor = .black
 
     }
 	
-	static func route() -> ViewControllerPageInfo {
-		
-		let storuboard = UIStoryboard(name: "PageStoryboard", bundle: nil)
-		let VC = storuboard.instantiateViewController(withIdentifier: "ViewControllerPageInfo") as! ViewControllerPageInfo
-
-        return VC
-    }
+	
 	
 
 }

@@ -12,7 +12,7 @@ class PageViewController: UIPageViewController {
 	
 	
 	var startIndex = 0
-	var countVC = 0 //количество экранов
+	var endIndex = 0 //количество экранов - 1
 	
 	var imageArray: [UIImage] = []
     fileprivate lazy var VCArr: [UIViewController] = []
@@ -20,8 +20,7 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        VCArr = Array(1...countVC).map { _ in ViewControllerPageInfo.route() }
-		
+        self.content()
         self.customNavigationBar()
         self.bacground()
         self.baseSettings()
@@ -36,27 +35,6 @@ class PageViewController: UIPageViewController {
 //            }
 //        }
 //    }
-	
-	/*функция применяется для безанмационного (как в телеграме/медиатеке) показа изображений*/
-	
-	static func presentPageVC(_ fromVC: UIViewController, startIndex: Int, countVC: Int){
-		
-		if startIndex > countVC {
-			return
-		}
-		
-		let storuboard = UIStoryboard(name: "PageStoryboard", bundle: nil)
-	
-		let VC = storuboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
-		VC.startIndex = startIndex
-		VC.countVC = countVC
-		
-		let NVC = UINavigationController(rootViewController: VC)
-		
-		fromVC.present(NVC, animated: true, completion: nil)
-
-	}
-	
 
     private func customNavigationBar() {
 
@@ -78,7 +56,14 @@ class PageViewController: UIPageViewController {
 //        view.insertSubview(imageViewBacgr!, at: 0)
     }
 
-
+    private func content() {
+        var returnArray: [UIViewController] = []
+        for i in 0...5 {
+            let VC = createVC(i)
+            returnArray.append(VC)
+        }
+        VCArr = returnArray
+    }
 }
 
 extension PageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
@@ -92,7 +77,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     }
 
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-		guard let viewControllerIndex = VCArr.firstIndex(of: viewController) else {
+        guard let viewControllerIndex = VCArr.index(of: viewController) else {
             return nil
         }
 
@@ -110,7 +95,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     }
 
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-		guard let viewControllerIndex = VCArr.firstIndex(of: viewController) else {
+        guard let viewControllerIndex = VCArr.index(of: viewController) else {
             return nil
         }
 
@@ -127,14 +112,22 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         return VCArr[nextIndex]
     }
 
+    fileprivate func createVC(_ index: Int) -> UIViewController {
+        guard let VC = Storyboard.page.getStoryboard().instantiateViewController(withIdentifier: "ViewControllerPageInfo") as? ViewControllerPageInfo else {
+            return UIViewController()
+        }
+
+        VC.settingsVC(index: index)
+        return VC
+    }
 
     public func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return countVC
+        return VCArr.count
     }
 
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
-			let firstViewControllerIndex = VCArr.firstIndex(of: firstViewController) else {
+            let firstViewControllerIndex = VCArr.index(of: firstViewController) else {
                 return 0
         }
 

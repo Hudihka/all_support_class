@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         getData()
         settingsCV()
-        addDADGesture()
         
     }
     
@@ -98,59 +97,21 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let cell: MyCustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
 
 
-        cell.name = dataArray[indexPath.row]
+        cell.image = dataArray[indexPath.row]
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-
+		
+		PageViewController.presentPageVC(self, startIndex: indexPath.row, countVC: dataArray.count)
         
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = wDdevice/3
         return CGSize(width: size, height: size)
-    }
-    
-    //MARK - DragAndDrop
-    
-    func addDADGesture() {
-        let longPressGesture = UILongPressGestureRecognizer(target: self,
-                                                            action: #selector(self.handleLongGesture(gesture:)))
-        longPressGesture.minimumPressDuration = 0.25
-        collectionView.addGestureRecognizer(longPressGesture)
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        moveItemAt sourceIndexPath: IndexPath,
-                        to destinationIndexPath: IndexPath) {
-        
-        let item = dataArray.remove(at: sourceIndexPath.item)
-        dataArray.insert(item, at: destinationIndexPath.item)
-    }
-    
-    @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
-        switch(gesture.state) {
-
-        case .began:
-            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
-                break
-            }
-            collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-        case .changed:
-            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
-        case .ended:
-            collectionView.endInteractiveMovement()
-        default:
-            collectionView.cancelInteractiveMovement()
-        }
     }
     
     

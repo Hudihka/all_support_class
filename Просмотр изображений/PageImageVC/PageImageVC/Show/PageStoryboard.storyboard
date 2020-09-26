@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="aPO-gp-1e9">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="bor-d1-Nko" customClass="PageViewController" customModule="PageImageVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZAY-T0-jEW"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obW-Xx-vik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240.8" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller Page Info-->
+        <scene sceneID="8n2-gV-Jq0">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerPageInfo" modalPresentationStyle="overFullScreen" id="Aem-n2-aQF" customClass="ViewControllerPageInfo" customModule="PageImageVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fsT-az-Arz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-We-Tcl">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dpl-8i-a5a">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dpl-8i-a5a" secondAttribute="bottom" id="OHw-7S-n6Y"/>
+                            <constraint firstItem="dpl-8i-a5a" firstAttribute="trailing" secondItem="tN0-V2-MHf" secondAttribute="trailing" id="PuA-mF-Qjh"/>
+                            <constraint firstItem="vgP-We-Tcl" firstAttribute="centerY" secondItem="tN0-V2-MHf" secondAttribute="centerY" id="QAq-xT-nnU"/>
+                            <constraint firstItem="dpl-8i-a5a" firstAttribute="leading" secondItem="tN0-V2-MHf" secondAttribute="leading" id="acj-eo-1zh"/>
+                            <constraint firstItem="vgP-We-Tcl" firstAttribute="centerX" secondItem="tN0-V2-MHf" secondAttribute="centerX" id="ckm-qg-fK7"/>
+                            <constraint firstItem="dpl-8i-a5a" firstAttribute="top" secondItem="fsT-az-Arz" secondAttribute="top" id="mxo-6w-dEB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tN0-V2-MHf"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dpl-8i-a5a" id="crV-yu-AAF"/>
+                        <outlet property="spiner" destination="vgP-We-Tcl" id="oAj-oo-SJm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vl-V3-Wge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052.1739130434785" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+</document>
