@@ -11,7 +11,7 @@
         <!--Page View Controller-->
         <scene sceneID="aPO-gp-1e9">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="bor-d1-Nko" customClass="PageViewController" customModule="PageImageVC" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" hidesBottomBarWhenPushed="YES" transitionStyle="scroll" pageSpacing="20" navigationOrientation="horizontal" spineLocation="none" id="bor-d1-Nko" customClass="PageViewController" customModule="PageImageVC" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ZAY-T0-jEW"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obW-Xx-vik" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -52,6 +52,7 @@ class PageViewController: UIPageViewController {
 		VC.countVC = countVC
 		
 		let NVC = UINavigationController(rootViewController: VC)
+		NVC.modalPresentationStyle = .fullScreen
 		
 		fromVC.present(NVC, animated: true, completion: nil)
 
@@ -99,46 +100,50 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         let previousIndex = viewControllerIndex - 1
 
         guard previousIndex >= 0 else {
-            return VCArr.last
+            return nil
         }
 
         guard VCArr.count > previousIndex else {
             return nil
         }
+		
+		if let VC = VCArr[previousIndex] as? ViewControllerPageInfo {
+			VC.image = imageFrom(previousIndex)
+			return VC
+		}
 
-        return VCArr[previousIndex]
+        return nil
     }
 
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
 		guard let viewControllerIndex = VCArr.firstIndex(of: viewController) else {
             return nil
         }
-
-        let nextIndex = viewControllerIndex + 1
+		
+		let nextIndex = viewControllerIndex + 1
 
         guard nextIndex < VCArr.count else {
-            return VCArr.first
+            return nil
         }
 
         guard VCArr.count > nextIndex else {
             return nil
         }
-
-        return VCArr[nextIndex]
+		
+		if let VC = VCArr[nextIndex] as? ViewControllerPageInfo {
+			VC.image = imageFrom(nextIndex)
+			return VC
+		}
+		
+		return nil
     }
+	
+
+	private func imageFrom(_ index: Int) -> UIImage{
+		return UIImage(named: "img_\(index)") ?? UIImage()
+	}
+	
 
 
-    public func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return countVC
-    }
-
-    public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        guard let firstViewController = viewControllers?.first,
-			let firstViewControllerIndex = VCArr.firstIndex(of: firstViewController) else {
-                return 0
-        }
-
-        return firstViewControllerIndex
-    }
 }
 

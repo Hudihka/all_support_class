@@ -13,22 +13,21 @@ class ViewControllerPageInfo: UIViewController {
 	@IBOutlet private weak var imageView: UIImageView!
 	@IBOutlet private weak var spiner: UIActivityIndicatorView!
 	
-	var image: UIImage? = nil {
-		didSet{
-			if let image = image {
-				imageView.image = image
-				spiner.stopAnimating()
-			}
-		}
-	}
+	var image: UIImage?
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
 		
 		spiner.startAnimating()
 		view.backgroundColor = .black
-
-    }
+		
+		
+		if let image = image {
+			imageView.image = image
+			spiner.stopAnimating()
+		}
+		
+	}
 	
 	static func route() -> ViewControllerPageInfo {
 		
