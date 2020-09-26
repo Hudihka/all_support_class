@@ -9,12 +9,10 @@
 import UIKit
 
 class PageViewController: UIPageViewController {
+
+	fileprivate var startIndex = 0
+	fileprivate var countVC = 0 //количество экранов
 	
-	
-	var startIndex = 0
-	var countVC = 0 //количество экранов
-	
-	var imageArray: [UIImage] = []
     fileprivate lazy var VCArr: [UIViewController] = []
 
     override func viewDidLoad() {
@@ -89,47 +87,48 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
 		
 		if let firstVC = VCArr[startIndex] as? ViewControllerPageInfo {
 			firstVC.image = imageFrom(startIndex)
+			settingsTitle(startIndex)
 			setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
 		}
 	}
-
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+	
+	public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 		guard let viewControllerIndex = VCArr.firstIndex(of: viewController) else {
-            return nil
-        }
-
-        let previousIndex = viewControllerIndex - 1
-
-        guard previousIndex >= 0 else {
-            return nil
-        }
-
-        guard VCArr.count > previousIndex else {
-            return nil
-        }
+			return nil
+		}
+		
+		let previousIndex = viewControllerIndex - 1
+		
+		guard previousIndex >= 0 else {
+			return nil
+		}
+		
+		guard VCArr.count > previousIndex else {
+			return nil
+		}
 		
 		if let VC = VCArr[previousIndex] as? ViewControllerPageInfo {
 			VC.image = imageFrom(previousIndex)
 			return VC
 		}
-
-        return nil
-    }
-
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+		
+		return nil
+	}
+	
+	public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
 		guard let viewControllerIndex = VCArr.firstIndex(of: viewController) else {
-            return nil
-        }
+			return nil
+		}
 		
 		let nextIndex = viewControllerIndex + 1
-
-        guard nextIndex < VCArr.count else {
-            return nil
-        }
-
-        guard VCArr.count > nextIndex else {
-            return nil
-        }
+		
+		guard nextIndex < VCArr.count else {
+			return nil
+		}
+		
+		guard VCArr.count > nextIndex else {
+			return nil
+		}
 		
 		if let VC = VCArr[nextIndex] as? ViewControllerPageInfo {
 			VC.image = imageFrom(nextIndex)
@@ -137,14 +136,27 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
 		}
 		
 		return nil
-    }
+	}
 	
-
+	
 	private func imageFrom(_ index: Int) -> UIImage{
 		return UIImage(named: "img_\(index)") ?? UIImage()
 	}
 	
+	private func settingsTitle(_ index: Int){
+		self.title = "\(index + 1) из \(countVC)"
+	}
+	
+	
+	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
 
+        if completed {
+            guard let newIndex = VCArr.firstIndex(where: { $0 == pageViewController.viewControllers?.last }) else { return }
+			settingsTitle(newIndex)
+        }
 
+    }
+	
+	
 }
 
