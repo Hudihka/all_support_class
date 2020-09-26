@@ -19,7 +19,7 @@ class ViewControllerPageInfo: UIViewController {
 		super.viewDidLoad()
 		
 		spiner.startAnimating()
-		view.backgroundColor = .black
+		view.backgroundColor = .clear
 		
 		
 		if let image = image {

@@ -19,21 +19,12 @@ class PageViewController: UIPageViewController {
         super.viewDidLoad()
 
         VCArr = Array(1...countVC).map { _ in ViewControllerPageInfo.route() }
+		self.view.backgroundColor = .black
 		
         self.customNavigationBar()
-        self.bacground()
         self.baseSettings()
     }
 
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        for view in self.view.subviews {
-//            if let viewPage = view as? UIPageControl {
-//                viewPage.pageIndicatorTintColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1)
-//                viewPage.currentPageIndicatorTintColor = SupportClass.Colors.orangeLogo
-//            }
-//        }
-//    }
 	
 	/*функция применяется для безанмационного (как в телеграме/медиатеке) показа изображений*/
 	
@@ -44,16 +35,21 @@ class PageViewController: UIPageViewController {
 		}
 		
 		let storuboard = UIStoryboard(name: "PageStoryboard", bundle: nil)
-	
+		
 		let VC = storuboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+		
+		
 		VC.startIndex = startIndex
 		VC.countVC = countVC
 		
 		let NVC = UINavigationController(rootViewController: VC)
-		NVC.modalPresentationStyle = .fullScreen
+		
+		NVC.providesPresentationContextTransitionStyle = true
+		NVC.definesPresentationContext = true
+		NVC.modalPresentationStyle = .overCurrentContext
 		
 		fromVC.present(NVC, animated: true, completion: nil)
-
+		
 	}
 	
 
@@ -65,16 +61,6 @@ class PageViewController: UIPageViewController {
 
     @objc private func exit() {
 		self.navigationController?.dismiss(animated: true, completion: nil)
-    }
-
-    private func bacground() {
-		
-		self.view.backgroundColor = .clear
-//        let imageBack = UIImage(named: "backgr1") ?? UIImage()
-//
-//        imageViewBacgr = UIImageView(image: imageBack)
-//        imageViewBacgr?.contentMode = .scaleAspectFill
-//        view.insertSubview(imageViewBacgr!, at: 0)
     }
 
 
