@@ -10,10 +10,10 @@ import UIKit
 
 class ViewControllerPageInfo: UIViewController {
 
-	@IBOutlet private weak var imageView: UIImageView!
 	@IBOutlet private weak var spiner: UIActivityIndicatorView!
 	
 	var image: UIImage?
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,9 +21,10 @@ class ViewControllerPageInfo: UIViewController {
 		spiner.startAnimating()
 		view.backgroundColor = .clear
 		
-		
 		if let image = image {
-			imageView.image = image
+			let zoomView = ZoomView(frame: CGRect(origin: .zero, size: self.view.frame.size))
+			self.view.addSubview(zoomView)
+			zoomView.set(image: image)
 			spiner.stopAnimating()
 		}
 		
