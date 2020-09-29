@@ -36,7 +36,7 @@ class ZoomView: UIScrollView, UIScrollViewDelegate {
         self.decelerationRate = UIScrollView.DecelerationRate.fast
 		self.backgroundColor = .clear
 		
-		self.maximumZoomScale = 4
+		self.maximumZoomScale = 3
 		self.minimumZoomScale = 1
 		self.zoomScale = self.minimumZoomScale
 		self.contentSize = self.frame.size

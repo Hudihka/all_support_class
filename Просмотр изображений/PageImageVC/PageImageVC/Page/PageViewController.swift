@@ -93,12 +93,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
 			return nil
 		}
 		
-		if let VC = VCArr[previousIndex] as? ViewControllerPageInfo {
-			VC.image = imageFrom(previousIndex)
-			return VC
-		}
-		
-		return nil
+		return VCFrom(previousIndex)
 	}
 	
 	public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -116,8 +111,28 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
 			return nil
 		}
 		
-		if let VC = VCArr[nextIndex] as? ViewControllerPageInfo {
-			VC.image = imageFrom(nextIndex)
+		return VCFrom(nextIndex)
+	}
+	
+	private func VCFrom(_ index: Int) -> UIViewController?{
+		if let VC = VCArr[index] as? ViewControllerPageInfo {
+			VC.image = imageFrom(index)
+			VC.translationBlock = { value in
+				print(value)
+				self.view.backgroundColor = UIColor.black.withAlphaComponent(value)
+			}
+			
+			VC.closeBlock = { isClose in
+				if isClose {
+					//анимаця закрытия
+				} else {
+					UIView.animate(withDuration: timeInterval) {
+						self.view.backgroundColor = UIColor.black
+					}
+				}
+				
+			}
+			
 			return VC
 		}
 		

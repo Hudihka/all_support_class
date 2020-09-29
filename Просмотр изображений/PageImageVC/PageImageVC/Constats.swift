@@ -12,7 +12,7 @@ import UIKit
 let hDdevice = UIScreen.main.bounds.size.height
 let wDdevice = UIScreen.main.bounds.size.width
 
-
+let timeInterval: TimeInterval = 0.2
 
 var isIPhone5: Bool {
     return hDdevice == 568
