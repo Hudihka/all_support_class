@@ -10,12 +10,20 @@ import Foundation
 import UIKit
 
 class ZoomView: UIScrollView, UIScrollViewDelegate {
+	
+	var tapedClearNavigationBar: () -> () = {  }
 
     private var imageZoomView: UIImageView!
     
-    private lazy var zoomingTap: UITapGestureRecognizer = {
-        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
+    private lazy var zoomingDoubleTap: UITapGestureRecognizer = {
+        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingDoubleTap))
         zoomingTap.numberOfTapsRequired = 2
+        return zoomingTap
+    }()
+	
+	private lazy var tapGesters: UITapGestureRecognizer = {
+        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        zoomingTap.numberOfTapsRequired = 1
         return zoomingTap
     }()
     
@@ -38,24 +46,34 @@ class ZoomView: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(image: UIImage) {
+	func set(image: UIImage) {
 		
-        imageZoomView?.removeFromSuperview()
-        imageZoomView = nil
+		imageZoomView?.removeFromSuperview()
+		imageZoomView = nil
 		imageZoomView = UIImageView(frame: CGRect(origin: .zero, size: self.frame.size))
 		imageZoomView.image = image
 		imageZoomView.contentMode = .scaleAspectFit
-        self.addSubview(imageZoomView)
-        
-        
-        self.imageZoomView.addGestureRecognizer(self.zoomingTap)
-        self.imageZoomView.isUserInteractionEnabled = true
-    }
+		addSubview(imageZoomView)
+		
+		
+		imageZoomView.addGestureRecognizer(self.zoomingDoubleTap)
+		imageZoomView.addGestureRecognizer(self.tapGesters)
+		
+		imageZoomView.isUserInteractionEnabled = true
+		
+		tapGesters.require(toFail: zoomingDoubleTap)
+		
+	}
     
     // gesture
-    @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
+	
+	@objc func handleZoomingDoubleTap(sender: UITapGestureRecognizer) {
         let location = sender.location(in: sender.view)
         self.zoom(point: location, animated: true)
+    }
+	
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+		tapedClearNavigationBar()
     }
 	
     

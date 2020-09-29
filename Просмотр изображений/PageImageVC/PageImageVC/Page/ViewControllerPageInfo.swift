@@ -14,6 +14,11 @@ class ViewControllerPageInfo: UIViewController {
 	
 	var image: UIImage?
 	
+	private var isHideStatusBar = false
+	
+	override var prefersStatusBarHidden: Bool {
+		 return isHideStatusBar
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,7 +31,14 @@ class ViewControllerPageInfo: UIViewController {
 			self.view.addSubview(zoomView)
 			zoomView.set(image: image)
 			spiner.stopAnimating()
+			
+			zoomView.tapedClearNavigationBar = {
+				self.clerarNavigationBar()
+			}
+			
 		}
+		
+//		self.navigationController?.navigationBar.isTranslucent = false
 		
 	}
 	
@@ -37,6 +49,28 @@ class ViewControllerPageInfo: UIViewController {
 
         return VC
     }
+	
+	
+	private func clerarNavigationBar() {
+		
+		guard let NB = self.navigationController else {return}
+		
+		let isOriginalFrame = rectNavigationBar(true) == NB.navigationBar.frame
+		
+		let finalFrame = rectNavigationBar(!isOriginalFrame)
+		
+		self.isHideStatusBar = true
+		self.setNeedsStatusBarAppearanceUpdate()
+		
+		UIView.animate(withDuration: 0.2,
+					   delay: 0,
+					   options: [.curveEaseIn],
+					   animations: {
+						NB.navigationBar.frame = finalFrame
+		},
+					   completion: nil)
+		
+	}
 	
 
 }

@@ -13,32 +13,6 @@ let hDdevice = UIScreen.main.bounds.size.height
 let wDdevice = UIScreen.main.bounds.size.width
 
 
-var getHKey: Int {
-
-    //без автокоррекцией
-    switch hDdevice {
-    case 896: return 267//XMAX
-    case 812: return 257//X
-    case 736: return 226//7+/8+
-    case 667: return 216//7/8
-    case 568: return 216//5
-    default: return 253
-    }
-}
-
-
-var getHKeyAutokorec: Int {
-
-    //с автокоррекции
-    switch hDdevice {
-    case 896: return 317//XMAX
-    case 812: return 302//X
-    case 736: return 271//7+/8+
-    case 667: return 260//7/8
-    case 568: return 253//5
-    default: return 253
-    }
-}
 
 var isIPhone5: Bool {
     return hDdevice == 568
@@ -60,5 +34,18 @@ let navigBarHeight: CGFloat = 44
 
 var heightTabBar: CGFloat {
     return isIPhoneXorXmax ? 84 : 58
+}
+
+func rectNavigationBar(_ defaultPosition: Bool) -> CGRect {
+	
+	let yPosition = defaultPosition ? statusBarHeight : -1 * navigBarHeight
+	
+	let defaultFrameNBar: CGRect = CGRect(x: 0,
+										  y: yPosition,
+										  width: wDdevice,
+										  height: navigBarHeight)
+	
+	return defaultFrameNBar
+	
 }
 
