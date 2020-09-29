@@ -16,10 +16,6 @@ class ViewControllerPageInfo: UIViewController {
 	
 	private var isHideStatusBar = false
 	
-	override var prefersStatusBarHidden: Bool {
-		 return isHideStatusBar
-	}
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -59,16 +55,11 @@ class ViewControllerPageInfo: UIViewController {
 		
 		let finalFrame = rectNavigationBar(!isOriginalFrame)
 		
-		self.isHideStatusBar = true
-		self.setNeedsStatusBarAppearanceUpdate()
+		UIApplication.shared.keyWindow?.windowLevel = isOriginalFrame ? .statusBar : .normal
 		
-		UIView.animate(withDuration: 0.2,
-					   delay: 0,
-					   options: [.curveEaseIn],
-					   animations: {
-						NB.navigationBar.frame = finalFrame
-		},
-					   completion: nil)
+		UIView.animate(withDuration: 0.2) {
+			NB.navigationBar.frame = finalFrame
+		}
 		
 	}
 	
