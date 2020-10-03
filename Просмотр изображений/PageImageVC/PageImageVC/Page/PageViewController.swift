@@ -11,7 +11,10 @@ import UIKit
 
 class PageViewController: UIViewController {
 	
-	fileprivate var startIndex = 0
+	var offsetScroll1 : CGFloat = 0
+	var offsetScroll2 : CGFloat = 0
+	
+	fileprivate var startIndex: IndexPath = IndexPath(row: 0, section: 0)
 	fileprivate var dataArray = DataManager.imageNameArray
 	
 	@IBOutlet fileprivate weak var collectionView: UICollectionView!
@@ -30,12 +33,11 @@ class PageViewController: UIViewController {
 	
 	/*функция применяется для безанмационного (как в телеграме/медиатеке) показа изображений*/
 	
-	static func presentPageVC(_ fromVC: UIViewController, startIndex: Int){
+	static func presentPageVC(_ fromVC: UIViewController, startIndex: IndexPath){
 		
 		let storuboard = UIStoryboard(name: "PageStoryboard", bundle: nil)
 		
 		let VC = storuboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
-		
 		
 		VC.startIndex = startIndex
 		
@@ -68,6 +70,9 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
 		
+		self.collectionView.isPagingEnabled = true
+		
+		self.collectionView.decelerationRate = .fast
 		
 		self.collectionView.register(UINib(nibName: "ZoomCell", bundle: nil),
 									 forCellWithReuseIdentifier: "ZoomCell")
@@ -97,9 +102,27 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+	
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 0
     }
+	
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+		let index = scrollView.contentOffset.x / wDdevice
+		let fracPart = index.truncatingRemainder(dividingBy: 1)
+		let item = Int(fracPart >= 0.5 ? ceil(index) : floor(index))
+
+		let indexPath = IndexPath(item: item, section: 0)
+		collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+	}
+	
+//	func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+//								   withVelocity velocity: CGPoint,
+//								   targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//		let pageWidth = (wDdevice + 100) //20 расстояние ежду ячейками
+//		let itemIndex = (targetContentOffset.pointee.x) / pageWidth
+//		targetContentOffset.pointee.x = round(itemIndex) * pageWidth + 10 //расстояние между ячейками / 2
+//	}
 	
 }
 

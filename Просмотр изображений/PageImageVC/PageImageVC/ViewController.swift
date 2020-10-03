@@ -56,7 +56,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
 		
-		PageViewController.presentPageVC(self, startIndex: indexPath.row)
+		PageViewController.presentPageVC(self, startIndex: indexPath)
         
     }
 
