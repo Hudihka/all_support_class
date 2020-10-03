@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5214AE43251F273C00102AA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5214AE41251F273C00102AA9 /* LaunchScreen.storyboard */; };
 		5214AE45251F277900102AA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5214AE44251F277900102AA9 /* Main.storyboard */; };
+		5223FF692528C66400D96943 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223FF682528C66400D96943 /* DataManager.swift */; };
+		5223FF6C2528CE6E00D96943 /* ZoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223FF6A2528CE6E00D96943 /* ZoomCell.swift */; };
+		5223FF6D2528CE6E00D96943 /* ZoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5223FF6B2528CE6E00D96943 /* ZoomCell.xib */; };
 		52A288A425224225004E2C29 /* ZoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A288A325224225004E2C29 /* ZoomView.swift */; };
 		52ACB013251E21D800D1AE80 /* PageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52ACB012251E21D800D1AE80 /* PageStoryboard.storyboard */; };
 		52ACB015251E247200D1AE80 /* ViewControllerPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACB014251E247200D1AE80 /* ViewControllerPageInfo.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		5214AE41251F273C00102AA9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5214AE44251F277900102AA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5223FF682528C66400D96943 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5223FF6A2528CE6E00D96943 /* ZoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomCell.swift; sourceTree = "<group>"; };
+		5223FF6B2528CE6E00D96943 /* ZoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomCell.xib; sourceTree = "<group>"; };
 		52A288A325224225004E2C29 /* ZoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomView.swift; sourceTree = "<group>"; };
 		52ACB012251E21D800D1AE80 /* PageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageStoryboard.storyboard; sourceTree = "<group>"; };
 		52ACB014251E247200D1AE80 /* ViewControllerPageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPageInfo.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 				52F16D7623C37D6500B9F974 /* ViewController.swift */,
 				52F16D8823C38DE600B9F974 /* MyCustomCell.swift */,
 				52F16D8623C383C900B9F974 /* Constats.swift */,
+				5223FF682528C66400D96943 /* DataManager.swift */,
 				52F16D8923C38DE600B9F974 /* MyCustomCell.xib */,
 			);
 			path = Base;
@@ -69,6 +76,8 @@
 				52ACB012251E21D800D1AE80 /* PageStoryboard.storyboard */,
 				52ACB014251E247200D1AE80 /* ViewControllerPageInfo.swift */,
 				52ACB016251E281E00D1AE80 /* PageViewController.swift */,
+				5223FF6A2528CE6E00D96943 /* ZoomCell.swift */,
+				5223FF6B2528CE6E00D96943 /* ZoomCell.xib */,
 				52A288A325224225004E2C29 /* ZoomView.swift */,
 			);
 			path = Page;
@@ -159,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5223FF6D2528CE6E00D96943 /* ZoomCell.xib in Resources */,
 				52F16D7C23C37D6700B9F974 /* Assets.xcassets in Resources */,
 				5214AE45251F277900102AA9 /* Main.storyboard in Resources */,
 				52F16D8B23C38DE600B9F974 /* MyCustomCell.xib in Resources */,
@@ -175,12 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F16D7723C37D6500B9F974 /* ViewController.swift in Sources */,
+				5223FF692528C66400D96943 /* DataManager.swift in Sources */,
 				52ACB015251E247200D1AE80 /* ViewControllerPageInfo.swift in Sources */,
 				52F16D7323C37D6500B9F974 /* AppDelegate.swift in Sources */,
 				52ACB017251E281E00D1AE80 /* PageViewController.swift in Sources */,
 				52F16D8A23C38DE600B9F974 /* MyCustomCell.swift in Sources */,
 				52F16D8723C383C900B9F974 /* Constats.swift in Sources */,
 				52A288A425224225004E2C29 /* ZoomView.swift in Sources */,
+				5223FF6C2528CE6E00D96943 /* ZoomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

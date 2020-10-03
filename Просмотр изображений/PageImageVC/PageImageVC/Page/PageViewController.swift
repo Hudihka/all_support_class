@@ -8,6 +8,104 @@
 
 import UIKit
 
+
+class PageViewController: UIViewController {
+	
+	fileprivate var startIndex = 0
+	fileprivate var dataArray = DataManager.imageNameArray
+	
+	@IBOutlet fileprivate weak var collectionView: UICollectionView!
+	
+	
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.view.backgroundColor = .black
+		
+		self.customNavigationBar()
+		self.settingsCV()
+	}
+	
+	
+	/*функция применяется для безанмационного (как в телеграме/медиатеке) показа изображений*/
+	
+	static func presentPageVC(_ fromVC: UIViewController, startIndex: Int){
+		
+		let storuboard = UIStoryboard(name: "PageStoryboard", bundle: nil)
+		
+		let VC = storuboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+		
+		
+		VC.startIndex = startIndex
+		
+		let NVC = UINavigationController(rootViewController: VC)
+		
+		NVC.providesPresentationContextTransitionStyle = true
+		NVC.definesPresentationContext = true
+		NVC.modalPresentationStyle = .overCurrentContext
+		
+		fromVC.present(NVC, animated: true, completion: nil)
+		
+	}
+	
+	private func customNavigationBar() {
+		
+		let button = UIBarButtonItem(title: "Продолжить", style: .plain, target: self, action: #selector(exit))
+		navigationItem.rightBarButtonItem = button
+	}
+	
+	@objc private func exit() {
+		self.navigationController?.dismiss(animated: true, completion: nil)
+	}
+	
+}
+
+
+extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+	
+	fileprivate func settingsCV() {
+		self.collectionView.delegate = self
+		self.collectionView.dataSource = self
+		
+		
+		self.collectionView.register(UINib(nibName: "ZoomCell", bundle: nil),
+									 forCellWithReuseIdentifier: "ZoomCell")
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return dataArray.count
+	}
+	
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZoomCell", for: indexPath) as! ZoomCell
+		
+		cell.image = dataArray[indexPath.row]
+
+
+        return cell
+    }
+
+
+    func collectionView(_ collectionView: UICollectionView,
+						layout collectionViewLayout: UICollectionViewLayout,
+						sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: wDdevice, height: hDdevice)
+    }
+	
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+	
+}
+
+
+/*
+
 class PageViewController: UIPageViewController {
 
 	fileprivate var startIndex = 0
@@ -161,3 +259,4 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
 	
 }
 
+*/

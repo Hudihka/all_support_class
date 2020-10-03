@@ -12,62 +12,13 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var dataArray = [UIImage]()
+    var dataArray = [UIImage?]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
         settingsCV()
-        
-    }
-    
-    private func getData(){
-        for i in 0...49{
-			let name = objImg(number: i)
-			let image = UIImage(named: name) ?? UIImage()
-            dataArray.append(image)
-        }
-    }
-    
-    private func objImg(number: Int) -> String{
-        return "img_\(number)"
-    }
-    
-    
-    private func reloadCV(add: Bool){
-        
-        if add{
-            let number = arc4random_uniform(50)
-            let name = objImg(number: Int(number))
-			let obj = UIImage(named: name) ?? UIImage()
-            dataArray.append(obj)
-        } else if !dataArray.isEmpty {
-            dataArray.remove(at: 0)
-        }
-    }
-    
-    
-    // MARK - Action
-    
-    @IBAction func deleteCell(_ sender: Any) {
-        self.reloadCV(add: false)
-        let index = IndexPath(row: 0, section:0)
-        
-        collectionView.performBatchUpdates({
-            
-            self.collectionView.deleteItems(at:[index])
-        }, completion: nil)
-    }
-    
-    
-    @IBAction func addCell(_ sender: Any) {
-        self.reloadCV(add: true)
-        let index = IndexPath(row: dataArray.count - 1, section: 0)
-        
-        collectionView.performBatchUpdates({
-            self.collectionView.insertItems(at: [index])
-        }, completion: nil)
+		dataArray = DataManager.imageNameArray
     }
     
 
@@ -105,7 +56,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
 		
-		PageViewController.presentPageVC(self, startIndex: indexPath.row, countVC: dataArray.count)
+		PageViewController.presentPageVC(self, startIndex: indexPath.row)
         
     }
 
