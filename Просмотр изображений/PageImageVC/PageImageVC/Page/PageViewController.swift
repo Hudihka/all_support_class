@@ -25,6 +25,7 @@ class PageViewController: UIViewController {
 		self.settingsCV()
 		self.settingsTitle(startIndex)
 		
+		
 	}
 	
 	override func viewDidLayoutSubviews() {
@@ -57,7 +58,22 @@ class PageViewController: UIViewController {
 	
 	private func customNavigationBar() {
 		
+//		navigationController?.navigationBar.tintColor = UIColor(red: 1, green: 0.5, blue: 1, alpha: 1)
+//		navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//		navigationController?.navigationBar.shadowImage = UIImage()
+//		navigationController?.navigationBar.isTranslucent = true
+		
+		navigationController?.setNavigationBarHidden(false, animated: false)
+		navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+		 navigationController?.navigationBar.shadowImage = UIImage()
+		navigationController?.navigationBar.isTranslucent = true
+		 navigationController?.view.backgroundColor = UIColor(red: 1, green: 0.5, blue: 1, alpha: 1)
+		 navigationController?.navigationBar.tintColor = UIColor(red: 1, green: 0.5, blue: 1, alpha: 1)
+		
+		
 		let button = UIBarButtonItem(title: "Продолжить", style: .plain, target: self, action: #selector(exit))
+		let colorBB = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+		button.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : colorBB], for: .normal)
 		navigationItem.rightBarButtonItem = button
 	}
 	
@@ -83,6 +99,19 @@ class PageViewController: UIViewController {
 			NB.navigationBar.frame = finalFrame
 		}
 		
+	}
+	
+	fileprivate func colorNB(_ alpha: CGFloat){
+		
+		guard let navigationController = navigationController else {return}
+		
+		let colorNB = UIColor(red: 1, green: 0.5, blue: 1, alpha: alpha)
+		navigationController.navigationBar.tintColor = colorNB
+		
+		let colorFont = UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+		let attributes = [NSAttributedString.Key.foregroundColor : colorFont] as [NSAttributedString.Key : Any]
+		navigationController.navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key : Any]
+	
 	}
 	
 }
@@ -117,12 +146,14 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 			self.clerarNavigationBar()
 		}
 		
-		cell.translationBlock = { alpha in
-			self.view.backgroundColor = UIColor.black.withAlphaComponent(alpha)
+		cell.translationBlock = {[weak self] alpha in
+			print(alpha)
+//			self?.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+			self?.colorNB(alpha)
 		}
 
-		cell.closeBlock = {
-			self.navigationController?.dismiss(animated: true, completion: nil)
+		cell.closeBlock = { [weak self] value in
+			self?.navigationController?.dismiss(animated: true, completion: nil)
 		}
 
         return cell

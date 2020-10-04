@@ -8,6 +8,8 @@
 
 import UIKit
 
+/*
+
 class ViewControllerPageInfo: UIViewController {
 	
 	var translationBlock: (CGFloat) -> () = { _ in }
@@ -108,3 +110,5 @@ class ViewControllerPageInfo: UIViewController {
 	
 
 }
+
+*/

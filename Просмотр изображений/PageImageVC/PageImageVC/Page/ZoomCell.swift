@@ -11,7 +11,7 @@ import UIKit
 class ZoomCell: UICollectionViewCell {
 	
 	var translationBlock: (CGFloat) -> () = { _ in }
-	var closeBlock: () -> () = {  }
+	var closeBlock: (Bool) -> () = { _ in }
 	
 	var clerarNavigationBar: () -> () = { }
 
@@ -68,22 +68,22 @@ class ZoomCell: UICollectionViewCell {
 		let size = CGSize(width: wDdevice, height: hDdevice)
 		zoomView.frame = CGRect(origin: point, size: size)
 		
-		let translation = 100 - abs(position.y)
+		let translation = 150 - abs(position.y)
 		
 		
 		if translation < 0 {
 			translationBlock(0)
 		} else {
-			translationBlock(translation)
+			translationBlock(translation/150)
 		}
 		
 		
 		if sender.state == .ended{
 			if translation < 0{
 				//анимация закрытия экрана
-				self.closeBlock()
+				self.closeBlock(true)
 			} else {
-				self.closeBlock()
+				self.closeBlock(false)
 				UIView.animate(withDuration: timeInterval) {
 					self.zoomView?.frame = CGRect(origin: .zero, size: size)
 				}
