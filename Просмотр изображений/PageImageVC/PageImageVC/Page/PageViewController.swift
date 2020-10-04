@@ -11,15 +11,10 @@ import UIKit
 
 class PageViewController: UIViewController {
 	
-	var offsetScroll1 : CGFloat = 0
-	var offsetScroll2 : CGFloat = 0
-	
 	fileprivate var startIndex: IndexPath = IndexPath(row: 0, section: 0)
 	fileprivate var dataArray = DataManager.imageNameArray
 	
 	@IBOutlet fileprivate weak var collectionView: UICollectionView!
-	
-	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,6 +23,15 @@ class PageViewController: UIViewController {
 		
 		self.customNavigationBar()
 		self.settingsCV()
+		self.settingsTitle(startIndex)
+		
+	}
+	
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		self.collectionView.scrollToItem(at: startIndex,
+										 at: [.centeredVertically, .centeredHorizontally],
+										 animated: false)
 	}
 	
 	
@@ -59,6 +63,10 @@ class PageViewController: UIViewController {
 	
 	@objc private func exit() {
 		self.navigationController?.dismiss(animated: true, completion: nil)
+	}
+	
+	private func settingsTitle(_ index: IndexPath){
+		self.title = "\(index.row + 1) из \(dataArray.count)"
 	}
 	
 }
@@ -104,25 +112,25 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
 	
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 20
     }
 	
-	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-		let index = scrollView.contentOffset.x / wDdevice
-		let fracPart = index.truncatingRemainder(dividingBy: 1)
-		let item = Int(fracPart >= 0.5 ? ceil(index) : floor(index))
+	func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+								   withVelocity velocity: CGPoint,
+								   targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 
-		let indexPath = IndexPath(item: item, section: 0)
-		collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+		targetContentOffset.pointee = scrollView.contentOffset
+		var indexes = self.collectionView.indexPathsForVisibleItems
+		indexes.sort()
+		var index = indexes.first!
+		let cell = self.collectionView.cellForItem(at: index)!
+		let position = self.collectionView.contentOffset.x - cell.frame.origin.x
+		if position > cell.frame.size.width/2{
+		   index.row = index.row+1
+		}
+		self.settingsTitle(index)
+		self.collectionView.scrollToItem(at: index, at: .left, animated: true )
 	}
-	
-//	func scrollViewWillEndDragging(_ scrollView: UIScrollView,
-//								   withVelocity velocity: CGPoint,
-//								   targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//		let pageWidth = (wDdevice + 100) //20 расстояние ежду ячейками
-//		let itemIndex = (targetContentOffset.pointee.x) / pageWidth
-//		targetContentOffset.pointee.x = round(itemIndex) * pageWidth + 10 //расстояние между ячейками / 2
-//	}
 	
 }
 
