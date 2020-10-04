@@ -97,6 +97,7 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 		self.collectionView.dataSource = self
 		
 		self.collectionView.decelerationRate = .fast
+		self.collectionView.contentInsetAdjustmentBehavior = .never
 		
 		self.collectionView.register(UINib(nibName: "ZoomCell", bundle: nil),
 									 forCellWithReuseIdentifier: "ZoomCell")

@@ -48,7 +48,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ViT-C3-FGG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="BAd-ab-xEu">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BAd-ab-xEu">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -68,9 +68,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ViT-C3-FGG" firstAttribute="top" secondItem="kNU-MZ-78u" secondAttribute="top" id="0pp-S6-3K2"/>
                             <constraint firstAttribute="bottom" secondItem="ViT-C3-FGG" secondAttribute="bottom" id="Bwb-Yu-c1r"/>
                             <constraint firstItem="ViT-C3-FGG" firstAttribute="leading" secondItem="31j-lk-DQZ" secondAttribute="leading" id="CHx-tT-JaY"/>
+                            <constraint firstItem="ViT-C3-FGG" firstAttribute="top" secondItem="kNU-MZ-78u" secondAttribute="top" id="TS1-P4-vKF"/>
                             <constraint firstItem="ViT-C3-FGG" firstAttribute="trailing" secondItem="31j-lk-DQZ" secondAttribute="trailing" id="zLD-b7-i33"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="31j-lk-DQZ"/>

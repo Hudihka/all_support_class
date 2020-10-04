@@ -28,7 +28,7 @@ class ZoomCell: UICollectionViewCell {
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
-		self.contentView.backgroundColor = .red
+		self.contentView.backgroundColor = .clear
     }
 	
 	private func addZoomView(_ image: UIImage){
