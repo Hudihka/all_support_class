@@ -69,16 +69,32 @@ class PageViewController: UIViewController {
 		self.title = "\(index.row + 1) из \(dataArray.count)"
 	}
 	
+	private func clerarNavigationBar() {
+		
+		guard let NB = self.navigationController else {return}
+		
+		let isOriginalFrame = rectNavigationBar(true) == NB.navigationBar.frame
+		
+		let finalFrame = rectNavigationBar(!isOriginalFrame)
+		
+		UIApplication.shared.keyWindow?.windowLevel = isOriginalFrame ? .statusBar : .normal
+		
+		UIView.animate(withDuration: timeInterval) {
+			NB.navigationBar.frame = finalFrame
+		}
+		
+	}
+	
 }
 
 
 extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 	
 	fileprivate func settingsCV() {
+		self.collectionView.backgroundColor = .clear
+		
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
-		
-		self.collectionView.isPagingEnabled = true
 		
 		self.collectionView.decelerationRate = .fast
 		
@@ -95,6 +111,10 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZoomCell", for: indexPath) as! ZoomCell
 		
 		cell.image = dataArray[indexPath.row]
+		
+		cell.clerarNavigationBar = {
+			self.clerarNavigationBar()
+		}
 
 
         return cell

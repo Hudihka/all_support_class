@@ -22,23 +22,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </activityIndicatorView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KrY-DS-4U1">
-                        <rect key="frame" x="0.0" y="0.0" width="296" height="238"/>
-                    </imageView>
                 </subviews>
             </view>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="KrY-DS-4U1" secondAttribute="trailing" id="CiT-MS-IOR"/>
-                <constraint firstItem="KrY-DS-4U1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Wzw-6t-P7X"/>
-                <constraint firstAttribute="bottom" secondItem="KrY-DS-4U1" secondAttribute="bottom" id="jrt-jB-Pzz"/>
-                <constraint firstItem="KrY-DS-4U1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lLo-6i-1mH"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="296" height="238"/>
             <connections>
-                <outlet property="imageView" destination="KrY-DS-4U1" id="hxl-hg-o2x"/>
                 <outlet property="spiner" destination="Ipg-Zg-fgC" id="h3q-V0-WPL"/>
-                <outlet property="topConstreint" destination="Wzw-6t-P7X" id="aPI-rd-gR9"/>
             </connections>
             <point key="canvasLocation" x="130.43478260869566" y="63.616071428571423"/>
         </collectionViewCell>
