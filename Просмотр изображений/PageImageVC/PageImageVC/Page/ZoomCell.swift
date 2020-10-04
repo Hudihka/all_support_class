@@ -10,6 +10,9 @@ import UIKit
 
 class ZoomCell: UICollectionViewCell {
 	
+	var translationBlock: (CGFloat) -> () = { _ in }
+	var closeBlock: () -> () = {  }
+	
 	var clerarNavigationBar: () -> () = { }
 
 	@IBOutlet private weak var spiner: UIActivityIndicatorView!
@@ -50,8 +53,41 @@ class ZoomCell: UICollectionViewCell {
 			self.clerarNavigationBar()
 		}
 		
-//		let panGestures = UIPanGestureRecognizer(target: self, action: #selector(dragAndDrop))
-//		zoomView.addGestureRecognizer(panGestures)
+		let panGestures = UIPanGestureRecognizer(target: self, action: #selector(dragAndDrop))
+		zoomView.addGestureRecognizer(panGestures)
 	}
-
+	
+	@objc private func dragAndDrop(sender: UIPanGestureRecognizer) {
+		
+		guard let zoomView = self.zoomView else {
+			return
+		}
+		
+		let position = sender.translation(in: self.contentView)
+		let point = CGPoint(x: 0, y: position.y)
+		let size = CGSize(width: wDdevice, height: hDdevice)
+		zoomView.frame = CGRect(origin: point, size: size)
+		
+		let translation = 100 - abs(position.y)
+		
+		
+		if translation < 0 {
+			translationBlock(0)
+		} else {
+			translationBlock(translation)
+		}
+		
+		
+		if sender.state == .ended{
+			if translation < 0{
+				//анимация закрытия экрана
+				self.closeBlock()
+			} else {
+				self.closeBlock()
+				UIView.animate(withDuration: timeInterval) {
+					self.zoomView?.frame = CGRect(origin: .zero, size: size)
+				}
+			}
+		}
+	}
 }

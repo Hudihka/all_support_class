@@ -116,7 +116,14 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 		cell.clerarNavigationBar = {
 			self.clerarNavigationBar()
 		}
+		
+		cell.translationBlock = { alpha in
+			self.view.backgroundColor = UIColor.black.withAlphaComponent(alpha)
+		}
 
+		cell.closeBlock = {
+			self.navigationController?.dismiss(animated: true, completion: nil)
+		}
 
         return cell
     }
