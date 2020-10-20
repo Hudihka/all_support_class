@@ -21,10 +21,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="HjO-71-ZI8" secondAttribute="bottom" id="TmG-JE-OLB"/>
                             <constraint firstItem="HjO-71-ZI8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VWq-wt-3vC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HjO-71-ZI8" secondAttribute="trailing" id="b0l-xo-jt4"/>
                             <constraint firstItem="HjO-71-ZI8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hGk-JH-IGW"/>
+                            <constraint firstAttribute="bottom" secondItem="HjO-71-ZI8" secondAttribute="bottom" id="mNv-7o-SdD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

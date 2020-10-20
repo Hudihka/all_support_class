@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5227A8C5253F338E00028388 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227A8C4253F338E00028388 /* ImageViewController.swift */; };
 		52F16D7323C37D6500B9F974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F16D7223C37D6500B9F974 /* AppDelegate.swift */; };
 		52F16D7723C37D6500B9F974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F16D7623C37D6500B9F974 /* ViewController.swift */; };
 		52F16D7A23C37D6500B9F974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F16D7823C37D6500B9F974 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5227A8C4253F338E00028388 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		52F16D6F23C37D6500B9F974 /* Context menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Context menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F16D7223C37D6500B9F974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F16D7623C37D6500B9F974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				52F16D7223C37D6500B9F974 /* AppDelegate.swift */,
 				52F16D7623C37D6500B9F974 /* ViewController.swift */,
+				5227A8C4253F338E00028388 /* ImageViewController.swift */,
 				52F16D7823C37D6500B9F974 /* Main.storyboard */,
 				52F16D8823C38DE600B9F974 /* MyCustomCell.swift */,
 				52F16D8923C38DE600B9F974 /* MyCustomCell.xib */,
@@ -147,6 +150,7 @@
 			files = (
 				52F16D7723C37D6500B9F974 /* ViewController.swift in Sources */,
 				52F16D7323C37D6500B9F974 /* AppDelegate.swift in Sources */,
+				5227A8C5253F338E00028388 /* ImageViewController.swift in Sources */,
 				52F16D8A23C38DE600B9F974 /* MyCustomCell.swift in Sources */,
 				52F16D8723C383C900B9F974 /* Constats.swift in Sources */,
 			);
