@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Context_menu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,18 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="w1J-tj-zlx">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="yHc-wb-N6T">
-                            <connections>
-                                <action selector="deleteCell:" destination="BYZ-38-t0r" id="F7b-Ob-Dd4"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="d8y-3y-kVw">
-                            <connections>
-                                <action selector="addCell:" destination="BYZ-38-t0r" id="sJc-Vf-TcD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="w1J-tj-zlx"/>
                     <connections>
                         <outlet property="collectionView" destination="1y5-FI-py6" id="BZ5-0q-UB5"/>
                     </connections>
