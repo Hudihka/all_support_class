@@ -73,21 +73,41 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 	
 	//MARK: Context menu
 	
+	//функция для показа вью контроллера в контекстном меню кастомным размером
+	
+	func makeRatePreview(indexPath: IndexPath) -> UIViewController {
+		
+		let image = UIImage(named: "img_\(indexPath.row)") ?? UIImage()
+		let VC = ImageViewController.route(image: image)
+		
+		//так мы задаем кастомные размеры контекстного меню
+		VC.preferredContentSize = image.size
+		return VC
+		
+	}
+	
 	
 	func collectionView(_ collectionView: UICollectionView,
 						contextMenuConfigurationForItemAt indexPath: IndexPath,
 						point: CGPoint) -> UIContextMenuConfiguration? {
 		
-		//		let configuration = UIContextMenuConfiguration(identifier: "\(indexPath.row)" as NSCopying,
-		//													   previewProvider: {
-		//					return SecondViewController(index: indexPath.row)
-		//				}){ action in
-		//		//add your uimenu as earlier
-		//		}
+		
+		print("-------------------------------------------")
 		
 		let identifier = "img_\(indexPath.row)" as NSCopying //создаем идентифаер для открытия 2рого вью контроллера
-		
-		let configuration = UIContextMenuConfiguration(identifier: identifier, previewProvider: nil){ action in
+//		https://www.raywenderlich.com/6328155-context-menus-tutorial-for-ios-getting-started
+		let configuration = UIContextMenuConfiguration(identifier: identifier,
+													   previewProvider: { () -> UIViewController? in
+														
+														//previewProvider это блок для показа кастомного
+														//вью контроллера в окне меню
+														
+//														print("бла бла")
+//														let image = UIImage(named: "img_\(indexPath.row)") ?? UIImage()
+//														return ImageViewController.route(image: image)
+														return self.makeRatePreview(indexPath: indexPath)
+														
+		}){ action in
 			
 			/*
 			state
@@ -143,6 +163,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 		return configuration
 	}
 	
+	//вызывается при тапе на изображение контекстного меню
 	
 	func collectionView(_ collectionView: UICollectionView,
 						willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration,
@@ -156,7 +177,21 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 			}
 		}
 		
+	}
+	
+	//срабатывает при появление контекстного меню
+	
+	func collectionView(_ collectionView: UICollectionView,
+						willDisplayContextMenu configuration: UIContextMenuConfiguration,
+						animator: UIContextMenuInteractionAnimating?){
 		
+	}
+	
+	//вызывается в результате сильного нажатия на ячейку коллекции
+	func collectionView(_ collectionView: UICollectionView,
+						previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+		print("==========================================")
+		return nil
 	}
 	
 }
