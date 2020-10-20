@@ -77,61 +77,86 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
 	func collectionView(_ collectionView: UICollectionView,
 						contextMenuConfigurationForItemAt indexPath: IndexPath,
 						point: CGPoint) -> UIContextMenuConfiguration? {
+		
+		//		let configuration = UIContextMenuConfiguration(identifier: "\(indexPath.row)" as NSCopying,
+		//													   previewProvider: {
+		//					return SecondViewController(index: indexPath.row)
+		//				}){ action in
+		//		//add your uimenu as earlier
+		//		}
+		
+		let identifier = "img_\(indexPath.row)" as NSCopying //создаем идентифаер для открытия 2рого вью контроллера
+		
+		let configuration = UIContextMenuConfiguration(identifier: identifier, previewProvider: nil){ action in
 			
-			let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil){ action in
-				
-				/*
-				state
-				
-				если поставить on то будет галочка
-				
-				case off Константа, указывающая, что элемент меню находится в выключенном состоянии.
-				case on Константа, указывающая, что элемент меню находится во включенном состоянии.
-				case mixed Константа, указывающая, что элемент меню находится в «смешанном» состоянии.
-				*/
-				
-				let viewMenu = UIAction(title: "View",
-										image: UIImage(named: "img_\(indexPath.row)"), //создаем кастомное изображение
-										identifier: UIAction.Identifier(rawValue: "view")) {_ in
-					print("button clicked..")
-				}
-				
-				let rotate = UIAction(title: "Rotate",
-									  image: UIImage(systemName: "arrow.counterclockwise"),
-									  identifier: nil,
-									  state: .off,
-									  handler: {action in
-					print("rotate clicked.")
-				})
-				
-				/*
-				attributes
-				
-				attributes: .disabled      бледно серый цвет
-				attributes: .destructive   крассный цвет
-				
-				*/
-				
-				let delete = UIAction(title: "Delete",
-									  image: UIImage(systemName: "trash.fill"),
-									  identifier: nil,
-									  discoverabilityTitle: nil,
-									  attributes: .destructive,
-									  state: .off,
-									  handler: {action in
-					
-										self.dataArray.remove(at: indexPath.row)
-										self.collectionView.reloadData()
-				})
-				
-				let editMenu = UIMenu(title: "Edit...", //под меню, при его нажатии открывается новое контекстное меню
-									  children: [rotate, delete])
-				
-				
-				return UIMenu(title: "ТИТУЛЬНИК", image: nil, identifier: nil, children: [viewMenu, editMenu])
+			/*
+			state
+			
+			если поставить on то будет галочка
+			
+			case off Константа, указывающая, что элемент меню находится в выключенном состоянии.
+			case on Константа, указывающая, что элемент меню находится во включенном состоянии.
+			case mixed Константа, указывающая, что элемент меню находится в «смешанном» состоянии.
+			*/
+			
+			let viewMenu = UIAction(title: "View",
+									image: UIImage(named: "img_\(indexPath.row)"), //создаем кастомное изображение
+			identifier: UIAction.Identifier(rawValue: "view")) {_ in
+				print("button clicked..")
 			}
 			
-			return configuration
+			let rotate = UIAction(title: "Открыть",
+								  image: UIImage(systemName: "arrow.counterclockwise"),
+								  identifier: nil,
+								  state: .off,
+								  handler: {action in
+									print("rotate clicked.")
+			})
+			
+			/*
+			attributes
+			
+			attributes: .disabled      бледно серый цвет
+			attributes: .destructive   крассный цвет
+			
+			*/
+			
+			let delete = UIAction(title: "Delete",
+								  image: UIImage(systemName: "trash.fill"),
+								  identifier: nil,
+								  discoverabilityTitle: nil,
+								  attributes: .destructive,
+								  state: .off,
+								  handler: {action in
+									
+									self.dataArray.remove(at: indexPath.row)
+									self.collectionView.reloadData()
+			})
+			
+			let editMenu = UIMenu(title: "Edit...", //под меню, при его нажатии открывается новое контекстное меню
+				children: [rotate, delete])
+			
+			
+			return UIMenu(title: "ТИТУЛЬНИК", image: nil, identifier: nil, children: [viewMenu, editMenu])
+		}
+		
+		return configuration
+	}
+	
+	
+	func collectionView(_ collectionView: UICollectionView,
+						willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration,
+						animator: UIContextMenuInteractionCommitAnimating) {
+		
+		if let id = configuration.identifier as? String, let image = UIImage(named: id){
+			animator.addCompletion {
+				let vc = ImageViewController.route(image: image)
+				self.navigationController?.pushViewController(vc, animated: true)
+//				self.show(vc, sender: self)
+			}
+		}
+		
+		
 	}
 	
 }

@@ -22,10 +22,10 @@ class ImageViewController: UIViewController {
 	static func route(image: UIImage) -> ImageViewController{
 		
 		let storuboard = UIStoryboard(name: "Main", bundle: nil)
-		let VC = storuboard.instantiateViewController(identifier: "ImageViewController")
+		let VC = storuboard.instantiateViewController(identifier: "ImageViewController") as! ImageViewController
+		VC.image = image
 		
-		
-		return VC as! ImageViewController
+		return VC
 	}
 
 
