@@ -11,8 +11,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var answerLabel: UILabel!
 
   // MARK: - Properties
-  let vowels: [Character] = ["a", "e", "i", "o", "u"]
-
+  let vowels: [Character] = ["a", "e", "i", "o", "u"] //гласные буквы
+	
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
