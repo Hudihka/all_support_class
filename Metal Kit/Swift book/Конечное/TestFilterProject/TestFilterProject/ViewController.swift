@@ -17,13 +17,22 @@ class ViewController: UIViewController {
     
     // MARK: - Private Properties
         
-    private var imageView = UIImageView()
+//    private var imageView = UIImageView()
+	
+	private var metalView: MetalImageView!
+	private var context: CIContext!
+	private var device: MTLDevice!
     
     private var image: UIImage!
-    
     private var filterWorker: FilterWorker!
     
     // MARK: - Lifecycle
+	
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		metalView.frame = containerView.bounds
+		metalView.render(image: CIImage(image: image)!, contex: context, device: device)
+	}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,25 +45,31 @@ class ViewController: UIViewController {
         image = UIImage(named: "sunset")!
         
         filterWorker = FilterWorker(image: image)
+		
+		device = MTLCreateSystemDefaultDevice()!//стандартное создание девайса
+		context = CIContext(mtlDevice: device)
+		metalView = MetalImageView(frame: .zero, device: device)
+		        containerView.addSubview(metalView)
         
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFit
-
-        containerView.addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            imageView.topAnchor.constraint(equalTo: containerView.topAnchor)
-        ])
+//        imageView.image = image
+//        imageView.contentMode = .scaleAspectFit
+//
+//        containerView.addSubview(imageView)
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        NSLayoutConstraint.activate([
+//            imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+//            imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+//            imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+//            imageView.topAnchor.constraint(equalTo: containerView.topAnchor)
+//        ])
     }
     
     // MARK: - IBActions
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-        let filteredImage = filterWorker.applyUIImage(with: sender.value)
-        imageView.image = filteredImage
+        let filteredImage = filterWorker.apply(with: sender.value)
+		metalView.render(image: filteredImage, contex: context, device: device)
+//        imageView.image = filteredImage
     }
 }
