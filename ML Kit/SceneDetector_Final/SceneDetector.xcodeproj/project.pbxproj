@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42D3A0971EEA4D2E005C15DF /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 42D3A0961EEA4D2E005C15DF /* GoogLeNetPlaces.mlmodel */; };
+		527DD39E25A34BE800C124B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527DD39C25A34BE600C124B0 /* LaunchScreen.storyboard */; };
+		527DD39F25A34BE800C124B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527DD39D25A34BE800C124B0 /* Main.storyboard */; };
 		CD8A65A11EE7EC0700942922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A65A01EE7EC0700942922 /* AppDelegate.swift */; };
 		CD8A65A31EE7EC0700942922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A65A21EE7EC0700942922 /* ViewController.swift */; };
-		CD8A65A61EE7EC0700942922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8A65A41EE7EC0700942922 /* Main.storyboard */; };
 		CD8A65A81EE7EC0700942922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8A65A71EE7EC0700942922 /* Assets.xcassets */; };
-		CD8A65AB1EE7EC0700942922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8A65A91EE7EC0700942922 /* LaunchScreen.storyboard */; };
 		CD8A65B61EE7EE3B00942922 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8A65B51EE7ECF600942922 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42D3A0961EEA4D2E005C15DF /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		527DD39C25A34BE600C124B0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		527DD39D25A34BE800C124B0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CD8A659D1EE7EC0700942922 /* SceneDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD8A65A01EE7EC0700942922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD8A65A21EE7EC0700942922 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD8A65A51EE7EC0700942922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD8A65A01EE7EC0700942922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SceneDetector/AppDelegate.swift; sourceTree = "<group>"; };
+		CD8A65A21EE7EC0700942922 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = SceneDetector/ViewController.swift; sourceTree = "<group>"; };
 		CD8A65A71EE7EC0700942922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CD8A65AA1EE7EC0700942922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CD8A65AC1EE7EC0700942922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8A65AC1EE7EC0700942922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SceneDetector/Info.plist; sourceTree = "<group>"; };
 		CD8A65B51EE7ECF600942922 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +42,12 @@
 		CD8A65941EE7EC0700942922 = {
 			isa = PBXGroup;
 			children = (
+				527DD39C25A34BE600C124B0 /* LaunchScreen.storyboard */,
+				527DD39D25A34BE800C124B0 /* Main.storyboard */,
+				CD8A65A01EE7EC0700942922 /* AppDelegate.swift */,
+				CD8A65A21EE7EC0700942922 /* ViewController.swift */,
+				CD8A65AC1EE7EC0700942922 /* Info.plist */,
+				CD8A65B21EE7EC4100942922 /* Resources */,
 				CD8A659F1EE7EC0700942922 /* SceneDetector */,
 				CD8A659E1EE7EC0700942922 /* Products */,
 			);
@@ -58,10 +66,6 @@
 		CD8A659F1EE7EC0700942922 /* SceneDetector */ = {
 			isa = PBXGroup;
 			children = (
-				CD8A65A01EE7EC0700942922 /* AppDelegate.swift */,
-				CD8A65A21EE7EC0700942922 /* ViewController.swift */,
-				CD8A65AC1EE7EC0700942922 /* Info.plist */,
-				CD8A65B21EE7EC4100942922 /* Resources */,
 			);
 			path = SceneDetector;
 			sourceTree = "<group>";
@@ -69,10 +73,9 @@
 		CD8A65B21EE7EC4100942922 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CD8A65A41EE7EC0700942922 /* Main.storyboard */,
+				42D3A0961EEA4D2E005C15DF /* GoogLeNetPlaces.mlmodel */,
 				CD8A65A71EE7EC0700942922 /* Assets.xcassets */,
 				CD8A65B51EE7ECF600942922 /* Default-568h@2x.png */,
-				CD8A65A91EE7EC0700942922 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -109,7 +112,7 @@
 				TargetAttributes = {
 					CD8A659C1EE7EC0700942922 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -136,10 +139,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8A65AB1EE7EC0700942922 /* LaunchScreen.storyboard in Resources */,
+				527DD39E25A34BE800C124B0 /* LaunchScreen.storyboard in Resources */,
 				CD8A65B61EE7EE3B00942922 /* Default-568h@2x.png in Resources */,
 				CD8A65A81EE7EC0700942922 /* Assets.xcassets in Resources */,
-				CD8A65A61EE7EC0700942922 /* Main.storyboard in Resources */,
+				527DD39F25A34BE800C124B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,31 +155,11 @@
 			files = (
 				CD8A65A31EE7EC0700942922 /* ViewController.swift in Sources */,
 				CD8A65A11EE7EC0700942922 /* AppDelegate.swift in Sources */,
+				42D3A0971EEA4D2E005C15DF /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CD8A65A41EE7EC0700942922 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD8A65A51EE7EC0700942922 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		CD8A65A91EE7EC0700942922 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD8A65AA1EE7EC0700942922 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CD8A65AD1EE7EC0700942922 /* Debug */ = {
@@ -286,8 +269,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z96TS9T74Z;
 				INFOPLIST_FILE = SceneDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.SceneDetector;
@@ -302,8 +286,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z96TS9T74Z;
 				INFOPLIST_FILE = SceneDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.SceneDetector;
