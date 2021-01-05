@@ -1,0 +1,6 @@
+framework module Pods_text_recognising {
+  umbrella header "Pods-text recognising-umbrella.h"
+
+  export *
+  module * { export * }
+}
