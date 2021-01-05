@@ -53,11 +53,33 @@ class ViewController: UIViewController {
     imageView.layer.addSublayer(frameSublayer)
 	
 	//MARK: распознавание
-	processor.process(in: imageView) { text in
-	  self.scannedText = text
-	}
+	drawFeatures(in: imageView)
 	
   }
+	
+	//удаляем все слои с фото при изменении
+	private func removeFrames() {
+	  guard let sublayers = frameSublayer.sublayers else { return }
+	  for sublayer in sublayers {
+		sublayer.removeFromSuperlayer()
+	  }
+	}
+	
+	//удаляем все слои с изображения
+	
+	private func drawFeatures(in imageView: UIImageView, completion: (() -> Void)? = nil) {
+	  // 2
+	  removeFrames()
+		
+	  processor.process(in: imageView) { text, elements in
+		elements.forEach() { element in
+		  self.frameSublayer.addSublayer(element.shapeLayer)
+		}
+		self.scannedText = text
+		// 3
+		completion?()
+	  }
+	}
 	
   // MARK: Touch handling to dismiss keyboard
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -82,8 +104,12 @@ class ViewController: UIViewController {
   }
   
   @IBAction func shareDidTouch(_ sender: UIBarButtonItem) {
-    let vc = UIActivityViewController(activityItems: [scannedText, imageView.image!], applicationActivities: [])
-    present(vc, animated: true, completion: nil)
+	
+	let vc = UIActivityViewController(
+	  activityItems: [textView.text, imageView.image!],
+	  applicationActivities: [])
+
+	present(vc, animated: true, completion: nil)
   }
   
   // MARK: Keyboard slide up
@@ -120,7 +146,12 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
     if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
       imageView.contentMode = .scaleAspectFit
-      imageView.image = pickedImage
+		
+		//в зависимости от того какое изображение мы получили мы переделываем его в портретную ориентацию
+      let fixedImage = pickedImage.fixOrientation()
+	  imageView.image = fixedImage
+		
+	  drawFeatures(in: imageView)
     }
     dismiss(animated: true, completion: nil)
   }
