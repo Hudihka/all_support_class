@@ -35,6 +35,9 @@ class ViewController: UIViewController {
   @IBOutlet weak var cameraButton: UIButton!
   
   var frameSublayer = CALayer()
+	
+	var processor = ScaledElementProcessor()
+	
   var scannedText: String = "Detected text can be edited here." {
     didSet {
       textView.text = scannedText
@@ -48,6 +51,12 @@ class ViewController: UIViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     
     imageView.layer.addSublayer(frameSublayer)
+	
+	//MARK: распознавание
+	processor.process(in: imageView) { text in
+	  self.scannedText = text
+	}
+	
   }
 	
   // MARK: Touch handling to dismiss keyboard
