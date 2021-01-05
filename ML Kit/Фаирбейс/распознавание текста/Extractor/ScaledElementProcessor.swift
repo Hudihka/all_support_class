@@ -9,7 +9,13 @@ class ScaledElementProcessor {
 	var textRecognizer: VisionTextRecognizer!
 	  
 	init() {
-	  textRecognizer = vision.onDeviceTextRecognizer()
+	//если используешь распознавание текста ТОЛЬКО на англ языке
+//	  textRecognizer = vision.onDeviceTextRecognizer()
+	
+		//если используешь распознавание текста кроме как на англ языке
+		let options = VisionCloudTextRecognizerOptions()
+		options.languageHints = ["en"]//список языков
+		textRecognizer = vision.cloudTextRecognizer(options: options)
 	}
 	
 	func process(in imageView: UIImageView,
@@ -24,6 +30,8 @@ class ScaledElementProcessor {
 		// У класса textRecognizerесть processметод, который принимает VisionImageи возвращает массив текстовых результатов в виде параметра, переданного в закрытие.
 		
 		guard error == nil, let result = result, !result.text.isEmpty else {
+			//если ты хочешьь распознавать текс кроме как на англ то читай ошибки
+			//придется настраивать платежную инф
 			callback("", [])
 			return
 		}
@@ -40,8 +48,8 @@ class ScaledElementProcessor {
 				   viewFrame: imageView.frame)
 				
 			  // создаем структуру
-			  let shapeLayer = self.createShapeLayer(frame: element.frame)
-			  let scaledElement = ScaledElement(frame: element.frame, shapeLayer: shapeLayer)
+			  let shapeLayer = self.createShapeLayer(frame:frame)
+			  let scaledElement = ScaledElement(frame: frame, shapeLayer: shapeLayer)
 
 			  // добавляем структуру в массив
 			  scaledElements.append(scaledElement)

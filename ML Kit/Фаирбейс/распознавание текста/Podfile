@@ -9,5 +9,7 @@ target 'text recognising' do
 #  pod 'Firebase/Core'
 #  pod 'Firebase/MLVision'
 #  pod 'Firebase/MLVisionTextModel'
+	#устанавливай если используешь распознавание текста кроме как на англ языке
+#	pod 'GoogleMLKit/TextRecognition'
 	
 end
