@@ -12,6 +12,8 @@ import MetalKit
 class MetalCircleView: NSView {
 	
 	private var metalView : MTKView!
+	private var metalDevice : MTLDevice!
+	private var metalCommandQueue : MTLCommandQueue!
 	
 	public required init(){
 		super.init(frame: .zero)
@@ -38,6 +40,21 @@ class MetalCircleView: NSView {
         metalView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         metalView.delegate = self
+		
+		/*
+			включить отображение его набора с помощью
+		*/
+        metalView.isPaused = true
+		/*
+		Это говорит ему, что он должен быть приостановлен и должен ждать, пока мы не сообщим ему, когда ему нужно что-то отобразить.
+		*/
+        metalView.enableSetNeedsDisplay = true
+        
+        //connect to the gpu
+        metalDevice = MTLCreateSystemDefaultDevice()
+        metalView.device = metalDevice
+		
+		metalCommandQueue = metalDevice.makeCommandQueue()!
     }
 	
 }
@@ -48,6 +65,26 @@ extension MetalCircleView : MTKViewDelegate {
     }
     
     func draw(in view: MTKView) {
-        //this is where we do all our drawing
+		//буфер для выполнения команд
+        guard let commandBuffer = metalCommandQueue.makeCommandBuffer() else {return}
+		
+		//Создание интерфейса для конвейера
+		//получаем информацию о вью
+        guard let renderDescriptor = view.currentRenderPassDescriptor else {return}
+		
+        //Установка "цвета фона"
+        renderDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0, 0, 1, 1)
+		
+		//Создание командного кодировщика или «внутри» конвейера
+        guard let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderDescriptor) else {return}
+        
+		//Завершите кодирование.
+		renderEncoder.endEncoding()
+		/*Сообщите графическому процессору, куда отправить результат рендеринга.
+		MTLDrawable- это « отображаемый ресурс, который можно отображать или записывать. ”
+		*/
+		commandBuffer.present(view.currentDrawable!)
+		//Добавляем инструкцию в нашу metalCommandQueue
+		commandBuffer.commit()
     }
 }
