@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520C0F6925A7390500BB06E0 /* CircleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 520C0F6825A7390500BB06E0 /* CircleShader.metal */; };
 		52F4DD8C25A6D33000971626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4DD8B25A6D33000971626 /* AppDelegate.swift */; };
 		52F4DD8E25A6D33000971626 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4DD8D25A6D33000971626 /* ViewController.swift */; };
 		52F4DD9025A6D33200971626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F4DD8F25A6D33200971626 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520C0F6825A7390500BB06E0 /* CircleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CircleShader.metal; sourceTree = "<group>"; };
 		52F4DD8825A6D33000971626 /* metal macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metal macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F4DD8B25A6D33000971626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F4DD8D25A6D33000971626 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				52F4DD8B25A6D33000971626 /* AppDelegate.swift */,
 				52F4DD8D25A6D33000971626 /* ViewController.swift */,
 				52F4DD9B25A6D4A000971626 /* MetalCircleView.swift */,
+				520C0F6825A7390500BB06E0 /* CircleShader.metal */,
 				52F4DD8F25A6D33200971626 /* Assets.xcassets */,
 				52F4DD9125A6D33200971626 /* Main.storyboard */,
 				52F4DD9425A6D33200971626 /* Info.plist */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520C0F6925A7390500BB06E0 /* CircleShader.metal in Sources */,
 				52F4DD9C25A6D4A000971626 /* MetalCircleView.swift in Sources */,
 				52F4DD8E25A6D33000971626 /* ViewController.swift in Sources */,
 				52F4DD8C25A6D33000971626 /* AppDelegate.swift in Sources */,

@@ -8,17 +8,27 @@
 
 import Cocoa
 import MetalKit
+import simd//фреймворк для метал отрисовки, для векторов
 
 class MetalCircleView: NSView {
 	
 	private var metalView : MTKView!
 	private var metalDevice : MTLDevice!
 	private var metalCommandQueue : MTLCommandQueue!
+	/*
+	MTLRenderPipelineState объект, который определяет состояние графики, включая функции вершинного и фрагментного шейдера , перед выполнением любых вызовов рисования.
+	*/
+	private var metalRenderPipelineState : MTLRenderPipelineState!
+	
+	// MARK: VERTEX VARS
+    var circleVertices = [simd_float2]()
+	private var vertexBuffer: MTLBuffer!
 	
 	public required init(){
 		super.init(frame: .zero)
 		setupView()
         setupMetal()
+		createVertexPoints()
 	}
 	
 	public required init?(coder aDecoder: NSCoder) {
@@ -51,10 +61,62 @@ class MetalCircleView: NSView {
         metalView.enableSetNeedsDisplay = true
         
         //connect to the gpu
-        metalDevice = MTLCreateSystemDefaultDevice()
+        metalDevice = MTLCreateSystemDefaultDevice()!
         metalView.device = metalDevice
 		
 		metalCommandQueue = metalDevice.makeCommandQueue()!
+		
+		// создание состояния конвейера рендеринга
+        createPipelineState()
+		
+		// превращаем точки вершин в данные буфера
+		/*
+		создает MTLBufferобъект путем копирования данных из существующего распределения памяти в новое распределение.
+		
+		makeBufferФункция принимает «длину» число байтов из наших circleVertices и сохраняет его в GPU / CPU доступной памяти. Для длины мы получаем шаг (количество байтов от начала одного экземпляра Tдо начала следующего при хранении в непрерывной памяти или в файлеArray<T> ) из MemoryLayout типа данных (в нашем случае simd_float2) и умножьте его на количество записей этого типа в массиве.
+		*/
+        vertexBuffer = metalDevice.makeBuffer(bytes: circleVertices, length: circleVertices.count * MemoryLayout<simd_float2>.stride, options: [])!
+        
+        
+        // рисуем
+//        metalView.needDisplay = true
+    }
+	
+	fileprivate  func  createPipelineState() {
+//		Чтобы создать состояние конвейера, нам понадобится файл
+		let pipelineDescriptor = MTLRenderPipelineDescriptor()
+		
+		// находит металлический файл из основного пакета
+		let library = metalDevice.makeDefaultLibrary()!
+		
+		// передаем имена функции в pipelineDescriptor
+		pipelineDescriptor.vertexFunction = library.makeFunction(name: "vertexShader")
+		pipelineDescriptor.fragmentFunction = library.makeFunction(name: "fragmentShader")
+		
+		// устанавливаем формат пикселей в соответствии с форматом пикселей MetalView
+		pipelineDescriptor.colorAttachments[0].pixelFormat = metalView.colorPixelFormat
+		
+		// создаем состояние конвейера, используя интерфейс gpu и pipelineDescriptor
+		metalRenderPipelineState = try! metalDevice.makeRenderPipelineState(descriptor: pipelineDescriptor)
+		
+	}
+	
+	fileprivate func createVertexPoints(){
+        func rads(forDegree d: Float)->Float32{
+            return (Float.pi*d)/180
+        }
+		
+		let origin = simd_float2(0, 0)
+		
+		for i in 0...720 {
+			let position : simd_float2 = [cos(rads(forDegree: Float(Float(i)/2.0))), sin(rads(forDegree: Float(Float(i)/2.0)))]
+			circleVertices.append(position)
+			
+			if (i+1)%2 == 0 {
+				circleVertices.append(origin)
+			}
+		}
+        
     }
 	
 }
@@ -77,6 +139,16 @@ extension MetalCircleView : MTKViewDelegate {
 		
 		//Создание командного кодировщика или «внутри» конвейера
         guard let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderDescriptor) else {return}
+
+		// Мы говорим, какой конвейер рендеринга использовать
+		renderEncoder.setRenderPipelineState(metalRenderPipelineState)
+		
+		/*Это то, что запускает нашу функцию vertexShader. Все, что мы сделали до сих пор, сделано на данный момент. Мы говорим нашему кодировщику рендеринга нарисовать конкретный примитив (помните, когда мы перебирали MTLPrimitiveTypes), с какой вершины начинать и vertexCount.
+		
+		Вам может быть интересно, зачем нам указывать точку vertexStart и точку vertexCount. Это необходимо, когда вы хотите создать разные типы примитивов в одном проходе рендеринга. Если ваши первые 1000 вершин предназначены для треугольников, а следующие 1000 - для линий, вам нужно указать, с какой вершины начинается следующий тип примитива.*/
+		
+		renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+		renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 1081)
         
 		//Завершите кодирование.
 		renderEncoder.endEncoding()

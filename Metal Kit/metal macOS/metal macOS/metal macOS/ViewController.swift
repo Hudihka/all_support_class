@@ -9,6 +9,8 @@
 import Cocoa
 
 class ViewController: NSViewController {
+//	статья на которой была взята инф
+//	https://medium.com/better-programming/making-your-first-circle-using-metal-shaders-1e5049ec8505
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
