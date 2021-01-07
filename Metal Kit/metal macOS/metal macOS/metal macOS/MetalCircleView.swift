@@ -27,8 +27,8 @@ class MetalCircleView: NSView {
 	public required init(){
 		super.init(frame: .zero)
 		setupView()
-        setupMetal()
 		createVertexPoints()
+		setupMetal()
 	}
 	
 	public required init?(coder aDecoder: NSCoder) {
