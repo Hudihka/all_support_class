@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2A10A7825B59D450076BC6C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A10A7725B59D450076BC6C /* DetailViewController.swift */; };
+		B2A10A7B25B59E150076BC6C /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A10A7A25B59E150076BC6C /* Monster.swift */; };
 		B2FD4C4325B558E80033E1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FD4C4225B558E80033E1DB /* AppDelegate.swift */; };
 		B2FD4C4A25B558E80033E1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FD4C4825B558E80033E1DB /* Main.storyboard */; };
 		B2FD4C4C25B558E90033E1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FD4C4B25B558E90033E1DB /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2A10A7725B59D450076BC6C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B2A10A7A25B59E150076BC6C /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		B2FD4C3F25B558E80033E1DB /* MathMonsters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMonsters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FD4C4225B558E80033E1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2FD4C4925B558E80033E1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +60,9 @@
 			children = (
 				B2FD4C4225B558E80033E1DB /* AppDelegate.swift */,
 				B2FD4C4825B558E80033E1DB /* Main.storyboard */,
+				B2A10A7A25B59E150076BC6C /* Monster.swift */,
 				B2FD4C5925B58C580033E1DB /* MasterViewController.swift */,
+				B2A10A7725B59D450076BC6C /* DetailViewController.swift */,
 				B2FD4C4B25B558E90033E1DB /* Assets.xcassets */,
 				B2FD4C4D25B558E90033E1DB /* LaunchScreen.storyboard */,
 				B2FD4C5025B558E90033E1DB /* Info.plist */,
@@ -134,6 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A10A7B25B59E150076BC6C /* Monster.swift in Sources */,
+				B2A10A7825B59D450076BC6C /* DetailViewController.swift in Sources */,
 				B2FD4C5A25B58C580033E1DB /* MasterViewController.swift in Sources */,
 				B2FD4C4325B558E80033E1DB /* AppDelegate.swift in Sources */,
 			);
