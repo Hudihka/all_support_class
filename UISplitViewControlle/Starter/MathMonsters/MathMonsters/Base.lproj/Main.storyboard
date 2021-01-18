@@ -123,7 +123,7 @@
         <!--Split View Controller-->
         <scene sceneID="GuT-l2-jg8">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="oHs-3M-cUJ" sceneMemberID="viewController">
+                <splitViewController id="oHs-3M-cUJ" sceneMemberID="viewController">
                     <connections>
                         <segue destination="8v0-hV-do4" kind="relationship" relationship="masterViewController" id="HO5-Lx-urL"/>
                         <segue destination="gio-fQ-wjJ" kind="relationship" relationship="detailViewController" id="5lx-98-ANR"/>
