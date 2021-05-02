@@ -51,10 +51,24 @@ class AutoregisterTests: XCTestCase {
   private let container = Container()
   
   // MARK: - Boilerplate methods
-  
-  override func setUp() {
-    super.setUp()
-  }
+  /*
+	Этот код автоматически регистрирует зависимости,
+	чтобы использовать предоставленный инициализатор
+	для создания правильной зависимости всякий раз,
+	когда вы просите контейнер разрешить ее.
+	*/
+	
+	override func setUp() {
+		super.setUp()
+		container.autoregister(Price.self,
+													 argument: String.self,
+													 initializer: Price.init(amount:))
+
+		container.autoregister(PriceResponse.self,
+													 argument: Price.self,
+													 initializer: PriceResponse.init(data:))
+	}
+
   
   override func tearDown() {
     super.tearDown()
@@ -64,11 +78,14 @@ class AutoregisterTests: XCTestCase {
   // MARK: - Tests
   
   func testPriceResponseData() {
-    XCTFail("Test not yet written.")
+   let price = container ~> (Price.self, argument: "789654")
+		let response = container ~> (PriceResponse.self, argument: price)
+		XCTAssertEqual(response.data.amount, "789654")
   }
   
   func testPrice() {
-    XCTFail("Test not yet written.")
+    let price = container ~> (Price.self, argument: "999456")
+		XCTAssertEqual (price.amount, "999456" )
   }
 
 }

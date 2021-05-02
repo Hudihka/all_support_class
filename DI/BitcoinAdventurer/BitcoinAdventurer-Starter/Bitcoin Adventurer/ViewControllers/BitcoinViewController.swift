@@ -8,7 +8,7 @@ internal class BitcoinViewController: UIViewController {
   @IBOutlet weak private var primary: UILabel!
   @IBOutlet weak private var partial: UILabel!
 	
-	let networking = HTTPNetworking()
+	let fetcher = ​BitcoinPriceFetcher(networking: HTTPNetworking())
   
   private let dollarsDisplayFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
@@ -44,22 +44,9 @@ internal class BitcoinViewController: UIViewController {
   
 	private func requestPrice()  {
 		
-		networking.request(from: Coinbase.bitcoin) { data, error in
-			// 1. Check for errors
-			if let error = error {
-				print("Error received requesting Bitcoin price: \(error.localizedDescription)")
-				return
-			}
+		fetcher.fetch { response in
+			guard let response = response else { return }
 
-			// 2. Parse the returned information
-			let decoder = JSONDecoder()
-			guard let data = data,
-						let response = try? decoder.decode(PriceResponse.self, from: data)
-			else { return }
-
-			print("Price returned: \(response.data.amount)")
-
-			// 3. Update the UI with the parsed PriceResponse
 			DispatchQueue.main.async { [weak self] in
 				self?.updateLabel(price: response.data)
 			}
