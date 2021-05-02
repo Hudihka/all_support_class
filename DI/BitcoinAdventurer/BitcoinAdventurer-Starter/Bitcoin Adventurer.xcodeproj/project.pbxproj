@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C5077AAAC85C7831FA8CD15 /* Pods_Bitcoin_Adventurer_Bitcoin_Adventurer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDAD690153818F33CB3A344 /* Pods_Bitcoin_Adventurer_Bitcoin_Adventurer_Tests.framework */; };
+		52C1B747263ECB250053D404 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1B746263ECB250053D404 /* HTTPNetworking.swift */; };
+		52C1B749263ECC9D0053D404 /* BitcoinPriceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1B748263ECC9D0053D404 /* BitcoinPriceFetcher.swift */; };
 		733E0F188EDF2FED6CFE3240 /* Pods_Bitcoin_Adventurer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063BB4E3376AFF7E31281C9C /* Pods_Bitcoin_Adventurer.framework */; };
 		8714602E1FF2FB41001F9EB5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8714602D1FF2FB41001F9EB5 /* Endpoint.swift */; };
 		8738EDC11FE59A31000CBC22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8738EDC01FE59A31000CBC22 /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		063BB4E3376AFF7E31281C9C /* Pods_Bitcoin_Adventurer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcoin_Adventurer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E41ABE2A875AB9A7AADA440 /* Pods-Bitcoin Adventurer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin Adventurer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin Adventurer/Pods-Bitcoin Adventurer.debug.xcconfig"; sourceTree = "<group>"; };
+		52C1B746263ECB250053D404 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
+		52C1B748263ECC9D0053D404 /* BitcoinPriceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPriceFetcher.swift; sourceTree = "<group>"; };
 		8714602D1FF2FB41001F9EB5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Model/Endpoint.swift; sourceTree = "<group>"; };
 		8738EDBD1FE59A31000CBC22 /* Bitcoin Adventurer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin Adventurer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8738EDC01FE59A31000CBC22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		52C1B745263ECAD30053D404 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				52C1B748263ECC9D0053D404 /* BitcoinPriceFetcher.swift */,
+				52C1B746263ECB250053D404 /* HTTPNetworking.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		8738EDB41FE59A31000CBC22 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				8738EDC01FE59A31000CBC22 /* AppDelegate.swift */,
+				52C1B745263ECAD30053D404 /* Dependencies */,
 				8738EDCC1FE59A31000CBC22 /* Info.plist */,
 				87CED55C1FE7540300C4D66E /* Storyboard */,
 				87CED55B1FE753EF00C4D66E /* ViewControllers */,
@@ -418,10 +432,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C1B749263ECC9D0053D404 /* BitcoinPriceFetcher.swift in Sources */,
 				87CED5611FE754DB00C4D66E /* PriceResponse.swift in Sources */,
 				8738EDC31FE59A31000CBC22 /* BitcoinViewController.swift in Sources */,
 				8738EDC11FE59A31000CBC22 /* AppDelegate.swift in Sources */,
 				87CED5631FE7550B00C4D66E /* Error.swift in Sources */,
+				52C1B747263ECB250053D404 /* HTTPNetworking.swift in Sources */,
 				8714602E1FF2FB41001F9EB5 /* Endpoint.swift in Sources */,
 				87CED55F1FE754A900C4D66E /* Price.swift in Sources */,
 			);
