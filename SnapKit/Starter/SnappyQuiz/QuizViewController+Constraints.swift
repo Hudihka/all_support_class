@@ -28,6 +28,7 @@
 
 import UIKit
 import SnapKit
+//https://www.raywenderlich.com/3225401-snapkit-for-ios-constraints-in-a-snap
 
 extension QuizViewController {
   func setupConstraints() {
@@ -43,13 +44,12 @@ extension QuizViewController {
 
     updateProgress(to: 0)
 
-    lblTimer.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-        lblTimer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45),
-        lblTimer.heightAnchor.constraint(equalToConstant: 45),
-        lblTimer.topAnchor.constraint(equalTo: viewProgress.bottomAnchor, constant: 32),
-        lblTimer.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-    ])
+    lblTimer.snp.makeConstraints {make in
+      make.width.equalToSuperview().multipliedBy(0.45) // 1
+      make.height.equalTo(45) // 2
+      make.top.equalTo (viewProgress.snp.bottom).offset(32) // 3
+      make.centerX.equalToSuperview() // 4
+    }
     
     lblQuestion.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([

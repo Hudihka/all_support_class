@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func applicationDidFinishLaunching(_ application: UIApplication) {
+    
     let appearance = UINavigationBarAppearance()
     appearance.backgroundColor = UIColor(red: 1, green: 108.0/255, blue: 0, alpha: 1.0)
     UINavigationBar.appearance().scrollEdgeAppearance = appearance
