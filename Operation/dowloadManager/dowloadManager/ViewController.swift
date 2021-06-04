@@ -80,7 +80,11 @@ class ViewController: UIViewController {
 
 extension ViewController: URLSessionDelegate, URLSessionDataDelegate, URLSessionDownloadDelegate {
 	
-	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+	func urlSession(_ session: URLSession,
+					downloadTask: URLSessionDownloadTask,
+					didWriteData bytesWritten: Int64,
+					totalBytesWritten: Int64,
+					totalBytesExpectedToWrite: Int64) {
 
 		DispatchQueue.main.async {
 			let progress = Float(totalBytesWritten)/Float(totalBytesExpectedToWrite)
@@ -89,12 +93,18 @@ extension ViewController: URLSessionDelegate, URLSessionDataDelegate, URLSession
 	}
 	
 
-	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-			DispatchQueue.main.async {
-
-	//DOWNLOAD SUCCESSFUL AND FILE PATH WILL BE IN URL.
-
+	  func urlSession(_ session: URLSession,
+					  downloadTask: URLSessionDownloadTask,
+					  didFinishDownloadingTo location: URL) {
+		print(downloadTask.originalRequest?.url)
+		
+		
+		print("Finished downloading to \(location).")
+	  }
+	
+	func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
+		
 	}
-	}
+
 	
 }

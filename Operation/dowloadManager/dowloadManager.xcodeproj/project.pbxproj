@@ -13,6 +13,7 @@
 		520A217C266A04440044C174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520A217A266A04440044C174 /* Main.storyboard */; };
 		520A217E266A04460044C174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520A217D266A04460044C174 /* Assets.xcassets */; };
 		520A2181266A04460044C174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520A217F266A04460044C174 /* LaunchScreen.storyboard */; };
+		52F1C3CB266A4FEB00CFA261 /* DowloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1C3CA266A4FEB00CFA261 /* DowloadManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		520A217D266A04460044C174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520A2180266A04460044C174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		520A2182266A04460044C174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F1C3CA266A4FEB00CFA261 /* DowloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowloadManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				520A2174266A04440044C174 /* AppDelegate.swift */,
 				520A2176266A04440044C174 /* SceneDelegate.swift */,
 				520A2178266A04440044C174 /* ViewController.swift */,
+				52F1C3CA266A4FEB00CFA261 /* DowloadManager.swift */,
 				520A217A266A04440044C174 /* Main.storyboard */,
 				520A217D266A04460044C174 /* Assets.xcassets */,
 				520A217F266A04460044C174 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				520A2179266A04440044C174 /* ViewController.swift in Sources */,
 				520A2175266A04440044C174 /* AppDelegate.swift in Sources */,
+				52F1C3CB266A4FEB00CFA261 /* DowloadManager.swift in Sources */,
 				520A2177266A04440044C174 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
