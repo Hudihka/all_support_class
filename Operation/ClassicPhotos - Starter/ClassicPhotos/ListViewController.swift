@@ -32,11 +32,14 @@ import CoreImage
 let dataSourceURL = URL(string:"http://www.raywenderlich.com/downloads/ClassicPhotosDictionary.plist")!
 
 class ListViewController: UITableViewController {
-  lazy var photos = NSDictionary(contentsOf: dataSourceURL)!
+  var photos: [PhotoRecord] = []
+  let pendingOperations = PendingOperations()
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Classic Photos"
+	fetchPhotoDetails()
   }
   
   // MARK: - Table view data source
@@ -46,29 +49,107 @@ class ListViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath) 
-    let rowKey = photos.allKeys[indexPath.row] as! String
-    
-    var image : UIImage?
+	  let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
+	  
+	  //Чтобы предоставить пользователю обратную связь,
+	//создайте UIActivityIndicatorViewи установите его в качестве дополнительного представления ячейки.
+	  if cell.accessoryView == nil {
+		let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		cell.accessoryView = indicator
+	  }
+	  let indicator = cell.accessoryView as! UIActivityIndicatorView
+	  
+	  //2
+	  let photoDetails = photos[indexPath.row]
+	  
+	  //3
+	  cell.textLabel?.text = photoDetails.name
+	  cell.imageView?.image = photoDetails.image
+	
+//	if !tableView.isDragging && !tableView.isDecelerating {
+//	  startOperations(for: photoDetails, at: indexPath)
+//	}
 
-    guard let imageURL = URL(string:photos[rowKey] as! String),
-      let imageData = try? Data(contentsOf: imageURL) else {
-        return cell
-    }
+	  
+	  //4
+	  switch (photoDetails.state) {
+	  case .filtered:
+		indicator.stopAnimating()
+	  case .failed:
+		indicator.stopAnimating()
+		cell.textLabel?.text = "Failed to load"
+	  case .new, .downloaded:
+		indicator.startAnimating()
+//		Вы указываете табличному представлению начать операции, только если табличное представление не прокручивается
+		if !tableView.isDragging && !tableView.isDecelerating {
+		  startOperations(for: photoDetails, at: indexPath)
+		}
+//		startOperations(for: photoDetails, at: indexPath)
+	  }
+	  
+	  return cell
+	}
 
-    //1
-    let unfilteredImage = UIImage(data:imageData)
-    //2
-    image = self.applySepiaFilter(unfilteredImage!)
+	func startOperations(for photoRecord: PhotoRecord, at indexPath: IndexPath) {
+	  switch (photoRecord.state) {
+	  case .new:
+		startDownload(for: photoRecord, at: indexPath)
+	  case .downloaded:
+		startFiltration(for: photoRecord, at: indexPath)
+	  default:
+		NSLog("do nothing")
+	  }
+	}
+	
+	func startDownload(for photoRecord: PhotoRecord, at indexPath: IndexPath) {
+	  //1
+	  guard pendingOperations.downloadsInProgress[indexPath] == nil else {
+		return
+	  }
+		  
+	  //2
+	  let downloader = ImageDownloader(photoRecord)
+	  
+	  //3
+	  downloader.completionBlock = {
+		if downloader.isCancelled {
+		  return
+		}
 
-    // Configure the cell...
-    cell.textLabel?.text = rowKey
-    if image != nil {
-      cell.imageView?.image = image!
-    }
-    
-    return cell
-  }
+		DispatchQueue.main.async {
+		  self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+		  self.tableView.reloadRows(at: [indexPath], with: .fade)
+		}
+	  }
+	  
+	  //4
+	  pendingOperations.downloadsInProgress[indexPath] = downloader
+	  
+	  //5
+	  pendingOperations.downloadQueue.addOperation(downloader)
+	}
+		
+	func startFiltration(for photoRecord: PhotoRecord, at indexPath: IndexPath) {
+	  guard pendingOperations.filtrationsInProgress[indexPath] == nil else {
+		  return
+	  }
+		  
+	  let filterer = ImageFiltration(photoRecord)
+	  filterer.completionBlock = {
+		if filterer.isCancelled {
+		  return
+		}
+		
+		DispatchQueue.main.async {
+		  self.pendingOperations.filtrationsInProgress.removeValue(forKey: indexPath)
+		  self.tableView.reloadRows(at: [indexPath], with: .fade)
+		}
+	  }
+	  
+	  pendingOperations.filtrationsInProgress[indexPath] = filterer
+	  pendingOperations.filtrationQueue.addOperation(filterer)
+	}
+
   
   // MARK: - image processing
 
@@ -85,4 +166,142 @@ class ListViewController: UITableViewController {
     }
     return UIImage(cgImage: outImage)
   }
+	
+	
+	func fetchPhotoDetails() {
+	  let request = URLRequest(url: dataSourceURL)
+	  UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
+	  // 1
+	  let task = URLSession(configuration: .default).dataTask(with: request) { data, response, error in
+
+		// 2
+		let alertController = UIAlertController(title: "Oops!",
+												message: "There was an error fetching photo details.",
+												preferredStyle: .alert)
+		let okAction = UIAlertAction(title: "OK", style: .default)
+		alertController.addAction(okAction)
+
+		if let data = data {
+		  do {
+			// 3
+			let datasourceDictionary =
+			  try PropertyListSerialization.propertyList(from: data,
+														 options: [],
+														 format: nil) as! [String: String]
+
+			// 4
+			for (name, value) in datasourceDictionary {
+			  let url = URL(string: value)
+			  if let url = url {
+				let photoRecord = PhotoRecord(name: name, url: url)
+				self.photos.append(photoRecord)
+			  }
+			}
+
+			// 5
+			DispatchQueue.main.async {
+			  UIApplication.shared.isNetworkActivityIndicatorVisible = false
+			  self.tableView.reloadData()
+			}
+			// 6
+		  } catch {
+			DispatchQueue.main.async {
+			  self.present(alertController, animated: true, completion: nil)
+			}
+		  }
+		}
+
+		// 6
+		if error != nil {
+		  DispatchQueue.main.async {
+			UIApplication.shared.isNetworkActivityIndicatorVisible = false
+			self.present(alertController, animated: true, completion: nil)
+		  }
+		}
+	  }
+	  // 7
+	  task.resume()
+	}
+	
+	override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+	  //Как только пользователь начнет прокрутку,
+		//вы захотите приостановить все операции и посмотреть,
+		//что пользователь хочет видеть. Вы воплотите
+		//suspendAllOperationsв жизнь буквально мгновение.
+	  suspendAllOperations()
+	}
+
+	override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+	  // Если значение decelerate равно false,
+		//это означает, что пользователь прекратил перетаскивать представление таблицы.
+		//Поэтому вы хотите возобновить приостановленные операции,
+		//отменить операции для ячеек за пределами экрана и начать
+		//операции для ячеек на экране. Вы будете реализовывать
+		//loadImagesForOnscreenCellsи resumeAllOperationsчерез некоторое время.
+	  if !decelerate {
+		loadImagesForOnscreenCells()
+		resumeAllOperations()
+	  }
+	}
+
+	override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+	  // Этот метод делегата сообщает вам, что просмотр таблицы
+	  //остановлен, поэтому вы сделаете то же, что и в №2.
+	  loadImagesForOnscreenCells()
+	  resumeAllOperations()
+	}
+
+	
+	func suspendAllOperations() {
+	  pendingOperations.downloadQueue.isSuspended = true //будет дисквалифицирован
+	  pendingOperations.filtrationQueue.isSuspended = true //будет дисквалифицирован
+	}
+
+	func resumeAllOperations() {
+	  pendingOperations.downloadQueue.isSuspended = false
+	  pendingOperations.filtrationQueue.isSuspended = false
+	}
+
+	func loadImagesForOnscreenCells() {
+	  //1
+	  if let pathsArray = tableView.indexPathsForVisibleRows {
+		//2
+		var allPendingOperations = Set(pendingOperations.downloadsInProgress.keys)
+		allPendingOperations.formUnion(pendingOperations.filtrationsInProgress.keys)
+		  
+		//Создайте набор всех индексных путей с
+		//отменяемыми операциями. Начните со всех
+		//операций, а затем удалите индексные пути видимых строк.
+		//Это оставит набор операций с внеэкранными строками.
+		
+		var toBeCancelled = allPendingOperations
+		let visiblePaths = Set(pathsArray)
+		toBeCancelled.subtract(visiblePaths)
+		  
+		//4
+		var toBeStarted = visiblePaths
+		toBeStarted.subtract(allPendingOperations)
+		  
+		// 5
+		for indexPath in toBeCancelled {
+		  if let pendingDownload = pendingOperations.downloadsInProgress[indexPath] {
+			pendingDownload.cancel()
+		  }
+		  pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+		  if let pendingFiltration = pendingOperations.filtrationsInProgress[indexPath] {
+			pendingFiltration.cancel()
+		  }
+		  pendingOperations.filtrationsInProgress.removeValue(forKey: indexPath)
+		}
+		  
+		// 6
+		for indexPath in toBeStarted {
+		  let recordToProcess = photos[indexPath.row]
+		  startOperations(for: recordToProcess, at: indexPath)
+		}
+	  }
+	}
+
+
 }
