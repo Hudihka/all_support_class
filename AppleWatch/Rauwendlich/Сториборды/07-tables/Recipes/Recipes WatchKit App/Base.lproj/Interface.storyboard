@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xca-ke-Qcl">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+    </dependencies>
+    <scenes>
+        <!--Recipes-->
+        <scene sceneID="UWD-Xm-tP7">
+            <objects>
+                <controller title="Recipes" id="Xca-ke-Qcl" customClass="RecipesController" customModule="Recipes_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="hI8-os-C6m">
+                            <items>
+                                <tableRow identifier="RecipeRowCell" id="fCc-ON-Y37" customClass="RecipeRowCell" customModule="Recipes_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="O2U-Hd-a9O">
+                                        <items>
+                                            <label alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="tfc-Iu-8iw"/>
+                                            <label alignment="left" text="Label" id="c0U-nu-HLu">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="ingredientsLabel" destination="c0U-nu-HLu" id="vgB-1v-W9N"/>
+                                        <outlet property="titleLabel" destination="tfc-Iu-8iw" id="c2h-VY-v6N"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="RecipeHederCell" id="KQd-ah-q3H" customClass="RecipeHederCell" customModule="Recipes_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="7" id="Nun-oP-eak">
+                                        <items>
+                                            <imageView width="38" alignment="left" id="Dcq-3j-Cox"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="Ggr-tg-cDC">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="Dcq-3j-Cox" id="IRj-5m-pSg"/>
+                                        <outlet property="titleLabel" destination="Ggr-tg-cDC" id="rer-nT-nUk"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="hI8-os-C6m" id="FcE-OL-I98"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="285" y="302"/>
+        </scene>
+        <!--RecipeDetailController-->
+        <scene sceneID="YBw-CJ-ylm">
+            <objects>
+                <controller identifier="RecipeDetailController" id="ug1-mG-oQB" customClass="RecipeDetailController" customModule="Recipes_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="aSh-aR-lWe">
+                            <items>
+                                <tableRow identifier="RecipeDetailHederCell" id="32b-5C-fes" customClass="RecipeDetailHederCell" customModule="Recipes_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="u5j-Y9-kXR">
+                                        <items>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="E1L-KQ-CrD"/>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="E1L-KQ-CrD" id="ftc-K4-EQt"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="RecipeStep" id="a60-xf-tNZ" customClass="RecipeDetailRowCell" customModule="Recipes_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="OfF-Hc-p2A">
+                                        <items>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="1Vp-Pm-Sle"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="1Vp-Pm-Sle" id="LLB-rZ-U7q"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="aSh-aR-lWe" id="PuN-pO-A14"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="694" y="302"/>
+        </scene>
+    </scenes>
+</document>

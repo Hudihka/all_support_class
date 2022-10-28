@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HederView" customModule="paralax" customModuleProvider="target">
+            <connections>
+                <outlet property="conteinerView" destination="iN0-l3-epB" id="dFc-71-mfh"/>
+                <outlet property="imageContent" destination="y1g-Wp-1TM" id="nO1-4j-QfI"/>
+                <outlet property="upConstreint" destination="qEm-Ra-Pww" id="vYf-sG-JoB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="413"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testIMG" translatesAutoresizingMaskIntoConstraints="NO" id="y1g-Wp-1TM">
+                    <rect key="frame" x="0.0" y="0.0" width="401" height="413"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="y1g-Wp-1TM" secondAttribute="bottom" id="EeT-MT-YA7"/>
+                <constraint firstItem="y1g-Wp-1TM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qEm-Ra-Pww"/>
+                <constraint firstItem="y1g-Wp-1TM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="sQF-wG-MMB"/>
+                <constraint firstItem="y1g-Wp-1TM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yJO-EY-u2v"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="125.36231884057972" y="-37.165178571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="testIMG" width="700" height="515"/>
+    </resources>
+</document>

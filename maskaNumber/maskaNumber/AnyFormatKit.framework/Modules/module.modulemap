@@ -1,0 +1,4 @@
+framework module AnyFormatKit {
+  header "AnyFormatKit-Swift.h"
+  requires objc
+}

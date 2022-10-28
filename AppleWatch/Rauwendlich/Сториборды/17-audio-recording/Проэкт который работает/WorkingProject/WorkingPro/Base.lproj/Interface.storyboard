@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WorkingPro" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="center" title="Play" id="3Lh-It-W7O">
+                            <connections>
+                                <action selector="playAction" destination="AgC-eL-Hgc" id="Jml-22-RGI"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="+voice" id="Gkv-wM-J7e">
+                            <connections>
+                                <action selector="writeSound" destination="AgC-eL-Hgc" id="CcD-VR-qnc"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-108" y="191"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="102" y="687"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WorkingPro" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="769"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="WorkingPro" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="471"/>
+        </scene>
+        <!--AudioPlayerInterfaceController-->
+        <scene sceneID="kZb-Uz-s4t">
+            <objects>
+                <controller identifier="AudioPlayerInterfaceController" hidesWhenLoading="NO" id="pU8-Uc-08v" customClass="AudioPlayerInterfaceController" customModule="WorkingPro" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="0bJ-rD-a8b">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <button width="1" alignment="left" title="Play" id="y5C-Db-ADQ">
+                            <connections>
+                                <action selector="playButtonTapped" destination="pU8-Uc-08v" id="44H-DH-4hA"/>
+                            </connections>
+                        </button>
+                        <group width="1" alignment="left" id="Px9-aE-R5q">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Time lapsed:" id="prk-2D-Trf">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <timer alignment="right" previewedSeconds="0" id="qjF-Kd-a4o">
+                                    <calendarUnit key="units" second="YES"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="interfaceTimer" destination="qjF-Kd-a4o" id="hNN-EY-cOP"/>
+                        <outlet property="playButton" destination="y5C-Db-ADQ" id="Vtd-Ov-OKS"/>
+                        <outlet property="titleLabel" destination="0bJ-rD-a8b" id="50f-jc-zrr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="413" y="119"/>
+        </scene>
+    </scenes>
+</document>

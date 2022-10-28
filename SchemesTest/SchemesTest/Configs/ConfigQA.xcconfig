@@ -1,0 +1,14 @@
+//
+//  ConfigQA.xcconfig
+//  SchemesTest
+//
+//  Created by Константин Ирошников on 27.10.2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// не забудь добавить в инфо плист
+
+API_URL_CUSTOM = www.google.com/
+API_ID = com.test

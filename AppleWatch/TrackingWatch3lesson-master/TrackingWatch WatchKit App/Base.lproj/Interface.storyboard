@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15505" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TrackingWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Time: N/A" id="G7t-vC-7cf">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="Steps: N/A" id="8YB-Bc-M21">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="Distance: N/A" id="Glc-Jj-Qsk">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <button width="1" alignment="left" title="Start Updating" id="9yj-hL-A8N">
+                            <connections>
+                                <action selector="updateTapped" destination="AgC-eL-Hgc" id="929-7W-uSb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="button" destination="9yj-hL-A8N" id="3sA-70-Jjl"/>
+                        <outlet property="distance" destination="Glc-Jj-Qsk" id="Bvh-5G-cho"/>
+                        <outlet property="steps" destination="8YB-Bc-M21" id="i30-Yt-F6e"/>
+                        <outlet property="time" destination="G7t-vC-7cf" id="z8q-iR-1Ur"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>

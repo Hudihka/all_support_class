@@ -1,0 +1,13 @@
+//
+//  ConfigRelese.xcconfig
+//  SchemesTest
+//
+//  Created by Константин Ирошников on 27.10.2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "ConfigQA.xcconfig"
+
+API_URL_CUSTOM = www.google.com/images
+API_ID = $(inherited).relese

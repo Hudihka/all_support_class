@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+    </dependencies>
+    <scenes>
+        <!--Carnivore-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="InitialController" title="Carnivore" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Carnivore_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="HkZ-RQ-BZj">
+                            <items>
+                                <timer alignment="center" textAlignment="center" id="qku-Gx-h3j">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                                <button width="1" alignment="center" title="Button" id="RcD-P8-wgE">
+                                    <connections>
+                                        <action selector="onTapedTimer" destination="AgC-eL-Hgc" id="Olg-4l-Ak3"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label width="1" alignment="center" text="Weight: 16 oz" textAlignment="center" id="3iF-mS-iLV"/>
+                        <picker height="55" alignment="left" id="d4L-Iz-Sf6">
+                            <connections>
+                                <action selector="onWeightChanged:" destination="AgC-eL-Hgc" id="WKi-0b-nIb"/>
+                            </connections>
+                        </picker>
+                        <label width="1" alignment="center" text="Label" textAlignment="center" id="KLO-do-mHV"/>
+                        <picker height="77" alignment="center" verticalAlignment="center" style="stack" focusStyle="stack" id="5i0-O9-UDL">
+                            <connections>
+                                <action selector="onTemperatureChange:" destination="AgC-eL-Hgc" id="lPQ-hy-qad"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="KLO-do-mHV" id="Gab-Jm-cGe"/>
+                        <outlet property="temperaturePicker" destination="5i0-O9-UDL" id="nBA-cO-AS7"/>
+                        <outlet property="timer" destination="qku-Gx-h3j" id="Q8d-Eh-rtO"/>
+                        <outlet property="timerButton" destination="RcD-P8-wgE" id="lui-mB-3gm"/>
+                        <outlet property="weightLabel" destination="3iF-mS-iLV" id="JmZ-DT-FZA"/>
+                        <outlet property="weightPicker" destination="d4L-Iz-Sf6" id="TK4-O3-1ct"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="51" y="20"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,1086 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		456CC72628D5E5E500367264 /* CellSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CC72528D5E5E500367264 /* CellSwiftUI.swift */; };
+		4595BED228D1D6C70025BEA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595BED128D1D6C70025BEA3 /* AppDelegate.swift */; };
+		4595BED428D1D6C70025BEA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595BED328D1D6C70025BEA3 /* SceneDelegate.swift */; };
+		4595BED628D1D6C70025BEA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595BED528D1D6C70025BEA3 /* ViewController.swift */; };
+		4595BED928D1D6C70025BEA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4595BED728D1D6C70025BEA3 /* Main.storyboard */; };
+		4595BEDB28D1D6C80025BEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4595BEDA28D1D6C80025BEA3 /* Assets.xcassets */; };
+		4595BEDE28D1D6C80025BEA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4595BEDC28D1D6C80025BEA3 /* LaunchScreen.storyboard */; };
+		4595BEE328D1D6C80025BEA3 /* CustomFont WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4595BEE228D1D6C80025BEA3 /* CustomFont WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4595BEE928D1D6C80025BEA3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4595BEE728D1D6C80025BEA3 /* Interface.storyboard */; };
+		4595BEEB28D1D6C90025BEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4595BEEA28D1D6C90025BEA3 /* Assets.xcassets */; };
+		4595BEF128D1D6C90025BEA3 /* CustomFont WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4595BEF028D1D6C90025BEA3 /* CustomFont WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4595BEF628D1D6C90025BEA3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595BEF528D1D6C90025BEA3 /* InterfaceController.swift */; };
+		4595BEF828D1D6C90025BEA3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595BEF728D1D6C90025BEA3 /* ExtensionDelegate.swift */; };
+		4595BEFA28D1D6C90025BEA3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595BEF928D1D6C90025BEA3 /* ComplicationController.swift */; };
+		4595BEFC28D1D6CB0025BEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4595BEFB28D1D6CB0025BEA3 /* Assets.xcassets */; };
+		45B836AB28D5AFDC0085137A /* CellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B836AA28D5AFDC0085137A /* CellTableView.swift */; };
+		45B836AF28D5B0110085137A /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B836AE28D5B0110085137A /* Content.swift */; };
+		45BEEF1928D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 45BEEF1828D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45BEEF1E28D5BDF300C2DB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BEEF1D28D5BDF300C2DB19 /* Assets.xcassets */; };
+		45BEEF2428D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45BEEF2328D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45BEEF2928D5BDF300C2DB19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEEF2828D5BDF300C2DB19 /* ContentView.swift */; };
+		45BEEF2B28D5BDF300C2DB19 /* CustomFontApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEEF2A28D5BDF300C2DB19 /* CustomFontApp.swift */; };
+		45BEEF2D28D5BDF300C2DB19 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEEF2C28D5BDF300C2DB19 /* ComplicationController.swift */; };
+		45BEEF2F28D5BDF400C2DB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BEEF2E28D5BDF400C2DB19 /* Assets.xcassets */; };
+		45BEEF3228D5BDF400C2DB19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BEEF3128D5BDF400C2DB19 /* Preview Assets.xcassets */; };
+		45BEEF4028D5BE9500C2DB19 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B836AE28D5B0110085137A /* Content.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4595BEE428D1D6C80025BEA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4595BEC628D1D6C70025BEA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4595BEE128D1D6C80025BEA3;
+			remoteInfo = "CustomFont WatchKit App";
+		};
+		4595BEF228D1D6C90025BEA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4595BEC628D1D6C70025BEA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4595BEEF28D1D6C90025BEA3;
+			remoteInfo = "CustomFont WatchKit Extension";
+		};
+		45BEEF1A28D5BDF200C2DB19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4595BEC628D1D6C70025BEA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45BEEF1728D5BDF200C2DB19;
+			remoteInfo = "CustomFont SwiftUI WatchKit App";
+		};
+		45BEEF2528D5BDF300C2DB19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4595BEC628D1D6C70025BEA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45BEEF2228D5BDF300C2DB19;
+			remoteInfo = "CustomFont SwiftUI WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4595BF0328D1D6CB0025BEA3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4595BEF128D1D6C90025BEA3 /* CustomFont WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4595BF0728D1D6CB0025BEA3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4595BEE328D1D6C80025BEA3 /* CustomFont WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45BEEF3628D5BDF400C2DB19 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				45BEEF1928D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45BEEF3928D5BDF400C2DB19 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				45BEEF2428D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		456CC72528D5E5E500367264 /* CellSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSwiftUI.swift; sourceTree = "<group>"; };
+		4595BECE28D1D6C70025BEA3 /* CustomFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4595BED128D1D6C70025BEA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4595BED328D1D6C70025BEA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4595BED528D1D6C70025BEA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4595BED828D1D6C70025BEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4595BEDA28D1D6C80025BEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4595BEDD28D1D6C80025BEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4595BEDF28D1D6C80025BEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4595BEE228D1D6C80025BEA3 /* CustomFont WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CustomFont WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4595BEE828D1D6C80025BEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4595BEEA28D1D6C90025BEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4595BEF028D1D6C90025BEA3 /* CustomFont WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CustomFont WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4595BEF528D1D6C90025BEA3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4595BEF728D1D6C90025BEA3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		4595BEF928D1D6C90025BEA3 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		4595BEFB28D1D6CB0025BEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4595BEFD28D1D6CB0025BEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45B836AA28D5AFDC0085137A /* CellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableView.swift; sourceTree = "<group>"; };
+		45B836AE28D5B0110085137A /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		45BEEF1528D5BDF100C2DB19 /* CustomFont SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CustomFont SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45BEEF1828D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CustomFont SwiftUI WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45BEEF1D28D5BDF300C2DB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45BEEF2328D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CustomFont SwiftUI WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45BEEF2828D5BDF300C2DB19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		45BEEF2A28D5BDF300C2DB19 /* CustomFontApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontApp.swift; sourceTree = "<group>"; };
+		45BEEF2C28D5BDF300C2DB19 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		45BEEF2E28D5BDF400C2DB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45BEEF3128D5BDF400C2DB19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		45BEEF3328D5BDF400C2DB19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4595BECB28D1D6C70025BEA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4595BEED28D1D6C90025BEA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45BEEF2028D5BDF300C2DB19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4595BEC528D1D6C70025BEA3 = {
+			isa = PBXGroup;
+			children = (
+				45BEEF3F28D5BE5200C2DB19 /* Sharing */,
+				4595BED028D1D6C70025BEA3 /* CustomFont */,
+				4595BEE628D1D6C80025BEA3 /* CustomFont WatchKit App */,
+				4595BEF428D1D6C90025BEA3 /* CustomFont WatchKit Extension */,
+				45BEEF1C28D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App */,
+				45BEEF2728D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension */,
+				4595BECF28D1D6C70025BEA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4595BECF28D1D6C70025BEA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4595BECE28D1D6C70025BEA3 /* CustomFont.app */,
+				4595BEE228D1D6C80025BEA3 /* CustomFont WatchKit App.app */,
+				4595BEF028D1D6C90025BEA3 /* CustomFont WatchKit Extension.appex */,
+				45BEEF1528D5BDF100C2DB19 /* CustomFont SwiftUI.app */,
+				45BEEF1828D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App.app */,
+				45BEEF2328D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4595BED028D1D6C70025BEA3 /* CustomFont */ = {
+			isa = PBXGroup;
+			children = (
+				4595BED128D1D6C70025BEA3 /* AppDelegate.swift */,
+				4595BED328D1D6C70025BEA3 /* SceneDelegate.swift */,
+				4595BED528D1D6C70025BEA3 /* ViewController.swift */,
+				4595BED728D1D6C70025BEA3 /* Main.storyboard */,
+				4595BEDA28D1D6C80025BEA3 /* Assets.xcassets */,
+				4595BEDC28D1D6C80025BEA3 /* LaunchScreen.storyboard */,
+				4595BEDF28D1D6C80025BEA3 /* Info.plist */,
+			);
+			path = CustomFont;
+			sourceTree = "<group>";
+		};
+		4595BEE628D1D6C80025BEA3 /* CustomFont WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				4595BEE728D1D6C80025BEA3 /* Interface.storyboard */,
+				4595BEEA28D1D6C90025BEA3 /* Assets.xcassets */,
+			);
+			path = "CustomFont WatchKit App";
+			sourceTree = "<group>";
+		};
+		4595BEF428D1D6C90025BEA3 /* CustomFont WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4595BEF528D1D6C90025BEA3 /* InterfaceController.swift */,
+				4595BEF728D1D6C90025BEA3 /* ExtensionDelegate.swift */,
+				4595BEF928D1D6C90025BEA3 /* ComplicationController.swift */,
+				45B836A928D5AFC10085137A /* Cells */,
+				4595BEFB28D1D6CB0025BEA3 /* Assets.xcassets */,
+				4595BEFD28D1D6CB0025BEA3 /* Info.plist */,
+			);
+			path = "CustomFont WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		45B836A928D5AFC10085137A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				45B836AA28D5AFDC0085137A /* CellTableView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		45BEEF1C28D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				45BEEF1D28D5BDF300C2DB19 /* Assets.xcassets */,
+			);
+			path = "CustomFont SwiftUI WatchKit App";
+			sourceTree = "<group>";
+		};
+		45BEEF2728D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				45BEEF2828D5BDF300C2DB19 /* ContentView.swift */,
+				456CC72528D5E5E500367264 /* CellSwiftUI.swift */,
+				45BEEF2A28D5BDF300C2DB19 /* CustomFontApp.swift */,
+				45BEEF2C28D5BDF300C2DB19 /* ComplicationController.swift */,
+				45BEEF2E28D5BDF400C2DB19 /* Assets.xcassets */,
+				45BEEF3328D5BDF400C2DB19 /* Info.plist */,
+				45BEEF3028D5BDF400C2DB19 /* Preview Content */,
+			);
+			path = "CustomFont SwiftUI WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		45BEEF3028D5BDF400C2DB19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				45BEEF3128D5BDF400C2DB19 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		45BEEF3F28D5BE5200C2DB19 /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				45B836AE28D5B0110085137A /* Content.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4595BECD28D1D6C70025BEA3 /* CustomFont */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4595BF0828D1D6CB0025BEA3 /* Build configuration list for PBXNativeTarget "CustomFont" */;
+			buildPhases = (
+				4595BECA28D1D6C70025BEA3 /* Sources */,
+				4595BECB28D1D6C70025BEA3 /* Frameworks */,
+				4595BECC28D1D6C70025BEA3 /* Resources */,
+				4595BF0728D1D6CB0025BEA3 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4595BEE528D1D6C80025BEA3 /* PBXTargetDependency */,
+			);
+			name = CustomFont;
+			productName = CustomFont;
+			productReference = 4595BECE28D1D6C70025BEA3 /* CustomFont.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4595BEE128D1D6C80025BEA3 /* CustomFont WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4595BF0428D1D6CB0025BEA3 /* Build configuration list for PBXNativeTarget "CustomFont WatchKit App" */;
+			buildPhases = (
+				4595BEE028D1D6C80025BEA3 /* Resources */,
+				4595BF0328D1D6CB0025BEA3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4595BEF328D1D6C90025BEA3 /* PBXTargetDependency */,
+			);
+			name = "CustomFont WatchKit App";
+			productName = "CustomFont WatchKit App";
+			productReference = 4595BEE228D1D6C80025BEA3 /* CustomFont WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4595BEEF28D1D6C90025BEA3 /* CustomFont WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4595BF0028D1D6CB0025BEA3 /* Build configuration list for PBXNativeTarget "CustomFont WatchKit Extension" */;
+			buildPhases = (
+				4595BEEC28D1D6C90025BEA3 /* Sources */,
+				4595BEED28D1D6C90025BEA3 /* Frameworks */,
+				4595BEEE28D1D6C90025BEA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CustomFont WatchKit Extension";
+			productName = "CustomFont WatchKit Extension";
+			productReference = 4595BEF028D1D6C90025BEA3 /* CustomFont WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		45BEEF1428D5BDF100C2DB19 /* CustomFont SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45BEEF3E28D5BDF400C2DB19 /* Build configuration list for PBXNativeTarget "CustomFont SwiftUI" */;
+			buildPhases = (
+				45BEEF1328D5BDF100C2DB19 /* Resources */,
+				45BEEF3628D5BDF400C2DB19 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45BEEF1B28D5BDF200C2DB19 /* PBXTargetDependency */,
+			);
+			name = "CustomFont SwiftUI";
+			productName = "CustomFont SwiftUI";
+			productReference = 45BEEF1528D5BDF100C2DB19 /* CustomFont SwiftUI.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		45BEEF1728D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45BEEF3D28D5BDF400C2DB19 /* Build configuration list for PBXNativeTarget "CustomFont SwiftUI WatchKit App" */;
+			buildPhases = (
+				45BEEF1628D5BDF200C2DB19 /* Resources */,
+				45BEEF3928D5BDF400C2DB19 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45BEEF2628D5BDF300C2DB19 /* PBXTargetDependency */,
+			);
+			name = "CustomFont SwiftUI WatchKit App";
+			productName = "CustomFont SwiftUI WatchKit App";
+			productReference = 45BEEF1828D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		45BEEF2228D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45BEEF3C28D5BDF400C2DB19 /* Build configuration list for PBXNativeTarget "CustomFont SwiftUI WatchKit Extension" */;
+			buildPhases = (
+				45BEEF1F28D5BDF300C2DB19 /* Sources */,
+				45BEEF2028D5BDF300C2DB19 /* Frameworks */,
+				45BEEF2128D5BDF300C2DB19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CustomFont SwiftUI WatchKit Extension";
+			productName = "CustomFont SwiftUI WatchKit Extension";
+			productReference = 45BEEF2328D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4595BEC628D1D6C70025BEA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4595BECD28D1D6C70025BEA3 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4595BEE128D1D6C80025BEA3 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4595BEEF28D1D6C90025BEA3 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					45BEEF1428D5BDF100C2DB19 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					45BEEF1728D5BDF200C2DB19 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					45BEEF2228D5BDF300C2DB19 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 4595BEC928D1D6C70025BEA3 /* Build configuration list for PBXProject "CustomFont" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4595BEC528D1D6C70025BEA3;
+			productRefGroup = 4595BECF28D1D6C70025BEA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4595BECD28D1D6C70025BEA3 /* CustomFont */,
+				4595BEE128D1D6C80025BEA3 /* CustomFont WatchKit App */,
+				4595BEEF28D1D6C90025BEA3 /* CustomFont WatchKit Extension */,
+				45BEEF1428D5BDF100C2DB19 /* CustomFont SwiftUI */,
+				45BEEF1728D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App */,
+				45BEEF2228D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4595BECC28D1D6C70025BEA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4595BEDE28D1D6C80025BEA3 /* LaunchScreen.storyboard in Resources */,
+				4595BEDB28D1D6C80025BEA3 /* Assets.xcassets in Resources */,
+				4595BED928D1D6C70025BEA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4595BEE028D1D6C80025BEA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4595BEEB28D1D6C90025BEA3 /* Assets.xcassets in Resources */,
+				4595BEE928D1D6C80025BEA3 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4595BEEE28D1D6C90025BEA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4595BEFC28D1D6CB0025BEA3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45BEEF1328D5BDF100C2DB19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45BEEF1628D5BDF200C2DB19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45BEEF1E28D5BDF300C2DB19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45BEEF2128D5BDF300C2DB19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45BEEF3228D5BDF400C2DB19 /* Preview Assets.xcassets in Resources */,
+				45BEEF2F28D5BDF400C2DB19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4595BECA28D1D6C70025BEA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4595BED628D1D6C70025BEA3 /* ViewController.swift in Sources */,
+				4595BED228D1D6C70025BEA3 /* AppDelegate.swift in Sources */,
+				4595BED428D1D6C70025BEA3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4595BEEC28D1D6C90025BEA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4595BEF828D1D6C90025BEA3 /* ExtensionDelegate.swift in Sources */,
+				45B836AB28D5AFDC0085137A /* CellTableView.swift in Sources */,
+				4595BEF628D1D6C90025BEA3 /* InterfaceController.swift in Sources */,
+				4595BEFA28D1D6C90025BEA3 /* ComplicationController.swift in Sources */,
+				45B836AF28D5B0110085137A /* Content.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45BEEF1F28D5BDF300C2DB19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45BEEF2928D5BDF300C2DB19 /* ContentView.swift in Sources */,
+				45BEEF2B28D5BDF300C2DB19 /* CustomFontApp.swift in Sources */,
+				45BEEF2D28D5BDF300C2DB19 /* ComplicationController.swift in Sources */,
+				456CC72628D5E5E500367264 /* CellSwiftUI.swift in Sources */,
+				45BEEF4028D5BE9500C2DB19 /* Content.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4595BEE528D1D6C80025BEA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4595BEE128D1D6C80025BEA3 /* CustomFont WatchKit App */;
+			targetProxy = 4595BEE428D1D6C80025BEA3 /* PBXContainerItemProxy */;
+		};
+		4595BEF328D1D6C90025BEA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4595BEEF28D1D6C90025BEA3 /* CustomFont WatchKit Extension */;
+			targetProxy = 4595BEF228D1D6C90025BEA3 /* PBXContainerItemProxy */;
+		};
+		45BEEF1B28D5BDF200C2DB19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45BEEF1728D5BDF200C2DB19 /* CustomFont SwiftUI WatchKit App */;
+			targetProxy = 45BEEF1A28D5BDF200C2DB19 /* PBXContainerItemProxy */;
+		};
+		45BEEF2628D5BDF300C2DB19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45BEEF2228D5BDF300C2DB19 /* CustomFont SwiftUI WatchKit Extension */;
+			targetProxy = 45BEEF2528D5BDF300C2DB19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4595BED728D1D6C70025BEA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4595BED828D1D6C70025BEA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4595BEDC28D1D6C80025BEA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4595BEDD28D1D6C80025BEA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4595BEE728D1D6C80025BEA3 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4595BEE828D1D6C80025BEA3 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4595BEFE28D1D6CB0025BEA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4595BEFF28D1D6CB0025BEA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4595BF0128D1D6CB0025BEA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CustomFont WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrcode.mobile.ios.CustomFont.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		4595BF0228D1D6CB0025BEA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CustomFont WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrcode.mobile.ios.CustomFont.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		4595BF0528D1D6CB0025BEA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = CustomFont_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.qrcode.mobile.ios.CustomFont;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrcode.mobile.ios.CustomFont.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		4595BF0628D1D6CB0025BEA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = CustomFont_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.qrcode.mobile.ios.CustomFont;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrcode.mobile.ios.CustomFont.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		4595BF0928D1D6CB0025BEA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CustomFont/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrcode.mobile.ios.CustomFont;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4595BF0A28D1D6CB0025BEA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CustomFont/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrcode.mobile.ios.CustomFont;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45BEEF3428D5BDF400C2DB19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qrcode.mobile.ios.CustomFont-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		45BEEF3528D5BDF400C2DB19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qrcode.mobile.ios.CustomFont-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45BEEF3728D5BDF400C2DB19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = CustomFont_SwiftUI_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont SwiftUI WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qrcode.mobile.ios.CustomFont-SwiftUI.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		45BEEF3828D5BDF400C2DB19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = CustomFont_SwiftUI_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont SwiftUI WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qrcode.mobile.ios.CustomFont-SwiftUI.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		45BEEF3A28D5BDF400C2DB19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CustomFont SwiftUI WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CustomFont SwiftUI WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont SwiftUI WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qrcode.mobile.ios.CustomFont-SwiftUI.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		45BEEF3B28D5BDF400C2DB19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CustomFont SwiftUI WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 256ZQ98Q4U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CustomFont SwiftUI WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CustomFont SwiftUI WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qrcode.mobile.ios.CustomFont-SwiftUI.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4595BEC928D1D6C70025BEA3 /* Build configuration list for PBXProject "CustomFont" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4595BEFE28D1D6CB0025BEA3 /* Debug */,
+				4595BEFF28D1D6CB0025BEA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4595BF0028D1D6CB0025BEA3 /* Build configuration list for PBXNativeTarget "CustomFont WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4595BF0128D1D6CB0025BEA3 /* Debug */,
+				4595BF0228D1D6CB0025BEA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4595BF0428D1D6CB0025BEA3 /* Build configuration list for PBXNativeTarget "CustomFont WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4595BF0528D1D6CB0025BEA3 /* Debug */,
+				4595BF0628D1D6CB0025BEA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4595BF0828D1D6CB0025BEA3 /* Build configuration list for PBXNativeTarget "CustomFont" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4595BF0928D1D6CB0025BEA3 /* Debug */,
+				4595BF0A28D1D6CB0025BEA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45BEEF3C28D5BDF400C2DB19 /* Build configuration list for PBXNativeTarget "CustomFont SwiftUI WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45BEEF3A28D5BDF400C2DB19 /* Debug */,
+				45BEEF3B28D5BDF400C2DB19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45BEEF3D28D5BDF400C2DB19 /* Build configuration list for PBXNativeTarget "CustomFont SwiftUI WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45BEEF3728D5BDF400C2DB19 /* Debug */,
+				45BEEF3828D5BDF400C2DB19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45BEEF3E28D5BDF400C2DB19 /* Build configuration list for PBXNativeTarget "CustomFont SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45BEEF3428D5BDF400C2DB19 /* Debug */,
+				45BEEF3528D5BDF400C2DB19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4595BEC628D1D6C70025BEA3 /* Project object */;
+}

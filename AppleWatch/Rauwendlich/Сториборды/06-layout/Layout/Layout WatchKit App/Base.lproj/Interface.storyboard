@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Layout_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="overlap" id="ekN-8X-xoG">
+                            <items>
+                                <imageView alignment="left" image="wwdc" id="G1e-Zf-7r0"/>
+                                <group width="1" alignment="left" spacing="0.0" id="cNI-bs-kX2">
+                                    <items>
+                                        <label alignment="left" text="@gruber" id="PgY-UV-BVJ">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                        <label alignment="right" text="13m" id="bez-Ky-9O4">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <edgeInsets key="margins" left="4" right="4" top="4" bottom="4"/>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="OCB-hf-zvJ">
+                            <items>
+                                <button width="0.5" alignment="left" title="Like" id="mrC-07-1aw"/>
+                                <button width="0.5" alignment="left" title="Share" id="0kI-S4-CVM"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="overlap" id="AzL-Ku-8Hz">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="gnq-3k-7e2">
+                                    <items>
+                                        <label alignment="left" text="I absolutely loved my first visit to WWDC! Can't wait to go back next year!" id="UpH-dw-ulo">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <label alignment="left" hidden="YES" text="I absolutely loved my first visit to WWDC! Can't wait to go back next year!" numberOfLines="0" id="k6M-Z1-bAJ">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <label alignment="left" text="Tap to view more..." id="kCq-Fq-iwe">
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" pointSize="11"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <button width="1" alignment="left" id="xq4-oC-ceB">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="onMoreButton" destination="AgC-eL-Hgc" id="TTo-24-diB"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="falseLabel" destination="UpH-dw-ulo" id="dTV-d2-TxC"/>
+                        <outlet property="moreLabel" destination="kCq-Fq-iwe" id="mPv-7n-9vD"/>
+                        <outlet property="trueLabel" destination="k6M-Z1-bAJ" id="iHC-wS-geZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="380" y="378"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wwdc" width="540" height="540"/>
+    </resources>
+</document>

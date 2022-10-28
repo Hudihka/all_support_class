@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zoom View Controller-->
+        <scene sceneID="4A4-Nj-gRf">
+            <objects>
+                <viewController storyboardIdentifier="ZoomViewController" id="i6V-jF-0Kd" customClass="ZoomViewController" customModule="ChefMarket_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SL2-5f-yes">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qun-tJ-aYx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-si-sg2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3tP-si-sg2" firstAttribute="top" secondItem="Qun-tJ-aYx" secondAttribute="top" id="2y6-Ka-R3r"/>
+                                    <constraint firstItem="3tP-si-sg2" firstAttribute="height" secondItem="Qun-tJ-aYx" secondAttribute="height" id="b0L-vS-6BH"/>
+                                    <constraint firstItem="3tP-si-sg2" firstAttribute="width" secondItem="Qun-tJ-aYx" secondAttribute="width" id="hCJ-un-lSM"/>
+                                    <constraint firstAttribute="bottom" secondItem="3tP-si-sg2" secondAttribute="bottom" id="jKn-cX-Jab"/>
+                                    <constraint firstItem="3tP-si-sg2" firstAttribute="leading" secondItem="Qun-tJ-aYx" secondAttribute="leading" id="ov1-qe-Q3N"/>
+                                    <constraint firstAttribute="trailing" secondItem="3tP-si-sg2" secondAttribute="trailing" id="spJ-3k-AmW"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iEd-1m-XFe">
+                                <rect key="frame" x="16" y="239.66666666666663" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iEd-1m-XFe" secondAttribute="height" multiplier="1:1" id="0HT-dX-68t"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subtract" translatesAutoresizingMaskIntoConstraints="NO" id="fYv-mu-N4C">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqW-Bm-owq" customClass="GreenButton" customModule="ChefMarket_2_0" customModuleProvider="target">
+                                <rect key="frame" x="16" y="710" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="igi-O8-bb7"/>
+                                </constraints>
+                                <state key="normal" title="СОХРАНИТЬ"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="i6V-jF-0Kd" eventType="touchUpInside" id="I1w-Yd-ljc"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hSF-Zg-z9h">
+                                <rect key="frame" x="169" y="641" width="37" height="37"/>
+                                <color key="color" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15805855390000001" green="0.15809151530000001" blue="0.15805155039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fYv-mu-N4C" firstAttribute="leading" secondItem="7gU-qS-QiJ" secondAttribute="leading" id="5Fv-Hd-dxl"/>
+                            <constraint firstAttribute="bottom" secondItem="Qun-tJ-aYx" secondAttribute="bottom" id="5V8-ec-BnG"/>
+                            <constraint firstItem="7gU-qS-QiJ" firstAttribute="trailing" secondItem="mqW-Bm-owq" secondAttribute="trailing" constant="16" id="8wj-pp-OU5"/>
+                            <constraint firstItem="iEd-1m-XFe" firstAttribute="centerY" secondItem="7gU-qS-QiJ" secondAttribute="centerY" id="C4B-gD-GeN"/>
+                            <constraint firstItem="mqW-Bm-owq" firstAttribute="leading" secondItem="7gU-qS-QiJ" secondAttribute="leading" constant="16" id="Hn6-wA-pBF"/>
+                            <constraint firstItem="mqW-Bm-owq" firstAttribute="top" secondItem="hSF-Zg-z9h" secondAttribute="bottom" constant="32" id="JLw-aR-528"/>
+                            <constraint firstItem="Qun-tJ-aYx" firstAttribute="leading" secondItem="7gU-qS-QiJ" secondAttribute="leading" id="Mth-ck-j3m"/>
+                            <constraint firstAttribute="bottom" secondItem="fYv-mu-N4C" secondAttribute="bottom" id="N8q-9T-P0U"/>
+                            <constraint firstItem="Qun-tJ-aYx" firstAttribute="trailing" secondItem="7gU-qS-QiJ" secondAttribute="trailing" id="WHK-nJ-OyN"/>
+                            <constraint firstItem="fYv-mu-N4C" firstAttribute="trailing" secondItem="7gU-qS-QiJ" secondAttribute="trailing" id="czB-Uh-SDg"/>
+                            <constraint firstItem="fYv-mu-N4C" firstAttribute="top" secondItem="SL2-5f-yes" secondAttribute="top" id="h4e-kR-tE0"/>
+                            <constraint firstItem="7gU-qS-QiJ" firstAttribute="bottom" secondItem="mqW-Bm-owq" secondAttribute="bottom" constant="20" id="lPe-Tz-1Xq"/>
+                            <constraint firstItem="hSF-Zg-z9h" firstAttribute="centerX" secondItem="fYv-mu-N4C" secondAttribute="centerX" id="mLi-JI-ybH"/>
+                            <constraint firstItem="iEd-1m-XFe" firstAttribute="leading" secondItem="7gU-qS-QiJ" secondAttribute="leading" constant="16" id="nm3-NT-ZZr"/>
+                            <constraint firstItem="7gU-qS-QiJ" firstAttribute="trailing" secondItem="iEd-1m-XFe" secondAttribute="trailing" constant="16" id="vxY-uq-ugA"/>
+                            <constraint firstItem="Qun-tJ-aYx" firstAttribute="top" secondItem="SL2-5f-yes" secondAttribute="top" id="yJG-Hq-gI3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7gU-qS-QiJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cupView" destination="iEd-1m-XFe" id="Ijb-wf-iWe"/>
+                        <outlet property="downConstreint" destination="lPe-Tz-1Xq" id="OHn-kV-Y2X"/>
+                        <outlet property="imageView" destination="3tP-si-sg2" id="xjE-mD-Kd1"/>
+                        <outlet property="saveButton" destination="mqW-Bm-owq" id="YKz-yd-28H"/>
+                        <outlet property="scrollView" destination="Qun-tJ-aYx" id="zYy-xP-Uuz"/>
+                        <outlet property="spiner" destination="hSF-Zg-z9h" id="iTs-ip-lZQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tev-J6-pGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="293.97321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Subtract" width="375" height="812"/>
+    </resources>
+</document>
