@@ -31,23 +31,42 @@ final class AFBaseRequest<T: Decodable> {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             guard
+                let self = self,
                 let data = data
             else {
-                let afError = AFError(error: error, type: .other)
-                completion(nil, afError)
+                self?.completionError(error: error, type: .other, completion: completion)
                 return
             }
 
             do {
                 let tracks = try JSONDecoder().decode(T.self, from: data)
-                completion(tracks, nil)
+                self.completion(tracks: tracks, completion: completion)
             } catch {
-                let afError = AFError(error: error, type: .decodable)
-                completion(nil, afError)
+                self.completionError(error: error, type: .decodable, completion: completion)
             }
         }
         task.resume()
+    }
+
+    private func completion(
+        tracks: T,
+        completion: @escaping (T?, AFError?) -> Void
+    ) {
+        DispatchQueue.main.async {
+            completion(tracks, nil)
+        }
+    }
+
+    private func completionError(
+        error: Error?,
+        type: AFError.ErrorType,
+        completion: @escaping (T?, AFError?) -> Void
+    ) {
+        DispatchQueue.main.async {
+            let afError = AFError(error: error, type: type)
+            completion(nil, afError)
+        }
     }
 }
