@@ -1,0 +1,7 @@
+//___FILEHEADER___
+
+final class ___VARIABLE_productName:identifier___ViewModel: ___VARIABLE_productName:identifier___ViewModelProtocolOut, ___VARIABLE_productName:identifier___DataStoreProtocol {
+}
+
+extension ___VARIABLE_productName:identifier___ViewModel: ___VARIABLE_productName:identifier___ViewModelProtocolIn {
+}
