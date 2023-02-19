@@ -18,6 +18,19 @@ class Examples {
 //    Output: [1,2]
     
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var hash = [Int: Int]()
         
+        for (index, value) in nums.enumerated() {
+            let ost = target - value
+            
+            if let indexFirst = hash[ost] {
+                return [indexFirst, index]
+            }
+            hash[ost] = index
+        }
+        
+        print(hash)
+        
+        return []
     }
 }
