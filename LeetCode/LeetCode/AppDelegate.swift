@@ -15,9 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        let examples = Examples()
-        print(examples.twoSum([1, 3, 5, 6], 7))
-        
+        let examples = Examples1()
+        print(examples.test([9,9,9,9,9,9,9], [9,9,9,9]))
         
         return true
     }
