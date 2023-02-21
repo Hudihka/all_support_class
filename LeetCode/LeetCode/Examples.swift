@@ -87,4 +87,41 @@ class Examples1 {
     }
 }
 
+class Example3 {
+    /*
+     Вход: s = "abcabcbb" Выход: Объяснение: Ответ - "abc", длиной 3.
+     Пример 2:
 
+     Вход: s = "bbbbb"Выход: Объяснение: Ответ "b" длиной 1.
+     Пример 3:
+
+     Вход: s = "pwwkew"Выход: Объяснение: Ответ - "wke", длиной 3.
+     */
+    
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        var returnCount = 0
+        let arr = s.map({ $0 })
+        
+        var dict = [Character: Character]()
+        
+        arr.forEach { value in
+            
+            if dict[value] == nil {
+                dict[value] = value
+            } else {
+                let newCount = dict.count
+                returnCount = max(newCount, returnCount)
+                dict = [:]
+            }
+        }
+        
+        if !dict.isEmpty {
+            let newCount = dict.count
+            returnCount = max(newCount, returnCount)
+            dict = [:]
+        }
+        
+        
+        return returnCount
+    }
+}

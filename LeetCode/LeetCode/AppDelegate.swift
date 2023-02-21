@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        let examples = Examples1()
-        print(examples.test([9,9,9,9,9,9,9], [9,9,9,9]))
+        let examples = Example3()
+        print(examples.lengthOfLongestSubstring("qwetrttttasdfghjk"))
         
         return true
     }
