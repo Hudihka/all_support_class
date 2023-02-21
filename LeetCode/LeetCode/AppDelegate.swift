@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        let examples = Example3()
-        print(examples.lengthOfLongestSubstring("qwetrttttasdfghjk"))
+        let examples = Example4()
+        print(examples.longestPalindrome("qwetrlttoottlasdfghjk"))
         
         return true
     }

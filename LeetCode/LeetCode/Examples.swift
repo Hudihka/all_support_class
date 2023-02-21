@@ -125,3 +125,49 @@ class Example3 {
         return returnCount
     }
 }
+
+class Example4 {
+    // max palindromic substring in s.
+    func longestPalindrome(_ s: String) -> String {
+        let arr = s.map({ String($0) })
+        let max = arr.count - 1
+        
+        var maxStr = ""
+        
+        for i in 0...max {
+            for j in i...max {
+                
+                let new = isPolindrom(arr, startInd: i, finish: j)
+                maxStr = new.count > maxStr.count ? new : maxStr
+                
+            }
+        }
+        
+        return maxStr
+    }
+    
+    func isPolindrom(_ arr: [String], startInd: Int, finish: Int) -> String {
+        var indStart = startInd
+        var indFinish = finish
+        
+        var startStr = ""
+        var finishStr = ""
+        
+        while indStart < indFinish {
+            let startValue = arr[indStart]
+            let finishValue = arr[indFinish]
+            
+            if startValue != finishValue {
+                return ""
+            }
+            
+            startStr += startValue
+            finishStr = finishValue + finishStr
+            
+            indStart += 1
+            indFinish -= 1
+        }
+        
+        return startStr + finishStr
+    }
+}
