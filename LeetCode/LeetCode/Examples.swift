@@ -171,3 +171,40 @@ class Example4 {
         return startStr + finishStr
     }
 }
+
+class Example6 {
+    /*
+     Example 1:
+     Input: x = 123
+     Output: 321
+     
+     Example 2:
+     Input: x = -123
+     Output: -321
+     
+     Example 3:
+     Input: x = 120
+     Output: 21
+     */
+    
+    func reverse(_ x: Int) -> Int {
+        let koef = x < 0 ? -1 : 1
+        let arr = "\(abs(x))".map({ $0 })
+        var new = ""
+        var zeroFlag = false
+        
+        arr.reversed().forEach { value in
+            if value == "0", zeroFlag {
+                new += String(value)
+            } else if value == "0", zeroFlag == false {
+                //
+            } else if value != "0" {
+                new += String(value)
+                zeroFlag = true
+            }
+        }
+        
+        return (Int(new) ?? 0) * koef
+    }
+    
+}

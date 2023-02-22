@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        let examples = Example4()
-        print(examples.longestPalindrome("qwetrlttoottlasdfghjk"))
+        let examples = Example6()
+        print(examples.reverse(-12345600))
         
         return true
     }
