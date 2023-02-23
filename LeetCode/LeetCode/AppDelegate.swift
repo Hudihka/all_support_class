@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        let examples = Example6()
-        print(examples.reverse(-12345600))
+        let examples = Example7()
+        print(examples.maxArea([1,8,6,2,5,4,8,3,7]))
         
         return true
     }
