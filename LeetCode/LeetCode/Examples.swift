@@ -247,15 +247,6 @@ class Example7 {
 // int to roman
 
 class Example8 {
-    /*
-     I             1
-     V             5
-     X             10
-     L             50
-     C             100
-     D             500
-     M             1000
-     */
     private let dict = [
        1 : "I",
        5 : "V",
@@ -265,4 +256,155 @@ class Example8 {
        500 : "D",
        1000 : "M"
     ]
+    
+    func generate(number: Int) -> String {
+        guard number < 4000 else {
+            return "-"
+        }
+        
+        var returnStr = ""
+        let str = String(number)
+        let max = str.count - 1
+        
+        str.enumerated().forEach { value in
+            let str = String(value.element)
+            
+            switch max - value.offset {
+            case 0:
+                returnStr += generateNumber(number: str, ed: "I", midle: "V", max: "X")
+            case 1:
+                returnStr += generateNumber(number: str, ed: "X", midle: "L", max: "C")
+            case 2:
+                returnStr += generateNumber(number: str, ed: "C", midle: "D", max: "M")
+            case 3:
+                returnStr += generateNumber(number: str, ed: "M", midle: "", max: "")
+            default:
+                returnStr += ""
+            }
+        }
+
+        return returnStr
+    }
+    
+    private func generateArray(number: Int) -> [Int] {
+        let str = String(number)
+        let max = str.count - 1
+        return str.enumerated().map({ (Int(String($0.element)) ?? 0) * Int(truncating: pow(10, max - $0.offset) as NSNumber) })
+    }
+    
+    private func generateNumber(
+        number: String,
+        ed: String,
+        midle: String,
+        max: String
+    ) -> String {
+        let value = Int(number) ?? 0
+        
+        switch value {
+        case 9:
+            return ed + max
+        case 6...8:
+            return midle + Array(repeating: ed, count: value - 5).joined()
+        case 5:
+            return midle
+        case 4:
+            return ed + midle
+        case 1...3:
+            return Array(repeating: ed, count: value).joined()
+        default:
+            return ""
+        }
+    }
+}
+
+class Example9 {
+    
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        guard let first = strs.first else {
+            return ""
+        }
+        var set = Set<String>()
+        
+        for (ind, obj) in strs.enumerated() {
+            let newSet = Set(arrayStrings(obj))
+            if ind == 0 {
+                set = newSet
+            } else {
+                set = set.intersection(newSet)
+            }
+        }
+        
+        guard !set.isEmpty else {
+            return ""
+        }
+        
+        var returnStr = ""
+        let array = arrayStrings(first)
+        for obj in array {
+            if set.contains(obj), let first = obj.first {
+                returnStr += String(first)
+                set.remove(obj)
+            }
+        }
+        
+        return returnStr
+    }
+    
+    func arrayStrings(_ str: String) -> [String] {
+        var arry = [String]()
+        
+        for obj in str {
+            let count = arry.filter({ $0.first == obj }).count
+            let symbol = String(obj) + "\(count)"
+            arry.append(symbol)
+        }
+        
+        return arry
+    }
+}
+
+class Example10 {
+    private let dictUsual = [
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    ]
+    
+    private let dictFour = [
+        "IV": 4,
+        "XL": 40,
+        "CD": 400,
+        "IX": 9,
+        "XC": 90,
+        "CM": 900
+    ]
+    
+    func generate(number: String) -> Int {
+        var summ = 0
+        
+        var iSeeNumberFour = false
+        let arr = number.map({ $0 })
+        
+        let _ = arr.enumerated().forEach { ind, value in
+            let str = String(value)
+            
+            if iSeeNumberFour {
+                iSeeNumberFour = false
+            } else {
+                if let next = arr[safe: ind + 1], let cifr = dictFour[str + "\(next)"] {
+                    summ += cifr
+                    iSeeNumberFour = true
+                } else {
+                    summ += dictUsual[str] ?? 0
+                }
+            }
+        }
+        
+        return summ
+    }
+    
 }

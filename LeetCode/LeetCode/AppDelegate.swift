@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        let examples = Example7()
-        print(examples.maxArea([1,8,6,2,5,4,8,3,7]))
+        let examples = Example10()
+        print(examples.generate(number: "MCMXCIV"))
         
         return true
     }
