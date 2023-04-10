@@ -28,12 +28,6 @@ class ViewController: UIViewController {
         skeletonView.backgroundColor = .red
         skeletonView.frame = CGRect(x: 100, y: 100, width: 150, height: 150)
         
-//        skeletonView.addSubview(topSkeletonView)
-//        topSkeletonView.backgroundColor = .white
-//        topSkeletonView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-//
-//        topSkeletonView.addSubview(topHoll)
-//        topHoll.frame = CGRect(x: 10, y: 10, width: 70, height: 20)
         
         
         addHoll()
