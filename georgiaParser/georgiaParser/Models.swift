@@ -30,7 +30,7 @@ struct Qwestion {
     init?(html: String, number: Int) {
         guard
             let htmlAswers = html.between("<div class=\"item\">", "</article>"),
-            let title = htmlAswers.between("text-wrap\" style=\"font-size: 17px;\">", "</span></p>"),
+            let title = htmlAswers.between("px;\">", "</span></p>"),
             let answers = Answer(htmlAswers: htmlAswers)
         else {
             return nil
