@@ -11,7 +11,7 @@ import Foundation
 protocol RecieptViewControllerProtocolIn {
     func fetchData()
 
-    init(url: String)
+    func next(html: Any?)
 }
 
 protocol RecieptViewControllerProtocolOut {

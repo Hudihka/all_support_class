@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct Epic {
-    let number: Int
-    let russName: String
-    let arrayNumbers: [Int]
-}
-
 final class Content {
     
     static let shared = Content()
@@ -49,7 +43,7 @@ final class Content {
         Epic(number: 30, russName: "Дополнительные информационные знаки", arrayNumbers: [1193, 1196, 1198, 1199, 1201, 1203, 1205, 1208, 1211, 1213, 1215, 1216, 1239, 1241, 1242, 1243, 1244, 1245, 1246]),
         Epic(number: 31, russName: "Эко-менеджмент", arrayNumbers: [1742, 1743, 1744, 1745, 1746, 1747, 1748, 1749, 1750, 1751, 1752, 1753, 1754, 1755, 1756, 1757, 1758, 1759, 1760, 1761, 1762, 1763, 1764, 1765, 1766, 1767, 1768, 1769, 1770, 1771, 1772, 1773, 1774, 1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1784, 1785, 1786, 1787, 1788, 1789, 1790, 1791, 1792])]
     
-    var epicQwestions: [String: [Int]] = [:]
+    var epicQwestions: [EpicWithQwestion] = []
 }
 
 extension String {

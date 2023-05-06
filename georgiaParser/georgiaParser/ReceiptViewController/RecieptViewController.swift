@@ -10,15 +10,11 @@ import Foundation
 import WebKit
 
 final class UrlViewController: UIViewController {
-    private enum Constants {
-        static let loaderTop: CGFloat = 10
-        static let labelSizeOffset: CGFloat = 16
-    }
     
     static func recieptViewController(url: String) -> UIViewController {
         let stor = UIStoryboard(name: "Main", bundle: nil)
         let VC = stor.instantiateViewController(withIdentifier: "UrlViewController") as! UrlViewController
-        let VM = RecieptViewControllerModel(url: url)
+        let VM = RecieptViewControllerModel()
 
         VC.viewModel = VM
 
@@ -69,11 +65,11 @@ extension UrlViewController: WKNavigationDelegate {
         didFinish: WKNavigation!
     ) {
         
-//        tickets-list with-topics single-ticket-list
-        
         webView.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                    completionHandler: { (html: Any?, error: Error?) in
             print(html)
+            
+            self.viewModel?.next(html: html)
         })
     }
 }
