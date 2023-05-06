@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func tapedButton(_ sender: Any) {
-        let myURLString = "https://teoria.on.ge/tickets?ticket=839"
+        let myURLString = "https://teoria.on.ge/tickets?ticket=1354"
         let vc = UrlViewController.recieptViewController(url: myURLString)
         
         self.present(vc, animated: true)

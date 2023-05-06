@@ -26,7 +26,6 @@ final class UrlViewController: UIViewController {
     }
 
     @IBOutlet weak var webView: WKWebView!
-    @IBOutlet weak var loader: UIActivityIndicatorView!
     
 
     var viewModel: (RecieptViewControllerProtocolIn & RecieptViewControllerProtocolOut)?
@@ -69,21 +68,12 @@ extension UrlViewController: WKNavigationDelegate {
         _ webView: WKWebView,
         didFinish: WKNavigation!
     ) {
-        loader.stopAnimating()
-    }
-
-    func webView(
-        _ webView: WKWebView,
-        didStartProvisionalNavigation navigation: WKNavigation!
-    ) {
-        loader.stopAnimating()
-    }
-
-    func webView(
-        _ webView: WKWebView,
-        didFail navigation: WKNavigation!,
-        withError error: Error
-    ) {
-        loader.startAnimating()
+        
+//        tickets-list with-topics single-ticket-list
+        
+        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()",
+                                   completionHandler: { (html: Any?, error: Error?) in
+            print(html)
+        })
     }
 }

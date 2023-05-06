@@ -63,24 +63,17 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lfO-JN-wxw">
-                                <rect key="frame" x="178" y="437" width="37" height="37"/>
-                                <color key="color" systemColor="tertiarySystemBackgroundColor"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q9h-JX-SwF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Qj8-QI-5vh" secondAttribute="bottom" id="4o7-St-wy4"/>
                             <constraint firstItem="Qj8-QI-5vh" firstAttribute="top" secondItem="q9h-JX-SwF" secondAttribute="top" id="NDi-p8-UE3"/>
-                            <constraint firstItem="lfO-JN-wxw" firstAttribute="centerY" secondItem="Qj8-QI-5vh" secondAttribute="centerY" id="Zq1-w7-KHM"/>
                             <constraint firstItem="Qj8-QI-5vh" firstAttribute="trailing" secondItem="q9h-JX-SwF" secondAttribute="trailing" id="dv7-Ij-HRc"/>
-                            <constraint firstItem="lfO-JN-wxw" firstAttribute="centerX" secondItem="Qj8-QI-5vh" secondAttribute="centerX" id="hPa-2Z-teh"/>
                             <constraint firstItem="Qj8-QI-5vh" firstAttribute="leading" secondItem="q9h-JX-SwF" secondAttribute="leading" id="hZv-aC-2PA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loader" destination="lfO-JN-wxw" id="1WT-FK-q9w"/>
                         <outlet property="webView" destination="Qj8-QI-5vh" id="pRr-py-YBt"/>
                     </connections>
                 </viewController>
@@ -98,9 +91,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
