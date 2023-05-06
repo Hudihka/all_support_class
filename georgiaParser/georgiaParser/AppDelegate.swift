@@ -7,153 +7,76 @@
 
 import UIKit
 
-struct Epic {
-    let title: String
-    let urls: [URL]
-    var idTask: [Int] = []
-    
-    init(title: String, urls: [URL]) {
-        self.title = title.capitalized
-        self.urls = urls
-    }
-    
-//    mutating func updateNumbers() {
-//        urls.forEach({ self.updateNumbersArray(url: $0) })
-//    }
-//
-//    private mutating func updateNumbersArray(url: URL) {
-//        do {
-//            let contents = try String(contentsOf: url)
-//            let arrayHTML = contents.components(separatedBy: "big-answers\">")
-//            let arrayNumbers = arrayHTML
-//                .compactMap({ $0.between("<div class=\"t-num\">#", "</div>") })
-//                .compactMap({ Int($0) })
-//
-//            self.idTask = arrayNumbers
-//            //
-//            print(arrayNumbers)
-//        } catch {
-//            // contents could not be loaded
-//        }
-//    }
-    
-    
-}
-
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private let content = Content.shared
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //        t-num
-        let epicks = [
-            "Водитель, пассажир и пешеход, знаки, условность",
-            "Непристойность и условия вождения",
-            "Предупреждающие знаки",
-            "Знаки приоритета",
-            "Запрещающие знаки",
-            "указательные знаки",
-            "Информационно-указательные знаки",
-            "знаки обслуживания",
-            "Дополнительные информационные знаки",
-            "сигналы светофора",
-            "Сигналы регулятора",
-            "Использование специального сигнала",
-            "сигнализация аварийным маяком",
-            "Световые инструменты, звуковой сигнал",
-            "Движение, маневрирование, ходовая часть",
-            "Обгон путем обхода встречного транспортного средства",
-            "скорость движения",
-            "Тормозной путь, расстояние",
-            "перестань стоять",
-            "Проезжая перекресток",
-            "Железнодорожный переезд",
-            "Трафик на шоссе",
-            "Жилая зона, приоритет для автобуса",
-            "Буксировка",
-            "Учебный ход",
-            "Доставка, люди, груз",
-            "Велосипеды, мопеды и погони для скота",
-            "Дорожная разметка",
-            "Медицинская помощь",
-            "дорожная безопасность",
-            "Административное право",
-            "Эко-менеджмент[новый]",
-        ]
-
-        var epicsArray = [Epic]()
-
-        for (num, obj) in epicks.enumerated() {
-            let numbPage = num + 1
-            var strUrls: [URL] = []
-
-            for pag in Array(1...20) {
-                let str = "https://teoria.on.ge/tickets/2/\(numbPage)?page=\(pag)"
-                if let url = URL(string: str) {
-                    strUrls.append(url)
-                }
-            }
-
-            epicsArray.append(Epic(title: obj, urls: strUrls))
-        }
-
-        var newEpics = [EpicAndNumbers]()
-
-
-        for obj in epicsArray {
-//
-            var idTask: [Int] = []
-//
-            for objUrl in obj.urls {
-                do {
-                    let contents = try String(contentsOf: objUrl)
-                    let arrayHTML = contents.components(separatedBy: "<div class=\"t-num\">")
-                    let arrayNumbers = arrayHTML
-                        .compactMap({ $0.between("#", "</div>") })
-                        .compactMap({ Int($0) })
-
-                    idTask += arrayNumbers
-                    //
-                    print(arrayNumbers)
-                } catch {
-                    // contents could not be loaded
-                }
-        print(idTask)
-            }
-
-            newEpics.append(EpicAndNumbers(title: obj.title, idTask: idTask))
-
-        }
+        //        1782
         
-        var count = 0
-        newEpics.forEach { str in
-            count += str.idTask.count
-        }
-//
-        print(newEpics)
-        print(count)
+        var setsEpic: Set<String> = []
+        var arrayNumberQwestion: [Int] = []
+
+        // название темы
+        //<a  href="/tickets/0/32" title="ეკო-მართვა"><span class="id">
+        // [B, B1]
         
+        // фаза 1 формирование тем и вопросов
         
-        // http://teoria.on.ge/tickets/2/1
+//        DispatchQueue.global().async {
+//            for i in 0...3000 {
+//                let url = "https://teoria.on.ge/tickets?ticket=\(i)"
+//                print(i)
+//                if
+//                    let text = self.getTextHTML(url),
+//                    text.contains("[B, B1]"),
+//                    let title = text.between("<a  href=\"/tickets/0/32\" title=\"", "\"><span class=\"id\">")
+//                {
+//                    arrayNumberQwestion.append(i)
+//                    setsEpic.insert(title)
+//                }
+//            }
+//            
+//            print(arrayNumberQwestion.count)
+//            print(setsEpic.count)
+//            print(setsEpic)
+//        
+//            
+//        }
         
+        // фаза 2 формирование дикшинари [тема : список вопросов]
         
-        // Override point for customization after application launch.
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
 }
 
+private extension AppDelegate {
+    func getTextHTML(_ url: String) -> String? {
+        guard let urlUrl = URL(string: url) else {
+            return nil
+        }
+        
+        do {
+            let contents = try String(contentsOf: urlUrl)
+            return contents
+        } catch {
+            return nil
+        }
+    }
+    
+    func epicQwestions(georgianEpic: String, number: Int) {
+        guard let keyRussian = content.epicks[georgianEpic] else {
+            return
+        }
+        
+        if var arrayRussian = content.epicQwestions[keyRussian], arrayRussian.isEmpty == false {
+                arrayRussian.append(number)
+                content.epicQwestions[keyRussian] = arrayRussian
+            
+        } else {
+            content.epicQwestions[keyRussian] = [number]
+        }
+    }
+}
