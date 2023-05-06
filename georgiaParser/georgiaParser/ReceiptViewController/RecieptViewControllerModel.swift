@@ -13,31 +13,41 @@ final class RecieptViewControllerModel: RecieptViewControllerProtocolIn,
     
     private let contentSingl = Content.shared
     private let contentEpics = Content.shared.epicks
+    
     private var localQwestionAnswers: [EpicWithQwestion] = []
+    private var localQwestion: [Qwestion] = []
     private var number = 0
 
     var content: (URL?) -> Void = { _ in }
 
     func fetchData() {
-//        guard let firstNumber = contentEpics.first?.arrayNumbers.first, let url = generateUrlWith(firstNumber) else {
-//            return
-//        }
-        
-        guard let url = generateUrlWith(403) else {
+        guard
+            let firstNumber = contentEpics.first?.arrayNumbers.first,
+            let url = generateUrlWith(firstNumber)
+        else {
             return
         }
         
-        self.number = 403
+        self.number = firstNumber
         
         content(url)
     }
     
     func next(html: Any?) {
-        guard let html = html as? String else {
+        guard
+            let html = html as? String,
+            let qwestion = Qwestion(html: html, number: number)
+        else {
+            print(number)
             fatalError()
         }
         
-        print(Qwestion(html: html, number: number))
+        
+        
+        localQwestion.append(qwestion)
+        
+        
+        
     }
 }
 

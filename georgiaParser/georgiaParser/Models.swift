@@ -16,7 +16,6 @@ struct Epic: Hashable {
 struct EpicWithQwestion {
     
     let name: String
-    let countQwestion: Int
     let qwestions: [Qwestion]
     
 }

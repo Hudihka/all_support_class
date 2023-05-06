@@ -26,8 +26,8 @@
             filePath = "georgiaParser/Models.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "init?(htmlAswers:)"
             landmarkType = "7">
          </BreakpointContent>
