@@ -67,8 +67,6 @@ extension UrlViewController: WKNavigationDelegate {
         
         webView.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                    completionHandler: { (html: Any?, error: Error?) in
-            print(html)
-            
             self.viewModel?.next(html: html)
         })
     }
