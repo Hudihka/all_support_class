@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E966FC592A06F62300D4DADC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966FC582A06F62300D4DADC /* Models.swift */; };
-		E9BE33F12A06E27500956E47 /* RecieptViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE33EE2A06E27500956E47 /* RecieptViewControllerModel.swift */; };
-		E9BE33F22A06E27500956E47 /* RecieptViewControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE33EF2A06E27500956E47 /* RecieptViewControllerProtocols.swift */; };
-		E9BE33F32A06E27500956E47 /* RecieptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE33F02A06E27500956E47 /* RecieptViewController.swift */; };
 		E9C6DCC729B671E800126F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6DCC629B671E800126F48 /* AppDelegate.swift */; };
 		E9C6DCC929B671E800126F48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6DCC829B671E800126F48 /* SceneDelegate.swift */; };
 		E9C6DCCB29B671E800126F48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6DCCA29B671E800126F48 /* ViewController.swift */; };
@@ -22,9 +19,6 @@
 
 /* Begin PBXFileReference section */
 		E966FC582A06F62300D4DADC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		E9BE33EE2A06E27500956E47 /* RecieptViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieptViewControllerModel.swift; sourceTree = "<group>"; };
-		E9BE33EF2A06E27500956E47 /* RecieptViewControllerProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieptViewControllerProtocols.swift; sourceTree = "<group>"; };
-		E9BE33F02A06E27500956E47 /* RecieptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieptViewController.swift; sourceTree = "<group>"; };
 		E9C6DCC329B671E800126F48 /* georgiaParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = georgiaParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C6DCC629B671E800126F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9C6DCC829B671E800126F48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,16 +41,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E9BE33ED2A06E27500956E47 /* ReceiptViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E9BE33EE2A06E27500956E47 /* RecieptViewControllerModel.swift */,
-				E9BE33EF2A06E27500956E47 /* RecieptViewControllerProtocols.swift */,
-				E9BE33F02A06E27500956E47 /* RecieptViewController.swift */,
-			);
-			path = ReceiptViewController;
-			sourceTree = "<group>";
-		};
 		E9C6DCBA29B671E800126F48 = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +65,6 @@
 				E966FC582A06F62300D4DADC /* Models.swift */,
 				E9C6DCC829B671E800126F48 /* SceneDelegate.swift */,
 				E9C6DCCA29B671E800126F48 /* ViewController.swift */,
-				E9BE33ED2A06E27500956E47 /* ReceiptViewController */,
 				E9C6DCCC29B671E800126F48 /* Main.storyboard */,
 				E9C6DCCF29B671EA00126F48 /* Assets.xcassets */,
 				E9C6DCD129B671EA00126F48 /* LaunchScreen.storyboard */,
@@ -166,12 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9C6DCCB29B671E800126F48 /* ViewController.swift in Sources */,
-				E9BE33F22A06E27500956E47 /* RecieptViewControllerProtocols.swift in Sources */,
-				E9BE33F32A06E27500956E47 /* RecieptViewController.swift in Sources */,
 				E966FC592A06F62300D4DADC /* Models.swift in Sources */,
 				E9C6DCC729B671E800126F48 /* AppDelegate.swift in Sources */,
 				E9C6DCC929B671E800126F48 /* SceneDelegate.swift in Sources */,
-				E9BE33F12A06E27500956E47 /* RecieptViewControllerModel.swift in Sources */,
 				E9E4B68B29B7A644008DAD33 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
