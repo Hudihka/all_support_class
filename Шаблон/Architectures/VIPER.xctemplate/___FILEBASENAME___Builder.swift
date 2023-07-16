@@ -10,7 +10,7 @@ final class ___VARIABLE_productName:identifier___Builder {
     static func build() -> ___VARIABLE_productName:identifier___ViewController {
         let interactor = ___VARIABLE_productName:identifier___Interactor()
         let router = ___VARIABLE_productName:identifier___Router()
-        let presenter = ___VARIABLE_productName:identifier___Presenter()
+        let presenter = ___VARIABLE_productName:identifier___Presenter(interactor: interactor, router: router)
         let viewController = ___VARIABLE_productName:identifier___ViewController(presenter: presenter)
 
         presenter.view = viewController

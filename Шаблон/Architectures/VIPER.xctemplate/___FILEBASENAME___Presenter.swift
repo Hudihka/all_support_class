@@ -19,7 +19,7 @@ final class ___VARIABLE_productName:identifier___Presenter: NSObject, ___VARIABL
 
     // MARK: - Initialization
 
-    required init(interactor: ___VARIABLE_productName:identifier___InteractorProtocol, router: ___VARIABLE_productName:identifier___Protocol, output: ___VARIABLE_productName:identifier___Output?) {
+    required init(interactor: ___VARIABLE_productName:identifier___InteractorProtocol, router: ___VARIABLE_productName:identifier___RouterProtocol, output: ___VARIABLE_productName:identifier___Output? = nil) {
         self.interactor = interactor
         self.router = router
         self.output = output
