@@ -14,10 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        JumpGame().test()
-        
-        
-        
+        print("-------------------------")
+        ProductArrayExceptSelf().test()
+        print("-------------------------")
         
         return true
     }

@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E99F0DCD2BE4571300925FEB /* H-index.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DCC2BE4571300925FEB /* H-index.swift */; };
+		E99F0DCF2BE45BC900925FEB /* InsertDeleteGetRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */; };
+		E99F0DD12BE45FDE00925FEB /* ProductArrayExceptSelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */; };
+		E99F0DD32BE46A3D00925FEB /* GasStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DD22BE46A3D00925FEB /* GasStation.swift */; };
 		E9D7AE4D2BE32889002E09EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AE4C2BE32889002E09EE /* AppDelegate.swift */; };
 		E9D7AE542BE32889002E09EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AE522BE32889002E09EE /* Main.storyboard */; };
 		E9D7AE562BE32889002E09EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AE552BE32889002E09EE /* Assets.xcassets */; };
 		E9D7AE592BE32889002E09EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AE572BE32889002E09EE /* LaunchScreen.storyboard */; };
 		E9D7AE612BE328C1002E09EE /* JumpGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AE602BE328C1002E09EE /* JumpGame.swift */; };
 		E9D7AE642BE328FF002E09EE /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AE632BE328FF002E09EE /* Tester.swift */; };
+		E9D7AE662BE32B32002E09EE /* JumpGameII.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AE652BE32B32002E09EE /* JumpGameII.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E99F0DCC2BE4571300925FEB /* H-index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "H-index.swift"; sourceTree = "<group>"; };
+		E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDeleteGetRandom.swift; sourceTree = "<group>"; };
+		E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArrayExceptSelf.swift; sourceTree = "<group>"; };
+		E99F0DD22BE46A3D00925FEB /* GasStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStation.swift; sourceTree = "<group>"; };
 		E9D7AE492BE32889002E09EE /* Algoritms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algoritms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D7AE4C2BE32889002E09EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D7AE532BE32889002E09EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		E9D7AE5A2BE32889002E09EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9D7AE602BE328C1002E09EE /* JumpGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpGame.swift; sourceTree = "<group>"; };
 		E9D7AE632BE328FF002E09EE /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
+		E9D7AE652BE32B32002E09EE /* JumpGameII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpGameII.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,11 @@
 			isa = PBXGroup;
 			children = (
 				E9D7AE602BE328C1002E09EE /* JumpGame.swift */,
+				E9D7AE652BE32B32002E09EE /* JumpGameII.swift */,
+				E99F0DCC2BE4571300925FEB /* H-index.swift */,
+				E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */,
+				E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */,
+				E99F0DD22BE46A3D00925FEB /* GasStation.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -146,9 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99F0DD32BE46A3D00925FEB /* GasStation.swift in Sources */,
 				E9D7AE642BE328FF002E09EE /* Tester.swift in Sources */,
+				E99F0DCF2BE45BC900925FEB /* InsertDeleteGetRandom.swift in Sources */,
 				E9D7AE4D2BE32889002E09EE /* AppDelegate.swift in Sources */,
 				E9D7AE612BE328C1002E09EE /* JumpGame.swift in Sources */,
+				E99F0DD12BE45FDE00925FEB /* ProductArrayExceptSelf.swift in Sources */,
+				E9D7AE662BE32B32002E09EE /* JumpGameII.swift in Sources */,
+				E99F0DCD2BE4571300925FEB /* H-index.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
