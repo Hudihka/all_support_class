@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90232342BE81FCD000F671A /* TrappingRainWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90232332BE81FCD000F671A /* TrappingRainWater.swift */; };
 		E99F0DCD2BE4571300925FEB /* H-index.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DCC2BE4571300925FEB /* H-index.swift */; };
 		E99F0DCF2BE45BC900925FEB /* InsertDeleteGetRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */; };
 		E99F0DD12BE45FDE00925FEB /* ProductArrayExceptSelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90232332BE81FCD000F671A /* TrappingRainWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrappingRainWater.swift; sourceTree = "<group>"; };
 		E99F0DCC2BE4571300925FEB /* H-index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "H-index.swift"; sourceTree = "<group>"; };
 		E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDeleteGetRandom.swift; sourceTree = "<group>"; };
 		E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArrayExceptSelf.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */,
 				E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */,
 				E99F0DD22BE46A3D00925FEB /* GasStation.swift */,
+				E90232332BE81FCD000F671A /* TrappingRainWater.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				E99F0DD32BE46A3D00925FEB /* GasStation.swift in Sources */,
 				E9D7AE642BE328FF002E09EE /* Tester.swift in Sources */,
 				E99F0DCF2BE45BC900925FEB /* InsertDeleteGetRandom.swift in Sources */,
+				E90232342BE81FCD000F671A /* TrappingRainWater.swift in Sources */,
 				E9D7AE4D2BE32889002E09EE /* AppDelegate.swift in Sources */,
 				E9D7AE612BE328C1002E09EE /* JumpGame.swift in Sources */,
 				E99F0DD12BE45FDE00925FEB /* ProductArrayExceptSelf.swift in Sources */,

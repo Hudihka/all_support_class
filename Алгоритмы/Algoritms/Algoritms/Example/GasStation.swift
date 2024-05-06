@@ -17,7 +17,7 @@ final class GasStation: TesterProtocol {
         
         for i in 0..<gas.count {
             let newGas = gas.separateOn(index: i)
-            let newCost = gas.separateOn(index: i)
+            let newCost = cost.separateOn(index: i)
             casOnBag = 0
             
             for (offset, value) in newGas.enumerated() {
@@ -26,10 +26,14 @@ final class GasStation: TesterProtocol {
                 }
                 
                 if casOnBag < 0 {
-                    return badResult
+                    continue
                 }
                 
                 casOnBag += (value - newCost[offset])
+                
+                if casOnBag < 0 {
+                    continue
+                }
             }
             
             if casOnBag >= 0 {

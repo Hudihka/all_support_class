@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         print("-------------------------")
-        ProductArrayExceptSelf().test()
+        TrappingRainWater().test()
         print("-------------------------")
         
         return true
