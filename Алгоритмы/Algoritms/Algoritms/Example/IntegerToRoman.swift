@@ -14,16 +14,28 @@ final class IntegerToRoman: TesterProtocol {
         let value: Int
         let kind: Int
         
-        var badValue: Bool {
-            value % 4 == 0 || value % 9 == 0
+        var isBadValue: Bool {
+            isFour || isNine
         }
         
-        var isMoreFive: Bool {
-            value > 5
+        var isFour: Bool {
+            value == 4
+        }
+        
+        var isNine: Bool {
+            value == 9
         }
         
         var countOnce: Int {
-            isMoreFive ? value - 5 : value
+            value > 5 ? value - 5 : value
+        }
+        
+        var isFive: Bool {
+            value == 5
+        }
+        
+        var valueForRoman: Int {
+            value * kind
         }
     }
     
@@ -37,7 +49,11 @@ final class IntegerToRoman: TesterProtocol {
         "M": 1000
     ]
     
+    var opositDictionary = [Int: String]()
+    
     func intToRoman(_ num: Int) -> String {
+        dictionary.forEach({ opositDictionary[$0.value] = $0.key })
+        
         let array = String(num).map({ String($0) }).reversed()
         
         var cifrs = [Cifr]()
@@ -53,11 +69,39 @@ final class IntegerToRoman: TesterProtocol {
             }
         }
         
+        var returnValue = ""
+        
+        cifrs.reversed().forEach({
+            if $0.isBadValue {
+                
+                let sumbolFirst = opositDictionary[$0.kind] ?? ""
+                var sumbolLast = ""
+                
+                if $0.isFour {
+                    sumbolLast = opositDictionary[5 * $0.kind] ?? ""
+                } else if $0.isNine {
+                    sumbolLast = opositDictionary[10 * $0.kind] ?? ""
+                }
+                
+                returnValue += "\(sumbolFirst)\(sumbolLast)"
+                
+            } else {
+                if $0.isFive {
+                    returnValue += opositDictionary[$0.valueForRoman] ?? ""
+                } else {
+                    let sumbol = opositDictionary[$0.kind] ?? ""
+                    
+                    let onceSumbols = Array(repeating: sumbol, count: $0.countOnce).joined()
+                    
+                    let five = $0.value > 5 ? opositDictionary[5 * $0.kind] ?? "" : ""
+                    
+                    returnValue += "\(five)\(onceSumbols)"
+                }
+            }
+        })
         
         
-        
-        
-        
+        return returnValue
     }
     
     func test() {
