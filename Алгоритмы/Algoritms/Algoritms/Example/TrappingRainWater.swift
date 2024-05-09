@@ -7,14 +7,18 @@
 
 import Foundation
 
+// https://leetcode.com/problems/trapping-rain-water/?envType=study-plan-v2&envId=top-interview-150
+
 final class TrappingRainWater: TesterProtocol {
     struct Marker {
         let index: Int
         let height: Int
     }
     
+    private var markers = [Marker]()
+    
     func trap(_ height: [Int]) -> Int {
-        let markers = height.enumerated().map({ Marker(index: $0.offset, height: $0.element) })
+        markers = height.enumerated().map({ Marker(index: $0.offset, height: $0.element) })
         
         guard 
             let maxHeight = markers.map({ $0.height }).max(),
@@ -56,41 +60,45 @@ final class TrappingRainWater: TesterProtocol {
             }
         }
     
-        spaces = spaces.sorted(by: { $0.index < $1.index})
+        let indexses = spaces.sorted(by: { $0.index < $1.index})
+            .map({ $0.index })
         
-        print(spaces)
+        if indexses.count < 2 {
+            return 0
+        }
         
-        return 0
+        var volume = 0
+        
+        for i in 0...indexses.count - 2 {
+            let from = indexses[i]
+            let to = indexses[i+1]
+            
+            volume += volumeBetwin(from: from, to: to)
+        }
+        
+        return volume
     }
     
-//    private func getValue(array: [Marker], marker: Marker, leftPart: Bool) -> Marker? {
-//        
-//        
-//        guard
-//            array.count > 1,
-//            
-//            let firstIndex = array
-//                .filter({ leftPart ? $0.index < marker.index : $0.index > marker.index })
-//                .firstIndex(where: { $0.height <= marker.height })
-//        else {
-//            return nil
-//        }
-//        
-//        let value = array[firstIndex]
-//        
-//        if abs(value.index - marker.index) == 1 {
-//            let second = arrayPart(array, index: firstIndex, leftPart: leftPart)
-//            
-//            if second.isEmpty {
-//                return nil
-//            }
-//            
-//            return getValue(array: second, marker: value, leftPart: leftPart)
-//        }
-//        
-//        
-//        return value
-//    }
+    private func volumeBetwin(from: Int, to: Int) -> Int {
+        if to - from < 2 {
+            return 0
+        }
+        
+        let fromMarker = markers[from]
+        let toMarker = markers[to]
+        
+        let width = to - from
+        let height = min(fromMarker.height, toMarker.height)
+        
+        var volume = width * height
+    
+        for i in from..<to {
+            let newHeight = min(markers[i].height, height)
+            volume -= newHeight
+        }
+        
+        return volume
+    }
     
     private func arrayPart(_ array: [Marker], index: Int, leftPart: Bool) -> [Marker] {
         if index == 0 || index >= array.count {
@@ -108,9 +116,5 @@ final class TrappingRainWater: TesterProtocol {
         print(
             trap([0,1,0,2,1,0,1,3,2,1,2,1]) == 6
         )
-        
-//        print(
-//            trap([4,2,0,3,2,5]) == 9
-//        )
     }
 }
