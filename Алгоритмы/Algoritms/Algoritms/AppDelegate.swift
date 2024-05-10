@@ -15,10 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         print("-------------------------")
-        IntegerToRoman().test()
+        ZigzagConversion().test()
         print("-------------------------")
         
         return true
     }
+    
+    
 }
 
