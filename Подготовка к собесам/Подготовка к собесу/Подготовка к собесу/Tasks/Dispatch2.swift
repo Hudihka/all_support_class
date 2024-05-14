@@ -7,20 +7,16 @@
 
 import Foundation
 
-protocol SomeProtocol {
-    var someProperty: Int { get set }
+protocol Drawing: AnyObject {
+    func render()
 }
 
-class SomeClass: SomeProtocol {
-    var someProperty: Int = 0
+extension Drawing {
+    func circle() { print("protocol") }
+    func render() { circle() }
 }
 
-struct SomeStruct: SomeProtocol {
-    var someProperty: Int = 0
+class SWG: Drawing {
+    func circle() { print("class") }
 }
 
-class Dispatch2 {
-    func foo(someArgument: inout SomeProtocol) {
-        someArgument.someProperty = 10
-    }
-}

@@ -17,6 +17,12 @@
 		E906FC3C2BF3020B00094393 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906FC3B2BF3020B00094393 /* DataTest.swift */; };
 		E906FC3E2BF307A600094393 /* Dispatch1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906FC3D2BF307A600094393 /* Dispatch1.swift */; };
 		E906FC402BF3085600094393 /* Dispatch2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906FC3F2BF3085600094393 /* Dispatch2.swift */; };
+		E9D55B1E2BF3952C00FCA996 /* Clousers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B1D2BF3952C00FCA996 /* Clousers.swift */; };
+		E9D55B202BF3978000FCA996 /* TestArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B1F2BF3978000FCA996 /* TestArray.swift */; };
+		E9D55B222BF39BD700FCA996 /* DidSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B212BF39BD700FCA996 /* DidSet.swift */; };
+		E9D55B242BF39F5800FCA996 /* Dispatch3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B232BF39F5800FCA996 /* Dispatch3.swift */; };
+		E9D55B262BF3A78F00FCA996 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B252BF3A78F00FCA996 /* GCD.swift */; };
+		E9DD91012BF3E117007CDE62 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD91002BF3E117007CDE62 /* Lock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		E906FC3B2BF3020B00094393 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		E906FC3D2BF307A600094393 /* Dispatch1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch1.swift; sourceTree = "<group>"; };
 		E906FC3F2BF3085600094393 /* Dispatch2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch2.swift; sourceTree = "<group>"; };
+		E9D55B1D2BF3952C00FCA996 /* Clousers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clousers.swift; sourceTree = "<group>"; };
+		E9D55B1F2BF3978000FCA996 /* TestArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArray.swift; sourceTree = "<group>"; };
+		E9D55B212BF39BD700FCA996 /* DidSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidSet.swift; sourceTree = "<group>"; };
+		E9D55B232BF39F5800FCA996 /* Dispatch3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch3.swift; sourceTree = "<group>"; };
+		E9D55B252BF3A78F00FCA996 /* GCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		E9DD91002BF3E117007CDE62 /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,12 @@
 				E906FC3B2BF3020B00094393 /* DataTest.swift */,
 				E906FC3D2BF307A600094393 /* Dispatch1.swift */,
 				E906FC3F2BF3085600094393 /* Dispatch2.swift */,
+				E9D55B232BF39F5800FCA996 /* Dispatch3.swift */,
+				E9D55B1D2BF3952C00FCA996 /* Clousers.swift */,
+				E9D55B1F2BF3978000FCA996 /* TestArray.swift */,
+				E9D55B212BF39BD700FCA996 /* DidSet.swift */,
+				E9D55B252BF3A78F00FCA996 /* GCD.swift */,
+				E9DD91002BF3E117007CDE62 /* Lock.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -159,11 +177,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E906FC402BF3085600094393 /* Dispatch2.swift in Sources */,
+				E9D55B1E2BF3952C00FCA996 /* Clousers.swift in Sources */,
 				E906FC3C2BF3020B00094393 /* DataTest.swift in Sources */,
 				E906FC292BF2FCD700094393 /* ViewController.swift in Sources */,
+				E9D55B202BF3978000FCA996 /* TestArray.swift in Sources */,
 				E906FC252BF2FCD700094393 /* AppDelegate.swift in Sources */,
+				E9D55B262BF3A78F00FCA996 /* GCD.swift in Sources */,
+				E9DD91012BF3E117007CDE62 /* Lock.swift in Sources */,
 				E906FC3E2BF307A600094393 /* Dispatch1.swift in Sources */,
+				E9D55B242BF39F5800FCA996 /* Dispatch3.swift in Sources */,
 				E906FC272BF2FCD700094393 /* SceneDelegate.swift in Sources */,
+				E9D55B222BF39BD700FCA996 /* DidSet.swift in Sources */,
 				E906FC3A2BF2FE3F00094393 /* ValueReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

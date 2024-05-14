@@ -58,4 +58,28 @@ class ValueReference {
     
 }
 
-
+class ValueReference1 {
+    class A {
+        weak var delegate: B?
+    }
+    
+    class B {
+        weak var delegate: A?
+    }
+    
+    var a: A?
+    var b: B?
+    
+    func test() {
+        a = A()
+        b = B()
+        
+        a?.delegate = b
+        b?.delegate = a
+        
+        print(a)
+        print(b)
+        print(a?.delegate)
+        print(b?.delegate)
+    }
+}

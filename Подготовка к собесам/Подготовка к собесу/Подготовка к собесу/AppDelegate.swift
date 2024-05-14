@@ -14,10 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let testClass = DataTest()
+        let testClass = Lock()
         
-        testClass.test1()
-        print("-------------------")
+//        testClass.test1()
+//        testClass.test2()
+//        testClass.test3()
+//        testClass.test4()
+//        testClass.test5()
+//        testClass.test6()
+//        testClass.test7()
+        testClass.test()
+//        testClass.test()
+//        print("-------------------")
 //        testClass.test2()
         
         
