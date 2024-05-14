@@ -5,46 +5,45 @@
 ////  Created by Константин Ирошников on 30.07.2022.
 ////
 //
+
 //enum Custom {
 //    case success(Int)
 //    case failure
 //}
 //
-var b = 10
-let result = Custom.success(b)
-b = 5
+//var b = 10
+//let result = Custom.success(b)
+//b = 5
 
-
-switch result {
-case .success(b):
-    print("success")
-case .failure:
-    print("failure")
-default:
-    print("Default")
-}
+//switch result {
+//case .success(b):
+//    print("success")
+//case .failure:
+//    print("failure")
+//default:
+//    print("Default")
+//}
 //
-////
-////import UIKit
-////
-struct A {
-    var iVar: Int = 0
-    
-    init(iVar: Int) {
-        self.iVar = iVar
-    }
-}
 
-let aTest = A(iVar: 90)
-let bTest = aTest
 
-print(aTest.iVar)
-print(bTest.iVar)
-
-bTest.iVar = 40
-
-print(aTest.iVar)
-print(bTest.iVar)
+//struct A {
+//    var iVar: Int = 0
+//    
+//    init(iVar: Int) {
+//        self.iVar = iVar
+//    }
+//}
+//
+//let aTest = A(iVar: 90)
+//let bTest = aTest
+//
+//print(aTest.iVar)
+//print(bTest.iVar)
+//
+//bTest.iVar = 40
+//
+//print(aTest.iVar)
+//print(bTest.iVar)
 
 //class TestA: Equatable {
 //    var iVar: Int = 0
@@ -105,26 +104,32 @@ print(bTest.iVar)
 //    someArgument.someProperty = 10
 //}
 
-protocol Drawing: class {
-    func render()
-}
 
-extension Drawing {
-    func circle() { print("protocol") }
-    func render() { circle() }
-}
 
-class SWG: Drawing {
-    func circle() { print("class") }
-}
 
-class TestArray {
-    var name: String
+//protocol Drawing: class {
+//    func render()
+//}
+//
+//extension Drawing {
+//    func circle() { print("protocol") }
+//    func render() { circle() }
+//}
+//
+//class SWG: Drawing {
+//    func circle() { print("class") }
+//}
+//
+//class TestArray {
+//    var name: String
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//}
 
-    init(name: String) {
-        self.name = name
-    }
-}
+
+
 
 //protocol ATestProtocol {
 //    var id: String { get }
@@ -176,16 +181,16 @@ class TestArray {
 //        print(equalGeneric(lhs: test1, rhs: test2))
 //
 //
-        var clouser: () -> Void = {  }
-
-        var count = 0
-
-        clouser = {
-            print(count)
-        }
-        clouser()
-        count = 10
-        clouser()
+//        var clouser: () -> Void = {  }
+//
+//        var count = 0
+//
+//        clouser = {
+//            print(count)
+//        }
+//        clouser()
+//        count = 10
+//        clouser()
 //
 //
 //        let vc = ViewController()
@@ -260,164 +265,89 @@ class TestArray {
 ////
 ////        return true
 ////    }
-////
-////    // MARK: UISceneSession Lifecycle
-////
-////    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-////        // Called when a new scene session is being created.
-////        // Use this method to select a configuration to create the new scene with.
-////        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-////    }
-////
-////    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-////        // Called when the user discards a scene session.
-////        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-////        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-////    }
-////
-////    func arraySorted(array1: [Int], array2: [Int]) -> [Int] {
-////        var result = [Int]()
-////        var i = 0
-////        var j = 0
-////        var k = 0
-////
-////        while(i < array1.count && j < array2.count) {
-////            if array1[i] < array2[j] {
-////                result.append(array1[i])
-////                i += 1
-////            } else {
-////                result.append(array2[j])
-////                j += 1
-////            }
-////
-////            k += 0
-////        }
-////
-////        while(i < array1.count) {
-////            print(array1[i])
-////            result.append(array1[i])
-////            i += 1
-////        }
-////
-////        while(j < array2.count) {
-////            result.append(array2[j])
-////            j += 1
-////        }
-////
-////        return result
-////    }
-////
-////
-////}
-////
-/////*
-////
-////         static int[] Merge(int[] first, int[] second) {
-////             if(first == null || second == null) throw new ArgumentException();
-////             int i = 0, j = i, k = i;
-////             var result = new int[first.Length + second.Length];
-////
-////             while(i< first.Length && j<second.Length) {
-////                 result[k++] = first[i] < second[j] ? first[i++] : second[j++];
-////             }
-////             while(i < first.Length) {
-////                 result[k++] = first[i++];
-////             }
-////             while(j < second.Length) {
-////                 result[k++] = second[j++];
-////             }
-////             return result;
-////         }
-////
-////
-////         static void Main(string[] args) {
-////             int[] A = { 1, 4, 6, 7 }, B = { 2, 3, 5 };
-////             var result = Merge(A, B);
-////             Console.WriteLine(string.Join(" ",result));
-////         }
-//// */
-////
-////
-////
-////
-var array = [Int]()
 
-for i in 0...500 {
-    let time = Double(arc4random_uniform(50))
 
-    DispatchQueue.main.asyncAfter(deadline: .now() + time) {
-        array.append(i)
-    }
 
-}
+//var array = [Int]()
+//
+//for i in 0...500 {
+//    let time = Double(arc4random_uniform(50))
+//
+//    DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+//        array.append(i)
+//    }
+//
+//}
+
+
 ////
 ////
-/////// задача 1
-////
-//////class A {
-//////    weak var delegate: B?
-//////}
-//////
-//////class B {
-//////    weak var delegate: A?
-//////}
-//////
-//////var a: A?
-//////var b: B?
-//////
-//////a = A()
-//////b = B()
-//////
-//////a?.delegate = b
-//////b?.delegate = a
-//////
-//////print(a)
-//////print(b)
-//////print(a?.delegate)
-//////print(b?.delegate)
-//////
-//////
-//////
-///////// задача 2
-//////
-//////func print(addres o: UnsafeRawPointer) {
-//////    print(String(format: "%p", Int(bitPattern: o)))
-//////}
-//////
-//////var array1 = [0, 1, 2, 3]
-//////var array2 = array1
-//////
-//////print(array1)
-//////print(array2)
-////
-////
-/////// задача 3
-///////
-//////struct Cat {
-//////    var name: String?
-//////}
-//////
-//////struct Dog {
-//////    var name: String?
-//////}
-//////
-//////struct Person {
-//////    var cat: Cat? {
-//////        didSet {
-//////            print("didSet cat")
-//////        }
-//////    }
-//////
-//////    var dogs: [Dog]? {
-//////        didSet {
-//////            print("didSet dogs")
-//////        }
-//////    }
-//////}
-////
-////
-/////// задача 4
-///////
+/// задача 1
+
+//class A {
+//    weak var delegate: B?
+//}
+//
+//class B {
+//    weak var delegate: A?
+//}
+//
+//var a: A?
+//var b: B?
+//
+//a = A()
+//b = B()
+//
+//a?.delegate = b
+//b?.delegate = a
+//
+//print(a)
+//print(b)
+//print(a?.delegate)
+//print(b?.delegate)
+
+
+/// задача 2
+//
+//func print(addres o: UnsafeRawPointer) {
+//    print(String(format: "%p", Int(bitPattern: o)))
+//}
+//
+//var array1 = [0, 1, 2, 3]
+//var array2 = array1
+//
+//print(array1)
+//print(array2)
+
+
+
+/// задача 3
+///
+//struct Cat {
+//    var name: String?
+//}
+//
+//struct Dog {
+//    var name: String?
+//}
+//
+//struct Person {
+//    var cat: Cat? {
+//        didSet {
+//            print("didSet cat")
+//        }
+//    }
+//
+//    var dogs: [Dog]? {
+//        didSet {
+//            print("didSet dogs")
+//        }
+//    }
+//}
+
+
+// задача 4
+//
 protocol Playable {
     func play()
 }
@@ -719,56 +649,30 @@ if testC1 == testC2 {
 
 
 
-////
-////func randomTime() -> Double {
-////    Double(arc4random_uniform(1000))
-////}
-//
-////extension String {
-////    var replaceBadSymbolsE: String {
-////        self.replace(string: "Ё", replacement: "Е").replace(string: "ё", replacement: "е")
-////    }
-////
-////    func replace(string:String, replacement:String) -> String {
-////        return self.replacingOccurrences(of: string, with: replacement, options: NSString.CompareOptions.literal, range: nil)
-////    }
-////}
-//
-//extension Int {
-//    var formatWithSpace: String? {
-//        // 2358000 -> "2 358 000"
-//
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .decimal
-//        formatter.locale = Locale(identifier: "fr_FR")
-//
-//        let formattedString = formatter.string(for: self)
-//        return formattedString
-//    }
-//}
-//
 ///*
 // // упростить функцию
- func bestAnimals(from animalsInfo: [String: [String]]) -> [String] {
-     var animals = [String]()
+// func bestAnimals(from animalsInfo: [String: [String]]) -> [String] {
+//     var animals = [String]()
+//
+//     for (key, _) in animalsInfo {
+//         guard let info = animalsInfo[key] else {
+//                 continue
+//         }
+//
+//         animals.append(contensOf: info.sorted(by: {(lhs: String, rhs: String) -> Bool in
+//             return lhs > rhs
+//         }))
+//     }
+//
+//     animals = animals.compactMap { animal in
+//         return animal.count > 3 ? animal : nil
+//     }.sorted(by: <)
+//
+//
+//     return animals
+// }
 
-     for (key, _) in animalsInfo {
-         guard let info = animalsInfo[key] else {
-                 continue
-         }
 
-         animals.append(contensOf: info.sorted(by: {(lhs: String, rhs: String) -> Bool in
-             return lhs > rhs
-         }))
-     }
-
-     animals = animals.compactMap { animal in
-         return animal.count > 3 ? animal : nil
-     }.sorted(by: <)
-
-
-     return animals
- }
 //
 // /////
 //
