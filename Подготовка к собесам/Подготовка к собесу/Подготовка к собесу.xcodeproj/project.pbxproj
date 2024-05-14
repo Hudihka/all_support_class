@@ -23,6 +23,7 @@
 		E9D55B242BF39F5800FCA996 /* Dispatch3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B232BF39F5800FCA996 /* Dispatch3.swift */; };
 		E9D55B262BF3A78F00FCA996 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B252BF3A78F00FCA996 /* GCD.swift */; };
 		E9DD91012BF3E117007CDE62 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD91002BF3E117007CDE62 /* Lock.swift */; };
+		E9DD91032BF3E91F007CDE62 /* ErasureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD91022BF3E91F007CDE62 /* ErasureType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E9D55B232BF39F5800FCA996 /* Dispatch3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch3.swift; sourceTree = "<group>"; };
 		E9D55B252BF3A78F00FCA996 /* GCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		E9DD91002BF3E117007CDE62 /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		E9DD91022BF3E91F007CDE62 /* ErasureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasureType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				E9D55B212BF39BD700FCA996 /* DidSet.swift */,
 				E9D55B252BF3A78F00FCA996 /* GCD.swift */,
 				E9DD91002BF3E117007CDE62 /* Lock.swift */,
+				E9DD91022BF3E91F007CDE62 /* ErasureType.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				E906FC3C2BF3020B00094393 /* DataTest.swift in Sources */,
 				E906FC292BF2FCD700094393 /* ViewController.swift in Sources */,
 				E9D55B202BF3978000FCA996 /* TestArray.swift in Sources */,
+				E9DD91032BF3E91F007CDE62 /* ErasureType.swift in Sources */,
 				E906FC252BF2FCD700094393 /* AppDelegate.swift in Sources */,
 				E9D55B262BF3A78F00FCA996 /* GCD.swift in Sources */,
 				E9DD91012BF3E117007CDE62 /* Lock.swift in Sources */,

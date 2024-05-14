@@ -23,12 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        testClass.test5()
 //        testClass.test6()
 //        testClass.test7()
-        testClass.test()
+//        testClass.test()
 //        testClass.test()
 //        print("-------------------")
 //        testClass.test2()
         
-        
+        print("=========0")
+        let test = ViewController()
+        print("=========1")
+//        let _ = test.view
+        print("=========2")
         
         return true
     }

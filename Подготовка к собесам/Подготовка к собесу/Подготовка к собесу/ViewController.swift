@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        view.layer.backgroundColor = CGColor(red: 1, green: 0, blue: 0, alpha: 1)
+        view.backgroundColor = .yellow
+        
+        print("000000")
     }
 
 }
