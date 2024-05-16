@@ -19,6 +19,8 @@
 		E906FC402BF3085600094393 /* Dispatch2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906FC3F2BF3085600094393 /* Dispatch2.swift */; };
 		E9A5F2612BF435AC00A23A60 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A5F2602BF435AC00A23A60 /* Actor.swift */; };
 		E9B825002BF583580012EA07 /* Deffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B824FF2BF583580012EA07 /* Deffer.swift */; };
+		E9B825022BF591DC0012EA07 /* GCD2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B825012BF591DC0012EA07 /* GCD2.swift */; };
+		E9B825042BF59C610012EA07 /* Dispatch4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B825032BF59C610012EA07 /* Dispatch4.swift */; };
 		E9D55B1E2BF3952C00FCA996 /* Clousers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B1D2BF3952C00FCA996 /* Clousers.swift */; };
 		E9D55B202BF3978000FCA996 /* TestArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B1F2BF3978000FCA996 /* TestArray.swift */; };
 		E9D55B222BF39BD700FCA996 /* DidSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D55B212BF39BD700FCA996 /* DidSet.swift */; };
@@ -43,6 +45,8 @@
 		E906FC3F2BF3085600094393 /* Dispatch2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch2.swift; sourceTree = "<group>"; };
 		E9A5F2602BF435AC00A23A60 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		E9B824FF2BF583580012EA07 /* Deffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deffer.swift; sourceTree = "<group>"; };
+		E9B825012BF591DC0012EA07 /* GCD2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD2.swift; sourceTree = "<group>"; };
+		E9B825032BF59C610012EA07 /* Dispatch4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch4.swift; sourceTree = "<group>"; };
 		E9D55B1D2BF3952C00FCA996 /* Clousers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clousers.swift; sourceTree = "<group>"; };
 		E9D55B1F2BF3978000FCA996 /* TestArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArray.swift; sourceTree = "<group>"; };
 		E9D55B212BF39BD700FCA996 /* DidSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidSet.swift; sourceTree = "<group>"; };
@@ -102,10 +106,12 @@
 				E906FC3D2BF307A600094393 /* Dispatch1.swift */,
 				E906FC3F2BF3085600094393 /* Dispatch2.swift */,
 				E9D55B232BF39F5800FCA996 /* Dispatch3.swift */,
+				E9B825032BF59C610012EA07 /* Dispatch4.swift */,
 				E9D55B1D2BF3952C00FCA996 /* Clousers.swift */,
 				E9D55B1F2BF3978000FCA996 /* TestArray.swift */,
 				E9D55B212BF39BD700FCA996 /* DidSet.swift */,
 				E9D55B252BF3A78F00FCA996 /* GCD.swift */,
+				E9B825012BF591DC0012EA07 /* GCD2.swift */,
 				E9DD91002BF3E117007CDE62 /* Lock.swift */,
 				E9DD91022BF3E91F007CDE62 /* ErasureType.swift */,
 				E9A5F2602BF435AC00A23A60 /* Actor.swift */,
@@ -187,6 +193,7 @@
 			files = (
 				E906FC402BF3085600094393 /* Dispatch2.swift in Sources */,
 				E9D55B1E2BF3952C00FCA996 /* Clousers.swift in Sources */,
+				E9B825022BF591DC0012EA07 /* GCD2.swift in Sources */,
 				E906FC3C2BF3020B00094393 /* DataTest.swift in Sources */,
 				E9B825002BF583580012EA07 /* Deffer.swift in Sources */,
 				E906FC292BF2FCD700094393 /* ViewController.swift in Sources */,
@@ -198,6 +205,7 @@
 				E9A5F2612BF435AC00A23A60 /* Actor.swift in Sources */,
 				E906FC3E2BF307A600094393 /* Dispatch1.swift in Sources */,
 				E9D55B242BF39F5800FCA996 /* Dispatch3.swift in Sources */,
+				E9B825042BF59C610012EA07 /* Dispatch4.swift in Sources */,
 				E906FC272BF2FCD700094393 /* SceneDelegate.swift in Sources */,
 				E9D55B222BF39BD700FCA996 /* DidSet.swift in Sources */,
 				E906FC3A2BF2FE3F00094393 /* ValueReference.swift in Sources */,

@@ -41,9 +41,16 @@ class Dispatch3 {
 //        str.play()
 //        str.stop()
         
-        let str1: Playable = PlayableStruct()
+        let str1 = PlayableStruct()
         str1.play()
         str1.stop()
+        
+        testFunction(obj: str1)
+    }
+    
+    func testFunction(obj: Playable) {
+        obj.play()
+        obj.stop()
     }
 }
 
