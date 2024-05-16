@@ -21,26 +21,27 @@ extension Playable {
     }
 }
 
-struct Player: Playable {
+struct PlayableStruct: Playable {
     func play() {
         print("play in struct")
     }
+    
     func stop() {
         print("stop in struct")
     }
 }
 
-extension Player {
+extension PlayableStruct {
 
 }
 
 class Dispatch3 {
     func test() {
-        let str = Player()
-        str.play()
-        str.stop()
+//        let str = PlayableClass()
+//        str.play()
+//        str.stop()
         
-        let str1: Playable = Player()
+        let str1: Playable = PlayableStruct()
         str1.play()
         str1.stop()
     }

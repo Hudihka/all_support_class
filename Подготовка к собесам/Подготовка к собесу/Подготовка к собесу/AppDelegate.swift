@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let testClass = Lock()
+        let testClass = Dispatch3()
         
-//        testClass.test1()
+        testClass.test()
 //        testClass.test2()
 //        testClass.test3()
 //        testClass.test4()
@@ -28,11 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        print("-------------------")
 //        testClass.test2()
         
-        print("=========0")
-        let test = ViewController()
-        print("=========1")
-//        let _ = test.view
-        print("=========2")
         
         return true
     }

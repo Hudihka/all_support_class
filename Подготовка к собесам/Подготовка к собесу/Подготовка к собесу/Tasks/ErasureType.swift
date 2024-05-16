@@ -14,7 +14,7 @@ protocol TestProtocol {
     func set(value: T)
 }
 
-struct TestStruct: TestProtocol {
+struct TestStruct0: TestProtocol {
     typealias T = Int
     
     var value: Int {
@@ -26,16 +26,46 @@ struct TestStruct: TestProtocol {
     }
 }
 
-class ErasureType {}
+struct TestStruct1: TestProtocol {
+    typealias T = Int
+    
+    var value: Int {
+        1
+    }
+    
+    func set(value: Int) {
+        print(value)
+    }
+}
+
+class AnyTestProtocol<T>: TestProtocol {
+    private var _value: T
+    
+    var value: T {
+        _value
+    }
+    
+    func set(value: T) { }
+    
+    init<U: TestProtocol>(_ base: U) where U.T == T {
+        _value = base.value
+    }
+}
+
+
+
 
 class ErasureTypeTest {
-    var array: [any TestProtocol] = []
-    
-    private func add(value: any TestProtocol) {
-        array.append(value)
-    }
-    
-    func test() {
-        add(value: TestStruct())
-    }
+//    var array: [ErasureTest] = []
+//    
+//    private func add(value: ErasureType) {
+//        array.append(value)
+//    }
+//    
+//    func test() {
+//        add(value: ErasureTest)
+//        add(value: <#T##ErasureType#>)
+//        
+//        array.forEach({ print($0.value) })
+//    }
 }

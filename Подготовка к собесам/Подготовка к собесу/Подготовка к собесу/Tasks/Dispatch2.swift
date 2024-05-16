@@ -12,11 +12,29 @@ protocol Drawing: AnyObject {
 }
 
 extension Drawing {
-    func circle() { print("protocol") }
-    func render() { circle() }
+    func circle() {
+        print("protocol")
+    }
+    
+    func render() {
+        circle()
+    }
 }
 
 class SWG: Drawing {
     func circle() { print("class") }
 }
 
+class Dispatch2 {
+    func test() {
+        let SWG = SWG()
+        print(SWG.circle())
+        print(SWG.render())
+        //
+        
+//        let SWG2: Drawing = SWG()
+//        
+//        print(SWG2.circle())
+//        print(SWG2.render())
+    }
+}
