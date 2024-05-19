@@ -14,12 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let testClass = Dispatch4()
+//        let testClass = Dispatch3()
         
 //        testClass.test1()
+//        testClass.test()
 //        testClass.test2()
-//        testClass.test3()
-        testClass.test4()
+//        testClass.test4()
 //        testClass.test5()
 //        testClass.test6()
 //        testClass.test7()

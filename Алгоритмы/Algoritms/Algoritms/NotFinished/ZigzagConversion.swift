@@ -66,7 +66,7 @@ final class ZigzagConversion: TesterProtocol {
 //    }
     
     func test() {
-        print(convert(numRows: 4))
+//        print(convert(numRows: 4))
 //        print(
 //            convert(numRows: 3)
 //        )

@@ -28,6 +28,18 @@ class ValueReference {
         }
     }
     
+    struct StructA: NSCopying {
+        var iVar: Int = 0
+
+        init(iVar: Int) {
+            self.iVar = iVar
+        }
+        
+        func copy(with zone: NSZone? = nil) -> Any {
+            self
+        }
+    }
+    
     init() {}
     
     func test1() {

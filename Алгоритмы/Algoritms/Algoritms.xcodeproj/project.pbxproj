@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E90232342BE81FCD000F671A /* TrappingRainWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90232332BE81FCD000F671A /* TrappingRainWater.swift */; };
+		E9966C222BF7F89B00F26292 /* TwoSumInputArrayIsSorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9966C212BF7F89B00F26292 /* TwoSumInputArrayIsSorted.swift */; };
+		E9966C242BF7FFF700F26292 /* ContainerWithMostWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9966C232BF7FFF700F26292 /* ContainerWithMostWater.swift */; };
+		E9966C262BF80A5F00F26292 /* 3Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9966C252BF80A5F00F26292 /* 3Sum.swift */; };
 		E99F0DCD2BE4571300925FEB /* H-index.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DCC2BE4571300925FEB /* H-index.swift */; };
 		E99F0DCF2BE45BC900925FEB /* InsertDeleteGetRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */; };
 		E99F0DD12BE45FDE00925FEB /* ProductArrayExceptSelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		E90232332BE81FCD000F671A /* TrappingRainWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrappingRainWater.swift; sourceTree = "<group>"; };
+		E9966C212BF7F89B00F26292 /* TwoSumInputArrayIsSorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSumInputArrayIsSorted.swift; sourceTree = "<group>"; };
+		E9966C232BF7FFF700F26292 /* ContainerWithMostWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerWithMostWater.swift; sourceTree = "<group>"; };
+		E9966C252BF80A5F00F26292 /* 3Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3Sum.swift; sourceTree = "<group>"; };
 		E99F0DCC2BE4571300925FEB /* H-index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "H-index.swift"; sourceTree = "<group>"; };
 		E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDeleteGetRandom.swift; sourceTree = "<group>"; };
 		E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArrayExceptSelf.swift; sourceTree = "<group>"; };
@@ -59,6 +65,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9966C1F2BF7F82F00F26292 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AE602BE328C1002E09EE /* JumpGame.swift */,
+				E9B1E9A92BED8B3F004489F5 /* LongestCommonPrefix.swift */,
+				E9D7AE652BE32B32002E09EE /* JumpGameII.swift */,
+				E99F0DCC2BE4571300925FEB /* H-index.swift */,
+				E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */,
+				E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */,
+				E99F0DD22BE46A3D00925FEB /* GasStation.swift */,
+				E90232332BE81FCD000F671A /* TrappingRainWater.swift */,
+				E9B1E9A52BEC570C004489F5 /* RomanToInteger.swift */,
+				E9B1E9A72BEC6290004489F5 /* IntegerToRoman.swift */,
+				E9BC92072BF19B16008519C7 /* TextJustification.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		E9966C202BF7F86600F26292 /* TwoPointers */ = {
+			isa = PBXGroup;
+			children = (
+				E9966C212BF7F89B00F26292 /* TwoSumInputArrayIsSorted.swift */,
+				E9966C232BF7FFF700F26292 /* ContainerWithMostWater.swift */,
+				E9966C252BF80A5F00F26292 /* 3Sum.swift */,
+			);
+			path = TwoPointers;
+			sourceTree = "<group>";
+		};
 		E9BC92062BF19AA3008519C7 /* NotFinished */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,17 +135,8 @@
 		E9D7AE622BE328F0002E09EE /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				E9D7AE602BE328C1002E09EE /* JumpGame.swift */,
-				E9B1E9A92BED8B3F004489F5 /* LongestCommonPrefix.swift */,
-				E9D7AE652BE32B32002E09EE /* JumpGameII.swift */,
-				E99F0DCC2BE4571300925FEB /* H-index.swift */,
-				E99F0DCE2BE45BC900925FEB /* InsertDeleteGetRandom.swift */,
-				E99F0DD02BE45FDE00925FEB /* ProductArrayExceptSelf.swift */,
-				E99F0DD22BE46A3D00925FEB /* GasStation.swift */,
-				E90232332BE81FCD000F671A /* TrappingRainWater.swift */,
-				E9B1E9A52BEC570C004489F5 /* RomanToInteger.swift */,
-				E9B1E9A72BEC6290004489F5 /* IntegerToRoman.swift */,
-				E9BC92072BF19B16008519C7 /* TextJustification.swift */,
+				E9966C202BF7F86600F26292 /* TwoPointers */,
+				E9966C1F2BF7F82F00F26292 /* Array */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -191,13 +216,16 @@
 				E9D7AE642BE328FF002E09EE /* Tester.swift in Sources */,
 				E9B1E9AC2BED9265004489F5 /* ZigzagConversion.swift in Sources */,
 				E9BC92082BF19B16008519C7 /* TextJustification.swift in Sources */,
+				E9966C222BF7F89B00F26292 /* TwoSumInputArrayIsSorted.swift in Sources */,
 				E99F0DCF2BE45BC900925FEB /* InsertDeleteGetRandom.swift in Sources */,
+				E9966C262BF80A5F00F26292 /* 3Sum.swift in Sources */,
 				E90232342BE81FCD000F671A /* TrappingRainWater.swift in Sources */,
 				E9D7AE4D2BE32889002E09EE /* AppDelegate.swift in Sources */,
 				E9D7AE612BE328C1002E09EE /* JumpGame.swift in Sources */,
 				E9B1E9A82BEC6290004489F5 /* IntegerToRoman.swift in Sources */,
 				E9B1E9AA2BED8B3F004489F5 /* LongestCommonPrefix.swift in Sources */,
 				E99F0DD12BE45FDE00925FEB /* ProductArrayExceptSelf.swift in Sources */,
+				E9966C242BF7FFF700F26292 /* ContainerWithMostWater.swift in Sources */,
 				E9D7AE662BE32B32002E09EE /* JumpGameII.swift in Sources */,
 				E99F0DCD2BE4571300925FEB /* H-index.swift in Sources */,
 				E9B1E9A62BEC570C004489F5 /* RomanToInteger.swift in Sources */,

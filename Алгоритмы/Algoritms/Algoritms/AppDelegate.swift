@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         print("-------------------------")
-        ZigzagConversion().test()
+        Sum3().test()
         print("-------------------------")
         
         return true
