@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         print("-------------------------")
-        Sum3().test()
+        MajorityElement().test()
         print("-------------------------")
         
         return true
