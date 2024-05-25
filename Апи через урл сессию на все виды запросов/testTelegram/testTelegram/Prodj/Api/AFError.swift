@@ -12,9 +12,7 @@ struct AFError {
     let message: String?
 
     enum ErrorType: String {
-
         case decodable
-
         case other
     }
 
