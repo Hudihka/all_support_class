@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public extension UIColor {
-    public convenience init(hex: String, alpha: CGFloat? = nil) {
+    convenience init(hex: String, alpha: CGFloat? = nil) {
         let r, g, b, a: CGFloat
 
         var mutableString = hex
