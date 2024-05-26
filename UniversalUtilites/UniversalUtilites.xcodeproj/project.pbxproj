@@ -31,6 +31,11 @@
 		E9EC7C8C2C038E52002949FC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C8B2C038E52002949FC /* SnapKit */; };
 		E9EC7C8E2C038E52002949FC /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C8D2C038E52002949FC /* SnapKit-Dynamic */; };
 		E9EC7C902C038E71002949FC /* UIView+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C8F2C038E71002949FC /* UIView+SnapKit.swift */; };
+		E9EC7C922C0391DD002949FC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C912C0391DD002949FC /* String.swift */; };
+		E9EC7C952C0392EF002949FC /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C942C0392EF002949FC /* UIApplication.swift */; };
+		E9EC7C972C0393AE002949FC /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C962C0393AE002949FC /* UIWindow.swift */; };
+		E9EC7C992C0394DE002949FC /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C982C0394DE002949FC /* UITextField.swift */; };
+		E9EC7C9B2C03953A002949FC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C9A2C03953A002949FC /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		E9EC7C852C038711002949FC /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E9EC7C872C0388F4002949FC /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		E9EC7C8F2C038E71002949FC /* UIView+SnapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SnapKit.swift"; sourceTree = "<group>"; };
+		E9EC7C912C0391DD002949FC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E9EC7C942C0392EF002949FC /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		E9EC7C962C0393AE002949FC /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		E9EC7C982C0394DE002949FC /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		E9EC7C9A2C03953A002949FC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,7 @@
 		E92FA0F82C0287AC009323B5 = {
 			isa = PBXGroup;
 			children = (
+				E9EC7C932C0391E5002949FC /* Utilits */,
 				E92FA1182C0289DE009323B5 /* UI */,
 				E92FA1032C0287AC009323B5 /* UniversalUtilites */,
 				E92FA1022C0287AC009323B5 /* Products */,
@@ -117,6 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				E92FA11B2C028CA3009323B5 /* UIColor.swift */,
+				E9EC7C942C0392EF002949FC /* UIApplication.swift */,
+				E9EC7C962C0393AE002949FC /* UIWindow.swift */,
+				E9EC7C982C0394DE002949FC /* UITextField.swift */,
+				E9EC7C9A2C03953A002949FC /* UIStackView.swift */,
 				E9EC7C872C0388F4002949FC /* UIEdgeInsets.swift */,
 				E9EC7C832C038548002949FC /* UIImage.swift */,
 				E9EC7C822C038527002949FC /* UIImageView */,
@@ -169,6 +184,14 @@
 				E9EC7C8F2C038E71002949FC /* UIView+SnapKit.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		E9EC7C932C0391E5002949FC /* Utilits */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC7C912C0391DD002949FC /* String.swift */,
+			);
+			path = Utilits;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,20 +277,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EC7C952C0392EF002949FC /* UIApplication.swift in Sources */,
 				E92FA11E2C028D36009323B5 /* UILabel.swift in Sources */,
 				E92FA1092C0287AC009323B5 /* ViewController.swift in Sources */,
 				E92FA1282C02A15F009323B5 /* UIClosureButton.swift in Sources */,
 				E9EC7C862C038711002949FC /* UIImageView.swift in Sources */,
 				E9EC7C902C038E71002949FC /* UIView+SnapKit.swift in Sources */,
 				E92FA1232C029671009323B5 /* UILabel+FewStyle.swift in Sources */,
+				E9EC7C9B2C03953A002949FC /* UIStackView.swift in Sources */,
 				E92FA11C2C028CA3009323B5 /* UIColor.swift in Sources */,
 				E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */,
+				E9EC7C972C0393AE002949FC /* UIWindow.swift in Sources */,
+				E9EC7C992C0394DE002949FC /* UITextField.swift in Sources */,
 				E92FA1052C0287AC009323B5 /* AppDelegate.swift in Sources */,
 				E92FA1202C028D63009323B5 /* UIView.swift in Sources */,
 				E9EC7C762C02A882002949FC /* UIFont.swift in Sources */,
 				E9EC7C842C038548002949FC /* UIImage.swift in Sources */,
 				E92FA1072C0287AC009323B5 /* SceneDelegate.swift in Sources */,
 				E9EC7C882C0388F4002949FC /* UIEdgeInsets.swift in Sources */,
+				E9EC7C922C0391DD002949FC /* String.swift in Sources */,
 				E9EC7C812C0378FC002949FC /* UIImageView+Nuke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
