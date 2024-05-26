@@ -95,28 +95,6 @@ public extension UIView {
         return self
     }
     
-    
-    //     func pinEdgesToSuperviewEdges(withOffset offset: CGFloat) {
-    //         self.pinEdgesToSuperviewEdges(top: offset, left: offset, bottom: offset, right: offset)
-    //     }
-    
-    //     func pinEdgesToSuperviewEdges(
-    //         top: CGFloat = 0,
-    //         left: CGFloat = 0,
-    //         bottom: CGFloat = 0,
-    //         right: CGFloat = 0
-    //     ) {
-    //         guard let superview = superview else {
-    //             return
-    //         }
-    //         snp.makeConstraints { make in
-    //             make.top.equalTo(superview.snp.top).offset(top)
-    //             make.bottom.equalTo(superview.snp.bottom).offset(-bottom)
-    //             make.left.equalTo(superview.snp.left).offset(left)
-    //             make.right.equalTo(superview.snp.right).offset(-right)
-    //         }
-    //     }
-    
     @discardableResult
     func addShadow(
         offset: CGSize = CGSize(width: 0, height: 0),
@@ -158,9 +136,9 @@ public extension UIView {
     }
     
     @discardableResult
-    func addBorder(number: CGFloat, color: UIColor) -> Self {
+    func addBorder(number: CGFloat, color: UIColor?) -> Self {
         layer.borderWidth = number
-        layer.borderColor = color.cgColor
+        layer.borderColor = color?.cgColor
         layer.masksToBounds = true
         
         return self

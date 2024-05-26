@@ -1,5 +1,5 @@
 //
-//  UIImage+Nuke.swift
+//  UIImageView+Nuke.swift
 //  UniversalUtilites
 //
 //  Created by Худышка К on 26.05.2024.
