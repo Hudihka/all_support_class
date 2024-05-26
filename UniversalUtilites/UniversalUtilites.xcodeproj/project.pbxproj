@@ -36,6 +36,7 @@
 		E9EC7C972C0393AE002949FC /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C962C0393AE002949FC /* UIWindow.swift */; };
 		E9EC7C992C0394DE002949FC /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C982C0394DE002949FC /* UITextField.swift */; };
 		E9EC7C9B2C03953A002949FC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C9A2C03953A002949FC /* UIStackView.swift */; };
+		E9EC7C9D2C039789002949FC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C9C2C039789002949FC /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		E9EC7C962C0393AE002949FC /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		E9EC7C982C0394DE002949FC /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		E9EC7C9A2C03953A002949FC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		E9EC7C9C2C039789002949FC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		E92FA11A2C028A20009323B5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9EC7C9C2C039789002949FC /* Constant.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				E92FA11C2C028CA3009323B5 /* UIColor.swift in Sources */,
 				E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */,
 				E9EC7C972C0393AE002949FC /* UIWindow.swift in Sources */,
+				E9EC7C9D2C039789002949FC /* Constant.swift in Sources */,
 				E9EC7C992C0394DE002949FC /* UITextField.swift in Sources */,
 				E92FA1052C0287AC009323B5 /* AppDelegate.swift in Sources */,
 				E92FA1202C028D63009323B5 /* UIView.swift in Sources */,
