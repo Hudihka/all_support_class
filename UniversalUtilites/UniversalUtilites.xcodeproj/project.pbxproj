@@ -20,6 +20,10 @@
 		E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1242C029AD2009323B5 /* UIButton.swift */; };
 		E92FA1282C02A15F009323B5 /* UIClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1272C02A15F009323B5 /* UIClosureButton.swift */; };
 		E9EC7C762C02A882002949FC /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C752C02A882002949FC /* UIFont.swift */; };
+		E9EC7C792C02BC31002949FC /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C782C02BC31002949FC /* Nuke */; };
+		E9EC7C7B2C02BC31002949FC /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C7A2C02BC31002949FC /* NukeExtensions */; };
+		E9EC7C7D2C02BC31002949FC /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C7C2C02BC31002949FC /* NukeUI */; };
+		E9EC7C7F2C02BC31002949FC /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C7E2C02BC31002949FC /* NukeVideo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EC7C7D2C02BC31002949FC /* NukeUI in Frameworks */,
+				E9EC7C792C02BC31002949FC /* Nuke in Frameworks */,
+				E9EC7C7B2C02BC31002949FC /* NukeExtensions in Frameworks */,
+				E9EC7C7F2C02BC31002949FC /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +152,12 @@
 			dependencies = (
 			);
 			name = UniversalUtilites;
+			packageProductDependencies = (
+				E9EC7C782C02BC31002949FC /* Nuke */,
+				E9EC7C7A2C02BC31002949FC /* NukeExtensions */,
+				E9EC7C7C2C02BC31002949FC /* NukeUI */,
+				E9EC7C7E2C02BC31002949FC /* NukeVideo */,
+			);
 			productName = UniversalUtilites;
 			productReference = E92FA1012C0287AC009323B5 /* UniversalUtilites.app */;
 			productType = "com.apple.product-type.application";
@@ -172,6 +186,9 @@
 				Base,
 			);
 			mainGroup = E92FA0F82C0287AC009323B5;
+			packageReferences = (
+				E9EC7C772C02BC31002949FC /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = E92FA1022C0287AC009323B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -433,6 +450,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9EC7C772C02BC31002949FC /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9EC7C782C02BC31002949FC /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9EC7C772C02BC31002949FC /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		E9EC7C7A2C02BC31002949FC /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9EC7C772C02BC31002949FC /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		E9EC7C7C2C02BC31002949FC /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9EC7C772C02BC31002949FC /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		E9EC7C7E2C02BC31002949FC /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9EC7C772C02BC31002949FC /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E92FA0F92C0287AC009323B5 /* Project object */;
 }
