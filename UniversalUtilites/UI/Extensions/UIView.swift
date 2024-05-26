@@ -8,6 +8,30 @@
 import Foundation
 import UIKit
 
+private var TapActionKey: UInt8 = 0
+
+public extension UIView {
+    private var tapAction: (() -> Void)? {
+        get {
+            return objc_getAssociatedObject(self, &TapActionKey) as? (() -> Void)
+        }
+        set {
+            objc_setAssociatedObject(self, &TapActionKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    func addTapGestureRecognizer(action: @escaping () -> Void) {
+        tapAction = action
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        addGestureRecognizer(tapGesture)
+        isUserInteractionEnabled = true // Обязательно для распознавания жестов
+    }
+    
+    @objc private func handleTap() {
+        tapAction?()
+    }
+}
+
 public extension UIView {
     var widthView: CGFloat {
         frame.width

@@ -16,6 +16,10 @@
 		E92FA11C2C028CA3009323B5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA11B2C028CA3009323B5 /* UIColor.swift */; };
 		E92FA11E2C028D36009323B5 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA11D2C028D36009323B5 /* UILabel.swift */; };
 		E92FA1202C028D63009323B5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA11F2C028D63009323B5 /* UIView.swift */; };
+		E92FA1232C029671009323B5 /* UILabel+FewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1222C029671009323B5 /* UILabel+FewStyle.swift */; };
+		E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1242C029AD2009323B5 /* UIButton.swift */; };
+		E92FA1282C02A15F009323B5 /* UIClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1272C02A15F009323B5 /* UIClosureButton.swift */; };
+		E9EC7C762C02A882002949FC /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C752C02A882002949FC /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		E92FA11B2C028CA3009323B5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		E92FA11D2C028D36009323B5 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		E92FA11F2C028D63009323B5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E92FA1222C029671009323B5 /* UILabel+FewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+FewStyle.swift"; sourceTree = "<group>"; };
+		E92FA1242C029AD2009323B5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		E92FA1272C02A15F009323B5 /* UIClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIClosureButton.swift; sourceTree = "<group>"; };
+		E9EC7C752C02A882002949FC /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				E92FA11B2C028CA3009323B5 /* UIColor.swift */,
-				E92FA11D2C028D36009323B5 /* UILabel.swift */,
+				E9EC7C752C02A882002949FC /* UIFont.swift */,
+				E92FA1212C029636009323B5 /* UILabel */,
 				E92FA11F2C028D63009323B5 /* UIView.swift */,
+				E92FA1262C02A149009323B5 /* UIButton */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -98,6 +108,24 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E92FA1212C029636009323B5 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				E92FA11D2C028D36009323B5 /* UILabel.swift */,
+				E92FA1222C029671009323B5 /* UILabel+FewStyle.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		E92FA1262C02A149009323B5 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				E92FA1242C029AD2009323B5 /* UIButton.swift */,
+				E92FA1272C02A15F009323B5 /* UIClosureButton.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +201,13 @@
 			files = (
 				E92FA11E2C028D36009323B5 /* UILabel.swift in Sources */,
 				E92FA1092C0287AC009323B5 /* ViewController.swift in Sources */,
+				E92FA1282C02A15F009323B5 /* UIClosureButton.swift in Sources */,
+				E92FA1232C029671009323B5 /* UILabel+FewStyle.swift in Sources */,
 				E92FA11C2C028CA3009323B5 /* UIColor.swift in Sources */,
+				E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */,
 				E92FA1052C0287AC009323B5 /* AppDelegate.swift in Sources */,
 				E92FA1202C028D63009323B5 /* UIView.swift in Sources */,
+				E9EC7C762C02A882002949FC /* UIFont.swift in Sources */,
 				E92FA1072C0287AC009323B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,6 +397,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
