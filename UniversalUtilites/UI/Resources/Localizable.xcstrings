@@ -1,0 +1,28 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "viewController.test1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "это тест 1"
+          }
+        }
+      }
+    },
+    "viewController.test2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "это тест 2"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

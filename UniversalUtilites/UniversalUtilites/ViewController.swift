@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             $0.top.left.right.equalToSuperview().inset(100)
         })
         
-        label.text = "test text"
+        label.text = NSLocalizedString("viewController.test1", comment: "table view source")
         
         view.backgroundColor = UIColor(named: "testColor1")
     }

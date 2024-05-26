@@ -20,6 +20,7 @@
 		E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1242C029AD2009323B5 /* UIButton.swift */; };
 		E92FA1282C02A15F009323B5 /* UIClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1272C02A15F009323B5 /* UIClosureButton.swift */; };
 		E9C8BBF72C03B89400058AA6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C8BBF62C03B89400058AA6 /* Colors.xcassets */; };
+		E9C8BBF92C03C46700058AA6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E9C8BBF82C03C46700058AA6 /* Localizable.xcstrings */; };
 		E9EC7C762C02A882002949FC /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C752C02A882002949FC /* UIFont.swift */; };
 		E9EC7C792C02BC31002949FC /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C782C02BC31002949FC /* Nuke */; };
 		E9EC7C7B2C02BC31002949FC /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = E9EC7C7A2C02BC31002949FC /* NukeExtensions */; };
@@ -56,6 +57,7 @@
 		E92FA1242C029AD2009323B5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		E92FA1272C02A15F009323B5 /* UIClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIClosureButton.swift; sourceTree = "<group>"; };
 		E9C8BBF62C03B89400058AA6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E9C8BBF82C03C46700058AA6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E9EC7C752C02A882002949FC /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		E9EC7C802C0378FC002949FC /* UIImageView+Nuke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nuke.swift"; sourceTree = "<group>"; };
 		E9EC7C832C038548002949FC /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				E9EC7C9C2C039789002949FC /* Constant.swift */,
+				E9C8BBF82C03C46700058AA6 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E92FA1112C0287AD009323B5 /* LaunchScreen.storyboard in Resources */,
+				E9C8BBF92C03C46700058AA6 /* Localizable.xcstrings in Resources */,
 				E9C8BBF72C03B89400058AA6 /* Colors.xcassets in Resources */,
 				E92FA10E2C0287AD009323B5 /* Assets.xcassets in Resources */,
 				E92FA10C2C0287AC009323B5 /* Main.storyboard in Resources */,
