@@ -31,3 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// ИНструкция для свифтГена
+
+// устанавливааем свифтГена через хомеБрев
+//$ brew update
+//$ brew install swiftgen
+
+// генерируем ямл файл в дир проэкта
+// swiftgen config init
+// файл расположится в дир проэкта
+
+// открываем свифтГен файл и раскоменчиваем нужное
