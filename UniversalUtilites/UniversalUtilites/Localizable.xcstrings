@@ -22,6 +22,17 @@
           }
         }
       }
+    },
+    "viewController.test3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "это тест 3"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -19,6 +19,7 @@
 		E92FA1232C029671009323B5 /* UILabel+FewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1222C029671009323B5 /* UILabel+FewStyle.swift */; };
 		E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1242C029AD2009323B5 /* UIButton.swift */; };
 		E92FA1282C02A15F009323B5 /* UIClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FA1272C02A15F009323B5 /* UIClosureButton.swift */; };
+		E94D1AE52C06055C000B0F6A /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94D1AE42C06055C000B0F6A /* Strings+Generated.swift */; };
 		E9C8BBF72C03B89400058AA6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C8BBF62C03B89400058AA6 /* Colors.xcassets */; };
 		E9C8BBF92C03C46700058AA6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E9C8BBF82C03C46700058AA6 /* Localizable.xcstrings */; };
 		E9EC7C762C02A882002949FC /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC7C752C02A882002949FC /* UIFont.swift */; };
@@ -56,6 +57,7 @@
 		E92FA1222C029671009323B5 /* UILabel+FewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+FewStyle.swift"; sourceTree = "<group>"; };
 		E92FA1242C029AD2009323B5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		E92FA1272C02A15F009323B5 /* UIClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIClosureButton.swift; sourceTree = "<group>"; };
+		E94D1AE42C06055C000B0F6A /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = SOURCE_ROOT; };
 		E9C8BBF62C03B89400058AA6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E9C8BBF82C03C46700058AA6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E9EC7C752C02A882002949FC /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		E92FA1032C0287AC009323B5 /* UniversalUtilites */ = {
 			isa = PBXGroup;
 			children = (
+				E94D1AE42C06055C000B0F6A /* Strings+Generated.swift */,
 				E92FA1042C0287AC009323B5 /* AppDelegate.swift */,
 				E92FA1062C0287AC009323B5 /* SceneDelegate.swift */,
 				E92FA1082C0287AC009323B5 /* ViewController.swift */,
@@ -117,6 +120,7 @@
 				E92FA10D2C0287AD009323B5 /* Assets.xcassets */,
 				E9C8BBF62C03B89400058AA6 /* Colors.xcassets */,
 				E92FA10F2C0287AD009323B5 /* LaunchScreen.storyboard */,
+				E9C8BBF82C03C46700058AA6 /* Localizable.xcstrings */,
 				E92FA1122C0287AD009323B5 /* Info.plist */,
 			);
 			path = UniversalUtilites;
@@ -154,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				E9EC7C9C2C039789002949FC /* Constant.swift */,
-				E9C8BBF82C03C46700058AA6 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				E9EC7C9B2C03953A002949FC /* UIStackView.swift in Sources */,
 				E92FA11C2C028CA3009323B5 /* UIColor.swift in Sources */,
 				E92FA1252C029AD2009323B5 /* UIButton.swift in Sources */,
+				E94D1AE52C06055C000B0F6A /* Strings+Generated.swift in Sources */,
 				E9EC7C972C0393AE002949FC /* UIWindow.swift in Sources */,
 				E9EC7C9D2C039789002949FC /* Constant.swift in Sources */,
 				E9EC7C992C0394DE002949FC /* UITextField.swift in Sources */,

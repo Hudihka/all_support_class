@@ -42,3 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // файл расположится в дир проэкта
 
 // открываем свифтГен файл и раскоменчиваем нужное
+
+// вводим в консоль swiftgen config lint
+
+// далее команда генерации swiftgen
