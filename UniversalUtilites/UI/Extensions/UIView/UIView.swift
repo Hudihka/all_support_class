@@ -47,7 +47,7 @@ public extension UIView {
         }
     }
     
-    var isNotHiden: Bool {
+    var isNotHidden: Bool {
         !isHidden
     }
     
@@ -211,15 +211,15 @@ public extension UIView {
     }
     
     @discardableResult
-    func setNotHiden(_ isNotHiden: Bool) -> Self  {
-        self.isHidden = !isNotHiden
+    func setNotHidden(_ isNotHidden: Bool) -> Self  {
+        self.isHidden = !isNotHidden
         
         return self
     }
     
     @discardableResult
-    func setHiden(_ isHiden: Bool) -> Self  {
-        self.isHidden = isHiden
+    func setHidden(_ isHidden: Bool) -> Self  {
+        self.isHidden = isHidden
         
         return self
     }
