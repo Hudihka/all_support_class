@@ -50,4 +50,24 @@ public extension UIView {
         return self
     }
     
+    @discardableResult
+    func addOnWith(edge: UIEdgeInsets) -> Self {
+        self.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(edge.top)
+            $0.bottom.equalToSuperview().inset(edge.bottom)
+            $0.left.equalToSuperview().inset(edge.left)
+            $0.right.equalToSuperview().inset(edge.right)
+        }
+        
+        return self
+    }
+    
+    @discardableResult
+    func addOnEqualToSuperview() -> Self {
+        self.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        return self
+    }
 }

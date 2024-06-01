@@ -55,4 +55,10 @@ public extension UIStackView {
         views.forEach(addArrangedSubview)
         return self
     }
+    
+    @discardableResult
+    func axis(_ axis: NSLayoutConstraint.Axis) -> Self {
+        self.axis = axis
+        return self
+    }
 }

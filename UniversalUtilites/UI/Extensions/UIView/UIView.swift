@@ -20,11 +20,14 @@ public extension UIView {
         }
     }
     
-    func addTapGestureRecognizer(action: @escaping () -> Void) {
+    @discardableResult
+    func addTapGestureRecognizer(action: @escaping () -> Void) -> Self {
         tapAction = action
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         addGestureRecognizer(tapGesture)
         isUserInteractionEnabled = true // Обязательно для распознавания жестов
+        
+        return self
     }
     
     @objc private func handleTap() {
@@ -59,6 +62,12 @@ public extension UIView {
             return self
         }
         self.backgroundColor = color
+        return self
+    }
+    
+    @discardableResult
+    func setClipsToBounds(_ clipsToBounds: Bool) -> Self {
+        self.clipsToBounds = clipsToBounds
         return self
     }
     
@@ -220,6 +229,13 @@ public extension UIView {
     @discardableResult
     func setHidden(_ isHidden: Bool) -> Self  {
         self.isHidden = isHidden
+        
+        return self
+    }
+    
+    @discardableResult
+    func setTintColor(_ color: UIColor) -> Self  {
+        self.tintColor = color
         
         return self
     }

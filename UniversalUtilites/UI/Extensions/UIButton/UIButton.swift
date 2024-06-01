@@ -20,9 +20,15 @@ public extension UIButton {
         }
     }
     
-    func addAction(for controlEvents: UIControl.Event = .touchUpInside, _ closure: @escaping () -> Void) {
+    @discardableResult
+    func addAction(
+        for controlEvents: UIControl.Event = .touchUpInside,
+        _ closure: @escaping () -> Void
+    ) -> Self {
         action = closure
         addTarget(self, action: #selector(triggerAction), for: controlEvents)
+        
+        return self
     }
     
     @objc private func triggerAction() {
@@ -58,6 +64,18 @@ public extension UIButton {
     @discardableResult
     func titleFont(_ newValue: UIFont?) -> Self {
         titleLabel?.font = newValue
+        return self
+    }
+    
+    @discardableResult
+    func setContentEdgeInsets(_ contentEdgeInsets: UIEdgeInsets) -> Self {
+        self.contentEdgeInsets = contentEdgeInsets
+        return self
+    }
+    
+    @discardableResult
+    func setEnable(_ enable: Bool) -> Self {
+        self.isEnabled = enable
         return self
     }
 }
