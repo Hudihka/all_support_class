@@ -10,6 +10,13 @@ import SnapKit
 import UIKit
 
 public extension UIView {
+    enum Side: CaseIterable {
+        case top
+        case bottom
+        case leading
+        case trailing
+    }
+    
     @discardableResult
     func changePositionOnSuperview(edge: UIEdgeInsets) -> Self {
         guard let superview = superview else {
@@ -18,8 +25,8 @@ public extension UIView {
         snp.makeConstraints {
             $0.top.equalToSuperview().inset(edge.top)
             $0.bottom.equalToSuperview().inset(edge.bottom)
-            $0.left.equalToSuperview().inset(edge.left)
-            $0.right.equalToSuperview().inset(edge.right)
+            $0.leading.equalToSuperview().inset(edge.left)
+            $0.trailing.equalToSuperview().inset(edge.right)
         }
         
         return self
@@ -32,8 +39,8 @@ public extension UIView {
         view.snp.makeConstraints {
             $0.top.equalToSuperview().inset(edge.top)
             $0.bottom.equalToSuperview().inset(edge.bottom)
-            $0.left.equalToSuperview().inset(edge.left)
-            $0.right.equalToSuperview().inset(edge.right)
+            $0.leading.equalToSuperview().inset(edge.left)
+            $0.trailing.equalToSuperview().inset(edge.right)
         }
         
         return self
@@ -55,8 +62,8 @@ public extension UIView {
         self.snp.makeConstraints {
             $0.top.equalToSuperview().inset(edge.top)
             $0.bottom.equalToSuperview().inset(edge.bottom)
-            $0.left.equalToSuperview().inset(edge.left)
-            $0.right.equalToSuperview().inset(edge.right)
+            $0.leading.equalToSuperview().inset(edge.left)
+            $0.trailing.equalToSuperview().inset(edge.right)
         }
         
         return self
@@ -66,6 +73,106 @@ public extension UIView {
     func addOnEqualToSuperview() -> Self {
         self.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        
+        return self
+    }
+    
+    @discardableResult
+    func addOnEqualToSuperview(view: UIView, withOut: Side..., compl: () -> Void) -> Self {
+        self.addSubview(view)
+        
+        let need = Side.allCases.filter({ !withOut.contains($0) })
+        
+        view.snp.makeConstraints { make in
+            
+            need.forEach({
+                switch $0 {
+                case .bottom:
+                    make.bottom.equalToSuperview()
+                case .top:
+                    make.top.equalToSuperview()
+                case .leading:
+                    make.leading.equalToSuperview()
+                case .trailing:
+                    make.trailing.equalToSuperview()
+                }
+            })
+            
+            compl()
+        }
+        
+        return self
+    }
+    
+    @discardableResult
+    func addOnEqualToSuperview(view: UIView, withOut: Side...) -> Self {
+        self.addSubview(view)
+        
+        let need = Side.allCases.filter({ !withOut.contains($0) })
+        
+        view.snp.makeConstraints { make in
+            
+            need.forEach({
+                switch $0 {
+                case .bottom:
+                    make.bottom.equalToSuperview()
+                case .top:
+                    make.top.equalToSuperview()
+                case .leading:
+                    make.leading.equalToSuperview()
+                case .trailing:
+                    make.trailing.equalToSuperview()
+                }
+            })
+        }
+        
+        return self
+    }
+    
+    @discardableResult
+    func addOnEqualToSuperview(withOut: Side..., compl: () -> Void) -> Self {
+        let need = Side.allCases.filter({ !withOut.contains($0) })
+        
+        self.snp.makeConstraints { make in
+            
+            need.forEach({
+                switch $0 {
+                case .bottom:
+                    make.bottom.equalToSuperview()
+                case .top:
+                    make.top.equalToSuperview()
+                case .leading:
+                    make.leading.equalToSuperview()
+                case .trailing:
+                    make.trailing.equalToSuperview()
+                }
+            })
+            
+            compl()
+        }
+        
+        return self
+    }
+    
+    @discardableResult
+    func addOnEqualToSuperview(withOut: Side...) -> Self {
+        let need = Side.allCases.filter({ !withOut.contains($0) })
+        
+        self.snp.makeConstraints { make in
+            
+            need.forEach({
+                switch $0 {
+                case .bottom:
+                    make.bottom.equalToSuperview()
+                case .top:
+                    make.top.equalToSuperview()
+                case .leading:
+                    make.leading.equalToSuperview()
+                case .trailing:
+                    make.trailing.equalToSuperview()
+                }
+            })
         }
         
         return self
