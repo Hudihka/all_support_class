@@ -81,6 +81,13 @@ public extension UITextView {
         
         return self
     }
+    
+    @discardableResult
+    func setDelegate(_ delegate: UITextViewDelegate) -> Self {
+        self.delegate = delegate
+        
+        return self
+    }
 }
 
 private extension ComparisonResult {

@@ -52,4 +52,11 @@ public extension UITextField {
         
         return self
     }
+    
+    @discardableResult
+    func setDelegate(_ delegate: UITextFieldDelegate) -> Self {
+        self.delegate = delegate
+        
+        return self
+    }
 }
