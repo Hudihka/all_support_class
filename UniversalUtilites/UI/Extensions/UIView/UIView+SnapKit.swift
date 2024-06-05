@@ -79,7 +79,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func addOnEqualToSuperview(view: UIView, withOut: Side..., compl: () -> Void) -> Self {
+    func addOnEqualToSuperview(view: UIView, withOut: Side..., compl: (ConstraintMaker) -> Void) -> Self {
         self.addSubview(view)
         
         let need = Side.allCases.filter({ !withOut.contains($0) })
@@ -99,7 +99,7 @@ public extension UIView {
                 }
             })
             
-            compl()
+            compl(make)
         }
         
         return self
@@ -131,7 +131,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func addOnEqualToSuperview(withOut: Side..., compl: () -> Void) -> Self {
+    func addOnEqualToSuperview(withOut: Side..., compl: (ConstraintMaker) -> Void) -> Self {
         let need = Side.allCases.filter({ !withOut.contains($0) })
         
         self.snp.makeConstraints { make in
@@ -149,7 +149,7 @@ public extension UIView {
                 }
             })
             
-            compl()
+            compl(make)
         }
         
         return self
