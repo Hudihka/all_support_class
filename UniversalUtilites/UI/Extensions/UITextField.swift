@@ -59,4 +59,49 @@ public extension UITextField {
         
         return self
     }
+
+        @discardableResult
+    func setPlaceholder(_ text: String) -> Self {
+        self.placeholder = text
+
+        return self
+    }
+
+    @discardableResult
+    func setPlaceholder(_ text: String, color: UIColor) -> Self {
+        self.attributedPlaceholder = NSAttributedString(
+            string: text,
+            attributes: [NSAttributedString.Key.foregroundColor: color]
+        )
+
+        return self
+    }
+
+    @discardableResult
+    func setTintColor(_ tintColor: UIColor) -> Self {
+        self.tintColor = tintColor
+
+        return self
+    }
+
+    @discardableResult
+    func setBorderStyle(_ borderStyle: UITextField.BorderStyle) -> Self {
+        self.borderStyle = borderStyle
+
+        return self
+    }
+
+    @discardableResult
+    func makeFirstResponder() -> Self {
+        self.becomeFirstResponder()
+
+        return self
+    }
+
+    @discardableResult
+    func endFirstResponder() -> Self {
+        self.resignFirstResponder()
+
+        return self
+    }
 }
