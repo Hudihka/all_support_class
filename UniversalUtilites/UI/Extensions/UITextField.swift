@@ -78,7 +78,7 @@ public extension UITextField {
     }
 
     @discardableResult
-    func setTintColor(_ tintColor: UIColor) -> Self {
+    func setNewTintColor(_ tintColor: UIColor) -> Self {
         self.tintColor = tintColor
 
         return self
