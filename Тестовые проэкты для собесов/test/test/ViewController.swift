@@ -7,13 +7,13 @@
 
 import UIKit
 
-var array = [Int]()
-
-for i in 0...1000 {
-    DispatchQueue.main.asyncAfter(deadline: randomTime()) {
-        array.append(i)
-    }
-}
+//var array = [Int]()
+//
+//for i in 0...1000 {
+//    DispatchQueue.main.asyncAfter(deadline: randomTime()) {
+//        array.append(i)
+//    }
+//}
 
 //class ViewController: UIViewController {
 //    let quу = DispatchQueue.global()

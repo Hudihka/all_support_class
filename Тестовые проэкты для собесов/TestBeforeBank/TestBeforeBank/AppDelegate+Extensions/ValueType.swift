@@ -34,7 +34,7 @@ class ValueType {
 
 struct CarStruct {
     var speed: Int
-    var car: CarStruct?
+    var car: CarStruct
     
     init(speed: Int) {
         self.speed = speed

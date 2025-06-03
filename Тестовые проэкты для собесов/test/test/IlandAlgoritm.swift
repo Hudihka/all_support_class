@@ -8,18 +8,18 @@
 //import Foundation
 //
 //final class IlandAlgoritm {
-    let arrays =
-    [
-    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-    [1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    ]
+//    let arrays =
+//    [
+//    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+//    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+//    [1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+//    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+//    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+//    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+//    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+//    [1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
+//    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+//    ]
 //
 //
 //    var algoritm: Int {
@@ -106,26 +106,30 @@
 ////}
 //
 //
-func bestAnimals(from animalsInfo: [String: [String]]) -> [String] {
-    var animals = [String]()
-
-    for (key, _) in animalsInfo {
-        guard let info = animalsInfo[key] else {
-                continue
-        }
-
-        animals.append(contentsOf: info.sorted(by: {(lhs: String, rhs: String) -> Bool in
-            return lhs > rhs
-        }))
-    }
-
-    animals = animals.compactMap { animal in
-        return animal.count > 3 ? animal : nil
-    }.sorted(by: <)
 
 
-    return animals
-}
+//func bestAnimals(from animalsInfo: [String: [String]]) -> [String] {
+//    var animals = [String]()
+//
+//    for (key, _) in animalsInfo {
+//        guard let info = animalsInfo[key] else {
+//                continue
+//        }
+//
+//        animals.append(contentsOf: info.sorted(by: {(lhs: String, rhs: String) -> Bool in
+//            return lhs > rhs
+//        }))
+//    }
+//
+//    animals = animals.compactMap { animal in
+//        return animal.count > 3 ? animal : nil
+//    }.sorted(by: <)
+//
+//
+//    return animals
+//}
+
+
 //
 //let a = MyOptional.none
 //let b = MyOptional.none
